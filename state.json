@@ -1,1 +1,572 @@
-{}
+{
+  "NVDA": {
+    "signal": "bear",
+    "price": 195.76,
+    "updated": "2026-07-06T17:42:30.863030"
+  },
+  "AMD": {
+    "signal": "bull",
+    "price": 552.84,
+    "updated": "2026-07-06T17:42:39.005276"
+  },
+  "AVGO": {
+    "signal": "bear",
+    "price": 374.86,
+    "updated": "2026-07-06T17:42:47.122643"
+  },
+  "SMCI": {
+    "signal": "bear",
+    "price": 26.94,
+    "updated": "2026-07-06T17:42:55.217365"
+  },
+  "ARM": {
+    "signal": "bear",
+    "price": 322.75,
+    "updated": "2026-07-06T17:43:04.552128"
+  },
+  "PLTR": {
+    "signal": "bull",
+    "price": 132.65,
+    "updated": "2026-07-06T17:43:12.656157"
+  },
+  "AI": {
+    "signal": "bear",
+    "price": 9.47,
+    "updated": "2026-07-06T17:43:20.917135"
+  },
+  "SOUN": {
+    "signal": "bear",
+    "price": 6.895,
+    "updated": "2026-07-06T17:43:29.119180"
+  },
+  "BBAI": {
+    "signal": "bear",
+    "price": 3.625,
+    "updated": "2026-07-06T17:43:37.292692"
+  },
+  "IONQ": {
+    "signal": "bear",
+    "price": 49.36,
+    "updated": "2026-07-06T17:43:45.383007"
+  },
+  "RGTI": {
+    "signal": "bear",
+    "price": 18.06,
+    "updated": "2026-07-06T17:43:53.504511"
+  },
+  "QUBT": {
+    "signal": "bull",
+    "price": 9.255,
+    "updated": "2026-07-06T17:44:02.241788"
+  },
+  "MRVL": {
+    "signal": "bull",
+    "price": 249.09,
+    "updated": "2026-07-06T17:44:10.406570"
+  },
+  "ALAB": {
+    "signal": "bull",
+    "price": 428.44,
+    "updated": "2026-07-06T17:44:18.609141"
+  },
+  "CRDO": {
+    "signal": "bull",
+    "price": 261.8,
+    "updated": "2026-07-06T17:44:26.696658"
+  },
+  "TSM": {
+    "signal": "bull",
+    "price": 453.745,
+    "updated": "2026-07-06T17:44:34.827774"
+  },
+  "LMT": {
+    "signal": "bull",
+    "price": 538.11,
+    "updated": "2026-07-06T17:44:42.941388"
+  },
+  "RTX": {
+    "signal": "bull",
+    "price": 200.53,
+    "updated": "2026-07-06T17:44:51.062245"
+  },
+  "NOC": {
+    "signal": "bull",
+    "price": 545.87,
+    "updated": "2026-07-06T17:44:59.191146"
+  },
+  "GD": {
+    "signal": "bull",
+    "price": 375.84,
+    "updated": "2026-07-06T17:45:11.552559"
+  },
+  "HII": {
+    "signal": "bear",
+    "price": 294.28,
+    "updated": "2026-07-06T17:45:20.198312"
+  },
+  "KTOS": {
+    "signal": "bear",
+    "price": 54.01,
+    "updated": "2026-07-06T17:45:28.755043"
+  },
+  "RKLB": {
+    "signal": "bear",
+    "price": 93.21,
+    "updated": "2026-07-06T17:45:37.259315"
+  },
+  "ASTS": {
+    "signal": "bear",
+    "price": 80.6,
+    "updated": "2026-07-06T17:45:45.528321"
+  },
+  "JOBY": {
+    "signal": "bear",
+    "price": 9.085,
+    "updated": "2026-07-06T17:45:53.974169"
+  },
+  "ACHR": {
+    "signal": "bear",
+    "price": 5.305,
+    "updated": "2026-07-06T17:46:02.537246"
+  },
+  "XOM": {
+    "signal": "bear",
+    "price": 136.86,
+    "updated": "2026-07-06T17:46:11.190881"
+  },
+  "CVX": {
+    "signal": "bear",
+    "price": 168.015,
+    "updated": "2026-07-06T17:46:19.469328"
+  },
+  "OXY": {
+    "signal": "bear",
+    "price": 49.02,
+    "updated": "2026-07-06T17:46:27.610442"
+  },
+  "SM": {
+    "signal": "bear",
+    "price": 26.56,
+    "updated": "2026-07-06T17:46:35.847611"
+  },
+  "CCJ": {
+    "signal": "bear",
+    "price": 98.02,
+    "updated": "2026-07-06T17:46:43.971755"
+  },
+  "UEC": {
+    "signal": "bear",
+    "price": 10.665,
+    "updated": "2026-07-06T17:46:52.065270"
+  },
+  "DNN": {
+    "signal": "bear",
+    "price": 3.265,
+    "updated": "2026-07-06T17:47:00.207506"
+  },
+  "NXE": {
+    "signal": "bear",
+    "price": 9.645,
+    "updated": "2026-07-06T17:47:08.919854"
+  },
+  "UUUU": {
+    "signal": "bear",
+    "price": 13.83,
+    "updated": "2026-07-06T17:47:17.050865"
+  },
+  "LEU": {
+    "signal": "bear",
+    "price": 174.01,
+    "updated": "2026-07-06T17:47:25.149752"
+  },
+  "AR": {
+    "signal": "bear",
+    "price": 35.01,
+    "updated": "2026-07-06T17:47:33.722738"
+  },
+  "GLD": {
+    "signal": "bear",
+    "price": 381.5,
+    "updated": "2026-07-06T17:47:41.825827"
+  },
+  "SLV": {
+    "signal": "bear",
+    "price": 56.0,
+    "updated": "2026-07-06T17:47:49.923762"
+  },
+  "GDX": {
+    "signal": "bear",
+    "price": 78.36,
+    "updated": "2026-07-06T17:47:58.046259"
+  },
+  "GDXJ": {
+    "signal": "bear",
+    "price": 103.25,
+    "updated": "2026-07-06T17:48:06.306493"
+  },
+  "NEM": {
+    "signal": "bear",
+    "price": 97.06,
+    "updated": "2026-07-06T17:48:14.554165"
+  },
+  "AEM": {
+    "signal": "bear",
+    "price": 153.86,
+    "updated": "2026-07-06T17:48:22.693291"
+  },
+  "PAAS": {
+    "signal": "bear",
+    "price": 44.86,
+    "updated": "2026-07-06T17:48:30.856195"
+  },
+  "AG": {
+    "signal": "bear",
+    "price": 17.185,
+    "updated": "2026-07-06T17:48:38.948744"
+  },
+  "EXK": {
+    "signal": "bear",
+    "price": 8.48,
+    "updated": "2026-07-06T17:48:47.115558"
+  },
+  "WPM": {
+    "signal": "bull",
+    "price": 114.59,
+    "updated": "2026-07-06T17:48:55.207941"
+  },
+  "XBI": {
+    "signal": "bull",
+    "price": 161.0,
+    "updated": "2026-07-06T17:49:04.108095"
+  },
+  "ARKG": {
+    "signal": "bull",
+    "price": 43.8,
+    "updated": "2026-07-06T17:49:12.268712"
+  },
+  "MRNA": {
+    "signal": "bull",
+    "price": 81.405,
+    "updated": "2026-07-06T17:49:20.372471"
+  },
+  "BNTX": {
+    "signal": "bull",
+    "price": 94.9,
+    "updated": "2026-07-06T17:49:28.467789"
+  },
+  "RXRX": {
+    "signal": "bull",
+    "price": 3.945,
+    "updated": "2026-07-06T17:49:36.624713"
+  },
+  "BEAM": {
+    "signal": "bull",
+    "price": 35.81,
+    "updated": "2026-07-06T17:49:44.883636"
+  },
+  "EDIT": {
+    "signal": "bull",
+    "price": 3.645,
+    "updated": "2026-07-06T17:49:53.048136"
+  },
+  "CRSP": {
+    "signal": "bull",
+    "price": 61.86,
+    "updated": "2026-07-06T17:50:01.482666"
+  },
+  "NTLA": {
+    "signal": "bull",
+    "price": 17.8,
+    "updated": "2026-07-06T17:50:09.669186"
+  },
+  "PACB": {
+    "signal": "bull",
+    "price": 1.675,
+    "updated": "2026-07-06T17:50:17.910829"
+  },
+  "NVAX": {
+    "signal": "bear",
+    "price": 9.38,
+    "updated": "2026-07-06T17:50:26.002830"
+  },
+  "COIN": {
+    "signal": "bear",
+    "price": 169.24,
+    "updated": "2026-07-06T17:50:34.442636"
+  },
+  "MSTR": {
+    "signal": "bear",
+    "price": 101.62,
+    "updated": "2026-07-06T17:50:42.700456"
+  },
+  "MARA": {
+    "signal": "bull",
+    "price": 13.08,
+    "updated": "2026-07-06T17:50:50.787322"
+  },
+  "RIOT": {
+    "signal": "bear",
+    "price": 23.06,
+    "updated": "2026-07-06T17:50:58.891432"
+  },
+  "CLSK": {
+    "signal": "bear",
+    "price": 13.55,
+    "updated": "2026-07-06T17:51:07.060758"
+  },
+  "HUT": {
+    "signal": "bear",
+    "price": 103.68,
+    "updated": "2026-07-06T17:51:15.253083"
+  },
+  "BTBT": {
+    "signal": "bear",
+    "price": 1.755,
+    "updated": "2026-07-06T17:51:23.416767"
+  },
+  "CIFR": {
+    "signal": "bear",
+    "price": 21.645,
+    "updated": "2026-07-06T17:51:31.623228"
+  },
+  "CORZ": {
+    "signal": "bear",
+    "price": 22.535,
+    "updated": "2026-07-06T17:51:39.717891"
+  },
+  "HOOD": {
+    "signal": "bull",
+    "price": 116.32,
+    "updated": "2026-07-06T17:51:47.800382"
+  },
+  "SQ": {
+    "signal": "bull",
+    "price": 78.83,
+    "updated": "2026-07-06T17:51:55.934016"
+  },
+  "AMZN": {
+    "signal": "bear",
+    "price": 245.07,
+    "updated": "2026-07-06T17:52:04.150151"
+  },
+  "SHOP": {
+    "signal": "bull",
+    "price": 120.09,
+    "updated": "2026-07-06T17:52:12.388704"
+  },
+  "CELH": {
+    "signal": "bull",
+    "price": 33.765,
+    "updated": "2026-07-06T17:52:20.478722"
+  },
+  "ELF": {
+    "signal": "bull",
+    "price": 73.72,
+    "updated": "2026-07-06T17:52:28.583293"
+  },
+  "ONON": {
+    "signal": "bear",
+    "price": 37.13,
+    "updated": "2026-07-06T17:52:36.743953"
+  },
+  "DUOL": {
+    "signal": "bull",
+    "price": 130.72,
+    "updated": "2026-07-06T17:52:44.860423"
+  },
+  "APP": {
+    "signal": "bull",
+    "price": 537.045,
+    "updated": "2026-07-06T17:52:52.959510"
+  },
+  "RBLX": {
+    "signal": "bull",
+    "price": 57.47,
+    "updated": "2026-07-06T17:53:01.132645"
+  },
+  "TTD": {
+    "signal": "bear",
+    "price": 19.065,
+    "updated": "2026-07-06T17:53:09.603545"
+  },
+  "DKNG": {
+    "signal": "bear",
+    "price": 25.565,
+    "updated": "2026-07-06T17:53:17.780067"
+  },
+  "CHWY": {
+    "signal": "bull",
+    "price": 21.365,
+    "updated": "2026-07-06T17:53:25.872227"
+  },
+  "W": {
+    "signal": "bull",
+    "price": 93.735,
+    "updated": "2026-07-06T17:53:34.054799"
+  },
+  "VNQ": {
+    "signal": "bull",
+    "price": 97.15,
+    "updated": "2026-07-06T17:53:42.146164"
+  },
+  "AMT": {
+    "signal": "bear",
+    "price": 161.11,
+    "updated": "2026-07-06T17:53:50.333311"
+  },
+  "EQIX": {
+    "signal": "bear",
+    "price": 995.56,
+    "updated": "2026-07-06T17:53:58.437891"
+  },
+  "PLD": {
+    "signal": "bear",
+    "price": 139.02,
+    "updated": "2026-07-06T17:54:06.614345"
+  },
+  "O": {
+    "signal": "bull",
+    "price": 63.14,
+    "updated": "2026-07-06T17:54:14.720393"
+  },
+  "IRM": {
+    "signal": "bear",
+    "price": 115.67,
+    "updated": "2026-07-06T17:54:22.811763"
+  },
+  "WELL": {
+    "signal": "bull",
+    "price": 232.04,
+    "updated": "2026-07-06T17:54:30.984445"
+  },
+  "SPG": {
+    "signal": "bull",
+    "price": 224.81,
+    "updated": "2026-07-06T17:54:39.072270"
+  },
+  "ARKK": {
+    "signal": "bull",
+    "price": 83.33,
+    "updated": "2026-07-06T17:54:47.201210"
+  },
+  "COPX": {
+    "signal": "bear",
+    "price": 78.2,
+    "updated": "2026-07-06T17:54:55.291530"
+  },
+  "URA": {
+    "signal": "bear",
+    "price": 43.95,
+    "updated": "2026-07-06T17:55:04.703164"
+  },
+  "BLOK": {
+    "signal": "bear",
+    "price": 63.72,
+    "updated": "2026-07-06T17:55:13.400828"
+  },
+  "IBB": {
+    "signal": "bull",
+    "price": 195.45,
+    "updated": "2026-07-06T17:55:21.492300"
+  },
+  "XLE": {
+    "signal": "bear",
+    "price": 53.28,
+    "updated": "2026-07-06T17:55:29.774949"
+  },
+  "XHB": {
+    "signal": "bull",
+    "price": 110.99,
+    "updated": "2026-07-06T17:55:37.870723"
+  },
+  "TAN": {
+    "signal": "bear",
+    "price": 57.705,
+    "updated": "2026-07-06T17:55:45.960499"
+  },
+  "QQQ": {
+    "signal": "bear",
+    "price": 721.67,
+    "updated": "2026-07-06T17:56:02.289022"
+  },
+  "BTC": {
+    "signal": "bear",
+    "price": 63562.0,
+    "updated": "2026-07-06T17:56:10.455433"
+  },
+  "ETH": {
+    "signal": "bear",
+    "price": 1787.54,
+    "updated": "2026-07-06T17:56:18.613942"
+  },
+  "SOL": {
+    "signal": "bull",
+    "price": 81.56,
+    "updated": "2026-07-06T17:56:26.739103"
+  },
+  "BNB": {
+    "signal": "bear",
+    "price": 583.04,
+    "updated": "2026-07-06T17:56:34.932510"
+  },
+  "OKLO": {
+    "signal": "bear",
+    "price": 51.12,
+    "updated": "2026-07-06T17:56:43.025362"
+  },
+  "NNE": {
+    "signal": "bear",
+    "price": 19.79,
+    "updated": "2026-07-06T17:56:51.121688"
+  },
+  "SMR": {
+    "signal": "bear",
+    "price": 9.595,
+    "updated": "2026-07-06T17:56:59.231542"
+  },
+  "LUNR": {
+    "signal": "bear",
+    "price": 18.79,
+    "updated": "2026-07-06T17:57:07.397640"
+  },
+  "RDW": {
+    "signal": "bear",
+    "price": 11.18,
+    "updated": "2026-07-06T17:57:15.492410"
+  },
+  "IREN": {
+    "signal": "bear",
+    "price": 43.955,
+    "updated": "2026-07-06T17:57:23.637839"
+  },
+  "GSAT": {
+    "signal": "bear",
+    "price": 80.225,
+    "updated": "2026-07-06T17:57:31.898239"
+  },
+  "NKLA": {
+    "signal": "bear",
+    "price": 0.0049999999,
+    "updated": "2026-07-06T17:57:40.163034"
+  },
+  "NVNI": {
+    "signal": "bear",
+    "price": 1.07,
+    "updated": "2026-07-06T17:57:48.258263"
+  },
+  "PRCT": {
+    "signal": "bear",
+    "price": 21.67,
+    "updated": "2026-07-06T17:57:56.373262"
+  },
+  "ISRG": {
+    "signal": "bull",
+    "price": 437.89,
+    "updated": "2026-07-06T17:58:04.998400"
+  },
+  "ABTS": {
+    "signal": "bear",
+    "price": 1.2,
+    "updated": "2026-07-06T17:58:13.207967"
+  }
+}

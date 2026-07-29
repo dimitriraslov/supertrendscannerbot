@@ -1,74 +1,153 @@
-# Supertrend 1D Flip Scanner
+# SuperTrend 1D Scanner Bot
 
-Runs every 4 hours on GitHub Actions. Sends Telegram alerts when any ticker flips bull or bear on the daily Supertrend (ATR 10, Factor 3.0).
+Scans a watchlist of equities, ETFs and crypto for **daily SuperTrend flips**
+(ATR 10, factor 3.0) and sends Telegram alerts. Runs free on GitHub Actions.
 
-## Setup (one time, takes 10 minutes)
+**This is v2.** v1 sent alerts that were late or plain wrong — roughly a third of
+them were for flips that never happened, and 1 in 6 announced a "fresh" flip on
+a trend that was already weeks old. The cause was found, isolated and fixed.
+The full measured write-up is in **[AUDIT.md](AUDIT.md)**.
 
-### Step 1 — Create a new GitHub repository
+## What changed
 
-1. Go to github.com → click **New repository**
-2. Name it `supertrend-scanner`
-3. Set it to **Private** (keeps your watchlist and API keys safe)
-4. Check **Add a README file**
-5. Click **Create repository**
+| | v1 | v2 |
+|---|---|---|
+| Candle used | still-forming daily candle | **only closed candles** |
+| Flip detection | `stored_signal != current_signal` | **flip's bar date**, de-duplicated |
+| Freshness | assumed | **stated**: flip date + age on every alert |
+| History | 60 bars | 400 bars |
+| Schedule | 6×/day, mid-session | 3×/day, after the close |
+| API credits | 696 / 800 (87%) | **348 / 800** |
+| State writes | non-atomic, end of run | atomic, `finally`-block |
+| Dropped run | can cause a false "fresh flip" | caught next run, labelled catch-up |
 
-### Step 2 — Upload these files
+Measured on identical data with 25% of runs randomly dropped: **100% of real
+flips caught, 0 missed, 0 false alerts, 0 duplicates** (v1: 98.7% caught, 222
+false alerts, 263 round-trips).
 
-Upload all 4 files to the root of your repository:
-- `scanner.py`
-- `watchlist.json`
-- `state.json`
-- `README.md`
+## Files
 
-Then create this folder structure for the workflow:
-- Create folder `.github/workflows/`
-- Upload `scanner.yml` inside that folder
-
-### Step 3 — Add your secrets
-
-Go to your repository → **Settings** → **Secrets and variables** → **Actions** → **New repository secret**
-
-Add these 3 secrets exactly as named:
-
-| Secret name | Value |
-|-------------|-------|
-| `TWELVE_DATA_KEY` | Your Twelve Data API key |
-| `TELEGRAM_TOKEN` | Your Telegram bot token |
-| `TELEGRAM_CHAT` | Your Telegram chat ID |
-
-### Step 4 — Test it
-
-1. Go to **Actions** tab in your repo
-2. Click **Supertrend 1D Scanner**
-3. Click **Run workflow** → **Run workflow**
-4. Watch it run — check your Telegram for a summary message
-
-### Step 5 — It runs automatically from now on
-
-The scanner runs every 4 hours automatically. You will receive:
-- An **individual alert** the moment any ticker flips
-- A **summary message** at the end of each scan (only if there were flips or errors)
-
-## Adding new tickers
-
-Edit `watchlist.json` and add to any narrative section:
-
-```json
-{"sym": "TICKER", "name": "Company Name", "td": "TICKER"}
+```
+scanner.py            main scanner + Telegram delivery
+supertrend.py         Pine-parity SuperTrend (Wilder RMA ATR)
+market_calendar.py    decides whether a bar has actually closed
+selftest.py           invariants; runs in CI before every scan
+watchlist.json        your symbols, grouped by narrative
+state.json            last known trend per symbol (committed by the workflow)
+requirements.txt
+AUDIT.md              why v1 was wrong, and the proof v2 isn't
+.github/workflows/scanner.yml
 ```
 
-For crypto use the format: `"td": "BTC/USD"`
+## Setup
 
-## Credit usage
+1. Push this repo to GitHub.
+2. **Settings → Secrets and variables → Actions**, add three repository secrets:
 
-- ~106 assets × 1 daily candle request = 106 credits per scan
-- 6 scans per day = 636 credits
-- Free tier limit = 800 credits/day
-- Leaves ~164 credits for your dashboard ✅
+   | Secret | Where to get it |
+   |---|---|
+   | `TWELVE_DATA_KEY` | [twelvedata.com](https://twelvedata.com/) — free tier is enough |
+   | `TELEGRAM_TOKEN` | [@BotFather](https://t.me/BotFather) → `/newbot` |
+   | `TELEGRAM_CHAT` | message your bot, then open `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id` |
 
-## Adjusting scan frequency
+3. **Settings → Actions → General → Workflow permissions** → select
+   **Read and write permissions**. The workflow commits `state.json` back to the
+   repo; without this it cannot remember what it already sent.
+4. **Actions** tab → *Supertrend 1D Scanner* → **Run workflow**.
 
-Edit `scanner.yml` and change the cron schedule:
-- Every 4h: `0 0,4,8,12,16,20 * * *`
-- Every 6h: `0 0,6,12,18 * * *` (saves credits)
-- Every 8h: `0 0,8,16 * * *` (most conservative)
+### The first run is silent — that is correct
+
+`state.json` ships empty. On the first run every symbol is adopted silently,
+because a trend that started before the bot was watching is by definition not a
+fresh flip. Announcing 115 "flips" on day one is exactly the bug v2 exists to
+prevent. You will start getting alerts from the second run onward, as flips
+actually occur.
+
+Upgrading from v1 and keeping your old `state.json` works too — v1 records are
+detected and migrated silently for the same reason.
+
+## Alerts
+
+A real flip:
+
+```
+🟢 SUPERTREND FLIP — BULL
+NVDA · NVIDIA
+1D SuperTrend BEAR → BULL
+Flip bar: 2026-07-28 (last closed daily candle)
+Close: $197.01   ST line: $214.15
+Narrative: AI / Semiconductors
+Data through: 2026-07-28 · 399 bars · ATR10×3.0
+```
+
+A flip the bot is behind on — clearly labelled, never sold as fresh:
+
+```
+🕓 CATCH-UP — BEAR (not a new flip)
+NVDA · NVIDIA
+1D SuperTrend BULL → BEAR
+Flip bar: 2026-06-05 — 35 trading days ago
+⚠️ Already in BEAR since then. Reported now because this scanner had not
+   recorded it yet.
+```
+
+If you see a catch-up, the bot missed runs — the alert is still honest about it.
+
+## Verifying against your chart
+
+```bash
+python scanner.py --verify NVDA
+```
+
+Prints the last closed bar, current trend, the date the trend began, and the
+last 12 flips. Set TradingView to SuperTrend with **ATR 10, factor 3.0** on the
+**1D** chart; the flip dates should match bar for bar. If they don't, that is a
+bug worth reporting — not something to talk yourself out of.
+
+Other flags:
+
+```bash
+python scanner.py --dry-run      # full scan, no Telegram, no state write
+python scanner.py --reseed       # adopt all current trends silently
+python scanner.py --no-summary   # skip the end-of-run summary message
+python selftest.py               # indicator + candle-close invariants
+```
+
+## Editing the watchlist
+
+`watchlist.json` maps a narrative name to a list of symbols:
+
+```json
+{
+  "AI / Semiconductors": [
+    { "sym": "NVDA", "name": "NVIDIA", "td": "NVDA" }
+  ],
+  "Base Crypto": [
+    { "sym": "BTC", "name": "Bitcoin", "td": "BTC/USD" }
+  ]
+}
+```
+
+`td` is the Twelve Data symbol (crypto uses `BASE/QUOTE`). Keep total symbols
+× 3 runs/day under your daily credit limit — at 800 credits/day the ceiling is
+about 260 symbols.
+
+## Schedule
+
+Runs at 22:23, 01:07 and 13:43 UTC. Chosen so the US close is settled in both
+EST and EDT, so crypto's UTC day has rolled over, and so a dropped overnight run
+gets a second chance in the morning. Minutes are deliberately off the hour —
+GitHub delays and sometimes drops jobs scheduled on round slots. Duplicate runs
+are harmless: alerts are de-duplicated on the flip bar's date.
+
+Note that GitHub **disables scheduled workflows on public repos after 60 days of
+repository inactivity**. If alerts stop entirely, check that first.
+
+## Notes
+
+- Direction convention follows Pine Script: `-1` = BULL, `+1` = BEAR.
+- A symbol with fewer than 120 bars of history is skipped rather than guessed at.
+- If `state.json` is corrupt, the scanner **exits without sending anything**
+  rather than treating every symbol as a fresh flip.
+- Alerts are only marked as sent after Telegram confirms delivery, so a network
+  failure means a retry next run, not a lost signal.

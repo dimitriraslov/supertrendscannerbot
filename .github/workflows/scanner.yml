@@ -2,30 +2,52 @@ name: Supertrend 1D Scanner
 
 on:
   schedule:
-    # Runs every 4 hours — 0:00, 4:00, 8:00, 12:00, 16:00, 20:00 UTC
-    - cron: '0 0,4,8,12,16,20 * * *'
+    # 3 runs/day — all after the US close + crypto UTC rollover
+    # 22:23 UTC = 6:23 PM ET (settled after the 4pm close + 45min buffer)
+    # 01:07 UTC = 9:07 PM ET (second pass, catches any dropped overnight run)
+    # 13:43 UTC = 9:43 AM ET (morning check, well after crypto UTC day rolled)
+    # Minutes are deliberately off the hour — GitHub drops and delays round-slot jobs.
+    - cron: '23 22 * * 1-5'   # Mon-Fri 22:23 UTC — primary post-close scan
+    - cron: '7 1 * * 2-6'     # Tue-Sat 01:07 UTC — overnight backup
+    - cron: '43 13 * * 1-5'   # Mon-Fri 13:43 UTC — morning catch-up
+
   workflow_dispatch:
-    # Also allows manual trigger from GitHub Actions tab
+    # Manual trigger from the Actions tab — for testing
+
+concurrency:
+  # Never let two runs overlap and clobber state.json
+  group: scanner
+  cancel-in-progress: false
 
 jobs:
   scan:
     runs-on: ubuntu-latest
 
-    # Allow workflow to write back state.json to the repo
     permissions:
-      contents: write
+      contents: write   # needed to commit state.json back to the repo
 
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          # Pull the very latest state.json before we start
+          # so a concurrent push from another run is not overwritten
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install -r requirements.txt
+
+      - name: Run self-tests
+        # Fails loudly if the indicator or candle-close logic is broken.
+        # The scan never runs if this step fails, so you get a failed workflow
+        # instead of a wave of wrong alerts.
+        run: python selftest.py
 
       - name: Run Supertrend scanner
         env:
@@ -35,9 +57,18 @@ jobs:
         run: python scanner.py
 
       - name: Save updated state back to repo
+        if: always()   # commit even if the scanner hit errors partway through
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Pull first to avoid push conflicts between concurrent runs
+          git pull --rebase --autostash origin main || true
           git add state.json
           git diff --staged --quiet || git commit -m "Update scanner state [skip ci]"
-          git push
+          # Retry push up to 3 times in case of a race
+          for i in 1 2 3; do
+            git push && break
+            echo "Push attempt $i failed, retrying..."
+            git pull --rebase --autostash origin main || true
+            sleep $((i * 5))
+          done

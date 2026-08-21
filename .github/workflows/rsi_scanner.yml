@@ -1,0 +1,70 @@
+name: RSI Oversold Scanner
+
+on:
+  schedule:
+    # Daily RSI (1D): runs Mon-Fri after US close
+    # 22:47 UTC = 6:47 PM ET — after 4pm close + 45min buffer
+    - cron: '47 22 * * 1-5'   # Mon-Fri post-close (1D scan)
+
+    # Weekly RSI (1W): runs once on Monday after close
+    # Weekly bar closes Friday night — Monday scan catches it fully settled
+    - cron: '47 22 * * 3'     # Wednesday post-close (1W scan)
+
+  workflow_dispatch:
+    # Manual trigger for testing — runs both
+
+concurrency:
+  group: rsi-scanner
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run RSI scanner — Daily (1D) every weekday
+        env:
+          TWELVE_DATA_KEY: ${{ secrets.TWELVE_DATA_KEY }}
+          TELEGRAM_TOKEN:  ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT:   ${{ secrets.TELEGRAM_CHAT }}
+        run: python rsi_scanner.py --timeframe 1day
+
+      - name: Run RSI scanner — Weekly (1W) on Mondays only
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '47 22 * * 3'
+        env:
+          TWELVE_DATA_KEY: ${{ secrets.TWELVE_DATA_KEY }}
+          TELEGRAM_TOKEN:  ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT:   ${{ secrets.TELEGRAM_CHAT }}
+        run: python rsi_scanner.py --timeframe 1week
+
+      - name: Save state back to repo
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git pull --rebase --autostash origin main || true
+          git add rsi_state.json
+          git diff --staged --quiet || git commit -m "Update RSI scanner state [skip ci]"
+          for i in 1 2 3; do
+            git push && break
+            echo "Push attempt $i failed, retrying..."
+            git pull --rebase --autostash origin main || true
+            sleep $((i * 5))
+          done

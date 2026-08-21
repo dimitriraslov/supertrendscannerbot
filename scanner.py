@@ -54,6 +54,34 @@ import requests
 from supertrend import supertrend, last_flip, all_flips, label, BULL, BEAR
 from market_calendar import last_closed_index, describe, is_crypto
 
+
+# ── RSI (Wilder RMA — matches TradingView ta.rsi) ────────────────────────────
+def calc_rsi(closes, period=14):
+    """Returns list of RSI values same length as closes. None during warmup."""
+    n = len(closes)
+    if n < period + 1:
+        return [None] * n
+    gains  = [0.0]
+    losses = [0.0]
+    for i in range(1, n):
+        ch = closes[i] - closes[i - 1]
+        gains.append(max(ch, 0.0))
+        losses.append(max(-ch, 0.0))
+    rsi = [None] * n
+    ag = sum(gains[1:period + 1]) / period
+    al = sum(losses[1:period + 1]) / period
+    for i in range(period, n):
+        if i > period:
+            ag = (ag * (period - 1) + gains[i]) / period
+            al = (al * (period - 1) + losses[i]) / period
+        if al == 0:
+            rsi[i] = 100.0
+        elif ag == 0:
+            rsi[i] = 0.0
+        else:
+            rsi[i] = 100.0 - (100.0 / (1.0 + ag / al))
+    return rsi
+
 # ── Config ────────────────────────────────────────────────────────────────────
 TWELVE_DATA_KEY = os.environ.get("TWELVE_DATA_KEY", "")
 TELEGRAM_TOKEN  = os.environ.get("TELEGRAM_TOKEN", "")
@@ -362,6 +390,44 @@ def verify(sym_query, watchlist):
     return 0
 
 
+
+# ── Dashboard export ──────────────────────────────────────────────────────────
+def export_dashboard(state, watchlist):
+    """
+    Write dashboard_data.json for the HTML dashboard to consume.
+    The dashboard fetches this file from GitHub raw URL — zero Twelve Data
+    credits used when opening the dashboard.
+    """
+    assets = []
+    for narrative, items in watchlist.items():
+        for a in items:
+            sym = a["sym"]
+            rec = state.get(sym, {})
+            assets.append({
+                "sym":          sym,
+                "name":         a["name"],
+                "narrative":    narrative,
+                "td":           a.get("td", sym),
+                "signal":       rec.get("signal"),
+                "flip_date":    rec.get("flip_date"),
+                "bars_since_flip": rec.get("bars_since_flip"),
+                "last_bar":     rec.get("last_closed_bar"),
+                "price":        rec.get("price"),
+                "supertrend":   rec.get("supertrend"),
+                "rsi":          rec.get("rsi"),
+                "updated":      rec.get("updated"),
+            })
+
+    out = {
+        "generated_at": datetime.now(timezone.utc)
+                         .replace(microsecond=0).isoformat(),
+        "assets": assets,
+    }
+    tmp = "dashboard_data.json.tmp"
+    with open(tmp, "w") as f:
+        json.dump(out, f, indent=2)
+    os.replace(tmp, "dashboard_data.json")
+
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
     ap = argparse.ArgumentParser()
@@ -431,6 +497,11 @@ def main():
             print(f"{res['signal'].upper():<4} since {res['flip_date'] or '—'} "
                   f"({age_s})  bar {res['last_bar']}", end="")
 
+            # Calculate RSI(14) on closed bars
+            closed_closes = [b["c"] for b in res["closed"]]
+            rsi_vals = calc_rsi(closed_closes, 14)
+            rsi_now = rsi_vals[-1] if rsi_vals else None
+
             record = {
                 "signal": res["signal"],
                 "flip_date": res["flip_date"],
@@ -438,6 +509,7 @@ def main():
                 "last_closed_bar": res["last_bar"],
                 "price": round(res["price"], 6),
                 "supertrend": (None if res["st"] is None else round(res["st"], 6)),
+                "rsi": (None if rsi_now is None else round(rsi_now, 2)),
                 "history_bars": res["bars"],
                 "schema": STATE_SCHEMA,
                 "updated": datetime.now(timezone.utc)
@@ -492,6 +564,9 @@ def main():
         if not args.dry_run:
             save_state(state)
             print(f"\nstate.json written ({len(state)} symbols)")
+            # Export dashboard_data.json — read by the HTML dashboard
+            export_dashboard(state, watchlist)
+            print("dashboard_data.json written")
 
     # staleness watchdog — surfaces silent scheduler/API failures
     stale = []

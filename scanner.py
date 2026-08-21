@@ -141,12 +141,12 @@ def save_state(state, path=STATE_FILE):
 
 
 # ── Data ──────────────────────────────────────────────────────────────────────
-def fetch_ohlc(td_symbol):
+def fetch_ohlc(td_symbol, interval="1day", outputsize=None):
     """Return (bars, meta, None) or (None, None, error). bars are oldest-first."""
     params = {
         "symbol": td_symbol,
-        "interval": "1day",
-        "outputsize": OUTPUTSIZE,
+        "interval": interval,
+        "outputsize": outputsize or OUTPUTSIZE,
         "order": "ASC",
         "apikey": TWELVE_DATA_KEY,
     }
@@ -397,25 +397,45 @@ def export_dashboard(state, watchlist):
     Write dashboard_data.json for the HTML dashboard to consume.
     The dashboard fetches this file from GitHub raw URL — zero Twelve Data
     credits used when opening the dashboard.
+    Merges daily state (updated every run) with weekly state (updated Fridays).
     """
+    # Load existing dashboard_data.json to preserve weekly data between runs
+    existing = {}
+    try:
+        with open("dashboard_data.json", "r") as f:
+            prev = json.load(f)
+        for a in prev.get("assets", []):
+            existing[a["sym"]] = a
+    except Exception:
+        pass
+
     assets = []
     for narrative, items in watchlist.items():
         for a in items:
             sym = a["sym"]
             rec = state.get(sym, {})
+            prev_a = existing.get(sym, {})
             assets.append({
-                "sym":          sym,
-                "name":         a["name"],
-                "narrative":    narrative,
-                "td":           a.get("td", sym),
-                "signal":       rec.get("signal"),
-                "flip_date":    rec.get("flip_date"),
+                "sym":             sym,
+                "name":            a["name"],
+                "narrative":       narrative,
+                "td":              a.get("td", sym),
+                # Daily data — always fresh from this run
+                "signal":          rec.get("signal"),
+                "flip_date":       rec.get("flip_date"),
                 "bars_since_flip": rec.get("bars_since_flip"),
-                "last_bar":     rec.get("last_closed_bar"),
-                "price":        rec.get("price"),
-                "supertrend":   rec.get("supertrend"),
-                "rsi":          rec.get("rsi"),
-                "updated":      rec.get("updated"),
+                "last_bar":        rec.get("last_closed_bar"),
+                "price":           rec.get("price"),
+                "supertrend":      rec.get("supertrend"),
+                "rsi":             rec.get("rsi"),
+                "updated":         rec.get("updated"),
+                # Weekly data — preserved from last Friday run
+                "signal_1w":       rec.get("signal_1w") or prev_a.get("signal_1w"),
+                "flip_date_1w":    rec.get("flip_date_1w") or prev_a.get("flip_date_1w"),
+                "bars_since_flip_1w": rec.get("bars_since_flip_1w") or prev_a.get("bars_since_flip_1w"),
+                "supertrend_1w":   rec.get("supertrend_1w") or prev_a.get("supertrend_1w"),
+                "rsi_1w":          rec.get("rsi_1w") or prev_a.get("rsi_1w"),
+                "updated_1w":      rec.get("updated_1w") or prev_a.get("updated_1w"),
             })
 
     out = {
@@ -438,6 +458,8 @@ def main():
     ap.add_argument("--reseed", action="store_true",
                     help="adopt every current trend silently, sending no alerts")
     ap.add_argument("--no-summary", action="store_true")
+    ap.add_argument("--weekly", action="store_true",
+                    help="scan 1W timeframe and update weekly fields in state + dashboard")
     args = ap.parse_args()
 
     if not TWELVE_DATA_KEY:
@@ -564,6 +586,49 @@ def main():
         if not args.dry_run:
             save_state(state)
             print(f"\nstate.json written ({len(state)} symbols)")
+
+    # ── Weekly scan (runs on Fridays via --weekly flag) ───────────────────────
+    if args.weekly:
+        print(f"\n{'='*50}")
+        print("Weekly scan (1W Supertrend + RSI)")
+        print(f"{'='*50}")
+        weekly_symbols = [(n, a) for n, assets in watchlist.items() for a in assets]
+        for narrative, asset in weekly_symbols:
+            sym  = asset["sym"]
+            td   = asset.get("td", sym)
+            print(f"  {sym:<8}", end=" ", flush=True)
+            bars, meta, err = fetch_ohlc(td, interval="1week", outputsize=200)
+            if err:
+                print(f"ERROR: {err}")
+                time.sleep(DELAY_SEC)
+                continue
+            res, why = evaluate(bars, td, meta)
+            if not res:
+                print(f"SKIP: {why}")
+                time.sleep(DELAY_SEC)
+                continue
+            # Calculate weekly RSI
+            closed_closes = [b["c"] for b in res["closed"]]
+            rsi_vals = calc_rsi(closed_closes, 14)
+            rsi_1w = rsi_vals[-1] if rsi_vals else None
+            # Store weekly data in state under _1w keys
+            if sym not in state:
+                state[sym] = {}
+            state[sym]["signal_1w"]          = res["signal"]
+            state[sym]["flip_date_1w"]        = res["flip_date"]
+            state[sym]["bars_since_flip_1w"]  = res["age"]
+            state[sym]["supertrend_1w"]       = (None if res["st"] is None else round(res["st"], 6))
+            state[sym]["rsi_1w"]              = (None if rsi_1w is None else round(rsi_1w, 2))
+            state[sym]["updated_1w"]          = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+            age_s = "never" if res["age"] is None else f"{res['age']}w ago"
+            rsi_s = f"RSI {rsi_1w:.1f}" if rsi_1w else "RSI —"
+            print(f"{res['signal'].upper():<4} {age_s}  {rsi_s}")
+            time.sleep(DELAY_SEC)
+        if not args.dry_run:
+            save_state(state)
+            print(f"state.json updated with weekly data")
+
+    if not args.dry_run:
             # Export dashboard_data.json — read by the HTML dashboard
             export_dashboard(state, watchlist)
             print("dashboard_data.json written")

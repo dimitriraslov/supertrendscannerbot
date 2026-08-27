@@ -2,7 +2,11 @@
   "ABTS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 52.87,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:43+00:00"
+=======
+    "updated": "2026-08-27T04:50:33+00:00"
+>>>>>>> Stashed changes
   },
   "ABTS:1week": {
     "last_bar": "2026-08-24",
@@ -12,7 +16,11 @@
   "ACHR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.37,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:40:41+00:00"
+=======
+    "updated": "2026-08-27T04:38:20+00:00"
+>>>>>>> Stashed changes
   },
   "ACHR:1week": {
     "last_bar": "2026-08-24",
@@ -22,7 +30,11 @@
   "ADI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 44.89,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:56+00:00"
+=======
+    "updated": "2026-08-27T04:55:45+00:00"
+>>>>>>> Stashed changes
   },
   "ADI:1week": {
     "last_bar": "2026-08-24",
@@ -32,7 +44,11 @@
   "AEM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 72.25,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:45:00+00:00"
+=======
+    "updated": "2026-08-27T04:40:39+00:00"
+>>>>>>> Stashed changes
   },
   "AEM:1week": {
     "last_bar": "2026-08-24",
@@ -42,7 +58,11 @@
   "AEVA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.22,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:09+00:00"
+=======
+    "updated": "2026-08-27T04:56:59+00:00"
+>>>>>>> Stashed changes
   },
   "AEVA:1week": {
     "last_bar": "2026-08-24",
@@ -52,7 +72,11 @@
   "AG:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 64.63,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:45:17+00:00"
+=======
+    "updated": "2026-08-27T04:40:56+00:00"
+>>>>>>> Stashed changes
   },
   "AG:1week": {
     "last_bar": "2026-08-24",
@@ -62,7 +86,11 @@
   "AI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 48.56,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:35:06+00:00"
+=======
+    "updated": "2026-08-27T04:35:44+00:00"
+>>>>>>> Stashed changes
   },
   "AI:1week": {
     "last_bar": "2026-08-24",
@@ -72,7 +100,11 @@
   "ALAB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.45,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:37:03+00:00"
+=======
+    "updated": "2026-08-27T04:36:41+00:00"
+>>>>>>> Stashed changes
   },
   "ALAB:1week": {
     "last_bar": "2026-08-24",
@@ -82,7 +114,11 @@
   "AMBA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.56,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:28+00:00"
+=======
+    "updated": "2026-08-27T04:56:18+00:00"
+>>>>>>> Stashed changes
   },
   "AMBA:1week": {
     "last_bar": "2026-08-24",
@@ -92,7 +128,11 @@
   "AMD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 48.43,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:34:05+00:00"
+=======
+    "updated": "2026-08-27T04:35:03+00:00"
+>>>>>>> Stashed changes
   },
   "AMD:1week": {
     "last_bar": "2026-08-24",
@@ -102,7 +142,11 @@
   "AMT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 54.21,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:56:28+00:00"
+=======
+    "updated": "2026-08-27T04:46:10+00:00"
+>>>>>>> Stashed changes
   },
   "AMT:1week": {
     "last_bar": "2026-08-24",
@@ -112,7 +156,11 @@
   "AMZN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:52:22+00:00"
+=======
+    "updated": "2026-08-27T04:44:21+00:00"
+>>>>>>> Stashed changes
   },
   "AMZN:1week": {
     "last_bar": "2026-08-24",
@@ -125,7 +173,11 @@
     },
     "last_bar": "2026-08-26",
     "last_rsi": 33.16,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:54:11+00:00"
+=======
+    "updated": "2026-08-27T04:45:12+00:00"
+>>>>>>> Stashed changes
   },
   "APP:1week": {
     "last_bar": "2026-08-24",
@@ -135,7 +187,11 @@
   "AR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 63.95,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:43:11+00:00"
+=======
+    "updated": "2026-08-27T04:39:50+00:00"
+>>>>>>> Stashed changes
   },
   "AR:1week": {
     "last_bar": "2026-08-24",
@@ -145,7 +201,11 @@
   "ARBE:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.45,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:26+00:00"
+=======
+    "updated": "2026-08-27T04:57:15+00:00"
+>>>>>>> Stashed changes
   },
   "ARBE:1week": {
     "last_bar": "2026-08-24",
@@ -155,7 +215,11 @@
   "ARKG:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 68.97,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:47:10+00:00"
+=======
+    "updated": "2026-08-27T04:41:29+00:00"
+>>>>>>> Stashed changes
   },
   "ARKG:1week": {
     "last_bar": "2026-08-24",
@@ -165,7 +229,11 @@
   "ARKK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 62.16,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:58:46+00:00"
+=======
+    "updated": "2026-08-27T04:47:08+00:00"
+>>>>>>> Stashed changes
   },
   "ARKK:1week": {
     "last_bar": "2026-08-24",
@@ -175,7 +243,11 @@
   "ARM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.79,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:34:30+00:00"
+=======
+    "updated": "2026-08-27T04:35:28+00:00"
+>>>>>>> Stashed changes
   },
   "ARM:1week": {
     "last_bar": "2026-08-24",
@@ -185,7 +257,11 @@
   "ASTS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.54,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:39:25+00:00"
+=======
+    "updated": "2026-08-27T04:38:03+00:00"
+>>>>>>> Stashed changes
   },
   "ASTS:1week": {
     "last_bar": "2026-08-24",
@@ -198,7 +274,11 @@
     },
     "last_bar": "2026-08-26",
     "last_rsi": 34.19,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:54+00:00"
+=======
+    "updated": "2026-08-27T04:53:41+00:00"
+>>>>>>> Stashed changes
   },
   "ATS:1week": {
     "last_bar": "2026-08-24",
@@ -208,7 +288,11 @@
   "AUR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.22,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:56+00:00"
+=======
+    "updated": "2026-08-27T04:51:47+00:00"
+>>>>>>> Stashed changes
   },
   "AUR:1week": {
     "last_bar": "2026-08-24",
@@ -218,7 +302,11 @@
   "AVAV:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 37.82,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:34+00:00"
+=======
+    "updated": "2026-08-27T04:57:23+00:00"
+>>>>>>> Stashed changes
   },
   "AVAV:1week": {
     "last_bar": "2026-08-24",
@@ -228,7 +316,11 @@
   "AVGO:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 34.35,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:34:13+00:00"
+=======
+    "updated": "2026-08-27T04:35:11+00:00"
+>>>>>>> Stashed changes
   },
   "AVGO:1week": {
     "last_bar": "2026-08-24",
@@ -238,7 +330,11 @@
   "BBAI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.02,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:35:22+00:00"
+=======
+    "updated": "2026-08-27T04:36:00+00:00"
+>>>>>>> Stashed changes
   },
   "BBAI:1week": {
     "last_bar": "2026-08-24",
@@ -248,7 +344,11 @@
   "BEAM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 56.91,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:48:03+00:00"
+=======
+    "updated": "2026-08-27T04:42:01+00:00"
+>>>>>>> Stashed changes
   },
   "BEAM:1week": {
     "last_bar": "2026-08-24",
@@ -258,7 +358,11 @@
   "BLOK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 57.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:10+00:00"
+=======
+    "updated": "2026-08-27T04:47:32+00:00"
+>>>>>>> Stashed changes
   },
   "BLOK:1week": {
     "last_bar": "2026-08-24",
@@ -268,7 +372,11 @@
   "BNB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 80.55,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:01:57+00:00"
+=======
+    "updated": "2026-08-27T04:48:54+00:00"
+>>>>>>> Stashed changes
   },
   "BNB:1week": {
     "last_bar": "2026-08-24",
@@ -278,7 +386,11 @@
   "BNTX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 69.34,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:47:26+00:00"
+=======
+    "updated": "2026-08-27T04:41:45+00:00"
+>>>>>>> Stashed changes
   },
   "BNTX:1week": {
     "last_bar": "2026-08-24",
@@ -288,7 +400,11 @@
   "BTBT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 53.07,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:51:41+00:00"
+=======
+    "updated": "2026-08-27T04:43:40+00:00"
+>>>>>>> Stashed changes
   },
   "BTBT:1week": {
     "last_bar": "2026-08-24",
@@ -298,7 +414,11 @@
   "BTC:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 80.58,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:00:32+00:00"
+=======
+    "updated": "2026-08-27T04:48:30+00:00"
+>>>>>>> Stashed changes
   },
   "BTC:1week": {
     "last_bar": "2026-08-24",
@@ -308,7 +428,11 @@
   "CAT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 42.81,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:57+00:00"
+=======
+    "updated": "2026-08-27T04:52:44+00:00"
+>>>>>>> Stashed changes
   },
   "CAT:1week": {
     "last_bar": "2026-08-24",
@@ -318,7 +442,11 @@
   "CCJ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 67.76,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:41:22+00:00"
+=======
+    "updated": "2026-08-27T04:39:01+00:00"
+>>>>>>> Stashed changes
   },
   "CCJ:1week": {
     "last_bar": "2026-08-24",
@@ -328,7 +456,11 @@
   "CELH:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 68.29,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:53:38+00:00"
+=======
+    "updated": "2026-08-27T04:44:37+00:00"
+>>>>>>> Stashed changes
   },
   "CELH:1week": {
     "last_bar": "2026-08-24",
@@ -338,7 +470,11 @@
   "CGNX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.36,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:24+00:00"
+=======
+    "updated": "2026-08-27T04:51:14+00:00"
+>>>>>>> Stashed changes
   },
   "CGNX:1week": {
     "last_bar": "2026-08-24",
@@ -348,7 +484,11 @@
   "CHWY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.84,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:55:44+00:00"
+=======
+    "updated": "2026-08-27T04:45:45+00:00"
+>>>>>>> Stashed changes
   },
   "CHWY:1week": {
     "last_bar": "2026-08-24",
@@ -358,7 +498,11 @@
   "CIFR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 42.68,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:51:49+00:00"
+=======
+    "updated": "2026-08-27T04:43:48+00:00"
+>>>>>>> Stashed changes
   },
   "CIFR:1week": {
     "last_bar": "2026-08-24",
@@ -368,7 +512,11 @@
   "CLSK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.21,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:50:24+00:00"
+=======
+    "updated": "2026-08-27T04:43:23+00:00"
+>>>>>>> Stashed changes
   },
   "CLSK:1week": {
     "last_bar": "2026-08-24",
@@ -378,7 +526,11 @@
   "CNH:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 60.35,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:05+00:00"
+=======
+    "updated": "2026-08-27T04:52:52+00:00"
+>>>>>>> Stashed changes
   },
   "CNH:1week": {
     "last_bar": "2026-08-24",
@@ -388,7 +540,11 @@
   "COIN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 61.08,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:49:52+00:00"
+=======
+    "updated": "2026-08-27T04:42:51+00:00"
+>>>>>>> Stashed changes
   },
   "COIN:1week": {
     "last_bar": "2026-08-24",
@@ -398,7 +554,11 @@
   "COPX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 69.58,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:58:54+00:00"
+=======
+    "updated": "2026-08-27T04:47:16+00:00"
+>>>>>>> Stashed changes
   },
   "COPX:1week": {
     "last_bar": "2026-08-24",
@@ -408,7 +568,11 @@
   "CORZ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 36.85,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:51:57+00:00"
+=======
+    "updated": "2026-08-27T04:43:56+00:00"
+>>>>>>> Stashed changes
   },
   "CORZ:1week": {
     "last_bar": "2026-08-24",
@@ -418,7 +582,11 @@
   "CRDO:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.81,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:37:11+00:00"
+=======
+    "updated": "2026-08-27T04:36:50+00:00"
+>>>>>>> Stashed changes
   },
   "CRDO:1week": {
     "last_bar": "2026-08-24",
@@ -428,7 +596,11 @@
   "CRSP:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 60.89,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:48:19+00:00"
+=======
+    "updated": "2026-08-27T04:42:18+00:00"
+>>>>>>> Stashed changes
   },
   "CRSP:1week": {
     "last_bar": "2026-08-24",
@@ -438,7 +610,11 @@
   "CVX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 57.71,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:40:57+00:00"
+=======
+    "updated": "2026-08-27T04:38:36+00:00"
+>>>>>>> Stashed changes
   },
   "CVX:1week": {
     "last_bar": "2026-08-24",
@@ -448,7 +624,11 @@
   "DE:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 56.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:48+00:00"
+=======
+    "updated": "2026-08-27T04:52:36+00:00"
+>>>>>>> Stashed changes
   },
   "DE:1week": {
     "last_bar": "2026-08-24",
@@ -458,7 +638,11 @@
   "DKNG:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.25,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:55:36+00:00"
+=======
+    "updated": "2026-08-27T04:45:36+00:00"
+>>>>>>> Stashed changes
   },
   "DKNG:1week": {
     "last_bar": "2026-08-24",
@@ -468,7 +652,11 @@
   "DNN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 65.66,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:42:38+00:00"
+=======
+    "updated": "2026-08-27T04:39:17+00:00"
+>>>>>>> Stashed changes
   },
   "DNN:1week": {
     "last_bar": "2026-08-24",
@@ -478,7 +666,11 @@
   "DUOL:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 53.62,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:54:03+00:00"
+=======
+    "updated": "2026-08-27T04:45:02+00:00"
+>>>>>>> Stashed changes
   },
   "DUOL:1week": {
     "last_bar": "2026-08-24",
@@ -488,7 +680,11 @@
   "EDIT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 57.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:48:11+00:00"
+=======
+    "updated": "2026-08-27T04:42:10+00:00"
+>>>>>>> Stashed changes
   },
   "EDIT:1week": {
     "last_bar": "2026-08-24",
@@ -498,7 +694,11 @@
   "ELF:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 74.83,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:53:46+00:00"
+=======
+    "updated": "2026-08-27T04:44:45+00:00"
+>>>>>>> Stashed changes
   },
   "ELF:1week": {
     "last_bar": "2026-08-24",
@@ -508,7 +708,11 @@
   "EMR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 55.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:10+00:00"
+=======
+    "updated": "2026-08-27T04:53:58+00:00"
+>>>>>>> Stashed changes
   },
   "EMR:1week": {
     "last_bar": "2026-08-24",
@@ -518,7 +722,11 @@
   "EQIX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 55.18,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:56:36+00:00"
+=======
+    "updated": "2026-08-27T04:46:18+00:00"
+>>>>>>> Stashed changes
   },
   "EQIX:1week": {
     "last_bar": "2026-08-24",
@@ -528,7 +736,11 @@
   "ETH:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 77.4,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:00:41+00:00"
+=======
+    "updated": "2026-08-27T04:48:38+00:00"
+>>>>>>> Stashed changes
   },
   "ETH:1week": {
     "last_bar": "2026-08-24",
@@ -538,7 +750,11 @@
   "EXK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 62.68,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:45:25+00:00"
+=======
+    "updated": "2026-08-27T04:41:04+00:00"
+>>>>>>> Stashed changes
   },
   "EXK:1week": {
     "last_bar": "2026-08-24",
@@ -548,7 +764,11 @@
   "GD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 48.34,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:38:52+00:00"
+=======
+    "updated": "2026-08-27T04:37:31+00:00"
+>>>>>>> Stashed changes
   },
   "GD:1week": {
     "last_bar": "2026-08-24",
@@ -558,7 +778,11 @@
   "GDX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 70.13,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:44:35+00:00"
+=======
+    "updated": "2026-08-27T04:40:15+00:00"
+>>>>>>> Stashed changes
   },
   "GDX:1week": {
     "last_bar": "2026-08-24",
@@ -568,7 +792,11 @@
   "GDXJ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 69.37,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:44:44+00:00"
+=======
+    "updated": "2026-08-27T04:40:23+00:00"
+>>>>>>> Stashed changes
   },
   "GDXJ:1week": {
     "last_bar": "2026-08-24",
@@ -578,7 +806,11 @@
   "GLD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 66.02,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:43:19+00:00"
+=======
+    "updated": "2026-08-27T04:39:58+00:00"
+>>>>>>> Stashed changes
   },
   "GLD:1week": {
     "last_bar": "2026-08-24",
@@ -588,7 +820,11 @@
   "GMED:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:07+00:00"
+=======
+    "updated": "2026-08-27T04:54:55+00:00"
+>>>>>>> Stashed changes
   },
   "GMED:1week": {
     "last_bar": "2026-08-24",
@@ -598,7 +834,11 @@
   "GSAT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 48.44,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:02+00:00"
+=======
+    "updated": "2026-08-27T04:49:52+00:00"
+>>>>>>> Stashed changes
   },
   "GSAT:1week": {
     "last_bar": "2026-08-24",
@@ -608,7 +848,11 @@
   "GXO:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.85,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:37+00:00"
+=======
+    "updated": "2026-08-27T04:53:25+00:00"
+>>>>>>> Stashed changes
   },
   "GXO:1week": {
     "last_bar": "2026-08-24",
@@ -618,7 +862,11 @@
   "HII:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 42.75,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:39:00+00:00"
+=======
+    "updated": "2026-08-27T04:37:39+00:00"
+>>>>>>> Stashed changes
   },
   "HII:1week": {
     "last_bar": "2026-08-24",
@@ -628,7 +876,11 @@
   "HON:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.78,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:02+00:00"
+=======
+    "updated": "2026-08-27T04:53:50+00:00"
+>>>>>>> Stashed changes
   },
   "HON:1week": {
     "last_bar": "2026-08-24",
@@ -638,7 +890,11 @@
   "HOOD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 59.36,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:52:05+00:00"
+=======
+    "updated": "2026-08-27T04:44:04+00:00"
+>>>>>>> Stashed changes
   },
   "HOOD:1week": {
     "last_bar": "2026-08-24",
@@ -648,7 +904,11 @@
   "HSAI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.67,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:16+00:00"
+=======
+    "updated": "2026-08-27T04:52:03+00:00"
+>>>>>>> Stashed changes
   },
   "HSAI:1week": {
     "last_bar": "2026-08-24",
@@ -658,7 +918,11 @@
   "HUT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 44.78,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:51:33+00:00"
+=======
+    "updated": "2026-08-27T04:43:32+00:00"
+>>>>>>> Stashed changes
   },
   "HUT:1week": {
     "last_bar": "2026-08-24",
@@ -668,7 +932,11 @@
   "IBB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 69.67,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:18+00:00"
+=======
+    "updated": "2026-08-27T04:47:40+00:00"
+>>>>>>> Stashed changes
   },
   "IBB:1week": {
     "last_bar": "2026-08-24",
@@ -678,7 +946,11 @@
   "INTC:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.69,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:20+00:00"
+=======
+    "updated": "2026-08-27T04:56:09+00:00"
+>>>>>>> Stashed changes
   },
   "INTC:1week": {
     "last_bar": "2026-08-24",
@@ -688,7 +960,11 @@
   "INVZ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 28.02,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:18+00:00"
+=======
+    "updated": "2026-08-27T04:57:07+00:00"
+>>>>>>> Stashed changes
   },
   "INVZ:1week": {
     "last_bar": "2026-08-24",
@@ -698,7 +974,11 @@
   "IONQ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.39,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:35:31+00:00"
+=======
+    "updated": "2026-08-27T04:36:09+00:00"
+>>>>>>> Stashed changes
   },
   "IONQ:1week": {
     "last_bar": "2026-08-24",
@@ -708,7 +988,11 @@
   "IREN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.48,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:54+00:00"
+=======
+    "updated": "2026-08-27T04:49:43+00:00"
+>>>>>>> Stashed changes
   },
   "IREN:1week": {
     "last_bar": "2026-08-24",
@@ -718,7 +1002,11 @@
   "IRM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 44.79,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:57:21+00:00"
+=======
+    "updated": "2026-08-27T04:46:43+00:00"
+>>>>>>> Stashed changes
   },
   "IRM:1week": {
     "last_bar": "2026-08-24",
@@ -728,7 +1016,11 @@
   "ISRG:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.79,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:59+00:00"
+=======
+    "updated": "2026-08-27T04:50:49+00:00"
+>>>>>>> Stashed changes
   },
   "ISRG:1week": {
     "last_bar": "2026-08-24",
@@ -738,7 +1030,11 @@
   "JOBY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 39.73,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:40:33+00:00"
+=======
+    "updated": "2026-08-27T04:38:12+00:00"
+>>>>>>> Stashed changes
   },
   "JOBY:1week": {
     "last_bar": "2026-08-24",
@@ -748,7 +1044,11 @@
   "KDK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:29+00:00"
+=======
+    "updated": "2026-08-27T04:53:17+00:00"
+>>>>>>> Stashed changes
   },
   "KDK:1week": {
     "last_bar": "2026-08-24",
@@ -758,7 +1058,11 @@
   "KITT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.7,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:11:06+00:00"
+=======
+    "updated": "2026-08-27T04:57:56+00:00"
+>>>>>>> Stashed changes
   },
   "KITT:1week": {
     "last_bar": "2026-08-24",
@@ -768,7 +1072,11 @@
   "KSCP:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 42.13,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:58+00:00"
+=======
+    "updated": "2026-08-27T04:57:48+00:00"
+>>>>>>> Stashed changes
   },
   "KSCP:1week": {
     "last_bar": "2026-08-24",
@@ -778,7 +1086,11 @@
   "KTOS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 44.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:39:08+00:00"
+=======
+    "updated": "2026-08-27T04:37:47+00:00"
+>>>>>>> Stashed changes
   },
   "KTOS:1week": {
     "last_bar": "2026-08-24",
@@ -788,7 +1100,11 @@
   "LEU:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 53.49,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:43:03+00:00"
+=======
+    "updated": "2026-08-27T04:39:42+00:00"
+>>>>>>> Stashed changes
   },
   "LEU:1week": {
     "last_bar": "2026-08-24",
@@ -798,7 +1114,11 @@
   "LMT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.44,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:37:28+00:00"
+=======
+    "updated": "2026-08-27T04:37:06+00:00"
+>>>>>>> Stashed changes
   },
   "LMT:1week": {
     "last_bar": "2026-08-24",
@@ -808,7 +1128,11 @@
   "LUNR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.06,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:37+00:00"
+=======
+    "updated": "2026-08-27T04:49:27+00:00"
+>>>>>>> Stashed changes
   },
   "LUNR:1week": {
     "last_bar": "2026-08-24",
@@ -818,7 +1142,11 @@
   "MARA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 52.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:50:08+00:00"
+=======
+    "updated": "2026-08-27T04:43:07+00:00"
+>>>>>>> Stashed changes
   },
   "MARA:1week": {
     "last_bar": "2026-08-24",
@@ -828,7 +1156,11 @@
   "MBLY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.12,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:08+00:00"
+=======
+    "updated": "2026-08-27T04:51:55+00:00"
+>>>>>>> Stashed changes
   },
   "MBLY:1week": {
     "last_bar": "2026-08-24",
@@ -838,7 +1170,11 @@
   "MCHP:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.19,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:04+00:00"
+=======
+    "updated": "2026-08-27T04:55:53+00:00"
+>>>>>>> Stashed changes
   },
   "MCHP:1week": {
     "last_bar": "2026-08-24",
@@ -848,7 +1184,11 @@
   "MDT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 61.15,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:51+00:00"
+=======
+    "updated": "2026-08-27T04:54:39+00:00"
+>>>>>>> Stashed changes
   },
   "MDT:1week": {
     "last_bar": "2026-08-24",
@@ -858,7 +1198,11 @@
   "MRNA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 68.5,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:47:18+00:00"
+=======
+    "updated": "2026-08-27T04:41:37+00:00"
+>>>>>>> Stashed changes
   },
   "MRNA:1week": {
     "last_bar": "2026-08-24",
@@ -868,7 +1212,11 @@
   "MRVL:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 57.81,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:36:55+00:00"
+=======
+    "updated": "2026-08-27T04:36:33+00:00"
+>>>>>>> Stashed changes
   },
   "MRVL:1week": {
     "last_bar": "2026-08-24",
@@ -878,7 +1226,11 @@
   "MSTR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 65.92,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:50:00+00:00"
+=======
+    "updated": "2026-08-27T04:42:59+00:00"
+>>>>>>> Stashed changes
   },
   "MSTR:1week": {
     "last_bar": "2026-08-24",
@@ -891,7 +1243,11 @@
     },
     "last_bar": "2026-08-26",
     "last_rsi": 32.92,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:11:14+00:00"
+=======
+    "updated": "2026-08-27T04:58:04+00:00"
+>>>>>>> Stashed changes
   },
   "MVIS:1week": {
     "last_bar": "2026-08-24",
@@ -901,7 +1257,11 @@
   "NEM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 71.46,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:44:52+00:00"
+=======
+    "updated": "2026-08-27T04:40:31+00:00"
+>>>>>>> Stashed changes
   },
   "NEM:1week": {
     "last_bar": "2026-08-24",
@@ -911,7 +1271,11 @@
   "NKLA:1day": {
     "last_bar": "2025-12-18",
     "last_rsi": 44.38,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:10+00:00"
+=======
+    "updated": "2026-08-27T04:50:00+00:00"
+>>>>>>> Stashed changes
   },
   "NKLA:1week": {
     "last_bar": "2025-11-10",
@@ -921,7 +1285,11 @@
   "NNE:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.11,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:21+00:00"
+=======
+    "updated": "2026-08-27T04:49:11+00:00"
+>>>>>>> Stashed changes
   },
   "NNE:1week": {
     "last_bar": "2026-08-24",
@@ -931,7 +1299,11 @@
   "NOC:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.85,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:38:44+00:00"
+=======
+    "updated": "2026-08-27T04:37:22+00:00"
+>>>>>>> Stashed changes
   },
   "NOC:1week": {
     "last_bar": "2026-08-24",
@@ -941,7 +1313,11 @@
   "NOVT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.95,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:35+00:00"
+=======
+    "updated": "2026-08-27T04:54:22+00:00"
+>>>>>>> Stashed changes
   },
   "NOVT:1week": {
     "last_bar": "2026-08-24",
@@ -951,7 +1327,11 @@
   "NTLA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 56.42,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:48:27+00:00"
+=======
+    "updated": "2026-08-27T04:42:26+00:00"
+>>>>>>> Stashed changes
   },
   "NTLA:1week": {
     "last_bar": "2026-08-24",
@@ -961,7 +1341,11 @@
   "NVAX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 63.48,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:49:44+00:00"
+=======
+    "updated": "2026-08-27T04:42:42+00:00"
+>>>>>>> Stashed changes
   },
   "NVAX:1week": {
     "last_bar": "2026-08-24",
@@ -971,7 +1355,11 @@
   "NVDA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.29,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:33:57+00:00"
+=======
+    "updated": "2026-08-27T04:34:55+00:00"
+>>>>>>> Stashed changes
   },
   "NVDA:1week": {
     "last_bar": "2026-08-24",
@@ -981,7 +1369,11 @@
   "NVNI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.87,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:18+00:00"
+=======
+    "updated": "2026-08-27T04:50:08+00:00"
+>>>>>>> Stashed changes
   },
   "NVNI:1week": {
     "last_bar": "2026-08-24",
@@ -991,7 +1383,11 @@
   "NXE:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 62.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:42:46+00:00"
+=======
+    "updated": "2026-08-27T04:39:25+00:00"
+>>>>>>> Stashed changes
   },
   "NXE:1week": {
     "last_bar": "2026-08-24",
@@ -1001,7 +1397,11 @@
   "NXPI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 35.8,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:48+00:00"
+=======
+    "updated": "2026-08-27T04:55:37+00:00"
+>>>>>>> Stashed changes
   },
   "NXPI:1week": {
     "last_bar": "2026-08-24",
@@ -1011,7 +1411,11 @@
   "O:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.41,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:57:13+00:00"
+=======
+    "updated": "2026-08-27T04:46:35+00:00"
+>>>>>>> Stashed changes
   },
   "O:1week": {
     "last_bar": "2026-08-24",
@@ -1021,7 +1425,11 @@
   "OKLO:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:12+00:00"
+=======
+    "updated": "2026-08-27T04:49:02+00:00"
+>>>>>>> Stashed changes
   },
   "OKLO:1week": {
     "last_bar": "2026-08-24",
@@ -1031,7 +1439,11 @@
   "OMCL:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 31.66,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:31+00:00"
+=======
+    "updated": "2026-08-27T04:55:20+00:00"
+>>>>>>> Stashed changes
   },
   "OMCL:1week": {
     "last_bar": "2026-08-24",
@@ -1041,7 +1453,11 @@
   "ONDS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.14,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:50+00:00"
+=======
+    "updated": "2026-08-27T04:57:40+00:00"
+>>>>>>> Stashed changes
   },
   "ONDS:1week": {
     "last_bar": "2026-08-24",
@@ -1054,7 +1470,11 @@
     },
     "last_bar": "2026-08-26",
     "last_rsi": 32.14,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:53:54+00:00"
+=======
+    "updated": "2026-08-27T04:44:54+00:00"
+>>>>>>> Stashed changes
   },
   "ONON:1week": {
     "last_bar": "2026-08-24",
@@ -1064,7 +1484,11 @@
   "OUST:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.48,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:24+00:00"
+=======
+    "updated": "2026-08-27T04:52:11+00:00"
+>>>>>>> Stashed changes
   },
   "OUST:1week": {
     "last_bar": "2026-08-24",
@@ -1074,7 +1498,11 @@
   "OXY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 53.74,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:41:06+00:00"
+=======
+    "updated": "2026-08-27T04:38:44+00:00"
+>>>>>>> Stashed changes
   },
   "OXY:1week": {
     "last_bar": "2026-08-24",
@@ -1084,7 +1512,11 @@
   "PAAS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 60.49,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:45:09+00:00"
+=======
+    "updated": "2026-08-27T04:40:48+00:00"
+>>>>>>> Stashed changes
   },
   "PAAS:1week": {
     "last_bar": "2026-08-24",
@@ -1094,7 +1526,11 @@
   "PACB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 62.85,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:49:36+00:00"
+=======
+    "updated": "2026-08-27T04:42:34+00:00"
+>>>>>>> Stashed changes
   },
   "PACB:1week": {
     "last_bar": "2026-08-24",
@@ -1104,7 +1540,11 @@
   "PDYN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.13,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:40+00:00"
+=======
+    "updated": "2026-08-27T04:52:28+00:00"
+>>>>>>> Stashed changes
   },
   "PDYN:1week": {
     "last_bar": "2026-08-24",
@@ -1114,7 +1554,11 @@
   "PH:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 58.17,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:36+00:00"
+=======
+    "updated": "2026-08-27T04:56:26+00:00"
+>>>>>>> Stashed changes
   },
   "PH:1week": {
     "last_bar": "2026-08-24",
@@ -1124,7 +1568,11 @@
   "PLD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.22,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:57:05+00:00"
+=======
+    "updated": "2026-08-27T04:46:27+00:00"
+>>>>>>> Stashed changes
   },
   "PLD:1week": {
     "last_bar": "2026-08-24",
@@ -1134,7 +1582,11 @@
   "PLTR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 64.65,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:34:38+00:00"
+=======
+    "updated": "2026-08-27T04:35:36+00:00"
+>>>>>>> Stashed changes
   },
   "PLTR:1week": {
     "last_bar": "2026-08-24",
@@ -1144,7 +1596,11 @@
   "PONY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 41.64,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:13+00:00"
+=======
+    "updated": "2026-08-27T04:53:01+00:00"
+>>>>>>> Stashed changes
   },
   "PONY:1week": {
     "last_bar": "2026-08-24",
@@ -1154,7 +1610,11 @@
   "PRCT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.66,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:48+00:00"
+=======
+    "updated": "2026-08-27T04:51:38+00:00"
+>>>>>>> Stashed changes
   },
   "PRCT:1week": {
     "last_bar": "2026-08-24",
@@ -1164,7 +1624,11 @@
   "QCOM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.95,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:40+00:00"
+=======
+    "updated": "2026-08-27T04:55:28+00:00"
+>>>>>>> Stashed changes
   },
   "QCOM:1week": {
     "last_bar": "2026-08-24",
@@ -1174,7 +1638,11 @@
   "QQQ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.33,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:00:21+00:00"
+=======
+    "updated": "2026-08-27T04:48:21+00:00"
+>>>>>>> Stashed changes
   },
   "QQQ:1week": {
     "last_bar": "2026-08-24",
@@ -1184,7 +1652,11 @@
   "QUBT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.72,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:36:47+00:00"
+=======
+    "updated": "2026-08-27T04:36:25+00:00"
+>>>>>>> Stashed changes
   },
   "QUBT:1week": {
     "last_bar": "2026-08-24",
@@ -1194,7 +1666,11 @@
   "RBLX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.52,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:54:19+00:00"
+=======
+    "updated": "2026-08-27T04:45:20+00:00"
+>>>>>>> Stashed changes
   },
   "RBLX:1week": {
     "last_bar": "2026-08-24",
@@ -1204,7 +1680,11 @@
   "RBOT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 24.49,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:23+00:00"
+=======
+    "updated": "2026-08-27T04:55:12+00:00"
+>>>>>>> Stashed changes
   },
   "RBOT:1week": {
     "last_bar": "2026-08-24",
@@ -1214,7 +1694,11 @@
   "RCAT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.05,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:42+00:00"
+=======
+    "updated": "2026-08-27T04:57:31+00:00"
+>>>>>>> Stashed changes
   },
   "RCAT:1week": {
     "last_bar": "2026-08-24",
@@ -1224,7 +1708,11 @@
   "RDW:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 46.93,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:46+00:00"
+=======
+    "updated": "2026-08-27T04:49:35+00:00"
+>>>>>>> Stashed changes
   },
   "RDW:1week": {
     "last_bar": "2026-08-24",
@@ -1234,7 +1722,11 @@
   "RGTI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.0,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:36:39+00:00"
+=======
+    "updated": "2026-08-27T04:36:17+00:00"
+>>>>>>> Stashed changes
   },
   "RGTI:1week": {
     "last_bar": "2026-08-24",
@@ -1244,7 +1736,11 @@
   "RIOT:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.49,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:50:16+00:00"
+=======
+    "updated": "2026-08-27T04:43:15+00:00"
+>>>>>>> Stashed changes
   },
   "RIOT:1week": {
     "last_bar": "2026-08-24",
@@ -1254,7 +1750,11 @@
   "RKLB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 36.27,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:39:17+00:00"
+=======
+    "updated": "2026-08-27T04:37:55+00:00"
+>>>>>>> Stashed changes
   },
   "RKLB:1week": {
     "last_bar": "2026-08-24",
@@ -1264,7 +1764,11 @@
   "ROK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.73,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:40+00:00"
+=======
+    "updated": "2026-08-27T04:51:30+00:00"
+>>>>>>> Stashed changes
   },
   "ROK:1week": {
     "last_bar": "2026-08-24",
@@ -1274,7 +1778,11 @@
   "RR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 55.96,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:05:32+00:00"
+=======
+    "updated": "2026-08-27T04:52:19+00:00"
+>>>>>>> Stashed changes
   },
   "RR:1week": {
     "last_bar": "2026-08-24",
@@ -1284,7 +1792,11 @@
   "RRX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 34.48,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:45+00:00"
+=======
+    "updated": "2026-08-27T04:56:34+00:00"
+>>>>>>> Stashed changes
   },
   "RRX:1week": {
     "last_bar": "2026-08-24",
@@ -1294,7 +1806,11 @@
   "RTX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 48.35,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:38:36+00:00"
+=======
+    "updated": "2026-08-27T04:37:14+00:00"
+>>>>>>> Stashed changes
   },
   "RTX:1week": {
     "last_bar": "2026-08-24",
@@ -1304,7 +1820,11 @@
   "RXRX:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 55.91,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:47:34+00:00"
+=======
+    "updated": "2026-08-27T04:41:53+00:00"
+>>>>>>> Stashed changes
   },
   "RXRX:1week": {
     "last_bar": "2026-08-24",
@@ -1314,7 +1834,11 @@
   "SERV:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 43.28,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:16+00:00"
+=======
+    "updated": "2026-08-27T04:51:06+00:00"
+>>>>>>> Stashed changes
   },
   "SERV:1week": {
     "last_bar": "2026-08-24",
@@ -1324,7 +1848,11 @@
   "SHOP:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 59.88,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:52:30+00:00"
+=======
+    "updated": "2026-08-27T04:44:29+00:00"
+>>>>>>> Stashed changes
   },
   "SHOP:1week": {
     "last_bar": "2026-08-24",
@@ -1334,7 +1862,11 @@
   "SLV:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 61.92,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:43:27+00:00"
+=======
+    "updated": "2026-08-27T04:40:07+00:00"
+>>>>>>> Stashed changes
   },
   "SLV:1week": {
     "last_bar": "2026-08-24",
@@ -1344,7 +1876,11 @@
   "SM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 59.65,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:41:14+00:00"
+=======
+    "updated": "2026-08-27T04:38:53+00:00"
+>>>>>>> Stashed changes
   },
   "SM:1week": {
     "last_bar": "2026-08-24",
@@ -1354,7 +1890,11 @@
   "SMCI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 58.87,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:34:21+00:00"
+=======
+    "updated": "2026-08-27T04:35:19+00:00"
+>>>>>>> Stashed changes
   },
   "SMCI:1week": {
     "last_bar": "2026-08-24",
@@ -1364,7 +1904,11 @@
   "SMR:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.25,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:02:29+00:00"
+=======
+    "updated": "2026-08-27T04:49:19+00:00"
+>>>>>>> Stashed changes
   },
   "SMR:1week": {
     "last_bar": "2026-08-24",
@@ -1374,7 +1918,11 @@
   "SOL:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 82.5,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:01:48+00:00"
+=======
+    "updated": "2026-08-27T04:48:46+00:00"
+>>>>>>> Stashed changes
   },
   "SOL:1week": {
     "last_bar": "2026-08-24",
@@ -1384,7 +1932,11 @@
   "SOUN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.9,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:35:14+00:00"
+=======
+    "updated": "2026-08-27T04:35:52+00:00"
+>>>>>>> Stashed changes
   },
   "SOUN:1week": {
     "last_bar": "2026-08-24",
@@ -1394,7 +1946,11 @@
   "SPG:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.75,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:58:38+00:00"
+=======
+    "updated": "2026-08-27T04:46:59+00:00"
+>>>>>>> Stashed changes
   },
   "SPG:1week": {
     "last_bar": "2026-08-24",
@@ -1404,7 +1960,11 @@
   "SPY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 54.35,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:51+00:00"
+=======
+    "updated": "2026-08-27T04:48:13+00:00"
+>>>>>>> Stashed changes
   },
   "SPY:1week": {
     "last_bar": "2026-08-24",
@@ -1414,7 +1974,11 @@
   "SQ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 57.17,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:52:13+00:00"
+=======
+    "updated": "2026-08-27T04:44:13+00:00"
+>>>>>>> Stashed changes
   },
   "SQ:1week": {
     "last_bar": "2026-08-24",
@@ -1424,7 +1988,11 @@
   "ST:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 39.54,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:10:01+00:00"
+=======
+    "updated": "2026-08-27T04:56:50+00:00"
+>>>>>>> Stashed changes
   },
   "ST:1week": {
     "last_bar": "2026-08-24",
@@ -1434,7 +2002,11 @@
   "STXS:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.03,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:08:15+00:00"
+=======
+    "updated": "2026-08-27T04:55:04+00:00"
+>>>>>>> Stashed changes
   },
   "STXS:1week": {
     "last_bar": "2026-08-24",
@@ -1444,7 +2016,11 @@
   "SYK:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.73,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:43+00:00"
+=======
+    "updated": "2026-08-27T04:54:31+00:00"
+>>>>>>> Stashed changes
   },
   "SYK:1week": {
     "last_bar": "2026-08-24",
@@ -1454,7 +2030,11 @@
   "SYM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.83,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:07+00:00"
+=======
+    "updated": "2026-08-27T04:50:57+00:00"
+>>>>>>> Stashed changes
   },
   "SYM:1week": {
     "last_bar": "2026-08-24",
@@ -1464,7 +2044,11 @@
   "TAN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.45,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:43+00:00"
+=======
+    "updated": "2026-08-27T04:48:05+00:00"
+>>>>>>> Stashed changes
   },
   "TAN:1week": {
     "last_bar": "2026-08-24",
@@ -1474,7 +2058,11 @@
   "TDY:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 40.5,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:26+00:00"
+=======
+    "updated": "2026-08-27T04:54:14+00:00"
+>>>>>>> Stashed changes
   },
   "TDY:1week": {
     "last_bar": "2026-08-24",
@@ -1484,7 +2072,11 @@
   "TER:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.48,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:04:32+00:00"
+=======
+    "updated": "2026-08-27T04:51:22+00:00"
+>>>>>>> Stashed changes
   },
   "TER:1week": {
     "last_bar": "2026-08-24",
@@ -1494,7 +2086,11 @@
   "TSLA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 49.82,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:03:51+00:00"
+=======
+    "updated": "2026-08-27T04:50:41+00:00"
+>>>>>>> Stashed changes
   },
   "TSLA:1week": {
     "last_bar": "2026-08-24",
@@ -1504,7 +2100,11 @@
   "TSM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.04,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:37:19+00:00"
+=======
+    "updated": "2026-08-27T04:36:58+00:00"
+>>>>>>> Stashed changes
   },
   "TSM:1week": {
     "last_bar": "2026-08-24",
@@ -1514,7 +2114,11 @@
   "TTD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 31.14,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:54:27+00:00"
+=======
+    "updated": "2026-08-27T04:45:28+00:00"
+>>>>>>> Stashed changes
   },
   "TTD:1week": {
     "last_bar": "2026-08-24",
@@ -1524,7 +2128,11 @@
   "TXN:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 38.81,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:09:12+00:00"
+=======
+    "updated": "2026-08-27T04:56:01+00:00"
+>>>>>>> Stashed changes
   },
   "TXN:1week": {
     "last_bar": "2026-08-24",
@@ -1534,7 +2142,11 @@
   "UEC:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 67.81,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:41:30+00:00"
+=======
+    "updated": "2026-08-27T04:39:09+00:00"
+>>>>>>> Stashed changes
   },
   "UEC:1week": {
     "last_bar": "2026-08-24",
@@ -1544,7 +2156,11 @@
   "URA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 64.59,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:02+00:00"
+=======
+    "updated": "2026-08-27T04:47:24+00:00"
+>>>>>>> Stashed changes
   },
   "URA:1week": {
     "last_bar": "2026-08-24",
@@ -1554,7 +2170,11 @@
   "UUUU:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 60.4,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:42:55+00:00"
+=======
+    "updated": "2026-08-27T04:39:34+00:00"
+>>>>>>> Stashed changes
   },
   "UUUU:1week": {
     "last_bar": "2026-08-24",
@@ -1564,7 +2184,11 @@
   "VNQ:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 50.79,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:56:20+00:00"
+=======
+    "updated": "2026-08-27T04:46:01+00:00"
+>>>>>>> Stashed changes
   },
   "VNQ:1week": {
     "last_bar": "2026-08-24",
@@ -1574,7 +2198,11 @@
   "W:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 56.14,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:56:12+00:00"
+=======
+    "updated": "2026-08-27T04:45:53+00:00"
+>>>>>>> Stashed changes
   },
   "W:1week": {
     "last_bar": "2026-08-24",
@@ -1584,7 +2212,11 @@
   "WELL:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 59.45,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:57:29+00:00"
+=======
+    "updated": "2026-08-27T04:46:51+00:00"
+>>>>>>> Stashed changes
   },
   "WELL:1week": {
     "last_bar": "2026-08-24",
@@ -1594,7 +2226,11 @@
   "WPM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 70.16,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:46:34+00:00"
+=======
+    "updated": "2026-08-27T04:41:12+00:00"
+>>>>>>> Stashed changes
   },
   "WPM:1week": {
     "last_bar": "2026-08-24",
@@ -1604,7 +2240,11 @@
   "WRD:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 47.87,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:06:21+00:00"
+=======
+    "updated": "2026-08-27T04:53:09+00:00"
+>>>>>>> Stashed changes
   },
   "WRD:1week": {
     "last_bar": "2026-08-24",
@@ -1614,7 +2254,11 @@
   "XBI:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 64.46,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:46:42+00:00"
+=======
+    "updated": "2026-08-27T04:41:20+00:00"
+>>>>>>> Stashed changes
   },
   "XBI:1week": {
     "last_bar": "2026-08-24",
@@ -1624,7 +2268,11 @@
   "XHB:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 45.59,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:35+00:00"
+=======
+    "updated": "2026-08-27T04:47:57+00:00"
+>>>>>>> Stashed changes
   },
   "XHB:1week": {
     "last_bar": "2026-08-24",
@@ -1634,7 +2282,11 @@
   "XLE:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 61.18,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:59:26+00:00"
+=======
+    "updated": "2026-08-27T04:47:49+00:00"
+>>>>>>> Stashed changes
   },
   "XLE:1week": {
     "last_bar": "2026-08-24",
@@ -1644,7 +2296,11 @@
   "XOM:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 51.09,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T03:40:49+00:00"
+=======
+    "updated": "2026-08-27T04:38:28+00:00"
+>>>>>>> Stashed changes
   },
   "XOM:1week": {
     "last_bar": "2026-08-24",
@@ -1654,7 +2310,11 @@
   "ZBH:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 61.69,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:59+00:00"
+=======
+    "updated": "2026-08-27T04:54:47+00:00"
+>>>>>>> Stashed changes
   },
   "ZBH:1week": {
     "last_bar": "2026-08-24",
@@ -1664,7 +2324,11 @@
   "ZBRA:1day": {
     "last_bar": "2026-08-26",
     "last_rsi": 62.23,
+<<<<<<< Updated upstream
     "updated": "2026-08-27T04:07:18+00:00"
+=======
+    "updated": "2026-08-27T04:54:06+00:00"
+>>>>>>> Stashed changes
   },
   "ZBRA:1week": {
     "last_bar": "2026-08-24",

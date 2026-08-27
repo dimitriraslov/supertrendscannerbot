@@ -23,7 +23,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 5.165223,
-    "updated": "2026-08-27T03:27:17+00:00"
+    "updated": "2026-08-27T11:13:24+00:00"
   },
   "ADI": {
     "alerted_flip_date": "2026-07-02",
@@ -49,7 +49,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 193.119165,
-    "updated": "2026-08-27T03:29:37+00:00"
+    "updated": "2026-08-27T11:15:54+00:00"
   },
   "AEVA": {
     "alerted_flip_date": "2026-08-21",
@@ -75,7 +75,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 18.318624,
-    "updated": "2026-08-27T03:29:53+00:00"
+    "updated": "2026-08-27T11:16:13+00:00"
   },
   "AI": {
     "alerted_flip_date": "2026-08-03",
@@ -88,7 +88,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 9.109142,
-    "updated": "2026-08-27T03:24:41+00:00"
+    "updated": "2026-08-27T11:10:42+00:00"
   },
   "ALAB": {
     "alerted_flip_date": "2026-08-04",
@@ -101,7 +101,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 243.989638,
-    "updated": "2026-08-27T03:25:39+00:00"
+    "updated": "2026-08-27T11:11:44+00:00"
   },
   "AMBA": {
     "alerted_flip_date": "2026-07-31",
@@ -127,7 +127,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 536.720042,
-    "updated": "2026-08-27T03:24:00+00:00"
+    "updated": "2026-08-27T11:09:58+00:00"
   },
   "AMT": {
     "alerted_flip_date": "2026-07-29",
@@ -179,7 +179,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 34.99046,
-    "updated": "2026-08-27T03:28:48+00:00"
+    "updated": "2026-08-27T11:14:58+00:00"
   },
   "ARBE": {
     "alerted_flip_date": "2026-08-17",
@@ -205,7 +205,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 44.042719,
-    "updated": "2026-08-27T03:30:30+00:00"
+    "updated": "2026-08-27T11:16:46+00:00"
   },
   "ARKK": {
     "alerted_flip_date": "2026-08-07",
@@ -231,7 +231,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 292.117119,
-    "updated": "2026-08-27T03:24:24+00:00"
+    "updated": "2026-08-27T11:10:25+00:00"
   },
   "ASTS": {
     "alerted_flip_date": "2026-08-12",
@@ -244,7 +244,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 56.809226,
-    "updated": "2026-08-27T03:27:01+00:00"
+    "updated": "2026-08-27T11:13:08+00:00"
   },
   "ATS": {
     "alerted_flip_date": "2026-05-28",
@@ -296,7 +296,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 394.457439,
-    "updated": "2026-08-27T03:24:08+00:00"
+    "updated": "2026-08-27T11:10:07+00:00"
   },
   "BBAI": {
     "alerted_flip_date": "2026-08-07",
@@ -309,7 +309,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 2.771719,
-    "updated": "2026-08-27T03:24:57+00:00"
+    "updated": "2026-08-27T11:11:00+00:00"
   },
   "BEAM": {
     "alerted_flip_date": "2026-08-25",
@@ -322,7 +322,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 25.308317,
-    "updated": "2026-08-27T03:31:05+00:00"
+    "updated": "2026-08-27T11:17:20+00:00"
   },
   "BLOK": {
     "alerted_flip_date": "2026-06-05",
@@ -361,7 +361,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 100.044886,
-    "updated": "2026-08-27T03:30:47+00:00"
+    "updated": "2026-08-27T11:17:03+00:00"
   },
   "BTBT": {
     "alerted_flip_date": "2026-07-02",
@@ -374,7 +374,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 1.635414,
-    "updated": "2026-08-27T03:32:45+00:00"
+    "updated": "2026-08-27T11:19:00+00:00"
   },
   "BTC": {
     "alerted_flip_date": "2026-07-21",
@@ -413,7 +413,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 96.972215,
-    "updated": "2026-08-27T03:27:58+00:00"
+    "updated": "2026-08-27T11:14:07+00:00"
   },
   "CELH": {
     "alerted_flip_date": "2026-08-19",
@@ -465,7 +465,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 21.681261,
-    "updated": "2026-08-27T03:32:54+00:00"
+    "updated": "2026-08-27T11:19:08+00:00"
   },
   "CLSK": {
     "alerted_flip_date": "2026-06-30",
@@ -478,7 +478,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 15.007682,
-    "updated": "2026-08-27T03:32:29+00:00"
+    "updated": "2026-08-27T11:18:43+00:00"
   },
   "CNH": {
     "alerted_flip_date": "2026-08-21",
@@ -504,7 +504,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 154.368413,
-    "updated": "2026-08-27T03:31:56+00:00"
+    "updated": "2026-08-27T11:18:10+00:00"
   },
   "COPX": {
     "alerted_flip_date": "2026-08-04",
@@ -543,7 +543,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 213.085712,
-    "updated": "2026-08-27T03:25:47+00:00"
+    "updated": "2026-08-27T11:11:52+00:00"
   },
   "CRSP": {
     "alerted_flip_date": "2026-08-17",
@@ -556,7 +556,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 52.272145,
-    "updated": "2026-08-27T03:31:23+00:00"
+    "updated": "2026-08-27T11:17:36+00:00"
   },
   "CVX": {
     "alerted_flip_date": "2026-07-13",
@@ -569,7 +569,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 194.861813,
-    "updated": "2026-08-27T03:27:34+00:00"
+    "updated": "2026-08-27T11:13:41+00:00"
   },
   "DE": {
     "alerted_flip_date": "2026-08-21",
@@ -608,7 +608,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 3.146458,
-    "updated": "2026-08-27T03:28:15+00:00"
+    "updated": "2026-08-27T11:14:24+00:00"
   },
   "DUOL": {
     "alerted_flip_date": "2026-04-30",
@@ -634,7 +634,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 2.615226,
-    "updated": "2026-08-27T03:31:14+00:00"
+    "updated": "2026-08-27T11:17:28+00:00"
   },
   "ELF": {
     "alerted_flip_date": "2026-06-11",
@@ -699,7 +699,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 9.140272,
-    "updated": "2026-08-27T03:30:04+00:00"
+    "updated": "2026-08-27T11:16:21+00:00"
   },
   "GD": {
     "alerted_flip_date": "2026-04-29",
@@ -712,7 +712,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 373.963471,
-    "updated": "2026-08-27T03:26:28+00:00"
+    "updated": "2026-08-27T11:12:34+00:00"
   },
   "GDX": {
     "alerted_flip_date": "2026-08-05",
@@ -725,7 +725,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 92.737551,
-    "updated": "2026-08-27T03:29:12+00:00"
+    "updated": "2026-08-27T11:15:27+00:00"
   },
   "GDXJ": {
     "alerted_flip_date": "2026-08-05",
@@ -738,7 +738,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 119.328239,
-    "updated": "2026-08-27T03:29:20+00:00"
+    "updated": "2026-08-27T11:15:37+00:00"
   },
   "GLD": {
     "alerted_flip_date": "2026-08-05",
@@ -751,7 +751,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 404.084105,
-    "updated": "2026-08-27T03:28:56+00:00"
+    "updated": "2026-08-27T11:15:09+00:00"
   },
   "GMED": {
     "alerted_flip_date": "2026-08-10",
@@ -803,7 +803,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 319.125444,
-    "updated": "2026-08-27T03:26:36+00:00"
+    "updated": "2026-08-27T11:12:43+00:00"
   },
   "HON": {
     "alerted_flip_date": "2026-08-18",
@@ -855,7 +855,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 106.823596,
-    "updated": "2026-08-27T03:32:37+00:00"
+    "updated": "2026-08-27T11:18:51+00:00"
   },
   "IBB": {
     "alerted_flip_date": "2026-08-07",
@@ -907,7 +907,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 37.403963,
-    "updated": "2026-08-27T03:25:06+00:00"
+    "updated": "2026-08-27T11:11:10+00:00"
   },
   "IREN": {
     "alerted_flip_date": "2026-08-13",
@@ -959,7 +959,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 8.416736,
-    "updated": "2026-08-27T03:27:09+00:00"
+    "updated": "2026-08-27T11:13:16+00:00"
   },
   "KDK": {
     "alerted_flip_date": "2026-04-29",
@@ -1011,7 +1011,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 63.246415,
-    "updated": "2026-08-27T03:26:44+00:00"
+    "updated": "2026-08-27T11:12:51+00:00"
   },
   "LEU": {
     "alerted_flip_date": "2026-08-04",
@@ -1024,7 +1024,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 158.580306,
-    "updated": "2026-08-27T03:28:39+00:00"
+    "updated": "2026-08-27T11:14:50+00:00"
   },
   "LMT": {
     "alerted_flip_date": "2026-08-25",
@@ -1037,7 +1037,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 606.228484,
-    "updated": "2026-08-27T03:26:03+00:00"
+    "updated": "2026-08-27T11:12:09+00:00"
   },
   "LUNR": {
     "alerted_flip_date": "2026-08-07",
@@ -1063,7 +1063,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 8.802285,
-    "updated": "2026-08-27T03:32:12+00:00"
+    "updated": "2026-08-27T11:18:26+00:00"
   },
   "MBLY": {
     "alerted_flip_date": "2026-07-23",
@@ -1115,7 +1115,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 102.00698,
-    "updated": "2026-08-27T03:30:39+00:00"
+    "updated": "2026-08-27T11:16:55+00:00"
   },
   "MRVL": {
     "alerted_flip_date": "2026-08-17",
@@ -1128,7 +1128,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 190.114362,
-    "updated": "2026-08-27T03:25:30+00:00"
+    "updated": "2026-08-27T11:11:35+00:00"
   },
   "MSTR": {
     "alerted_flip_date": "2026-08-20",
@@ -1141,7 +1141,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 102.495306,
-    "updated": "2026-08-27T03:32:04+00:00"
+    "updated": "2026-08-27T11:18:18+00:00"
   },
   "MVIS": {
     "alerted_flip_date": "2026-07-24",
@@ -1167,7 +1167,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 118.17191,
-    "updated": "2026-08-27T03:29:29+00:00"
+    "updated": "2026-08-27T11:15:46+00:00"
   },
   "NKLA": {
     "alerted_flip_date": "2025-06-17",
@@ -1206,7 +1206,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 586.414559,
-    "updated": "2026-08-27T03:26:20+00:00"
+    "updated": "2026-08-27T11:12:26+00:00"
   },
   "NOVT": {
     "alerted_flip_date": "2026-08-19",
@@ -1232,7 +1232,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 10.981393,
-    "updated": "2026-08-27T03:31:31+00:00"
+    "updated": "2026-08-27T11:17:45+00:00"
   },
   "NVAX": {
     "alerted_flip_date": "2026-08-19",
@@ -1245,7 +1245,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 7.871286,
-    "updated": "2026-08-27T03:31:47+00:00"
+    "updated": "2026-08-27T11:18:01+00:00"
   },
   "NVDA": {
     "alerted_flip_date": "2026-08-05",
@@ -1258,7 +1258,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 207.405161,
-    "updated": "2026-08-27T03:23:51+00:00"
+    "updated": "2026-08-27T11:09:49+00:00"
   },
   "NVNI": {
     "alerted_flip_date": "2026-07-24",
@@ -1284,7 +1284,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 9.752719,
-    "updated": "2026-08-27T03:28:23+00:00"
+    "updated": "2026-08-27T11:14:33+00:00"
   },
   "NXPI": {
     "alerted_flip_date": "2026-06-10",
@@ -1388,7 +1388,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 57.084398,
-    "updated": "2026-08-27T03:27:42+00:00"
+    "updated": "2026-08-27T11:13:50+00:00"
   },
   "PAAS": {
     "alerted_flip_date": "2026-08-24",
@@ -1401,7 +1401,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 46.854892,
-    "updated": "2026-08-27T03:29:45+00:00"
+    "updated": "2026-08-27T11:16:04+00:00"
   },
   "PACB": {
     "alerted_flip_date": "2026-08-25",
@@ -1414,7 +1414,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 1.183905,
-    "updated": "2026-08-27T03:31:39+00:00"
+    "updated": "2026-08-27T11:17:53+00:00"
   },
   "PDYN": {
     "alerted_flip_date": "2026-08-10",
@@ -1466,7 +1466,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 154.567948,
-    "updated": "2026-08-27T03:24:32+00:00"
+    "updated": "2026-08-27T11:10:33+00:00"
   },
   "PONY": {
     "alerted_flip_date": "2026-08-26",
@@ -1531,7 +1531,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 9.320865,
-    "updated": "2026-08-27T03:25:22+00:00"
+    "updated": "2026-08-27T11:11:27+00:00"
   },
   "RBLX": {
     "alerted_flip_date": "2026-07-31",
@@ -1596,7 +1596,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 15.423483,
-    "updated": "2026-08-27T03:25:14+00:00"
+    "updated": "2026-08-27T11:11:19+00:00"
   },
   "RIOT": {
     "alerted_flip_date": "2026-07-02",
@@ -1609,7 +1609,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 23.901988,
-    "updated": "2026-08-27T03:32:21+00:00"
+    "updated": "2026-08-27T11:18:35+00:00"
   },
   "RKLB": {
     "alerted_flip_date": "2026-08-07",
@@ -1622,7 +1622,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 65.276168,
-    "updated": "2026-08-27T03:26:53+00:00"
+    "updated": "2026-08-27T11:12:59+00:00"
   },
   "ROK": {
     "alerted_flip_date": "2026-08-04",
@@ -1674,7 +1674,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 222.731432,
-    "updated": "2026-08-27T03:26:12+00:00"
+    "updated": "2026-08-27T11:12:18+00:00"
   },
   "RXRX": {
     "alerted_flip_date": "2026-08-19",
@@ -1687,7 +1687,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 2.909205,
-    "updated": "2026-08-27T03:30:56+00:00"
+    "updated": "2026-08-27T11:17:11+00:00"
   },
   "SERV": {
     "alerted_flip_date": "2026-08-03",
@@ -1726,7 +1726,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 57.181273,
-    "updated": "2026-08-27T03:29:04+00:00"
+    "updated": "2026-08-27T11:15:17+00:00"
   },
   "SM": {
     "alerted_flip_date": "2026-08-14",
@@ -1739,7 +1739,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 33.05992,
-    "updated": "2026-08-27T03:27:50+00:00"
+    "updated": "2026-08-27T11:13:58+00:00"
   },
   "SMCI": {
     "alerted_flip_date": "2026-07-22",
@@ -1752,7 +1752,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 31.878894,
-    "updated": "2026-08-27T03:24:16+00:00"
+    "updated": "2026-08-27T11:10:16+00:00"
   },
   "SMR": {
     "alerted_flip_date": "2026-08-11",
@@ -1791,7 +1791,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 6.099735,
-    "updated": "2026-08-27T03:24:49+00:00"
+    "updated": "2026-08-27T11:10:51+00:00"
   },
   "SPG": {
     "alerted_flip_date": "2026-08-06",
@@ -1947,7 +1947,7 @@
     "schema": 2,
     "signal": "bear",
     "supertrend": 434.20595,
-    "updated": "2026-08-27T03:25:55+00:00"
+    "updated": "2026-08-27T11:12:01+00:00"
   },
   "TTD": {
     "alerted_flip_date": "2026-05-13",
@@ -1986,7 +1986,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 11.220691,
-    "updated": "2026-08-27T03:28:07+00:00"
+    "updated": "2026-08-27T11:14:16+00:00"
   },
   "URA": {
     "alerted_flip_date": "2026-08-06",
@@ -2012,7 +2012,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 13.010159,
-    "updated": "2026-08-27T03:28:31+00:00"
+    "updated": "2026-08-27T11:14:41+00:00"
   },
   "VNQ": {
     "alerted_flip_date": "2026-08-10",
@@ -2064,7 +2064,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 142.443195,
-    "updated": "2026-08-27T03:30:12+00:00"
+    "updated": "2026-08-27T11:16:30+00:00"
   },
   "WRD": {
     "alerted_flip_date": "2026-08-11",
@@ -2090,7 +2090,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 154.343652,
-    "updated": "2026-08-27T03:30:22+00:00"
+    "updated": "2026-08-27T11:16:38+00:00"
   },
   "XHB": {
     "alerted_flip_date": "2026-07-08",
@@ -2129,7 +2129,7 @@
     "schema": 2,
     "signal": "bull",
     "supertrend": 156.344785,
-    "updated": "2026-08-27T03:27:25+00:00"
+    "updated": "2026-08-27T11:13:33+00:00"
   },
   "ZBH": {
     "alerted_flip_date": "2026-07-13",

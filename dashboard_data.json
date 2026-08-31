@@ -1,9 +1,5 @@
 {
-<<<<<<< Updated upstream
-  "generated_at": "2026-08-29T04:09:36+00:00",
-=======
-  "generated_at": "2026-08-29T05:19:22+00:00",
->>>>>>> Stashed changes
+  "generated_at": "2026-08-31T17:13:02+00:00",
   "assets": [
     {
       "sym": "NVDA",
@@ -14,29 +10,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 217.55,
       "supertrend": 207.405161,
       "rsi": 52.34,
-      "updated": "2026-08-29T03:45:32+00:00",
+      "updated": "2026-08-31T16:45:34+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 217.53999,
-      "supertrend": 207.405161,
-      "rsi": 52.33,
-      "updated": "2026-08-29T04:32:58+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-06-23",
-      "bars_since_flip_1w": 61,
-      "supertrend_1w": 176.530902,
-      "rsi_1w": 56.94,
-      "updated_1w": "2026-08-29T04:56:15+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AMD",
@@ -47,29 +30,16 @@
       "flip_date": "2026-07-28",
       "bars_since_flip": 23,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 465.57999,
       "supertrend": 536.720042,
       "rsi": 44.83,
-      "updated": "2026-08-29T03:45:40+00:00",
+      "updated": "2026-08-31T16:45:44+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 465.60001,
-      "supertrend": 536.720042,
-      "rsi": 44.84,
-      "updated": "2026-08-29T04:33:06+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-13",
-      "bars_since_flip_1w": 19,
-      "supertrend_1w": 368.983562,
-      "rsi_1w": 56.08,
-      "updated_1w": "2026-08-29T04:56:23+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AVGO",
@@ -80,29 +50,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 368.79001,
       "supertrend": 394.455509,
       "rsi": 42.74,
-      "updated": "2026-08-29T03:45:48+00:00",
+      "updated": "2026-08-31T16:45:56+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 368.67999,
-      "supertrend": 394.455509,
-      "rsi": 42.7,
-      "updated": "2026-08-29T04:33:15+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-05-12",
-      "bars_since_flip_1w": 67,
-      "supertrend_1w": 334.2613,
-      "rsi_1w": 48.27,
-      "updated_1w": "2026-08-29T04:56:32+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SMCI",
@@ -116,23 +73,13 @@
       "price": 37.080002,
       "supertrend": 31.878894,
       "rsi": 56.88,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:45:56+00:00",
+      "updated": "2026-08-31T16:46:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:33:23+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 44.829699,
-      "rsi_1w": 54.84,
-      "updated_1w": "2026-08-29T04:56:40+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ARM",
@@ -143,29 +90,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 239.050003,
       "supertrend": 292.117119,
       "rsi": 39.96,
-      "updated": "2026-08-29T03:46:05+00:00",
+      "updated": "2026-08-31T16:46:17+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 239.080002,
-      "supertrend": 292.117119,
-      "rsi": 39.97,
-      "updated": "2026-08-29T04:33:31+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-27",
-      "bars_since_flip_1w": 4,
-      "supertrend_1w": 406.450764,
-      "rsi_1w": 48.6,
-      "updated_1w": "2026-08-29T04:56:48+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PLTR",
@@ -176,29 +110,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 186.28999,
       "supertrend": 163.406158,
       "rsi": 69.28,
-      "updated": "2026-08-29T03:46:13+00:00",
+      "updated": "2026-08-31T16:46:25+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 186.25,
-      "supertrend": 163.406158,
-      "rsi": 69.26,
-      "updated": "2026-08-29T04:33:39+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 122.871118,
-      "rsi_1w": 64.52,
-      "updated_1w": "2026-08-29T04:56:56+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AI",
@@ -209,29 +130,16 @@
       "flip_date": "2026-08-03",
       "bars_since_flip": 19,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 10.53,
       "supertrend": 9.109142,
       "rsi": 60.55,
-      "updated": "2026-08-29T03:46:21+00:00",
+      "updated": "2026-08-31T16:46:34+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 10.54,
-      "supertrend": 9.109142,
-      "rsi": 60.67,
-      "updated": "2026-08-29T04:33:47+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-02-24",
-      "bars_since_flip_1w": 78,
-      "supertrend_1w": 12.385368,
-      "rsi_1w": 51.48,
-      "updated_1w": "2026-08-29T04:57:04+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SOUN",
@@ -245,23 +153,13 @@
       "price": 7.11,
       "supertrend": 6.099735,
       "rsi": 52.27,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:46:29+00:00",
+      "updated": "2026-08-31T16:46:44+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:33:55+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 9.696258,
-      "rsi_1w": 45.67,
-      "updated_1w": "2026-08-29T04:57:12+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BBAI",
@@ -272,29 +170,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 3.05,
       "supertrend": 2.771719,
       "rsi": 46.43,
-      "updated": "2026-08-29T03:46:37+00:00",
+      "updated": "2026-08-31T16:46:53+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 3.065,
-      "supertrend": 2.771719,
-      "rsi": 46.93,
-      "updated": "2026-08-29T04:34:04+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 4.609083,
-      "rsi_1w": 40.18,
-      "updated_1w": "2026-08-29T04:57:20+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "IONQ",
@@ -305,29 +190,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 39.2,
       "supertrend": 37.403963,
       "rsi": 44.52,
-      "updated": "2026-08-29T03:46:45+00:00",
+      "updated": "2026-08-31T16:47:05+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 39.18,
-      "supertrend": 37.403963,
-      "rsi": 44.48,
-      "updated": "2026-08-29T04:34:12+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 62.41291,
-      "rsi_1w": 45.35,
-      "updated_1w": "2026-08-29T04:57:29+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RGTI",
@@ -341,23 +213,13 @@
       "price": 15.59,
       "supertrend": 15.423483,
       "rsi": 43.87,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:46:53+00:00",
+      "updated": "2026-08-31T16:47:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:34:20+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 12.344681,
-      "rsi_1w": 44.24,
-      "updated_1w": "2026-08-29T04:57:37+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "QUBT",
@@ -371,23 +233,13 @@
       "price": 8.15,
       "supertrend": 9.320865,
       "rsi": 44.85,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:47:01+00:00",
+      "updated": "2026-08-31T16:47:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:34:28+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 5.786072,
-      "rsi_1w": 43.85,
-      "updated_1w": "2026-08-29T04:57:45+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MRVL",
@@ -398,29 +250,16 @@
       "flip_date": "2026-08-17",
       "bars_since_flip": 9,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 216.62,
       "supertrend": 197.444933,
       "rsi": 47.16,
-      "updated": "2026-08-29T03:47:09+00:00",
+      "updated": "2026-08-31T16:47:35+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 216.595,
-      "supertrend": 197.444933,
-      "rsi": 47.15,
-      "updated": "2026-08-29T04:34:36+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 300.381377,
-      "rsi_1w": 56.37,
-      "updated_1w": "2026-08-29T04:57:53+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ALAB",
@@ -431,29 +270,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 289.47,
       "supertrend": 243.989638,
       "rsi": 43.96,
-      "updated": "2026-08-29T03:47:17+00:00",
+      "updated": "2026-08-31T16:47:45+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 289.45999,
-      "supertrend": 243.989638,
-      "rsi": 43.96,
-      "updated": "2026-08-29T04:34:44+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-20",
-      "bars_since_flip_1w": 18,
-      "supertrend_1w": 267.55071,
-      "rsi_1w": 51.92,
-      "updated_1w": "2026-08-29T04:58:01+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CRDO",
@@ -464,29 +290,16 @@
       "flip_date": "2026-08-12",
       "bars_since_flip": 12,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 232.75,
       "supertrend": 213.085712,
       "rsi": 48.99,
-      "updated": "2026-08-29T03:47:25+00:00",
+      "updated": "2026-08-31T16:47:53+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 232.83,
-      "supertrend": 213.085712,
-      "rsi": 49.02,
-      "updated": "2026-08-29T04:34:52+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-20",
-      "bars_since_flip_1w": 18,
-      "supertrend_1w": 148.701457,
-      "rsi_1w": 55.67,
-      "updated_1w": "2026-08-29T04:58:09+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TSM",
@@ -497,29 +310,16 @@
       "flip_date": "2026-07-16",
       "bars_since_flip": 31,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 417.51999,
       "supertrend": 434.20595,
       "rsi": 49.59,
-      "updated": "2026-08-29T03:47:33+00:00",
+      "updated": "2026-08-31T16:48:04+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 417.56,
-      "supertrend": 434.20595,
-      "rsi": 49.61,
-      "updated": "2026-08-29T04:35:01+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-06-02",
-      "bars_since_flip_1w": 64,
-      "supertrend_1w": 351.375609,
-      "rsi_1w": 58.04,
-      "updated_1w": "2026-08-29T04:58:17+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "LMT",
@@ -530,29 +330,16 @@
       "flip_date": "2026-08-25",
       "bars_since_flip": 3,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 563.84998,
-      "supertrend": 603.941545,
+      "supertrend": 604.309561,
       "rsi": 46.72,
-      "updated": "2026-08-29T03:47:42+00:00",
+      "updated": "2026-08-31T16:48:14+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 563.78003,
-      "supertrend": 604.305561,
-      "rsi": 46.69,
-      "updated": "2026-08-29T04:35:09+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-10",
-      "bars_since_flip_1w": 2,
-      "supertrend_1w": 494.529985,
-      "rsi_1w": 51.62,
-      "updated_1w": "2026-08-29T04:58:25+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RTX",
@@ -563,29 +350,16 @@
       "flip_date": "2026-08-21",
       "bars_since_flip": 5,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 211.71001,
       "supertrend": 222.731432,
       "rsi": 47.89,
-      "updated": "2026-08-29T03:47:50+00:00",
+      "updated": "2026-08-31T16:48:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 211.72,
-      "supertrend": 222.731432,
-      "rsi": 47.91,
-      "updated": "2026-08-29T04:35:17+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-07-20",
-      "bars_since_flip_1w": 5,
-      "supertrend_1w": 189.741332,
-      "rsi_1w": 60.3,
-      "updated_1w": "2026-08-29T04:58:34+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NOC",
@@ -596,29 +370,16 @@
       "flip_date": "2026-08-25",
       "bars_since_flip": 3,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 545.57001,
-      "supertrend": 581.591748,
+      "supertrend": 581.59675,
       "rsi": 45.04,
-      "updated": "2026-08-29T03:47:58+00:00",
+      "updated": "2026-08-31T16:48:35+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 545.21002,
-      "supertrend": 581.591748,
-      "rsi": 44.84,
-      "updated": "2026-08-29T04:35:25+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-04-20",
-      "bars_since_flip_1w": 18,
-      "supertrend_1w": 610.288473,
-      "rsi_1w": 44.33,
-      "updated_1w": "2026-08-29T04:58:42+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GD",
@@ -629,29 +390,16 @@
       "flip_date": "2026-04-29",
       "bars_since_flip": 84,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 379.32001,
       "supertrend": 373.963471,
       "rsi": 45.64,
-      "updated": "2026-08-29T03:48:06+00:00",
+      "updated": "2026-08-31T16:48:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 379.37,
-      "supertrend": 373.963471,
-      "rsi": 45.69,
-      "updated": "2026-08-29T04:35:33+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-06-29",
-      "bars_since_flip_1w": 8,
-      "supertrend_1w": 342.379013,
-      "rsi_1w": 57.54,
-      "updated_1w": "2026-08-29T04:58:50+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "HII",
@@ -662,29 +410,16 @@
       "flip_date": "2026-08-24",
       "bars_since_flip": 4,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 294.20999,
       "supertrend": 319.125444,
       "rsi": 41.47,
-      "updated": "2026-08-29T03:48:14+00:00",
+      "updated": "2026-08-31T16:48:52+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 293.92999,
-      "supertrend": 319.125444,
-      "rsi": 41.3,
-      "updated": "2026-08-29T04:35:41+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 346.719429,
-      "rsi_1w": 42.19,
-      "updated_1w": "2026-08-29T04:58:58+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "KTOS",
@@ -696,25 +431,15 @@
       "bars_since_flip": 4,
       "last_bar": "2026-08-28",
       "price": 52.0,
-      "supertrend": 61.828625,
+      "supertrend": 61.827185,
       "rsi": 42.54,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:48:22+00:00",
+      "updated": "2026-08-31T16:49:01+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:35:50+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 73.489253,
-      "rsi_1w": 43.68,
-      "updated_1w": "2026-08-29T04:59:06+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RKLB",
@@ -725,29 +450,16 @@
       "flip_date": "2026-08-28",
       "bars_since_flip": 0,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 64.39,
-      "supertrend": 78.589415,
+      "supertrend": 78.589465,
       "rsi": 35.3,
-      "updated": "2026-08-29T03:48:30+00:00",
+      "updated": "2026-08-31T16:49:11+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 64.4,
-      "supertrend": 78.589415,
-      "rsi": 35.31,
-      "updated": "2026-08-29T04:35:58+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 116.098034,
-      "rsi_1w": 43.37,
-      "updated_1w": "2026-08-29T04:59:14+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ASTS",
@@ -758,29 +470,16 @@
       "flip_date": "2026-08-12",
       "bars_since_flip": 12,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 58.049999,
       "supertrend": 56.809226,
       "rsi": 39.24,
-      "updated": "2026-08-29T03:48:39+00:00",
+      "updated": "2026-08-31T16:49:20+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 58.099998,
-      "supertrend": 56.809226,
-      "rsi": 39.29,
-      "updated": "2026-08-29T04:36:06+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 107.613123,
-      "rsi_1w": 42.02,
-      "updated_1w": "2026-08-29T04:59:22+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "JOBY",
@@ -794,23 +493,13 @@
       "price": 6.98,
       "supertrend": 8.137931,
       "rsi": 37.69,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:48:47+00:00",
+      "updated": "2026-08-31T16:49:28+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:36:14+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-01-26",
-      "bars_since_flip_1w": 30,
-      "supertrend_1w": 10.945192,
-      "rsi_1w": 38.88,
-      "updated_1w": "2026-08-29T04:59:31+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ACHR",
@@ -821,29 +510,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 5.75,
       "supertrend": 5.165223,
       "rsi": 48.93,
-      "updated": "2026-08-29T03:48:55+00:00",
+      "updated": "2026-08-31T16:49:38+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 5.755,
-      "supertrend": 5.165223,
-      "rsi": 49.0,
-      "updated": "2026-08-29T04:36:22+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 7.289951,
-      "rsi_1w": 48.32,
-      "updated_1w": "2026-08-29T04:59:39+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "XOM",
@@ -854,29 +530,16 @@
       "flip_date": "2026-07-16",
       "bars_since_flip": 31,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 156.71001,
       "supertrend": 156.344785,
       "rsi": 48.26,
-      "updated": "2026-08-29T03:49:03+00:00",
+      "updated": "2026-08-31T16:49:48+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 156.69,
-      "supertrend": 156.344785,
-      "rsi": 48.22,
-      "updated": "2026-08-29T04:36:30+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 136.878096,
-      "rsi_1w": 56.22,
-      "updated_1w": "2026-08-29T04:59:47+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CVX",
@@ -887,29 +550,16 @@
       "flip_date": "2026-07-13",
       "bars_since_flip": 34,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 201.86,
       "supertrend": 194.861813,
       "rsi": 60.03,
-      "updated": "2026-08-29T03:49:11+00:00",
+      "updated": "2026-08-31T16:49:56+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 201.85001,
-      "supertrend": 194.861813,
-      "rsi": 60.02,
-      "updated": "2026-08-29T04:36:38+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-10",
-      "bars_since_flip_1w": 2,
-      "supertrend_1w": 171.835442,
-      "rsi_1w": 59.82,
-      "updated_1w": "2026-08-29T04:59:55+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "OXY",
@@ -920,29 +570,16 @@
       "flip_date": "2026-07-08",
       "bars_since_flip": 37,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 59.099998,
       "supertrend": 57.084398,
       "rsi": 55.43,
-      "updated": "2026-08-29T03:49:19+00:00",
+      "updated": "2026-08-31T16:50:09+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 59.095001,
-      "supertrend": 57.084398,
-      "rsi": 55.41,
-      "updated": "2026-08-29T04:36:47+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 62.145646,
-      "rsi_1w": 57.12,
-      "updated_1w": "2026-08-29T05:00:04+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SM",
@@ -953,29 +590,16 @@
       "flip_date": "2026-08-14",
       "bars_since_flip": 10,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 36.62,
       "supertrend": 33.05992,
       "rsi": 63.44,
-      "updated": "2026-08-29T03:49:27+00:00",
+      "updated": "2026-08-31T16:50:20+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 36.63,
-      "supertrend": 33.05992,
-      "rsi": 63.5,
-      "updated": "2026-08-29T04:36:55+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-03-02",
-      "bars_since_flip_1w": 25,
-      "supertrend_1w": 24.813078,
-      "rsi_1w": 62.53,
-      "updated_1w": "2026-08-29T05:00:12+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CCJ",
@@ -986,29 +610,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 100.010002,
       "supertrend": 96.972215,
       "rsi": 52.59,
-      "updated": "2026-08-29T03:49:35+00:00",
+      "updated": "2026-08-31T16:50:29+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 100.037498,
-      "supertrend": 96.972215,
-      "rsi": 52.64,
-      "updated": "2026-08-29T04:37:03+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 120.664981,
-      "rsi_1w": 49.37,
-      "updated_1w": "2026-08-29T05:00:21+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "UEC",
@@ -1022,23 +633,13 @@
       "price": 12.4,
       "supertrend": 11.252722,
       "rsi": 57.08,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:49:43+00:00",
+      "updated": "2026-08-31T16:50:38+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:37:11+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-08",
-      "bars_since_flip_1w": 11,
-      "supertrend_1w": 15.100835,
-      "rsi_1w": 51.34,
-      "updated_1w": "2026-08-29T05:00:29+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "DNN",
@@ -1049,29 +650,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 3.39,
       "supertrend": 3.147458,
       "rsi": 53.95,
-      "updated": "2026-08-29T03:49:51+00:00",
+      "updated": "2026-08-31T16:50:47+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 3.385,
-      "supertrend": 3.147458,
-      "rsi": 53.77,
-      "updated": "2026-08-29T04:37:19+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 4.109945,
-      "rsi_1w": 52.75,
-      "updated_1w": "2026-08-29T05:00:37+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NXE",
@@ -1085,23 +673,13 @@
       "price": 10.4,
       "supertrend": 9.780663,
       "rsi": 50.69,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:49:59+00:00",
+      "updated": "2026-08-31T16:50:55+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:37:27+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 12.672349,
-      "rsi_1w": 50.17,
-      "updated_1w": "2026-08-29T05:00:45+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "UUUU",
@@ -1112,29 +690,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 14.67,
       "supertrend": 13.010079,
       "rsi": 52.59,
-      "updated": "2026-08-29T03:50:07+00:00",
+      "updated": "2026-08-31T16:51:08+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 14.665,
-      "supertrend": 13.010079,
-      "rsi": 52.56,
-      "updated": "2026-08-29T04:37:36+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-06",
-      "bars_since_flip_1w": 7,
-      "supertrend_1w": 19.604819,
-      "rsi_1w": 46.51,
-      "updated_1w": "2026-08-29T05:00:53+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "LEU",
@@ -1145,29 +710,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 175.78,
       "supertrend": 158.580306,
       "rsi": 47.36,
-      "updated": "2026-08-29T03:50:15+00:00",
+      "updated": "2026-08-31T16:51:18+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 175.85001,
-      "supertrend": 158.580306,
-      "rsi": 47.39,
-      "updated": "2026-08-29T04:37:44+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 249.699038,
-      "rsi_1w": 45.29,
-      "updated_1w": "2026-08-29T05:01:02+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AR",
@@ -1178,29 +730,16 @@
       "flip_date": "2026-08-03",
       "bars_since_flip": 19,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 38.45,
-      "supertrend": 35.469071,
+      "supertrend": 35.470071,
       "rsi": 63.2,
-      "updated": "2026-08-29T03:50:23+00:00",
+      "updated": "2026-08-31T16:51:26+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 38.46,
-      "supertrend": 35.469071,
-      "rsi": 63.29,
-      "updated": "2026-08-29T04:37:52+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-15",
-      "bars_since_flip_1w": 10,
-      "supertrend_1w": 41.799534,
-      "rsi_1w": 56.24,
-      "updated_1w": "2026-08-29T05:01:10+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GLD",
@@ -1211,29 +750,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 408.89001,
       "supertrend": 404.084105,
       "rsi": 54.56,
-      "updated": "2026-08-29T03:50:31+00:00",
+      "updated": "2026-08-31T16:51:36+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 408.81,
-      "supertrend": 404.084105,
-      "rsi": 54.51,
-      "updated": "2026-08-29T04:38:00+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-01",
-      "bars_since_flip_1w": 12,
-      "supertrend_1w": 428.538338,
-      "rsi_1w": 52.77,
-      "updated_1w": "2026-08-29T05:01:18+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SLV",
@@ -1244,29 +770,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 60.02,
       "supertrend": 57.181273,
       "rsi": 54.38,
-      "updated": "2026-08-29T03:50:40+00:00",
+      "updated": "2026-08-31T16:51:44+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 60.029999,
-      "supertrend": 57.181273,
-      "rsi": 54.42,
-      "updated": "2026-08-29T04:38:08+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 71.159128,
-      "rsi_1w": 49.61,
-      "updated_1w": "2026-08-29T05:01:27+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GDX",
@@ -1277,29 +790,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 99.65,
       "supertrend": 92.737551,
       "rsi": 62.88,
-      "updated": "2026-08-29T03:50:48+00:00",
+      "updated": "2026-08-31T16:51:53+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 99.67,
-      "supertrend": 92.737551,
-      "rsi": 62.92,
-      "updated": "2026-08-29T04:38:16+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 75.083824,
-      "rsi_1w": 59.37,
-      "updated_1w": "2026-08-29T05:01:35+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GDXJ",
@@ -1310,29 +810,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 128.8,
       "supertrend": 119.720411,
       "rsi": 61.56,
-      "updated": "2026-08-29T03:50:56+00:00",
+      "updated": "2026-08-31T16:52:08+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 128.85001,
-      "supertrend": 119.720411,
-      "rsi": 61.63,
-      "updated": "2026-08-29T04:38:24+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 132.955374,
-      "rsi_1w": 57.94,
-      "updated_1w": "2026-08-29T05:01:43+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NEM",
@@ -1343,29 +830,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 127.98,
       "supertrend": 118.659969,
       "rsi": 64.49,
-      "updated": "2026-08-29T03:51:04+00:00",
+      "updated": "2026-08-31T16:52:16+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 127.92,
-      "supertrend": 118.659969,
-      "rsi": 64.39,
-      "updated": "2026-08-29T04:38:33+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 99.100341,
-      "rsi_1w": 62.79,
-      "updated_1w": "2026-08-29T05:01:51+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AEM",
@@ -1376,29 +850,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 206.25,
       "supertrend": 193.119165,
       "rsi": 63.67,
-      "updated": "2026-08-29T03:51:12+00:00",
+      "updated": "2026-08-31T16:52:27+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 206.21001,
-      "supertrend": 193.119165,
-      "rsi": 63.64,
-      "updated": "2026-08-29T04:38:41+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 155.528289,
-      "rsi_1w": 59.03,
-      "updated_1w": "2026-08-29T05:01:59+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PAAS",
@@ -1409,29 +870,16 @@
       "flip_date": "2026-08-24",
       "bars_since_flip": 4,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 52.87,
       "supertrend": 47.329263,
       "rsi": 58.53,
-      "updated": "2026-08-29T03:51:20+00:00",
+      "updated": "2026-08-31T16:52:36+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 52.865,
-      "supertrend": 47.329263,
-      "rsi": 58.51,
-      "updated": "2026-08-29T04:38:49+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 60.267509,
-      "rsi_1w": 53.65,
-      "updated_1w": "2026-08-29T05:02:07+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AG",
@@ -1445,23 +893,13 @@
       "price": 20.76,
       "supertrend": 18.353585,
       "rsi": 60.01,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:51:28+00:00",
+      "updated": "2026-08-31T16:52:45+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:38:57+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 23.722594,
-      "rsi_1w": 55.29,
-      "updated_1w": "2026-08-29T05:02:15+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "EXK",
@@ -1472,29 +910,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 10.76,
       "supertrend": 9.146828,
       "rsi": 58.9,
-      "updated": "2026-08-29T03:51:36+00:00",
+      "updated": "2026-08-31T16:52:54+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 10.75,
-      "supertrend": 9.146828,
-      "rsi": 58.79,
-      "updated": "2026-08-29T04:39:05+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 11.794484,
-      "rsi_1w": 58.17,
-      "updated_1w": "2026-08-29T05:02:24+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "WPM",
@@ -1505,29 +930,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 153.33,
       "supertrend": 142.443195,
       "rsi": 65.22,
-      "updated": "2026-08-29T03:51:44+00:00",
+      "updated": "2026-08-31T16:53:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 153.34,
-      "supertrend": 142.443195,
-      "rsi": 65.23,
-      "updated": "2026-08-29T04:39:13+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 113.653815,
-      "rsi_1w": 61.25,
-      "updated_1w": "2026-08-29T05:02:32+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "XBI",
@@ -1538,29 +950,16 @@
       "flip_date": "2026-08-12",
       "bars_since_flip": 12,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 162.38,
       "supertrend": 155.264845,
       "rsi": 53.95,
-      "updated": "2026-08-29T03:51:52+00:00",
+      "updated": "2026-08-31T16:53:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 162.39,
-      "supertrend": 155.264845,
-      "rsi": 53.96,
-      "updated": "2026-08-29T04:39:21+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-08-11",
-      "bars_since_flip_1w": 54,
-      "supertrend_1w": 138.064707,
-      "rsi_1w": 66.2,
-      "updated_1w": "2026-08-29T05:02:40+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ARKG",
@@ -1574,23 +973,13 @@
       "price": 47.64,
       "supertrend": 44.558847,
       "rsi": 60.07,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:52:00+00:00",
+      "updated": "2026-08-31T16:53:24+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:39:30+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-09-29",
-      "bars_since_flip_1w": 47,
-      "supertrend_1w": 38.136767,
-      "rsi_1w": 69.89,
-      "updated_1w": "2026-08-29T05:02:48+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MRNA",
@@ -1601,29 +990,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 137.99001,
       "supertrend": 102.00698,
       "rsi": 63.54,
-      "updated": "2026-08-29T03:52:08+00:00",
+      "updated": "2026-08-31T16:53:32+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 137.9473,
-      "supertrend": 102.00698,
-      "rsi": 63.52,
-      "updated": "2026-08-29T04:39:38+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-01-12",
-      "bars_since_flip_1w": 32,
-      "supertrend_1w": 83.809804,
-      "rsi_1w": 77.83,
-      "updated_1w": "2026-08-29T05:02:57+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BNTX",
@@ -1634,29 +1010,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 102.074997,
       "supertrend": 100.044886,
       "rsi": 51.78,
-      "updated": "2026-08-29T03:52:16+00:00",
+      "updated": "2026-08-31T16:53:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 102.029999,
-      "supertrend": 100.044886,
-      "rsi": 51.72,
-      "updated": "2026-08-29T04:39:46+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 80.025136,
-      "rsi_1w": 53.68,
-      "updated_1w": "2026-08-29T05:03:05+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RXRX",
@@ -1667,29 +1030,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 3.34,
       "supertrend": 2.909205,
       "rsi": 51.14,
-      "updated": "2026-08-29T03:52:24+00:00",
+      "updated": "2026-08-31T16:53:51+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 3.33,
-      "supertrend": 2.909205,
-      "rsi": 50.85,
-      "updated": "2026-08-29T04:39:54+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-03-31",
-      "bars_since_flip_1w": 73,
-      "supertrend_1w": 4.504951,
-      "rsi_1w": 47.93,
-      "updated_1w": "2026-08-29T05:03:13+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BEAM",
@@ -1700,29 +1050,16 @@
       "flip_date": "2026-08-25",
       "bars_since_flip": 3,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 29.32,
       "supertrend": 25.368735,
       "rsi": 52.85,
-      "updated": "2026-08-29T03:52:32+00:00",
+      "updated": "2026-08-31T16:54:00+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 29.29,
-      "supertrend": 25.368735,
-      "rsi": 52.74,
-      "updated": "2026-08-29T04:40:03+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-09-29",
-      "bars_since_flip_1w": 47,
-      "supertrend_1w": 21.728627,
-      "rsi_1w": 51.34,
-      "updated_1w": "2026-08-29T05:03:21+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "EDIT",
@@ -1733,29 +1070,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 3.16,
       "supertrend": 2.614826,
       "rsi": 55.2,
-      "updated": "2026-08-29T03:52:40+00:00",
+      "updated": "2026-08-31T16:54:08+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 3.15,
-      "supertrend": 2.614826,
-      "rsi": 54.89,
-      "updated": "2026-08-29T04:40:11+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-06",
-      "bars_since_flip_1w": 20,
-      "supertrend_1w": 1.85734,
-      "rsi_1w": 54.85,
-      "updated_1w": "2026-08-29T05:03:29+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CRSP",
@@ -1766,29 +1090,16 @@
       "flip_date": "2026-08-17",
       "bars_since_flip": 9,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 57.72,
       "supertrend": 52.272145,
       "rsi": 56.46,
-      "updated": "2026-08-29T03:52:49+00:00",
+      "updated": "2026-08-31T16:54:17+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 57.71,
-      "supertrend": 52.272145,
-      "rsi": 56.44,
-      "updated": "2026-08-29T04:40:19+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-02-02",
-      "bars_since_flip_1w": 29,
-      "supertrend_1w": 65.708694,
-      "rsi_1w": 54.92,
-      "updated_1w": "2026-08-29T05:03:37+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NTLA",
@@ -1802,23 +1113,13 @@
       "price": 12.87,
       "supertrend": 11.066254,
       "rsi": 53.42,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:52:57+00:00",
+      "updated": "2026-08-31T16:54:25+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:40:27+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 9.698269,
-      "rsi_1w": 49.56,
-      "updated_1w": "2026-08-29T05:03:45+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PACB",
@@ -1832,23 +1133,13 @@
       "price": 1.4,
       "supertrend": 1.207514,
       "rsi": 52.74,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:53:05+00:00",
+      "updated": "2026-08-31T16:54:35+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:40:35+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-23",
-      "bars_since_flip_1w": 22,
-      "supertrend_1w": 1.855677,
-      "rsi_1w": 48.42,
-      "updated_1w": "2026-08-29T05:03:54+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NVAX",
@@ -1859,29 +1150,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 9.26,
       "supertrend": 7.871286,
       "rsi": 62.93,
-      "updated": "2026-08-29T03:53:13+00:00",
+      "updated": "2026-08-31T16:54:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 9.27,
-      "supertrend": 7.871286,
-      "rsi": 63.05,
-      "updated": "2026-08-29T04:40:43+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-02-23",
-      "bars_since_flip_1w": 26,
-      "supertrend_1w": 6.781377,
-      "rsi_1w": 53.74,
-      "updated_1w": "2026-08-29T05:04:02+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "COIN",
@@ -1892,29 +1170,16 @@
       "flip_date": "2026-08-20",
       "bars_since_flip": 6,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 178.64,
       "supertrend": 154.368413,
       "rsi": 56.84,
-      "updated": "2026-08-29T03:53:21+00:00",
+      "updated": "2026-08-31T16:54:51+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 178.66,
-      "supertrend": 154.368413,
-      "rsi": 56.86,
-      "updated": "2026-08-29T04:40:52+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 220.792652,
-      "rsi_1w": 49.55,
-      "updated_1w": "2026-08-29T05:04:10+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MSTR",
@@ -1925,29 +1190,16 @@
       "flip_date": "2026-08-20",
       "bars_since_flip": 6,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 127.31,
       "supertrend": 107.643288,
       "rsi": 63.04,
-      "updated": "2026-08-29T03:53:29+00:00",
+      "updated": "2026-08-31T16:54:59+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 127.3,
-      "supertrend": 107.643288,
-      "rsi": 63.04,
-      "updated": "2026-08-29T04:41:00+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-02-24",
-      "bars_since_flip_1w": 78,
-      "supertrend_1w": 154.436736,
-      "rsi_1w": 48.49,
-      "updated_1w": "2026-08-29T05:04:18+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MARA",
@@ -1958,29 +1210,16 @@
       "flip_date": "2026-08-25",
       "bars_since_flip": 3,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 10.67,
       "supertrend": 8.802285,
       "rsi": 47.9,
-      "updated": "2026-08-29T03:53:37+00:00",
+      "updated": "2026-08-31T16:55:09+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 10.6635,
-      "supertrend": 8.802285,
-      "rsi": 47.86,
-      "updated": "2026-08-29T04:41:08+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 8.463307,
-      "rsi_1w": 46.63,
-      "updated_1w": "2026-08-29T05:04:26+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RIOT",
@@ -1994,23 +1233,13 @@
       "price": 18.99,
       "supertrend": 23.901988,
       "rsi": 43.44,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:53:45+00:00",
+      "updated": "2026-08-31T16:55:21+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:41:16+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 17.93202,
-      "rsi_1w": 47.31,
-      "updated_1w": "2026-08-29T05:04:34+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CLSK",
@@ -2024,23 +1253,13 @@
       "price": 11.66,
       "supertrend": 15.007682,
       "rsi": 43.97,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:53:53+00:00",
+      "updated": "2026-08-31T16:55:30+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:41:24+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 10.301022,
-      "rsi_1w": 44.96,
-      "updated_1w": "2026-08-29T05:04:42+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "HUT",
@@ -2054,23 +1273,13 @@
       "price": 79.42,
       "supertrend": 106.823596,
       "rsi": 41.26,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:54:01+00:00",
+      "updated": "2026-08-31T16:55:39+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:41:32+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-08-11",
-      "bars_since_flip_1w": 54,
-      "supertrend_1w": 74.468806,
-      "rsi_1w": 46.39,
-      "updated_1w": "2026-08-29T05:04:51+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BTBT",
@@ -2081,29 +1290,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 1.43,
       "supertrend": 1.635414,
       "rsi": 46.01,
-      "updated": "2026-08-29T03:54:09+00:00",
+      "updated": "2026-08-31T16:55:47+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 1.429,
-      "supertrend": 1.635414,
-      "rsi": 45.97,
-      "updated": "2026-08-29T04:41:40+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-12-22",
-      "bars_since_flip_1w": 35,
-      "supertrend_1w": 2.286257,
-      "rsi_1w": 42.67,
-      "updated_1w": "2026-08-29T05:04:59+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CIFR",
@@ -2114,25 +1310,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 15.17,
       "supertrend": 21.222867,
       "rsi": 41.02,
-      "updated": "2026-08-29T03:54:17+00:00",
+      "updated": "2026-08-31T16:55:55+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
-=======
-      "price": 15.18,
-      "supertrend": 21.222867,
-      "rsi": 41.04,
-      "updated": "2026-08-29T04:41:49+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-24",
->>>>>>> Stashed changes
       "bars_since_flip_1w": null,
-      "supertrend_1w": 31.272667,
-      "rsi_1w": 43.88,
-      "updated_1w": "2026-08-29T05:05:07+00:00"
+      "supertrend_1w": null,
+      "rsi_1w": null,
+      "updated_1w": null
     },
     {
       "sym": "CORZ",
@@ -2143,29 +1330,16 @@
       "flip_date": "2026-07-01",
       "bars_since_flip": 41,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 16.51,
       "supertrend": 20.804051,
       "rsi": 34.19,
-      "updated": "2026-08-29T03:54:25+00:00",
+      "updated": "2026-08-31T16:56:04+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 16.53,
-      "supertrend": 20.804051,
-      "rsi": 34.25,
-      "updated": "2026-08-29T04:41:57+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 27.614192,
-      "rsi_1w": 39.9,
-      "updated_1w": "2026-08-29T05:05:15+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "HOOD",
@@ -2176,29 +1350,16 @@
       "flip_date": "2026-08-21",
       "bars_since_flip": 5,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 104.26,
       "supertrend": 91.370509,
       "rsi": 54.1,
-      "updated": "2026-08-29T03:54:33+00:00",
+      "updated": "2026-08-31T16:56:14+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 104.27,
-      "supertrend": 91.370509,
-      "rsi": 54.11,
-      "updated": "2026-08-29T04:42:05+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-06-15",
-      "bars_since_flip_1w": 10,
-      "supertrend_1w": 70.529595,
-      "rsi_1w": 54.72,
-      "updated_1w": "2026-08-29T05:05:23+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SQ",
@@ -2212,23 +1373,13 @@
       "price": 83.57,
       "supertrend": 77.1765,
       "rsi": 56.98,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:54:41+00:00",
+      "updated": "2026-08-31T16:56:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:42:13+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 64.403707,
-      "rsi_1w": 61.38,
-      "updated_1w": "2026-08-29T05:05:31+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AMZN",
@@ -2239,29 +1390,16 @@
       "flip_date": "2026-07-31",
       "bars_since_flip": 20,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 266.42999,
       "supertrend": 249.917737,
       "rsi": 55.85,
-      "updated": "2026-08-29T03:54:49+00:00",
+      "updated": "2026-08-31T16:56:32+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 266.38,
-      "supertrend": 249.917737,
-      "rsi": 55.82,
-      "updated": "2026-08-29T04:42:21+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-13",
-      "bars_since_flip_1w": 19,
-      "supertrend_1w": 224.569502,
-      "rsi_1w": 57.33,
-      "updated_1w": "2026-08-29T05:05:39+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SHOP",
@@ -2272,29 +1410,16 @@
       "flip_date": "2026-05-28",
       "bars_since_flip": 64,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 152.89999,
-      "supertrend": 137.721529,
+      "supertrend": 137.721193,
       "rsi": 61.23,
-      "updated": "2026-08-29T03:54:57+00:00",
+      "updated": "2026-08-31T16:56:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 152.97,
-      "supertrend": 137.721529,
-      "rsi": 61.32,
-      "updated": "2026-08-29T04:42:29+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-10",
-      "bars_since_flip_1w": 2,
-      "supertrend_1w": 105.762628,
-      "rsi_1w": 61.96,
-      "updated_1w": "2026-08-29T05:05:48+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CELH",
@@ -2308,23 +1433,13 @@
       "price": 32.98,
       "supertrend": 29.91734,
       "rsi": 57.73,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:55:05+00:00",
+      "updated": "2026-08-31T16:56:50+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:42:38+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-03",
-      "bars_since_flip_1w": 42,
-      "supertrend_1w": 39.212331,
-      "rsi_1w": 48.28,
-      "updated_1w": "2026-08-29T05:05:56+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ELF",
@@ -2335,29 +1450,16 @@
       "flip_date": "2026-06-11",
       "bars_since_flip": 54,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 104.099998,
       "supertrend": 93.432231,
       "rsi": 68.06,
-      "updated": "2026-08-29T03:55:13+00:00",
+      "updated": "2026-08-31T16:56:58+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 104.080002,
-      "supertrend": 93.432231,
-      "rsi": 68.01,
-      "updated": "2026-08-29T04:42:46+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-07-27",
-      "bars_since_flip_1w": 4,
-      "supertrend_1w": 76.020327,
-      "rsi_1w": 66.24,
-      "updated_1w": "2026-08-29T05:06:04+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ONON",
@@ -2368,29 +1470,16 @@
       "flip_date": "2026-06-23",
       "bars_since_flip": 47,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 28.85,
-      "supertrend": 32.909612,
+      "supertrend": 32.917612,
       "rsi": 31.07,
-      "updated": "2026-08-29T03:55:22+00:00",
+      "updated": "2026-08-31T16:57:07+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 28.855,
-      "supertrend": 32.917612,
-      "rsi": 31.08,
-      "updated": "2026-08-29T04:42:54+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 40.39968,
-      "rsi_1w": 33.07,
-      "updated_1w": "2026-08-29T05:06:12+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "DUOL",
@@ -2401,29 +1490,16 @@
       "flip_date": "2026-04-30",
       "bars_since_flip": 83,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 146.98,
       "supertrend": 123.197383,
       "rsi": 58.46,
-      "updated": "2026-08-29T03:55:30+00:00",
+      "updated": "2026-08-31T16:57:16+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 147.080002,
-      "supertrend": 123.197383,
-      "rsi": 58.53,
-      "updated": "2026-08-29T04:43:02+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-07-07",
-      "bars_since_flip_1w": 59,
-      "supertrend_1w": 152.629511,
-      "rsi_1w": 56.16,
-      "updated_1w": "2026-08-29T05:06:20+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "APP",
@@ -2434,29 +1510,16 @@
       "flip_date": "2026-07-13",
       "bars_since_flip": 34,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 317.76001,
       "supertrend": 354.493975,
       "rsi": 37.7,
-      "updated": "2026-08-29T03:55:38+00:00",
+      "updated": "2026-08-31T16:57:25+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 317.87,
-      "supertrend": 354.493975,
-      "rsi": 37.75,
-      "updated": "2026-08-29T04:43:10+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 512.517935,
-      "rsi_1w": 36.96,
-      "updated_1w": "2026-08-29T05:06:28+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RBLX",
@@ -2467,29 +1530,16 @@
       "flip_date": "2026-07-31",
       "bars_since_flip": 20,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 38.53,
       "supertrend": 44.255269,
       "rsi": 42.41,
-      "updated": "2026-08-29T03:55:46+00:00",
+      "updated": "2026-08-31T16:57:33+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 38.54,
-      "supertrend": 44.255269,
-      "rsi": 42.45,
-      "updated": "2026-08-29T04:43:18+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 59.281771,
-      "rsi_1w": 37.27,
-      "updated_1w": "2026-08-29T05:06:36+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TTD",
@@ -2503,23 +1553,13 @@
       "price": 13.57,
       "supertrend": 15.493164,
       "rsi": 36.92,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:55:54+00:00",
+      "updated": "2026-08-31T16:57:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:43:26+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-08-04",
-      "bars_since_flip_1w": 55,
-      "supertrend_1w": 21.185901,
-      "rsi_1w": 28.07,
-      "updated_1w": "2026-08-29T05:06:45+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "DKNG",
@@ -2530,29 +1570,16 @@
       "flip_date": "2026-08-11",
       "bars_since_flip": 13,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 25.26,
       "supertrend": 22.552732,
       "rsi": 52.1,
-      "updated": "2026-08-29T03:56:02+00:00",
+      "updated": "2026-08-31T16:57:50+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 25.25,
-      "supertrend": 22.552732,
-      "rsi": 52.05,
-      "updated": "2026-08-29T04:43:35+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-09-29",
-      "bars_since_flip_1w": 47,
-      "supertrend_1w": 31.180748,
-      "rsi_1w": 47.64,
-      "updated_1w": "2026-08-29T05:06:53+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CHWY",
@@ -2563,29 +1590,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 23.26,
       "supertrend": 21.937225,
       "rsi": 52.97,
-      "updated": "2026-08-29T03:56:10+00:00",
+      "updated": "2026-08-31T16:57:58+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 23.27,
-      "supertrend": 21.937225,
-      "rsi": 53.04,
-      "updated": "2026-08-29T04:43:43+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-07-21",
-      "bars_since_flip_1w": 57,
-      "supertrend_1w": 26.046542,
-      "rsi_1w": 48.23,
-      "updated_1w": "2026-08-29T05:07:01+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "W",
@@ -2596,29 +1610,16 @@
       "flip_date": "2026-05-26",
       "bars_since_flip": 66,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 103.76,
       "supertrend": 90.515976,
       "rsi": 55.37,
-      "updated": "2026-08-29T03:56:18+00:00",
+      "updated": "2026-08-31T16:58:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 103.75,
-      "supertrend": 90.515976,
-      "rsi": 55.35,
-      "updated": "2026-08-29T04:43:51+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 67.881484,
-      "rsi_1w": 62.04,
-      "updated_1w": "2026-08-29T05:07:09+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "VNQ",
@@ -2629,29 +1630,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 97.24,
       "supertrend": 100.730817,
       "rsi": 42.78,
-      "updated": "2026-08-29T03:56:26+00:00",
+      "updated": "2026-08-31T16:58:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 97.25,
-      "supertrend": 100.730817,
-      "rsi": 42.83,
-      "updated": "2026-08-29T04:43:59+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-06-08",
-      "bars_since_flip_1w": 11,
-      "supertrend_1w": 90.719786,
-      "rsi_1w": 52.45,
-      "updated_1w": "2026-08-29T05:07:17+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AMT",
@@ -2662,29 +1650,16 @@
       "flip_date": "2026-07-29",
       "bars_since_flip": 22,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 176.23,
       "supertrend": 166.103442,
       "rsi": 54.75,
-      "updated": "2026-08-29T03:56:34+00:00",
+      "updated": "2026-08-31T16:58:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 176.24001,
-      "supertrend": 166.103442,
-      "rsi": 54.77,
-      "updated": "2026-08-29T04:44:07+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-09-01",
-      "bars_since_flip_1w": 51,
-      "supertrend_1w": 196.575797,
-      "rsi_1w": 48.92,
-      "updated_1w": "2026-08-29T05:07:25+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "EQIX",
@@ -2695,29 +1670,16 @@
       "flip_date": "2026-08-14",
       "bars_since_flip": 10,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 1044.41003,
       "supertrend": 1014.392221,
       "rsi": 45.5,
-      "updated": "2026-08-29T03:56:42+00:00",
+      "updated": "2026-08-31T16:58:35+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 1044.16003,
-      "supertrend": 1014.392221,
-      "rsi": 45.44,
-      "updated": "2026-08-29T04:44:15+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-02-09",
-      "bars_since_flip_1w": 28,
-      "supertrend_1w": 960.666899,
-      "rsi_1w": 52.66,
-      "updated_1w": "2026-08-29T05:07:33+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PLD",
@@ -2728,29 +1690,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 140.7,
       "supertrend": 147.774294,
       "rsi": 45.31,
-      "updated": "2026-08-29T03:56:50+00:00",
+      "updated": "2026-08-31T16:58:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 140.69,
-      "supertrend": 147.774294,
-      "rsi": 45.28,
-      "updated": "2026-08-29T04:44:23+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-09-29",
-      "bars_since_flip_1w": 47,
-      "supertrend_1w": 126.371578,
-      "rsi_1w": 51.16,
-      "updated_1w": "2026-08-29T05:07:42+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "O",
@@ -2761,29 +1710,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 61.98,
-      "supertrend": 64.447343,
+      "supertrend": 64.451343,
       "rsi": 42.03,
-      "updated": "2026-08-29T03:56:58+00:00",
+      "updated": "2026-08-31T16:58:51+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 61.99,
-      "supertrend": 64.447343,
-      "rsi": 42.13,
-      "updated": "2026-08-29T04:44:32+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-09-01",
-      "bars_since_flip_1w": 51,
-      "supertrend_1w": 59.79959,
-      "rsi_1w": 48.09,
-      "updated_1w": "2026-08-29T05:07:50+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "IRM",
@@ -2794,29 +1730,16 @@
       "flip_date": "2026-08-14",
       "bars_since_flip": 10,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 117.4,
       "supertrend": 116.044579,
       "rsi": 38.42,
-      "updated": "2026-08-29T03:57:06+00:00",
+      "updated": "2026-08-31T16:58:59+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 117.35,
-      "supertrend": 116.044579,
-      "rsi": 38.35,
-      "updated": "2026-08-29T04:44:40+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-02-09",
-      "bars_since_flip_1w": 28,
-      "supertrend_1w": 109.623796,
-      "rsi_1w": 49.24,
-      "updated_1w": "2026-08-29T05:07:58+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "WELL",
@@ -2830,23 +1753,13 @@
       "price": 238.070007,
       "supertrend": 245.211419,
       "rsi": 52.6,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:57:14+00:00",
+      "updated": "2026-08-31T16:59:07+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:44:48+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2023-07-17",
-      "bars_since_flip_1w": 162,
-      "supertrend_1w": 209.663095,
-      "rsi_1w": 60.88,
-      "updated_1w": "2026-08-29T05:08:06+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SPG",
@@ -2857,29 +1770,16 @@
       "flip_date": "2026-08-06",
       "bars_since_flip": 16,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 214.56,
-      "supertrend": 225.346432,
+      "supertrend": 225.350424,
       "rsi": 37.08,
-      "updated": "2026-08-29T03:57:23+00:00",
+      "updated": "2026-08-31T16:59:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 214.58,
-      "supertrend": 225.346432,
-      "rsi": 37.11,
-      "updated": "2026-08-29T04:44:56+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-08-25",
-      "bars_since_flip_1w": 52,
-      "supertrend_1w": 203.213294,
-      "rsi_1w": 53.24,
-      "updated_1w": "2026-08-29T05:08:14+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ARKK",
@@ -2890,29 +1790,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 84.59,
       "supertrend": 79.983556,
       "rsi": 57.37,
-      "updated": "2026-08-29T03:57:31+00:00",
+      "updated": "2026-08-31T16:59:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 84.49,
-      "supertrend": 79.983556,
-      "rsi": 57.13,
-      "updated": "2026-08-29T04:45:13+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 68.2536,
-      "rsi_1w": 58.41,
-      "updated_1w": "2026-08-29T05:08:22+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "COPX",
@@ -2923,29 +1810,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 94.42,
       "supertrend": 88.195712,
       "rsi": 64.69,
-      "updated": "2026-08-29T03:57:39+00:00",
+      "updated": "2026-08-31T16:59:32+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 94.445,
-      "supertrend": 88.195712,
-      "rsi": 64.76,
-      "updated": "2026-08-29T04:45:21+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 97.403277,
-      "rsi_1w": 62.66,
-      "updated_1w": "2026-08-29T05:08:30+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "URA",
@@ -2956,29 +1830,16 @@
       "flip_date": "2026-08-06",
       "bars_since_flip": 16,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 45.57,
       "supertrend": 43.778694,
       "rsi": 53.35,
-      "updated": "2026-08-29T03:57:47+00:00",
+      "updated": "2026-08-31T16:59:40+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 45.59,
-      "supertrend": 43.778694,
-      "rsi": 53.42,
-      "updated": "2026-08-29T04:45:29+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 53.266127,
-      "rsi_1w": 48.95,
-      "updated_1w": "2026-08-29T05:08:38+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BLOK",
@@ -2992,23 +1853,13 @@
       "price": 62.07,
       "supertrend": 59.215418,
       "rsi": 51.26,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:57:55+00:00",
+      "updated": "2026-08-31T16:59:48+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:45:38+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 52.350822,
-      "rsi_1w": 52.65,
-      "updated_1w": "2026-08-29T05:08:47+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "IBB",
@@ -3019,29 +1870,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 208.95,
       "supertrend": 201.997567,
       "rsi": 58.78,
-      "updated": "2026-08-29T03:58:03+00:00",
+      "updated": "2026-08-31T16:59:56+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 208.92999,
-      "supertrend": 201.997567,
-      "rsi": 58.75,
-      "updated": "2026-08-29T04:45:46+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-07-21",
-      "bars_since_flip_1w": 57,
-      "supertrend_1w": 185.673793,
-      "rsi_1w": 70.45,
-      "updated_1w": "2026-08-29T05:08:55+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "XLE",
@@ -3052,29 +1890,16 @@
       "flip_date": "2026-07-13",
       "bars_since_flip": 34,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 62.68,
       "supertrend": 60.655706,
       "rsi": 62.07,
-      "updated": "2026-08-29T03:58:11+00:00",
+      "updated": "2026-08-31T17:00:12+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 62.66,
-      "supertrend": 60.655706,
-      "rsi": 61.98,
-      "updated": "2026-08-29T04:45:54+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-01-12",
-      "bars_since_flip_1w": 32,
-      "supertrend_1w": 54.093263,
-      "rsi_1w": 62.53,
-      "updated_1w": "2026-08-29T05:09:03+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "XHB",
@@ -3085,29 +1910,16 @@
       "flip_date": "2026-07-08",
       "bars_since_flip": 37,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 104.6,
-      "supertrend": 111.526381,
+      "supertrend": 111.582381,
       "rsi": 42.42,
-      "updated": "2026-08-29T03:58:19+00:00",
+      "updated": "2026-08-31T17:00:22+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 104.63,
-      "supertrend": 111.582381,
-      "rsi": 42.51,
-      "updated": "2026-08-29T04:46:02+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-09",
-      "bars_since_flip_1w": 24,
-      "supertrend_1w": 115.794431,
-      "rsi_1w": 47.08,
-      "updated_1w": "2026-08-29T05:09:11+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TAN",
@@ -3118,29 +1930,16 @@
       "flip_date": "2026-06-05",
       "bars_since_flip": 58,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 48.65,
       "supertrend": 52.878768,
       "rsi": 39.48,
-      "updated": "2026-08-29T03:58:27+00:00",
+      "updated": "2026-08-31T17:00:31+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 48.64,
-      "supertrend": 52.878768,
-      "rsi": 39.44,
-      "updated": "2026-08-29T04:46:11+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 61.945234,
-      "rsi_1w": 39.28,
-      "updated_1w": "2026-08-29T05:09:19+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SPY",
@@ -3151,29 +1950,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 769.34998,
       "supertrend": 755.669057,
       "rsi": 56.61,
-      "updated": "2026-08-29T03:58:35+00:00",
+      "updated": "2026-08-31T17:00:45+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 769.38,
-      "supertrend": 755.669057,
-      "rsi": 56.65,
-      "updated": "2026-08-29T04:46:19+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-13",
-      "bars_since_flip_1w": 19,
-      "supertrend_1w": 714.840286,
-      "rsi_1w": 64.02,
-      "updated_1w": "2026-08-29T05:09:27+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "QQQ",
@@ -3184,29 +1970,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 716.42999,
       "supertrend": 698.289117,
       "rsi": 51.88,
-      "updated": "2026-08-29T03:58:43+00:00",
+      "updated": "2026-08-31T17:00:55+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 716.45001,
-      "supertrend": 698.289117,
-      "rsi": 51.89,
-      "updated": "2026-08-29T04:46:28+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-13",
-      "bars_since_flip_1w": 19,
-      "supertrend_1w": 653.150963,
-      "rsi_1w": 57.98,
-      "updated_1w": "2026-08-29T05:09:35+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BTC",
@@ -3215,28 +1988,18 @@
       "td": "BTC/USD",
       "signal": "bull",
       "flip_date": "2026-07-21",
-      "bars_since_flip": 38,
-      "last_bar": "2026-08-28",
-      "price": 77845.87,
+      "bars_since_flip": 40,
+      "last_bar": "2026-08-30",
+      "price": 77682.0,
       "supertrend": 72310.901918,
-      "rsi": 70.82,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:58:51+00:00",
+      "rsi": 69.05,
+      "updated": "2026-08-31T17:01:05+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:46:36+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 79741.474049,
-      "rsi_1w": 56.54,
-      "updated_1w": "2026-08-29T05:09:44+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ETH",
@@ -3245,28 +2008,18 @@
       "td": "ETH/USD",
       "signal": "bull",
       "flip_date": "2026-07-12",
-      "bars_since_flip": 47,
-      "last_bar": "2026-08-28",
-      "price": 2442.8,
+      "bars_since_flip": 49,
+      "last_bar": "2026-08-30",
+      "price": 2416.88,
       "supertrend": 2213.769116,
-      "rsi": 70.09,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:58:59+00:00",
+      "rsi": 66.42,
+      "updated": "2026-08-31T17:01:14+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:46:44+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 1767.493224,
-      "rsi_1w": 58.54,
-      "updated_1w": "2026-08-29T05:09:52+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SOL",
@@ -3275,28 +2028,18 @@
       "td": "SOL/USD",
       "signal": "bull",
       "flip_date": "2026-07-01",
-      "bars_since_flip": 58,
-      "last_bar": "2026-08-28",
-      "price": 104.15,
+      "bars_since_flip": 60,
+      "last_bar": "2026-08-30",
+      "price": 101.75,
       "supertrend": 88.219862,
-      "rsi": 74.51,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:59:07+00:00",
+      "rsi": 67.72,
+      "updated": "2026-08-31T17:01:22+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:46:52+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 104.026065,
-      "rsi_1w": 58.93,
-      "updated_1w": "2026-08-29T05:10:00+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "BNB",
@@ -3305,28 +2048,18 @@
       "td": "BNB/USD",
       "signal": "bull",
       "flip_date": "2026-08-11",
-      "bars_since_flip": 17,
-      "last_bar": "2026-08-28",
-      "price": 691.47,
+      "bars_since_flip": 19,
+      "last_bar": "2026-08-30",
+      "price": 684.74,
       "supertrend": 644.724619,
-      "rsi": 68.72,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T03:59:15+00:00",
+      "rsi": 64.59,
+      "updated": "2026-08-31T17:01:31+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:47:00+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-01-26",
-      "bars_since_flip_1w": 30,
-      "supertrend_1w": 744.307703,
-      "rsi_1w": 55.37,
-      "updated_1w": "2026-08-29T05:10:08+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "OKLO",
@@ -3337,29 +2070,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 40.14,
       "supertrend": 35.749108,
       "rsi": 43.75,
-      "updated": "2026-08-29T03:59:23+00:00",
+      "updated": "2026-08-31T17:01:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 40.11,
-      "supertrend": 35.749108,
-      "rsi": 43.71,
-      "updated": "2026-08-29T04:47:08+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 70.70422,
-      "rsi_1w": 38.04,
-      "updated_1w": "2026-08-29T05:10:16+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NNE",
@@ -3370,29 +2090,16 @@
       "flip_date": "2026-08-13",
       "bars_since_flip": 11,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 17.97,
       "supertrend": 16.201051,
       "rsi": 46.8,
-      "updated": "2026-08-29T03:59:31+00:00",
+      "updated": "2026-08-31T17:01:52+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 17.975,
-      "supertrend": 16.201051,
-      "rsi": 46.82,
-      "updated": "2026-08-29T04:47:16+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-12-22",
-      "bars_since_flip_1w": 35,
-      "supertrend_1w": 29.991386,
-      "rsi_1w": 42.09,
-      "updated_1w": "2026-08-29T05:10:24+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SMR",
@@ -3403,29 +2110,16 @@
       "flip_date": "2026-08-11",
       "bars_since_flip": 13,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 9.29,
       "supertrend": 7.682262,
       "rsi": 50.11,
-      "updated": "2026-08-29T03:59:39+00:00",
+      "updated": "2026-08-31T17:02:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 9.275,
-      "supertrend": 7.682262,
-      "rsi": 49.98,
-      "updated": "2026-08-29T04:47:25+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 14.789325,
-      "rsi_1w": 40.76,
-      "updated_1w": "2026-08-29T05:10:32+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "LUNR",
@@ -3436,29 +2130,16 @@
       "flip_date": "2026-08-07",
       "bars_since_flip": 15,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 15.37,
       "supertrend": 15.201715,
       "rsi": 42.83,
-      "updated": "2026-08-29T03:59:47+00:00",
+      "updated": "2026-08-31T17:02:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 15.38,
-      "supertrend": 15.201715,
-      "rsi": 42.87,
-      "updated": "2026-08-29T04:47:33+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 28.073995,
-      "rsi_1w": 43.42,
-      "updated_1w": "2026-08-29T05:10:40+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RDW",
@@ -3469,29 +2150,16 @@
       "flip_date": "2026-08-06",
       "bars_since_flip": 16,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 10.87,
       "supertrend": 10.854918,
       "rsi": 43.9,
-      "updated": "2026-08-29T03:59:56+00:00",
+      "updated": "2026-08-31T17:02:25+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 10.88,
-      "supertrend": 10.854918,
-      "rsi": 43.97,
-      "updated": "2026-08-29T04:47:41+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-22",
-      "bars_since_flip_1w": 9,
-      "supertrend_1w": 17.081814,
-      "rsi_1w": 48.38,
-      "updated_1w": "2026-08-29T05:10:49+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "IREN",
@@ -3502,29 +2170,16 @@
       "flip_date": "2026-08-13",
       "bars_since_flip": 11,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 35.45,
       "supertrend": 34.298808,
       "rsi": 40.24,
-      "updated": "2026-08-29T04:00:05+00:00",
+      "updated": "2026-08-31T17:02:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 35.425,
-      "supertrend": 34.298808,
-      "rsi": 40.21,
-      "updated": "2026-08-29T04:47:49+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 32.293828,
-      "rsi_1w": 43.27,
-      "updated_1w": "2026-08-29T05:10:57+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GSAT",
@@ -3538,23 +2193,13 @@
       "price": 81.76,
       "supertrend": 80.524384,
       "rsi": 47.89,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:00:13+00:00",
+      "updated": "2026-08-31T17:02:52+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:47:57+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-07-07",
-      "bars_since_flip_1w": 59,
-      "supertrend_1w": 73.134194,
-      "rsi_1w": 62.77,
-      "updated_1w": "2026-08-29T05:11:05+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NKLA",
@@ -3563,33 +2208,18 @@
       "td": "NKLA",
       "signal": "bear",
       "flip_date": "2025-06-17",
-<<<<<<< Updated upstream
-      "bars_since_flip": 132,
-      "last_bar": "2025-12-24",
-      "price": 0.007,
-      "supertrend": 0.055334,
-      "rsi": 47.76,
-      "updated": "2026-08-29T04:00:21+00:00",
+      "bars_since_flip": 97,
+      "last_bar": "2025-12-18",
+      "price": 0.005,
+      "supertrend": 0.0454,
+      "rsi": 44.38,
+      "updated": "2026-08-31T17:03:01+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "bars_since_flip": 97,
-      "last_bar": "2025-12-18",
-      "price": 0.005,
-      "supertrend": 0.0454,
-      "rsi": 44.38,
-      "updated": "2026-08-29T04:48:05+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2023-08-28",
-      "bars_since_flip_1w": 115,
-      "supertrend_1w": 0.139182,
-      "rsi_1w": 27.91,
-      "updated_1w": "2026-08-29T05:11:13+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NVNI",
@@ -3600,26 +2230,16 @@
       "flip_date": "2026-07-24",
       "bars_since_flip": 25,
       "last_bar": "2026-08-28",
-      "price": 0.9962,
+      "price": 1.003,
       "supertrend": 1.208155,
-      "rsi": 41.91,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:00:30+00:00",
+      "rsi": 42.55,
+      "updated": "2026-08-31T17:03:13+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:48:14+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-09-29",
-      "bars_since_flip_1w": 47,
-      "supertrend_1w": 1.855291,
-      "rsi_1w": 41.91,
-      "updated_1w": "2026-08-29T05:11:21+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PRCT",
@@ -3630,26 +2250,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-      "price": 20.85,
+      "price": 20.83,
       "supertrend": 18.115594,
-      "rsi": 50.43,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:03:05+00:00",
+      "rsi": 50.31,
+      "updated": "2026-08-31T17:05:14+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:49:43+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-02-10",
-      "bars_since_flip_1w": 80,
-      "supertrend_1w": 27.852601,
-      "rsi_1w": 41.74,
-      "updated_1w": "2026-08-29T05:12:51+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ISRG",
@@ -3660,29 +2270,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 372.60001,
       "supertrend": 365.909829,
       "rsi": 45.71,
-      "updated": "2026-08-29T04:02:15+00:00",
+      "updated": "2026-08-31T17:04:03+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 372.5,
-      "supertrend": 365.909829,
-      "rsi": 45.65,
-      "updated": "2026-08-29T04:48:54+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-02-02",
-      "bars_since_flip_1w": 29,
-      "supertrend_1w": 445.145859,
-      "rsi_1w": 38.91,
-      "updated_1w": "2026-08-29T05:12:02+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ABTS",
@@ -3693,26 +2290,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-      "price": 1.3699,
+      "price": 1.37,
       "supertrend": 1.064961,
-      "rsi": 55.3,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:00:54+00:00",
+      "rsi": 55.31,
+      "updated": "2026-08-31T17:03:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:48:38+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-01-26",
-      "bars_since_flip_1w": 30,
-      "supertrend_1w": 2.661384,
-      "rsi_1w": 43.71,
-      "updated_1w": "2026-08-29T05:11:46+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TSLA",
@@ -3723,29 +2310,16 @@
       "flip_date": "2026-08-21",
       "bars_since_flip": 5,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 348.75,
       "supertrend": 316.230341,
       "rsi": 50.89,
-      "updated": "2026-08-29T04:01:03+00:00",
+      "updated": "2026-08-31T17:03:52+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 348.76001,
-      "supertrend": 316.230341,
-      "rsi": 50.89,
-      "updated": "2026-08-29T04:48:46+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 424.777621,
-      "rsi_1w": 44.16,
-      "updated_1w": "2026-08-29T05:11:54+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ISRG",
@@ -3756,29 +2330,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 372.60001,
       "supertrend": 365.909829,
       "rsi": 45.71,
-      "updated": "2026-08-29T04:02:15+00:00",
+      "updated": "2026-08-31T17:04:03+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 372.5,
-      "supertrend": 365.909829,
-      "rsi": 45.65,
-      "updated": "2026-08-29T04:48:54+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-02-02",
-      "bars_since_flip_1w": 29,
-      "supertrend_1w": 445.145859,
-      "rsi_1w": 38.91,
-      "updated_1w": "2026-08-29T05:12:02+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SYM",
@@ -3789,29 +2350,16 @@
       "flip_date": "2026-08-06",
       "bars_since_flip": 16,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 39.875,
-      "supertrend": 46.331332,
+      "supertrend": 46.351332,
       "rsi": 43.81,
-      "updated": "2026-08-29T04:02:24+00:00",
+      "updated": "2026-08-31T17:04:12+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 39.86,
-      "supertrend": 46.331332,
-      "rsi": 43.77,
-      "updated": "2026-08-29T04:49:03+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-01",
-      "bars_since_flip_1w": 12,
-      "supertrend_1w": 58.107834,
-      "rsi_1w": 41.21,
-      "updated_1w": "2026-08-29T05:12:10+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SERV",
@@ -3825,23 +2373,13 @@
       "price": 5.03,
       "supertrend": 4.535058,
       "rsi": 48.68,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:02:32+00:00",
+      "updated": "2026-08-31T17:04:21+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:49:11+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-06-01",
-      "bars_since_flip_1w": 12,
-      "supertrend_1w": 8.168691,
-      "rsi_1w": 33.9,
-      "updated_1w": "2026-08-29T05:12:18+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CGNX",
@@ -3855,23 +2393,13 @@
       "price": 60.46,
       "supertrend": 67.786812,
       "rsi": 45.14,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:02:40+00:00",
+      "updated": "2026-08-31T17:04:33+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:49:19+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-02-09",
-      "bars_since_flip_1w": 28,
-      "supertrend_1w": 51.573489,
-      "rsi_1w": 51.68,
-      "updated_1w": "2026-08-29T05:12:26+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TER",
@@ -3882,29 +2410,16 @@
       "flip_date": "2026-08-13",
       "bars_since_flip": 11,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 354.97,
       "supertrend": 347.915224,
       "rsi": 43.82,
-      "updated": "2026-08-29T04:02:49+00:00",
+      "updated": "2026-08-31T17:04:43+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 354.965,
-      "supertrend": 347.915224,
-      "rsi": 43.82,
-      "updated": "2026-08-29T04:49:27+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-08-04",
-      "bars_since_flip_1w": 55,
-      "supertrend_1w": 292.605951,
-      "rsi_1w": 51.43,
-      "updated_1w": "2026-08-29T05:12:34+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ROK",
@@ -3915,29 +2430,16 @@
       "flip_date": "2026-08-04",
       "bars_since_flip": 18,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 430.85999,
-      "supertrend": 462.855487,
+      "supertrend": 462.855583,
       "rsi": 40.48,
-      "updated": "2026-08-29T04:02:57+00:00",
+      "updated": "2026-08-31T17:04:54+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 430.88501,
-      "supertrend": 462.855487,
-      "rsi": 40.5,
-      "updated": "2026-08-29T04:49:35+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 397.601823,
-      "rsi_1w": 48.58,
-      "updated_1w": "2026-08-29T05:12:42+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PRCT",
@@ -3948,26 +2450,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-      "price": 20.85,
+      "price": 20.83,
       "supertrend": 18.115594,
-      "rsi": 50.43,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:03:05+00:00",
+      "rsi": 50.31,
+      "updated": "2026-08-31T17:05:14+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:49:43+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-02-10",
-      "bars_since_flip_1w": 80,
-      "supertrend_1w": 27.852601,
-      "rsi_1w": 41.74,
-      "updated_1w": "2026-08-29T05:12:51+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AUR",
@@ -3978,29 +2470,16 @@
       "flip_date": "2026-08-24",
       "bars_since_flip": 4,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 5.83,
       "supertrend": 6.871857,
       "rsi": 40.6,
-      "updated": "2026-08-29T04:03:13+00:00",
+      "updated": "2026-08-31T17:05:23+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 5.825,
-      "supertrend": 6.871857,
-      "rsi": 40.49,
-      "updated": "2026-08-29T04:49:51+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-04-27",
-      "bars_since_flip_1w": 17,
-      "supertrend_1w": 5.096352,
-      "rsi_1w": 48.34,
-      "updated_1w": "2026-08-29T05:12:59+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MBLY",
@@ -4014,23 +2493,13 @@
       "price": 8.58,
       "supertrend": 9.602229,
       "rsi": 46.88,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:03:21+00:00",
+      "updated": "2026-08-31T17:05:33+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:50:00+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 7.020093,
-      "rsi_1w": 45.86,
-      "updated_1w": "2026-08-29T05:13:07+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "HSAI",
@@ -4041,29 +2510,16 @@
       "flip_date": "2026-08-03",
       "bars_since_flip": 19,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 17.42,
       "supertrend": 16.882163,
       "rsi": 48.0,
-      "updated": "2026-08-29T04:03:29+00:00",
+      "updated": "2026-08-31T17:05:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 17.425,
-      "supertrend": 16.882163,
-      "rsi": 48.03,
-      "updated": "2026-08-29T04:50:08+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-23",
-      "bars_since_flip_1w": 22,
-      "supertrend_1w": 23.193102,
-      "rsi_1w": 45.21,
-      "updated_1w": "2026-08-29T05:13:15+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "OUST",
@@ -4074,29 +2530,16 @@
       "flip_date": "2026-08-24",
       "bars_since_flip": 4,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 34.62,
-      "supertrend": 45.329321,
+      "supertrend": 45.351821,
       "rsi": 40.01,
-      "updated": "2026-08-29T04:03:37+00:00",
+      "updated": "2026-08-31T17:05:51+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 34.605,
-      "supertrend": 45.329321,
-      "rsi": 39.99,
-      "updated": "2026-08-29T04:50:16+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-06-02",
-      "bars_since_flip_1w": 64,
-      "supertrend_1w": 26.383682,
-      "rsi_1w": 49.42,
-      "updated_1w": "2026-08-29T05:13:23+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RR",
@@ -4107,29 +2550,16 @@
       "flip_date": "2026-08-14",
       "bars_since_flip": 10,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 1.83,
       "supertrend": 1.483802,
       "rsi": 53.94,
-      "updated": "2026-08-29T04:03:45+00:00",
+      "updated": "2026-08-31T17:06:01+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 1.835,
-      "supertrend": 1.483802,
-      "rsi": 54.14,
-      "updated": "2026-08-29T04:50:24+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 2.77766,
-      "rsi_1w": 42.7,
-      "updated_1w": "2026-08-29T05:13:31+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PDYN",
@@ -4143,23 +2573,13 @@
       "price": 5.76,
       "supertrend": 5.502523,
       "rsi": 46.03,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:03:53+00:00",
+      "updated": "2026-08-31T17:06:10+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:50:32+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-03-02",
-      "bars_since_flip_1w": 25,
-      "supertrend_1w": 3.829865,
-      "rsi_1w": 47.01,
-      "updated_1w": "2026-08-29T05:13:39+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "DE",
@@ -4170,29 +2590,16 @@
       "flip_date": "2026-08-21",
       "bars_since_flip": 5,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 630.33002,
       "supertrend": 588.286318,
       "rsi": 54.95,
-      "updated": "2026-08-29T04:04:02+00:00",
+      "updated": "2026-08-31T17:06:19+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 630.32001,
-      "supertrend": 588.286318,
-      "rsi": 54.95,
-      "updated": "2026-08-29T04:50:40+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2024-09-16",
-      "bars_since_flip_1w": 101,
-      "supertrend_1w": 525.441939,
-      "rsi_1w": 57.66,
-      "updated_1w": "2026-08-29T05:13:48+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "CAT",
@@ -4203,25 +2610,16 @@
       "flip_date": "2026-07-15",
       "bars_since_flip": 32,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 800.25,
-      "supertrend": 895.997063,
+      "supertrend": 895.997855,
       "rsi": 38.41,
-      "updated": "2026-08-29T04:04:10+00:00",
+      "updated": "2026-08-31T17:06:28+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
-=======
-      "price": 800.12,
-      "supertrend": 895.997063,
-      "rsi": 38.39,
-      "updated": "2026-08-29T04:50:49+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-24",
->>>>>>> Stashed changes
       "bars_since_flip_1w": null,
-      "supertrend_1w": 1032.108815,
-      "rsi_1w": 46.86,
-      "updated_1w": "2026-08-29T05:13:56+00:00"
+      "supertrend_1w": null,
+      "rsi_1w": null,
+      "updated_1w": null
     },
     {
       "sym": "CNH",
@@ -4232,29 +2630,16 @@
       "flip_date": "2026-08-21",
       "bars_since_flip": 5,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 11.68,
       "supertrend": 10.390965,
       "rsi": 60.15,
-      "updated": "2026-08-29T04:04:18+00:00",
+      "updated": "2026-08-31T17:06:37+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 11.675,
-      "supertrend": 10.390965,
-      "rsi": 60.1,
-      "updated": "2026-08-29T04:50:57+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-16",
-      "bars_since_flip_1w": 23,
-      "supertrend_1w": 13.056298,
-      "rsi_1w": 56.14,
-      "updated_1w": "2026-08-29T05:14:04+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PONY",
@@ -4265,17 +2650,10 @@
       "flip_date": "2026-08-26",
       "bars_since_flip": 2,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 7.58,
       "supertrend": 8.724031,
       "rsi": 47.19,
-      "updated": "2026-08-29T04:04:27+00:00",
-=======
-      "price": 7.575,
-      "supertrend": 8.724031,
-      "rsi": 47.11,
-      "updated": "2026-08-29T04:51:05+00:00",
->>>>>>> Stashed changes
+      "updated": "2026-08-31T17:06:45+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -4295,11 +2673,7 @@
       "price": 6.05,
       "supertrend": 5.587954,
       "rsi": 50.86,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:04:35+00:00",
-=======
-      "updated": "2026-08-29T04:51:13+00:00",
->>>>>>> Stashed changes
+      "updated": "2026-08-31T17:06:54+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -4316,14 +2690,10 @@
       "flip_date": "2026-04-29",
       "bars_since_flip": 84,
       "last_bar": "2026-08-28",
-      "price": 3.895,
+      "price": 3.9,
       "supertrend": 4.611139,
-      "rsi": 39.86,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:04:43+00:00",
-=======
-      "updated": "2026-08-29T04:51:21+00:00",
->>>>>>> Stashed changes
+      "rsi": 39.97,
+      "updated": "2026-08-31T17:07:03+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -4340,29 +2710,16 @@
       "flip_date": "2026-08-05",
       "bars_since_flip": 17,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 47.6,
       "supertrend": 50.455867,
       "rsi": 46.14,
-      "updated": "2026-08-29T04:04:51+00:00",
+      "updated": "2026-08-31T17:07:30+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 47.59,
-      "supertrend": 50.455867,
-      "rsi": 46.1,
-      "updated": "2026-08-29T04:51:29+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-09",
-      "bars_since_flip_1w": 24,
-      "supertrend_1w": 59.571947,
-      "rsi_1w": 43.39,
-      "updated_1w": "2026-08-29T05:14:36+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "JBT",
@@ -4393,29 +2750,16 @@
       "flip_date": "2026-05-28",
       "bars_since_flip": 64,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 19.21,
-      "supertrend": 21.672773,
+      "supertrend": 21.673493,
       "rsi": 31.58,
-      "updated": "2026-08-29T04:05:08+00:00",
+      "updated": "2026-08-31T17:07:48+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 19.215,
-      "supertrend": 21.670773,
-      "rsi": 31.6,
-      "updated": "2026-08-29T04:51:46+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 27.460535,
-      "rsi_1w": 29.88,
-      "updated_1w": "2026-08-29T05:14:53+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "HON",
@@ -4426,29 +2770,16 @@
       "flip_date": "2026-08-18",
       "bars_since_flip": 8,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 217.42999,
       "supertrend": 231.456768,
       "rsi": 37.91,
-      "updated": "2026-08-29T04:05:16+00:00",
+      "updated": "2026-08-31T17:07:57+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 217.48,
-      "supertrend": 231.456768,
-      "rsi": 37.95,
-      "updated": "2026-08-29T04:51:54+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 199.217248,
-      "rsi_1w": 45.61,
-      "updated_1w": "2026-08-29T05:15:01+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "EMR",
@@ -4459,29 +2790,16 @@
       "flip_date": "2026-07-24",
       "bars_since_flip": 25,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 155.17999,
       "supertrend": 150.010172,
       "rsi": 50.39,
-      "updated": "2026-08-29T04:05:24+00:00",
+      "updated": "2026-08-31T17:08:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 155.19,
-      "supertrend": 150.010172,
-      "rsi": 50.41,
-      "updated": "2026-08-29T04:52:02+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 132.232984,
-      "rsi_1w": 57.73,
-      "updated_1w": "2026-08-29T05:15:10+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ZBRA",
@@ -4492,29 +2810,16 @@
       "flip_date": "2026-06-29",
       "bars_since_flip": 43,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 356.45001,
       "supertrend": 337.011746,
       "rsi": 59.31,
-      "updated": "2026-08-29T04:05:32+00:00",
+      "updated": "2026-08-31T17:08:16+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 356.47,
-      "supertrend": 337.011746,
-      "rsi": 59.33,
-      "updated": "2026-08-29T04:52:10+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-06-29",
-      "bars_since_flip_1w": 8,
-      "supertrend_1w": 292.045455,
-      "rsi_1w": 69.72,
-      "updated_1w": "2026-08-29T05:15:18+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TDY",
@@ -4525,29 +2830,16 @@
       "flip_date": "2026-08-20",
       "bars_since_flip": 6,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 621.96002,
       "supertrend": 664.707957,
       "rsi": 36.21,
-      "updated": "2026-08-29T04:05:40+00:00",
+      "updated": "2026-08-31T17:08:25+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 622.21002,
-      "supertrend": 664.707957,
-      "rsi": 36.3,
-      "updated": "2026-08-29T04:52:18+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-01-12",
-      "bars_since_flip_1w": 32,
-      "supertrend_1w": 585.340259,
-      "rsi_1w": 48.19,
-      "updated_1w": "2026-08-29T05:15:27+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NOVT",
@@ -4558,29 +2850,16 @@
       "flip_date": "2026-08-19",
       "bars_since_flip": 7,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 142.2,
       "supertrend": 162.159864,
       "rsi": 40.59,
-      "updated": "2026-08-29T04:05:49+00:00",
+      "updated": "2026-08-31T17:08:36+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 142.32001,
-      "supertrend": 162.159864,
-      "rsi": 40.69,
-      "updated": "2026-08-29T04:52:27+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-01-12",
-      "bars_since_flip_1w": 32,
-      "supertrend_1w": 120.290604,
-      "rsi_1w": 48.31,
-      "updated_1w": "2026-08-29T05:15:35+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "SYK",
@@ -4594,23 +2873,13 @@
       "price": 330.69,
       "supertrend": 316.337614,
       "rsi": 49.21,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:05:57+00:00",
+      "updated": "2026-08-31T17:08:45+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:52:35+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-03-31",
-      "bars_since_flip_1w": 73,
-      "supertrend_1w": 352.357683,
-      "rsi_1w": 49.6,
-      "updated_1w": "2026-08-29T05:15:43+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MDT",
@@ -4621,29 +2890,16 @@
       "flip_date": "2026-06-04",
       "bars_since_flip": 59,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 91.23,
       "supertrend": 87.158702,
       "rsi": 57.01,
-      "updated": "2026-08-29T04:06:05+00:00",
+      "updated": "2026-08-31T17:08:53+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 91.205,
-      "supertrend": 87.158702,
-      "rsi": 56.95,
-      "updated": "2026-08-29T04:52:43+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-10",
-      "bars_since_flip_1w": 2,
-      "supertrend_1w": 78.850698,
-      "rsi_1w": 58.25,
-      "updated_1w": "2026-08-29T05:15:51+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ZBH",
@@ -4654,29 +2910,16 @@
       "flip_date": "2026-07-13",
       "bars_since_flip": 34,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 100.91,
       "supertrend": 93.125723,
       "rsi": 58.97,
-      "updated": "2026-08-29T04:06:13+00:00",
+      "updated": "2026-08-31T17:09:02+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 100.9,
-      "supertrend": 93.125723,
-      "rsi": 58.95,
-      "updated": "2026-08-29T04:52:51+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-10",
-      "bars_since_flip_1w": 2,
-      "supertrend_1w": 83.770919,
-      "rsi_1w": 62.71,
-      "updated_1w": "2026-08-29T05:15:59+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "GMED",
@@ -4687,29 +2930,16 @@
       "flip_date": "2026-08-10",
       "bars_since_flip": 14,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 82.97,
       "supertrend": 80.030181,
       "rsi": 49.63,
-      "updated": "2026-08-29T04:06:21+00:00",
+      "updated": "2026-08-31T17:09:11+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 82.96,
-      "supertrend": 80.030181,
-      "rsi": 49.61,
-      "updated": "2026-08-29T04:52:59+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-05-11",
-      "bars_since_flip_1w": 15,
-      "supertrend_1w": 96.153064,
-      "rsi_1w": 50.45,
-      "updated_1w": "2026-08-29T05:16:07+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "STXS",
@@ -4720,29 +2950,16 @@
       "flip_date": "2026-06-24",
       "bars_since_flip": 46,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 1.45,
       "supertrend": 1.624387,
       "rsi": 50.78,
-      "updated": "2026-08-29T04:06:29+00:00",
+      "updated": "2026-08-31T17:09:20+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 1.44,
-      "supertrend": 1.624387,
-      "rsi": 49.66,
-      "updated": "2026-08-29T04:53:07+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-10",
-      "bars_since_flip_1w": 41,
-      "supertrend_1w": 2.05247,
-      "rsi_1w": 37.85,
-      "updated_1w": "2026-08-29T05:16:15+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RBOT",
@@ -4756,23 +2973,13 @@
       "price": 0.042,
       "supertrend": 0.066882,
       "rsi": 27.41,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:06:37+00:00",
+      "updated": "2026-08-31T17:09:29+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:53:16+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-03-17",
-      "bars_since_flip_1w": 75,
-      "supertrend_1w": 0.530496,
-      "rsi_1w": 30.6,
-      "updated_1w": "2026-08-29T05:16:24+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "OMCL",
@@ -4783,25 +2990,16 @@
       "flip_date": "2026-07-22",
       "bars_since_flip": 27,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 33.080002,
-      "supertrend": 37.178851,
+      "supertrend": 37.179851,
       "rsi": 30.54,
-      "updated": "2026-08-29T04:06:45+00:00",
+      "updated": "2026-08-31T17:09:38+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
-=======
-      "price": 33.13,
-      "supertrend": 37.178851,
-      "rsi": 30.69,
-      "updated": "2026-08-29T04:53:24+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-24",
->>>>>>> Stashed changes
       "bars_since_flip_1w": null,
-      "supertrend_1w": 46.189164,
-      "rsi_1w": 39.32,
-      "updated_1w": "2026-08-29T05:16:32+00:00"
+      "supertrend_1w": null,
+      "rsi_1w": null,
+      "updated_1w": null
     },
     {
       "sym": "QCOM",
@@ -4812,29 +3010,16 @@
       "flip_date": "2026-06-10",
       "bars_since_flip": 55,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 164.19,
       "supertrend": 173.443146,
       "rsi": 48.5,
-      "updated": "2026-08-29T04:06:53+00:00",
+      "updated": "2026-08-31T17:09:46+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 164.2,
-      "supertrend": 173.443146,
-      "rsi": 48.52,
-      "updated": "2026-08-29T04:53:32+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-27",
-      "bars_since_flip_1w": 4,
-      "supertrend_1w": 225.248233,
-      "rsi_1w": 47.11,
-      "updated_1w": "2026-08-29T05:16:40+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "NXPI",
@@ -4845,29 +3030,16 @@
       "flip_date": "2026-06-10",
       "bars_since_flip": 55,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 223.58,
       "supertrend": 244.065223,
       "rsi": 37.15,
-      "updated": "2026-08-29T04:07:01+00:00",
+      "updated": "2026-08-31T17:09:54+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 223.53999,
-      "supertrend": 244.065223,
-      "rsi": 37.12,
-      "updated": "2026-08-29T04:53:40+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-27",
-      "bars_since_flip_1w": 4,
-      "supertrend_1w": 294.042785,
-      "rsi_1w": 41.68,
-      "updated_1w": "2026-08-29T05:16:48+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ADI",
@@ -4878,29 +3050,16 @@
       "flip_date": "2026-07-02",
       "bars_since_flip": 40,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 361.78,
       "supertrend": 402.294804,
       "rsi": 39.38,
-      "updated": "2026-08-29T04:07:09+00:00",
+      "updated": "2026-08-31T17:10:05+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 361.81,
-      "supertrend": 402.294804,
-      "rsi": 39.39,
-      "updated": "2026-08-29T04:53:48+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-06-23",
-      "bars_since_flip_1w": 61,
-      "supertrend_1w": 346.385514,
-      "rsi_1w": 48.51,
-      "updated_1w": "2026-08-29T05:16:56+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MCHP",
@@ -4911,29 +3070,16 @@
       "flip_date": "2026-06-05",
       "bars_since_flip": 58,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 72.93,
-      "supertrend": 83.384016,
+      "supertrend": 83.384096,
       "rsi": 40.23,
-      "updated": "2026-08-29T04:07:17+00:00",
+      "updated": "2026-08-31T17:10:26+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 72.94,
-      "supertrend": 83.384016,
-      "rsi": 40.25,
-      "updated": "2026-08-29T04:53:56+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-27",
-      "bars_since_flip_1w": 4,
-      "supertrend_1w": 100.035162,
-      "rsi_1w": 43.94,
-      "updated_1w": "2026-08-29T05:17:04+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "TXN",
@@ -4944,29 +3090,16 @@
       "flip_date": "2026-06-26",
       "bars_since_flip": 44,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 258.64001,
       "supertrend": 288.078066,
       "rsi": 38.3,
-      "updated": "2026-08-29T04:07:25+00:00",
+      "updated": "2026-08-31T17:10:38+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 258.70001,
-      "supertrend": 288.078066,
-      "rsi": 38.34,
-      "updated": "2026-08-29T04:54:05+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-01-05",
-      "bars_since_flip_1w": 33,
-      "supertrend_1w": 256.716692,
-      "rsi_1w": 48.38,
-      "updated_1w": "2026-08-29T05:17:12+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "INTC",
@@ -4980,23 +3113,13 @@
       "price": 89.47,
       "supertrend": 102.843817,
       "rsi": 41.5,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:07:33+00:00",
+      "updated": "2026-08-31T17:10:46+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:54:13+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-09-15",
-      "bars_since_flip_1w": 49,
-      "supertrend_1w": 84.530999,
-      "rsi_1w": 49.95,
-      "updated_1w": "2026-08-29T05:17:20+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AMBA",
@@ -5007,29 +3130,16 @@
       "flip_date": "2026-07-31",
       "bars_since_flip": 20,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 70.63,
       "supertrend": 68.500256,
       "rsi": 42.63,
-      "updated": "2026-08-29T04:07:41+00:00",
+      "updated": "2026-08-31T17:10:55+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 70.67,
-      "supertrend": 68.500256,
-      "rsi": 42.68,
-      "updated": "2026-08-29T04:54:21+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-04",
-      "bars_since_flip_1w": 16,
-      "supertrend_1w": 55.343965,
-      "rsi_1w": 49.3,
-      "updated_1w": "2026-08-29T05:17:29+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "PH",
@@ -5040,29 +3150,16 @@
       "flip_date": "2026-06-09",
       "bars_since_flip": 56,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 995.02002,
       "supertrend": 985.758706,
       "rsi": 45.23,
-      "updated": "2026-08-29T04:07:49+00:00",
+      "updated": "2026-08-31T17:11:06+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 994.96002,
-      "supertrend": 985.758706,
-      "rsi": 45.22,
-      "updated": "2026-08-29T04:54:29+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-08-03",
-      "bars_since_flip_1w": 3,
-      "supertrend_1w": 892.564231,
-      "rsi_1w": 56.52,
-      "updated_1w": "2026-08-29T05:17:37+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RRX",
@@ -5073,29 +3170,16 @@
       "flip_date": "2026-07-29",
       "bars_since_flip": 22,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 157.42999,
       "supertrend": 183.448263,
       "rsi": 29.91,
-      "updated": "2026-08-29T04:07:57+00:00",
+      "updated": "2026-08-31T17:11:15+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 157.39999,
-      "supertrend": 183.448263,
-      "rsi": 29.9,
-      "updated": "2026-08-29T04:54:37+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-08-17",
-      "bars_since_flip_1w": 1,
-      "supertrend_1w": 224.884866,
-      "rsi_1w": 34.13,
-      "updated_1w": "2026-08-29T05:17:45+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MOGA",
@@ -5127,27 +3211,15 @@
       "bars_since_flip": 55,
       "last_bar": "2026-08-28",
       "price": 41.029999,
-<<<<<<< Updated upstream
-      "supertrend": 46.49426,
+      "supertrend": 46.496659,
       "rsi": 34.14,
-      "updated": "2026-08-29T04:08:14+00:00",
+      "updated": "2026-08-31T17:11:33+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "supertrend": 46.492659,
-      "rsi": 34.14,
-      "updated": "2026-08-29T04:54:53+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2025-06-16",
-      "bars_since_flip_1w": 62,
-      "supertrend_1w": 39.839324,
-      "rsi_1w": 43.77,
-      "updated_1w": "2026-08-29T05:18:01+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AEVA",
@@ -5161,23 +3233,13 @@
       "price": 15.63,
       "supertrend": 21.322992,
       "rsi": 38.53,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:08:22+00:00",
+      "updated": "2026-08-31T17:11:42+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:55:02+00:00",
-      "signal_1w": "bull",
-      "flip_date_1w": "2026-05-18",
-      "bars_since_flip_1w": 14,
-      "supertrend_1w": 13.997564,
-      "rsi_1w": 45.89,
-      "updated_1w": "2026-08-29T05:18:09+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "INVZ",
@@ -5191,23 +3253,13 @@
       "price": 0.35,
       "supertrend": 0.420696,
       "rsi": 34.64,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:08:30+00:00",
+      "updated": "2026-08-31T17:11:51+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:55:10+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-12-15",
-      "bars_since_flip_1w": 36,
-      "supertrend_1w": 0.705929,
-      "rsi_1w": 29.27,
-      "updated_1w": "2026-08-29T05:18:17+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ARBE",
@@ -5218,26 +3270,16 @@
       "flip_date": "2026-08-17",
       "bars_since_flip": 9,
       "last_bar": "2026-08-28",
-      "price": 0.6559,
+      "price": 0.656,
       "supertrend": 0.637937,
-      "rsi": 39.93,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:08:38+00:00",
+      "rsi": 39.94,
+      "updated": "2026-08-31T17:11:59+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:55:18+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-11-17",
-      "bars_since_flip_1w": 40,
-      "supertrend_1w": 1.1984,
-      "rsi_1w": 41.38,
-      "updated_1w": "2026-08-29T05:18:26+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "AVAV",
@@ -5248,29 +3290,16 @@
       "flip_date": "2026-08-20",
       "bars_since_flip": 6,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 147.94,
-      "supertrend": 176.97347,
+      "supertrend": 176.977462,
       "rsi": 39.7,
-      "updated": "2026-08-29T04:08:46+00:00",
+      "updated": "2026-08-31T17:12:08+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 147.85001,
-      "supertrend": 176.97347,
-      "rsi": 39.66,
-      "updated": "2026-08-29T04:55:26+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-03-02",
-      "bars_since_flip_1w": 25,
-      "supertrend_1w": 238.734125,
-      "rsi_1w": 42.59,
-      "updated_1w": "2026-08-29T05:18:34+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "RCAT",
@@ -5281,36 +3310,22 @@
       "flip_date": "2026-08-28",
       "bars_since_flip": 0,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 8.49,
-      "supertrend": 11.024666,
+      "supertrend": 11.024516,
       "rsi": 42.91,
-      "updated": "2026-08-29T04:08:54+00:00",
+      "updated": "2026-08-31T17:12:18+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 8.495,
-      "supertrend": 11.024666,
-      "rsi": 42.95,
-      "updated": "2026-08-29T04:55:34+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 14.254582,
-      "rsi_1w": 44.65,
-      "updated_1w": "2026-08-29T05:18:42+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "ONDS",
       "name": "Ondas Holdings",
       "narrative": "Robotics & Physical AI",
       "td": "ONDS",
-<<<<<<< Updated upstream
       "signal": "bear",
       "flip_date": "2026-08-28",
       "bars_since_flip": 0,
@@ -5318,29 +3333,13 @@
       "price": 7.9,
       "supertrend": 9.80366,
       "rsi": 43.61,
-      "updated": "2026-08-29T04:09:03+00:00",
+      "updated": "2026-08-31T17:12:27+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "signal": "bull",
-      "flip_date": "2026-08-03",
-      "bars_since_flip": 19,
-      "last_bar": "2026-08-28",
-      "price": 7.915,
-      "supertrend": 7.902601,
-      "rsi": 43.74,
-      "updated": "2026-08-29T04:55:42+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-07-13",
-      "bars_since_flip_1w": 6,
-      "supertrend_1w": 12.795963,
-      "rsi_1w": 46.44,
-      "updated_1w": "2026-08-29T05:18:50+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "KSCP",
@@ -5351,29 +3350,16 @@
       "flip_date": "2026-07-22",
       "bars_since_flip": 27,
       "last_bar": "2026-08-28",
-<<<<<<< Updated upstream
       "price": 1.41,
       "supertrend": 1.216286,
       "rsi": 43.77,
-      "updated": "2026-08-29T04:09:12+00:00",
+      "updated": "2026-08-31T17:12:37+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "price": 1.405,
-      "supertrend": 1.216286,
-      "rsi": 43.55,
-      "updated": "2026-08-29T04:55:51+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-01-26",
-      "bars_since_flip_1w": 30,
-      "supertrend_1w": 2.750911,
-      "rsi_1w": 28.4,
-      "updated_1w": "2026-08-29T05:18:58+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "KITT",
@@ -5385,25 +3371,15 @@
       "bars_since_flip": 8,
       "last_bar": "2026-08-28",
       "price": 0.797,
-      "supertrend": 1.070088,
+      "supertrend": 1.070108,
       "rsi": 37.93,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:09:20+00:00",
+      "updated": "2026-08-31T17:12:46+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:55:59+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2025-02-24",
-      "bars_since_flip_1w": 78,
-      "supertrend_1w": 2.631425,
-      "rsi_1w": 24.06,
-      "updated_1w": "2026-08-29T05:19:06+00:00"
->>>>>>> Stashed changes
     },
     {
       "sym": "MVIS",
@@ -5417,23 +3393,13 @@
       "price": 1.84,
       "supertrend": 2.942761,
       "rsi": 33.08,
-<<<<<<< Updated upstream
-      "updated": "2026-08-29T04:09:28+00:00",
+      "updated": "2026-08-31T17:12:54+00:00",
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
       "supertrend_1w": null,
       "rsi_1w": null,
       "updated_1w": null
-=======
-      "updated": "2026-08-29T04:56:07+00:00",
-      "signal_1w": "bear",
-      "flip_date_1w": "2026-02-09",
-      "bars_since_flip_1w": 28,
-      "supertrend_1w": 6.385202,
-      "rsi_1w": 26.91,
-      "updated_1w": "2026-08-29T05:19:14+00:00"
->>>>>>> Stashed changes
     }
   ]
 }

@@ -104,8 +104,22 @@ def load_state():
     except FileNotFoundError:
         return {}
     except Exception as e:
-        print(f"!! {STATE_FILE} unreadable ({e}). Refusing to run.")
-        sys.exit(1)
+        # State file corrupted — likely from overlapping git pushes.
+        # Self-repair: reset and reseed silently instead of crashing.
+        print(f"!! {STATE_FILE} unreadable ({e}).")
+        print("!! Auto-repairing: resetting to {} and reseeding silently.")
+        print("!! No RSI alerts will fire this run.")
+        try:
+            import shutil
+            shutil.copy(STATE_FILE, STATE_FILE + ".corrupt")
+        except Exception:
+            pass
+        try:
+            with open(STATE_FILE, "w") as f:
+                f.write("{}")
+        except Exception:
+            pass
+        return {}
 
 
 def save_state(state):

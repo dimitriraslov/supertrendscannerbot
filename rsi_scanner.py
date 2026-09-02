@@ -97,128 +97,163 @@ def calc_rsi(closes, period=14):
 
 
 # ── RSI Divergence Detection ──────────────────────────────────────────────────
-SWING_N       = 3    # bars each side to confirm a swing point
-LOOKBACK      = 60   # max bars to search for swing points
-FRESH_BARS    = 5    # most recent swing must be within this many bars
-MIN_RSI_DIFF  = 2.0  # minimum RSI difference to count as divergence (filter noise)
+# Divergence detection parameters — based on professional TradingView standard
+PIVOT_LEFT    = 5    # bars to LEFT of pivot required to confirm swing (TradingView standard)
+PIVOT_RIGHT   = 5    # bars to RIGHT of pivot required to confirm swing
+MIN_PIVOT_GAP = 5    # minimum bars between two swing points (avoid fake close divergences)
+MAX_PIVOT_GAP = 50   # maximum bars between two swing points (5-50 is professional standard)
+FRESH_BARS    = 5    # most recent swing must be within this many bars of last close bar
+MIN_RSI_DIFF  = 3.0  # minimum RSI difference between swings (3pts filters noise better than 2)
+RSI_BULL_ZONE = 40   # bullish divergence: both RSI lows must be BELOW this (oversold zone)
+RSI_BEAR_ZONE = 60   # bearish divergence: both RSI highs must be ABOVE this (overbought zone)
+LOOKBACK      = 60   # total bars to search back for swing points
 
-def find_swings(values, n=SWING_N, lookback=LOOKBACK):
+def find_swings(values, left=PIVOT_LEFT, right=PIVOT_RIGHT, lookback=LOOKBACK):
     """
-    Find swing highs and lows in the last `lookback` bars.
-    A swing low:  values[i] < all values[i-n:i] and values[i+1:i+n+1]
-    A swing high: values[i] > all values[i-n:i] and values[i+1:i+n+1]
-    Returns list of (index, value, type) where type is 'high' or 'low'.
+    Find swing highs and lows using professional pivot detection.
+    Standard: 5 bars left, 5 bars right (TradingView RSI divergence standard).
+
+    A swing low:  values[i] is strictly less than ALL values in [i-left:i]
+                  AND strictly less than ALL values in [i+1:i+right+1]
+    A swing high: same logic but strictly greater.
+
+    Uses CLOSING prices only — mixing wick-based lows on price with
+    close-based RSI lows manufactures false divergences.
+
+    Returns list of (index, value, type) sorted oldest to newest.
     """
     length = len(values)
-    start  = max(n, length - lookback)
+    start  = max(left, length - lookback - right)
     swings = []
-    for i in range(start, length - n):
+    for i in range(start, length - right):
         v = values[i]
         if v is None:
             continue
-        left  = values[i - n:i]
-        right = values[i + 1:i + n + 1]
-        if any(x is None for x in left + right):
+        left_bars  = values[max(0, i - left):i]
+        right_bars = values[i + 1:i + right + 1]
+        if len(left_bars) < left or len(right_bars) < right:
             continue
-        if v < min(left) and v < min(right):
+        if any(x is None for x in left_bars + right_bars):
+            continue
+        if v < min(left_bars) and v < min(right_bars):
             swings.append((i, v, "low"))
-        elif v > max(left) and v > max(right):
+        elif v > max(left_bars) and v > max(right_bars):
             swings.append((i, v, "high"))
     return swings
 
 
 def detect_divergence(closes, rsi_vals, idx):
     """
-    Detect bullish or bearish RSI divergence on the last closed bar.
+    Detect regular bullish or bearish RSI divergence.
 
-    Bullish divergence:
-      - Price making lower lows (swing low 2 < swing low 1)
-      - RSI making higher lows  (rsi at swing low 2 > rsi at swing low 1)
-      - Both RSI swing lows below 50
-      - Most recent swing low within FRESH_BARS of idx
+    Uses professional TradingView standard parameters:
+      - 5 bars left / 5 bars right for pivot confirmation
+      - 5-50 bars between pivot points (not too close, not too stale)
+      - RSI zone filters: bullish only below 40, bearish only above 60
+      - Minimum 3 RSI points difference to filter noise
+      - Freshness: most recent pivot within 5 bars of last closed bar
 
-    Bearish divergence:
-      - Price making higher highs (swing high 2 > swing high 1)
-      - RSI making lower highs   (rsi at swing high 2 < rsi at swing high 1)
-      - Both RSI swing highs above 50
-      - Most recent swing high within FRESH_BARS of idx
+    Closes only — no wick mixing.
 
-    Returns list of divergence dicts (usually 0 or 1).
+    BULLISH divergence (reversal signal — buy opportunity):
+      Price: lower low (2nd swing low < 1st swing low)
+      RSI:   higher low (RSI at 2nd swing > RSI at 1st swing)
+      Zone:  both RSI values below 40 (genuine oversold)
+
+    BEARISH divergence (reversal signal — sell opportunity):
+      Price: higher high (2nd swing high > 1st swing high)
+      RSI:   lower high  (RSI at 2nd swing < RSI at 1st swing)
+      Zone:  both RSI values above 60 (genuine overbought)
+
+    Returns list of divergence dicts.
     """
-    if idx < SWING_N * 2 + 5:
+    min_bars_needed = PIVOT_LEFT + PIVOT_RIGHT + MIN_PIVOT_GAP + 5
+    if idx < min_bars_needed:
         return []
 
     closed_closes = closes[:idx + 1]
-    closed_rsi    = rsi_vals[:idx + 1]
+    closed_rsi    = [r for r in rsi_vals[:idx + 1]]
 
+    # Detect swings using 5L/5R professional standard
     price_swings = find_swings(closed_closes)
     rsi_swings   = find_swings(closed_rsi)
 
     results = []
 
-    # ── Bullish divergence: compare last two price swing LOWS ─────────────────
+    # ── BULLISH DIVERGENCE: lower price lows + higher RSI lows ───────────────
     price_lows = [(i, v) for i, v, t in price_swings if t == "low"]
     rsi_lows   = [(i, v) for i, v, t in rsi_swings   if t == "low"]
 
     if len(price_lows) >= 2 and len(rsi_lows) >= 2:
-        # Most recent swing low
-        pl2_i, pl2_v = price_lows[-1]
-        pl1_i, pl1_v = price_lows[-2]
-        # Find RSI swing lows near the same price swing bars (within 3 bars)
-        rl2 = next(((i,v) for i,v in reversed(rsi_lows) if abs(i-pl2_i)<=3), None)
-        rl1 = next(((i,v) for i,v in reversed(rsi_lows) if abs(i-pl1_i)<=3 and i<(rl2[0] if rl2 else idx)), None)
+        pl2_i, pl2_v = price_lows[-1]   # most recent price swing low
+        pl1_i, pl1_v = price_lows[-2]   # previous price swing low
 
-        if rl2 and rl1:
-            price_lower_low = pl2_v < pl1_v
-            rsi_higher_low  = rl2[1] > rl1[1]
-            rsi_diff        = rl2[1] - rl1[1]
-            both_oversold   = rl2[1] < 50 and rl1[1] < 50
-            fresh           = (idx - pl2_i) <= FRESH_BARS
+        pivot_gap = pl2_i - pl1_i
+        fresh     = (idx - pl2_i) <= FRESH_BARS
 
-            if (price_lower_low and rsi_higher_low and
-                    both_oversold and fresh and rsi_diff >= MIN_RSI_DIFF):
-                strength = "STRONG" if rsi_diff >= 5 else "MODERATE"
-                results.append({
-                    "type":        "bullish",
-                    "strength":    strength,
-                    "rsi_diff":    round(rsi_diff, 1),
-                    "price_low1":  round(pl1_v, 4),
-                    "price_low2":  round(pl2_v, 4),
-                    "rsi_low1":    round(rl1[1], 1),
-                    "rsi_low2":    round(rl2[1], 1),
-                    "bar_date_idx": pl2_i,
-                })
+        if MIN_PIVOT_GAP <= pivot_gap <= MAX_PIVOT_GAP and fresh:
+            # Find RSI swing lows closest to each price swing low (within 5 bars)
+            rl2 = next(((i,v) for i,v in reversed(rsi_lows) if abs(i-pl2_i)<=5), None)
+            rl1 = next(((i,v) for i,v in reversed(rsi_lows)
+                        if abs(i-pl1_i)<=5 and i < (rl2[0] if rl2 else idx)), None)
 
-    # ── Bearish divergence: compare last two price swing HIGHS ────────────────
+            if rl2 and rl1:
+                price_lower_low  = pl2_v < pl1_v          # price: lower low ✓
+                rsi_higher_low   = rl2[1] > rl1[1]        # RSI: higher low ✓
+                rsi_diff         = rl2[1] - rl1[1]
+                both_in_zone     = rl2[1] < RSI_BULL_ZONE and rl1[1] < RSI_BULL_ZONE
+                strong_enough    = rsi_diff >= MIN_RSI_DIFF
+
+                if price_lower_low and rsi_higher_low and both_in_zone and strong_enough:
+                    strength = "STRONG" if rsi_diff >= 6 else "MODERATE"
+                    results.append({
+                        "type":         "bullish",
+                        "strength":     strength,
+                        "rsi_diff":     round(rsi_diff, 1),
+                        "price_low1":   round(pl1_v, 4),
+                        "price_low2":   round(pl2_v, 4),
+                        "rsi_low1":     round(rl1[1], 1),
+                        "rsi_low2":     round(rl2[1], 1),
+                        "pivot_gap":    pivot_gap,
+                        "bar_date_idx": pl2_i,
+                    })
+
+    # ── BEARISH DIVERGENCE: higher price highs + lower RSI highs ─────────────
     price_highs = [(i, v) for i, v, t in price_swings if t == "high"]
     rsi_highs   = [(i, v) for i, v, t in rsi_swings   if t == "high"]
 
     if len(price_highs) >= 2 and len(rsi_highs) >= 2:
         ph2_i, ph2_v = price_highs[-1]
         ph1_i, ph1_v = price_highs[-2]
-        rh2 = next(((i,v) for i,v in reversed(rsi_highs) if abs(i-ph2_i)<=3), None)
-        rh1 = next(((i,v) for i,v in reversed(rsi_highs) if abs(i-ph1_i)<=3 and i<(rh2[0] if rh2 else idx)), None)
 
-        if rh2 and rh1:
-            price_higher_high = ph2_v > ph1_v
-            rsi_lower_high    = rh2[1] < rh1[1]
-            rsi_diff          = rh1[1] - rh2[1]
-            both_overbought   = rh2[1] > 50 and rh1[1] > 50
-            fresh             = (idx - ph2_i) <= FRESH_BARS
+        pivot_gap = ph2_i - ph1_i
+        fresh     = (idx - ph2_i) <= FRESH_BARS
 
-            if (price_higher_high and rsi_lower_high and
-                    both_overbought and fresh and rsi_diff >= MIN_RSI_DIFF):
-                strength = "STRONG" if rsi_diff >= 5 else "MODERATE"
-                results.append({
-                    "type":         "bearish",
-                    "strength":     strength,
-                    "rsi_diff":     round(rsi_diff, 1),
-                    "price_high1":  round(ph1_v, 4),
-                    "price_high2":  round(ph2_v, 4),
-                    "rsi_high1":    round(rh1[1], 1),
-                    "rsi_high2":    round(rh2[1], 1),
-                    "bar_date_idx": ph2_i,
-                })
+        if MIN_PIVOT_GAP <= pivot_gap <= MAX_PIVOT_GAP and fresh:
+            rh2 = next(((i,v) for i,v in reversed(rsi_highs) if abs(i-ph2_i)<=5), None)
+            rh1 = next(((i,v) for i,v in reversed(rsi_highs)
+                        if abs(i-ph1_i)<=5 and i < (rh2[0] if rh2 else idx)), None)
+
+            if rh2 and rh1:
+                price_higher_high = ph2_v > ph1_v
+                rsi_lower_high    = rh2[1] < rh1[1]
+                rsi_diff          = rh1[1] - rh2[1]
+                both_in_zone      = rh2[1] > RSI_BEAR_ZONE and rh1[1] > RSI_BEAR_ZONE
+                strong_enough     = rsi_diff >= MIN_RSI_DIFF
+
+                if price_higher_high and rsi_lower_high and both_in_zone and strong_enough:
+                    strength = "STRONG" if rsi_diff >= 6 else "MODERATE"
+                    results.append({
+                        "type":          "bearish",
+                        "strength":      strength,
+                        "rsi_diff":      round(rsi_diff, 1),
+                        "price_high1":   round(ph1_v, 4),
+                        "price_high2":   round(ph2_v, 4),
+                        "rsi_high1":     round(rh1[1], 1),
+                        "rsi_high2":     round(rh2[1], 1),
+                        "pivot_gap":     pivot_gap,
+                        "bar_date_idx":  ph2_i,
+                    })
 
     return results
 

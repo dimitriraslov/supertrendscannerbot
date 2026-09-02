@@ -95,6 +95,133 @@ def calc_rsi(closes, period=14):
     return rsi
 
 
+
+# ── RSI Divergence Detection ──────────────────────────────────────────────────
+SWING_N       = 3    # bars each side to confirm a swing point
+LOOKBACK      = 60   # max bars to search for swing points
+FRESH_BARS    = 5    # most recent swing must be within this many bars
+MIN_RSI_DIFF  = 2.0  # minimum RSI difference to count as divergence (filter noise)
+
+def find_swings(values, n=SWING_N, lookback=LOOKBACK):
+    """
+    Find swing highs and lows in the last `lookback` bars.
+    A swing low:  values[i] < all values[i-n:i] and values[i+1:i+n+1]
+    A swing high: values[i] > all values[i-n:i] and values[i+1:i+n+1]
+    Returns list of (index, value, type) where type is 'high' or 'low'.
+    """
+    length = len(values)
+    start  = max(n, length - lookback)
+    swings = []
+    for i in range(start, length - n):
+        v = values[i]
+        if v is None:
+            continue
+        left  = values[i - n:i]
+        right = values[i + 1:i + n + 1]
+        if any(x is None for x in left + right):
+            continue
+        if v < min(left) and v < min(right):
+            swings.append((i, v, "low"))
+        elif v > max(left) and v > max(right):
+            swings.append((i, v, "high"))
+    return swings
+
+
+def detect_divergence(closes, rsi_vals, idx):
+    """
+    Detect bullish or bearish RSI divergence on the last closed bar.
+
+    Bullish divergence:
+      - Price making lower lows (swing low 2 < swing low 1)
+      - RSI making higher lows  (rsi at swing low 2 > rsi at swing low 1)
+      - Both RSI swing lows below 50
+      - Most recent swing low within FRESH_BARS of idx
+
+    Bearish divergence:
+      - Price making higher highs (swing high 2 > swing high 1)
+      - RSI making lower highs   (rsi at swing high 2 < rsi at swing high 1)
+      - Both RSI swing highs above 50
+      - Most recent swing high within FRESH_BARS of idx
+
+    Returns list of divergence dicts (usually 0 or 1).
+    """
+    if idx < SWING_N * 2 + 5:
+        return []
+
+    closed_closes = closes[:idx + 1]
+    closed_rsi    = rsi_vals[:idx + 1]
+
+    price_swings = find_swings(closed_closes)
+    rsi_swings   = find_swings(closed_rsi)
+
+    results = []
+
+    # ── Bullish divergence: compare last two price swing LOWS ─────────────────
+    price_lows = [(i, v) for i, v, t in price_swings if t == "low"]
+    rsi_lows   = [(i, v) for i, v, t in rsi_swings   if t == "low"]
+
+    if len(price_lows) >= 2 and len(rsi_lows) >= 2:
+        # Most recent swing low
+        pl2_i, pl2_v = price_lows[-1]
+        pl1_i, pl1_v = price_lows[-2]
+        # Find RSI swing lows near the same price swing bars (within 3 bars)
+        rl2 = next(((i,v) for i,v in reversed(rsi_lows) if abs(i-pl2_i)<=3), None)
+        rl1 = next(((i,v) for i,v in reversed(rsi_lows) if abs(i-pl1_i)<=3 and i<(rl2[0] if rl2 else idx)), None)
+
+        if rl2 and rl1:
+            price_lower_low = pl2_v < pl1_v
+            rsi_higher_low  = rl2[1] > rl1[1]
+            rsi_diff        = rl2[1] - rl1[1]
+            both_oversold   = rl2[1] < 50 and rl1[1] < 50
+            fresh           = (idx - pl2_i) <= FRESH_BARS
+
+            if (price_lower_low and rsi_higher_low and
+                    both_oversold and fresh and rsi_diff >= MIN_RSI_DIFF):
+                strength = "STRONG" if rsi_diff >= 5 else "MODERATE"
+                results.append({
+                    "type":        "bullish",
+                    "strength":    strength,
+                    "rsi_diff":    round(rsi_diff, 1),
+                    "price_low1":  round(pl1_v, 4),
+                    "price_low2":  round(pl2_v, 4),
+                    "rsi_low1":    round(rl1[1], 1),
+                    "rsi_low2":    round(rl2[1], 1),
+                    "bar_date_idx": pl2_i,
+                })
+
+    # ── Bearish divergence: compare last two price swing HIGHS ────────────────
+    price_highs = [(i, v) for i, v, t in price_swings if t == "high"]
+    rsi_highs   = [(i, v) for i, v, t in rsi_swings   if t == "high"]
+
+    if len(price_highs) >= 2 and len(rsi_highs) >= 2:
+        ph2_i, ph2_v = price_highs[-1]
+        ph1_i, ph1_v = price_highs[-2]
+        rh2 = next(((i,v) for i,v in reversed(rsi_highs) if abs(i-ph2_i)<=3), None)
+        rh1 = next(((i,v) for i,v in reversed(rsi_highs) if abs(i-ph1_i)<=3 and i<(rh2[0] if rh2 else idx)), None)
+
+        if rh2 and rh1:
+            price_higher_high = ph2_v > ph1_v
+            rsi_lower_high    = rh2[1] < rh1[1]
+            rsi_diff          = rh1[1] - rh2[1]
+            both_overbought   = rh2[1] > 50 and rh1[1] > 50
+            fresh             = (idx - ph2_i) <= FRESH_BARS
+
+            if (price_higher_high and rsi_lower_high and
+                    both_overbought and fresh and rsi_diff >= MIN_RSI_DIFF):
+                strength = "STRONG" if rsi_diff >= 5 else "MODERATE"
+                results.append({
+                    "type":         "bearish",
+                    "strength":     strength,
+                    "rsi_diff":     round(rsi_diff, 1),
+                    "price_high1":  round(ph1_v, 4),
+                    "price_high2":  round(ph2_v, 4),
+                    "rsi_high1":    round(rh1[1], 1),
+                    "rsi_high2":    round(rh2[1], 1),
+                    "bar_date_idx": ph2_i,
+                })
+
+    return results
+
 # ── State ─────────────────────────────────────────────────────────────────────
 def load_state():
     try:
@@ -225,6 +352,31 @@ def fmt_price(p):
         return f"${p:.2f}"
     return f"${p:.4f}"
 
+
+
+def format_div_alert(sym, name, narrative, tf_label, div, price, bar_date):
+    if div["type"] == "bullish":
+        return (
+            f"📈 <b>BULLISH DIVERGENCE — {tf_label}</b>\n"
+            f"<b>{sym}</b> · {name}\n"
+            f"Price: lower low  ({fmt_price(div['price_low1'])} → {fmt_price(div['price_low2'])})\n"
+            f"RSI:   higher low ({div['rsi_low1']} → {div['rsi_low2']}) ↑{div['rsi_diff']}pts\n"
+            f"Strength: <b>{div['strength']}</b>\n"
+            f"Current price: {fmt_price(price)} · Bar: {bar_date}\n"
+            f"Narrative: {narrative}\n\n"
+            f"⏰ {_stamp()}"
+        )
+    else:
+        return (
+            f"📉 <b>BEARISH DIVERGENCE — {tf_label}</b>\n"
+            f"<b>{sym}</b> · {name}\n"
+            f"Price: higher high ({fmt_price(div['price_high1'])} → {fmt_price(div['price_high2'])})\n"
+            f"RSI:   lower high  ({div['rsi_high1']} → {div['rsi_high2']}) ↓{div['rsi_diff']}pts\n"
+            f"Strength: <b>{div['strength']}</b>\n"
+            f"Current price: {fmt_price(price)} · Bar: {bar_date}\n"
+            f"Narrative: {narrative}\n\n"
+            f"⏰ {_stamp()}"
+        )
 
 def format_alert(sym, name, narrative, tf_label, level, rsi_val, prev_rsi, price, bar_date):
     lvl = next((l for l in LEVELS if l["value"] == level), LEVELS[0])
@@ -442,6 +594,37 @@ def main():
                         }
                     else:
                         print(f"    (delivery failed; will retry next run)")
+
+                # ── Divergence detection (uses same fetched bars, 0 extra credits) ──
+                div_key_prefix = f"{sym}:{tf_id}:div"
+                dates_all  = [b["date"] for b in bars]
+                closes_all = [b["c"]    for b in bars]
+                idx_all    = last_closed_index(dates_all, td, meta)
+                if idx_all is not None and idx_all >= SWING_N * 2 + 5:
+                    rsi_all = calc_rsi(closes_all[:idx_all + 1], RSI_PERIOD)
+                    divs    = detect_divergence(closes_all, rsi_all, idx_all)
+                    for div in divs:
+                        bar_date = dates_all[div["bar_date_idx"]] if div["bar_date_idx"] < len(dates_all) else dates_all[idx_all]
+                        div_alert_key = f"{div['type']}:{bar_date}"
+                        div_state_key = div_key_prefix
+                        div_prior     = state.get(div_state_key, {})
+                        already_div   = div_prior.get("alerted", {})
+
+                        if first_time or args.reseed:
+                            state[div_state_key] = {**div_prior, "alerted": {**already_div, div_alert_key: True}}
+                            continue
+
+                        if already_div.get(div_alert_key):
+                            continue
+
+                        # Genuine new divergence — alert once
+                        cur_price = closes_all[idx_all]
+                        print(f"  *** {div['type'].upper()} DIVERGENCE {div['strength']} on {tf_label} ***")
+                        msg = format_div_alert(sym, name, narrative, tf_label, div, cur_price, bar_date)
+                        if send_telegram(msg, dry=args.dry_run):
+                            alerts.append({"sym": sym, "tf": tf_label, "level": f"DIV_{div['type'].upper()}", "rsi": 0})
+                            state[div_state_key] = {**div_prior, "alerted": {**already_div, div_alert_key: True},
+                                                    "updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat()}
 
                 time.sleep(DELAY_SEC)
 

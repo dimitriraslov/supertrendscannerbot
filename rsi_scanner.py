@@ -429,20 +429,41 @@ def format_alert(sym, name, narrative, tf_label, level, rsi_val, prev_rsi, price
 
 def format_summary(alerts, errors, total):
     now = _stamp()
-    if not alerts:
-        return (
-            f"📊 <b>RSI Scan Complete</b>\n"
-            f"No RSI crosses detected · {total} symbols × 2 TFs scanned\n"
-            f"⏰ {now}"
-        )
-    lines = [f"📊 <b>RSI Scan — {len(alerts)} cross(es)</b>", ""]
-    for a in alerts:
-        lvl = next((l for l in LEVELS if l["value"] == a["level"]), LEVELS[0])
-        lines.append(
-            f"{lvl['emoji']} {a['sym']} RSI<{a['level']} on {a['tf']}  "
-            f"(RSI {a['rsi']:.1f})"
-        )
-    lines += ["", f"⏰ {now}"]
+
+    # Separate RSI crosses from divergence alerts
+    rsi_alerts  = [a for a in alerts if not str(a.get("level","")).startswith("DIV_")]
+    bull_divs   = [a for a in alerts if a.get("level") == "DIV_BULLISH"]
+    bear_divs   = [a for a in alerts if a.get("level") == "DIV_BEARISH"]
+
+    lines = [f"📊 <b>RSI Daily Scan Summary</b>", ""]
+
+    # RSI crosses section
+    if rsi_alerts:
+        lines.append(f"<b>RSI Crosses ({len(rsi_alerts)})</b>")
+        for a in rsi_alerts:
+            lvl = next((l for l in LEVELS if l["value"] == a["level"]), LEVELS[0])
+            lines.append(f"  {lvl['emoji']} {a['sym']} RSI<{a['level']} on {a['tf']} (RSI {a['rsi']:.1f})")
+    else:
+        lines.append("RSI Crosses: none detected")
+
+    lines.append("")
+
+    # Divergence section
+    if bull_divs or bear_divs:
+        lines.append(f"<b>Divergences ({len(bull_divs) + len(bear_divs)})</b>")
+        for a in bull_divs:
+            lines.append(f"  📈 {a['sym']} BULLISH divergence on {a['tf']}")
+        for a in bear_divs:
+            lines.append(f"  📉 {a['sym']} BEARISH divergence on {a['tf']}")
+    else:
+        lines.append("Divergences: none detected")
+
+    lines.append("")
+
+    if errors:
+        lines.append(f"⚠️ Errors: {len(errors)}")
+
+    lines.append(f"{total} symbols scanned · ⏰ {now}")
     return "\n".join(lines)
 
 
@@ -672,11 +693,12 @@ def main():
         print(f"seeded (silent): {', '.join(seeded)}")
 
     if not args.no_summary and not args.reseed:
-        if alerts or errors:
-            send_telegram(
-                format_summary(alerts, errors, total),
-                dry=args.dry_run
-            )
+        # Always send summary so you know the scan ran
+        # and whether divergences or crosses were found
+        send_telegram(
+            format_summary(alerts, errors, total),
+            dry=args.dry_run
+        )
 
     took = (datetime.now(timezone.utc) - started).total_seconds()
     print(f"\nDone in {took/60:.1f} min — {total} evaluated, "

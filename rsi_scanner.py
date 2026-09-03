@@ -635,7 +635,7 @@ def main():
                 dates_all  = [b["date"] for b in bars]
                 closes_all = [b["c"]    for b in bars]
                 idx_all    = last_closed_index(dates_all, td, meta)
-                if idx_all is not None and idx_all >= SWING_N * 2 + 5:
+                if idx_all is not None and idx_all >= PIVOT_LEFT * 2 + 5:
                     rsi_all = calc_rsi(closes_all[:idx_all + 1], RSI_PERIOD)
                     divs    = detect_divergence(closes_all, rsi_all, idx_all)
                     for div in divs:

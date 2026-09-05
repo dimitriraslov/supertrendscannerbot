@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "generated_at": "2026-09-05T00:45:26+00:00",
+=======
+  "generated_at": "2026-09-05T01:20:25+00:00",
+>>>>>>> Stashed changes
   "assets": [
     {
       "sym": "NVDA",
@@ -13,7 +17,11 @@
       "price": 230.36,
       "supertrend": 209.778254,
       "rsi": 60.39,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:12:52+00:00",
+=======
+      "updated": "2026-09-05T00:45:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -33,7 +41,11 @@
       "price": 477.57001,
       "supertrend": 510.035007,
       "rsi": 49.67,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:00+00:00",
+=======
+      "updated": "2026-09-05T00:46:07+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -53,7 +65,11 @@
       "price": 357.89499,
       "supertrend": 389.934519,
       "rsi": 38.04,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:08+00:00",
+=======
+      "updated": "2026-09-05T00:46:16+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -73,7 +89,11 @@
       "price": 39.59,
       "supertrend": 32.401549,
       "rsi": 62.66,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:17+00:00",
+=======
+      "updated": "2026-09-05T00:46:24+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -93,7 +113,11 @@
       "price": 252.089996,
       "supertrend": 277.512791,
       "rsi": 47.95,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:25+00:00",
+=======
+      "updated": "2026-09-05T00:46:32+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -113,7 +137,11 @@
       "price": 174.33,
       "supertrend": 163.948034,
       "rsi": 54.16,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:33+00:00",
+=======
+      "updated": "2026-09-05T00:47:00+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -133,7 +161,11 @@
       "price": 10.46,
       "supertrend": 9.236887,
       "rsi": 55.03,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:41+00:00",
+=======
+      "updated": "2026-09-05T00:47:08+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -153,7 +185,11 @@
       "price": 6.74,
       "supertrend": 6.099735,
       "rsi": 45.43,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:50+00:00",
+=======
+      "updated": "2026-09-05T00:47:16+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -173,7 +209,11 @@
       "price": 2.92,
       "supertrend": 2.771719,
       "rsi": 42.62,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:13:58+00:00",
+=======
+      "updated": "2026-09-05T00:47:25+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -193,7 +233,11 @@
       "price": 39.52,
       "supertrend": 37.403963,
       "rsi": 46.42,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:06+00:00",
+=======
+      "updated": "2026-09-05T00:47:33+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -213,7 +257,11 @@
       "price": 15.2,
       "supertrend": 17.779694,
       "rsi": 42.97,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:15+00:00",
+=======
+      "updated": "2026-09-05T00:47:41+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -233,7 +281,11 @@
       "price": 8.01,
       "supertrend": 9.149148,
       "rsi": 44.31,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:23+00:00",
+=======
+      "updated": "2026-09-05T00:48:09+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -253,7 +305,11 @@
       "price": 223.55,
       "supertrend": 197.444933,
       "rsi": 51.08,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:31+00:00",
+=======
+      "updated": "2026-09-05T00:48:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -273,7 +329,11 @@
       "price": 310.39999,
       "supertrend": 243.989638,
       "rsi": 52.22,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:40+00:00",
+=======
+      "updated": "2026-09-05T00:48:26+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -293,7 +353,11 @@
       "price": 170.57001,
       "supertrend": 221.864431,
       "rsi": 34.2,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:48+00:00",
+=======
+      "updated": "2026-09-05T00:48:34+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -313,7 +377,11 @@
       "price": 428.91,
       "supertrend": 434.20595,
       "rsi": 56.77,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:14:56+00:00",
+=======
+      "updated": "2026-09-05T00:49:02+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -333,7 +401,11 @@
       "price": 525.28003,
       "supertrend": 568.652041,
       "rsi": 33.48,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:06+00:00",
+=======
+      "updated": "2026-09-05T00:49:10+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -353,7 +425,11 @@
       "price": 200.78999,
       "supertrend": 213.273177,
       "rsi": 34.79,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:15+00:00",
+=======
+      "updated": "2026-09-05T00:49:19+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -373,7 +449,11 @@
       "price": 514.97998,
       "supertrend": 557.684195,
       "rsi": 34.05,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:24+00:00",
+=======
+      "updated": "2026-09-05T00:49:27+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -393,7 +473,11 @@
       "price": 359.39001,
       "supertrend": 384.04743,
       "rsi": 31.03,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:32+00:00",
+=======
+      "updated": "2026-09-05T00:50:35+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -413,7 +497,11 @@
       "price": 285.92999,
       "supertrend": 310.73877,
       "rsi": 37.07,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:40+00:00",
+=======
+      "updated": "2026-09-05T00:50:43+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -433,7 +521,11 @@
       "price": 47.82,
       "supertrend": 55.953687,
       "rsi": 35.7,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:49+00:00",
+=======
+      "updated": "2026-09-05T00:50:52+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -453,7 +545,11 @@
       "price": 64.26,
       "supertrend": 73.853568,
       "rsi": 37.19,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:15:57+00:00",
+=======
+      "updated": "2026-09-05T00:51:00+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -473,7 +569,11 @@
       "price": 62.31,
       "supertrend": 69.366875,
       "rsi": 47.16,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:05+00:00",
+=======
+      "updated": "2026-09-05T00:51:08+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -493,7 +593,11 @@
       "price": 6.74,
       "supertrend": 7.706774,
       "rsi": 36.36,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:15+00:00",
+=======
+      "updated": "2026-09-05T00:51:16+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -513,7 +617,11 @@
       "price": 5.71,
       "supertrend": 5.165223,
       "rsi": 48.65,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:23+00:00",
+=======
+      "updated": "2026-09-05T00:51:24+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -533,7 +641,11 @@
       "price": 159.47,
       "supertrend": 156.344785,
       "rsi": 50.99,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:31+00:00",
+=======
+      "updated": "2026-09-05T00:52:33+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -553,7 +665,11 @@
       "price": 208.60001,
       "supertrend": 200.713409,
       "rsi": 64.03,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:40+00:00",
+=======
+      "updated": "2026-09-05T00:52:41+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -573,7 +689,11 @@
       "price": 60.040001,
       "supertrend": 57.084398,
       "rsi": 56.81,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:48+00:00",
+=======
+      "updated": "2026-09-05T00:52:49+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -593,7 +713,11 @@
       "price": 36.44,
       "supertrend": 33.907265,
       "rsi": 57.42,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:16:56+00:00",
+=======
+      "updated": "2026-09-05T00:52:57+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -613,7 +737,11 @@
       "price": 100.74,
       "supertrend": 108.508694,
       "rsi": 54.05,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:04+00:00",
+=======
+      "updated": "2026-09-05T00:53:06+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -633,7 +761,11 @@
       "price": 11.54,
       "supertrend": 11.252722,
       "rsi": 49.37,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:13+00:00",
+=======
+      "updated": "2026-09-05T00:53:14+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -653,7 +785,11 @@
       "price": 3.42,
       "supertrend": 3.147458,
       "rsi": 54.81,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:21+00:00",
+=======
+      "updated": "2026-09-05T00:53:22+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -673,7 +809,11 @@
       "price": 10.73,
       "supertrend": 9.780663,
       "rsi": 54.88,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:29+00:00",
+=======
+      "updated": "2026-09-05T00:53:30+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -693,7 +833,11 @@
       "price": 14.47,
       "supertrend": 13.010079,
       "rsi": 51.27,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:38+00:00",
+=======
+      "updated": "2026-09-05T00:54:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -713,7 +857,11 @@
       "price": 173.89,
       "supertrend": 158.580306,
       "rsi": 47.45,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:46+00:00",
+=======
+      "updated": "2026-09-05T00:54:47+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -733,7 +881,11 @@
       "price": 39.41,
       "supertrend": 36.713185,
       "rsi": 65.38,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:17:54+00:00",
+=======
+      "updated": "2026-09-05T00:54:55+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -753,7 +905,11 @@
       "price": 406.76999,
       "supertrend": 423.400739,
       "rsi": 52.41,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:03+00:00",
+=======
+      "updated": "2026-09-05T00:55:03+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -773,7 +929,11 @@
       "price": 59.82,
       "supertrend": 57.181273,
       "rsi": 52.93,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:11+00:00",
+=======
+      "updated": "2026-09-05T00:55:11+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -793,7 +953,11 @@
       "price": 99.26,
       "supertrend": 92.737551,
       "rsi": 58.46,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:20+00:00",
+=======
+      "updated": "2026-09-05T00:55:19+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -813,7 +977,11 @@
       "price": 129.029999,
       "supertrend": 119.720411,
       "rsi": 57.96,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:28+00:00",
+=======
+      "updated": "2026-09-05T00:55:28+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -833,7 +1001,11 @@
       "price": 128.089996,
       "supertrend": 118.659969,
       "rsi": 60.49,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:36+00:00",
+=======
+      "updated": "2026-09-05T00:56:36+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -853,7 +1025,11 @@
       "price": 204.73,
       "supertrend": 193.119165,
       "rsi": 59.17,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:44+00:00",
+=======
+      "updated": "2026-09-05T00:56:44+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -873,7 +1049,11 @@
       "price": 51.34,
       "supertrend": 47.329263,
       "rsi": 52.96,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:18:53+00:00",
+=======
+      "updated": "2026-09-05T00:56:53+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -893,7 +1073,11 @@
       "price": 20.97,
       "supertrend": 18.353585,
       "rsi": 58.24,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:01+00:00",
+=======
+      "updated": "2026-09-05T00:57:01+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -913,7 +1097,11 @@
       "price": 11.12,
       "supertrend": 9.424744,
       "rsi": 58.82,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:09+00:00",
+=======
+      "updated": "2026-09-05T00:57:09+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -933,7 +1121,11 @@
       "price": 154.98,
       "supertrend": 142.443195,
       "rsi": 62.18,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:18+00:00",
+=======
+      "updated": "2026-09-05T00:57:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -953,7 +1145,11 @@
       "price": 163.81,
       "supertrend": 155.264845,
       "rsi": 55.14,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:26+00:00",
+=======
+      "updated": "2026-09-05T00:57:25+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -973,7 +1169,11 @@
       "price": 47.14,
       "supertrend": 44.558847,
       "rsi": 57.73,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:34+00:00",
+=======
+      "updated": "2026-09-05T00:58:34+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -993,7 +1193,11 @@
       "price": 145.55,
       "supertrend": 105.023918,
       "rsi": 63.19,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:43+00:00",
+=======
+      "updated": "2026-09-05T00:58:42+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1013,7 +1217,11 @@
       "price": 103.76,
       "supertrend": 100.044886,
       "rsi": 53.96,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:51+00:00",
+=======
+      "updated": "2026-09-05T00:58:50+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1033,7 +1241,11 @@
       "price": 3.63,
       "supertrend": 2.970281,
       "rsi": 59.67,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:19:59+00:00",
+=======
+      "updated": "2026-09-05T00:58:58+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1053,7 +1265,11 @@
       "price": 29.66,
       "supertrend": 25.368735,
       "rsi": 54.25,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:08+00:00",
+=======
+      "updated": "2026-09-05T00:59:06+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1073,7 +1289,11 @@
       "price": 3.23,
       "supertrend": 2.614826,
       "rsi": 57.49,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:16+00:00",
+=======
+      "updated": "2026-09-05T00:59:15+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1093,7 +1313,11 @@
       "price": 55.79,
       "supertrend": 52.272145,
       "rsi": 50.7,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:24+00:00",
+=======
+      "updated": "2026-09-05T00:59:23+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1113,7 +1337,11 @@
       "price": 12.74,
       "supertrend": 11.066254,
       "rsi": 52.15,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:33+00:00",
+=======
+      "updated": "2026-09-05T00:59:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1133,7 +1361,11 @@
       "price": 1.35,
       "supertrend": 1.207514,
       "rsi": 50.55,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:41+00:00",
+=======
+      "updated": "2026-09-05T01:00:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1153,7 +1385,11 @@
       "price": 10.22,
       "supertrend": 8.627007,
       "rsi": 70.68,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:49+00:00",
+=======
+      "updated": "2026-09-05T01:00:48+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1173,7 +1409,11 @@
       "price": 184.64,
       "supertrend": 154.368413,
       "rsi": 56.4,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:20:57+00:00",
+=======
+      "updated": "2026-09-05T01:00:56+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1193,7 +1433,11 @@
       "price": 142.8,
       "supertrend": 113.17194,
       "rsi": 66.2,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:06+00:00",
+=======
+      "updated": "2026-09-05T01:01:05+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1213,7 +1457,11 @@
       "price": 11.31,
       "supertrend": 8.802285,
       "rsi": 52.42,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:14+00:00",
+=======
+      "updated": "2026-09-05T01:01:15+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1233,7 +1481,11 @@
       "price": 21.8,
       "supertrend": 23.136363,
       "rsi": 55.55,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:22+00:00",
+=======
+      "updated": "2026-09-05T01:01:23+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1253,7 +1505,11 @@
       "price": 12.69,
       "supertrend": 13.9876,
       "rsi": 51.4,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:31+00:00",
+=======
+      "updated": "2026-09-05T01:01:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1273,7 +1529,11 @@
       "price": 93.545,
       "supertrend": 100.263679,
       "rsi": 54.37,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:39+00:00",
+=======
+      "updated": "2026-09-05T01:02:40+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1293,7 +1553,11 @@
       "price": 1.64,
       "supertrend": 1.217354,
       "rsi": 57.04,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:47+00:00",
+=======
+      "updated": "2026-09-05T01:02:48+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1313,7 +1577,11 @@
       "price": 17.74,
       "supertrend": 19.53306,
       "rsi": 51.01,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:21:56+00:00",
+=======
+      "updated": "2026-09-05T01:03:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1333,7 +1601,11 @@
       "price": 17.89,
       "supertrend": 19.577006,
       "rsi": 44.29,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:05+00:00",
+=======
+      "updated": "2026-09-05T01:03:25+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1353,7 +1625,11 @@
       "price": 122.11,
       "supertrend": 101.713281,
       "rsi": 65.94,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:13+00:00",
+=======
+      "updated": "2026-09-05T01:03:33+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1373,7 +1649,11 @@
       "price": 82.76,
       "supertrend": 77.1765,
       "rsi": 53.4,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:21+00:00",
+=======
+      "updated": "2026-09-05T01:03:41+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1393,7 +1673,11 @@
       "price": 258.51001,
       "supertrend": 249.917737,
       "rsi": 49.55,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:29+00:00",
+=======
+      "updated": "2026-09-05T01:04:10+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1413,7 +1697,11 @@
       "price": 145.089996,
       "supertrend": 137.721193,
       "rsi": 52.01,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:38+00:00",
+=======
+      "updated": "2026-09-05T01:04:20+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1433,7 +1721,11 @@
       "price": 30.66,
       "supertrend": 29.91734,
       "rsi": 48.27,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:46+00:00",
+=======
+      "updated": "2026-09-05T01:04:28+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1453,7 +1745,11 @@
       "price": 109.67,
       "supertrend": 95.028229,
       "rsi": 69.63,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:22:54+00:00",
+=======
+      "updated": "2026-09-05T01:05:37+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1473,7 +1769,11 @@
       "price": 27.99,
       "supertrend": 31.002399,
       "rsi": 31.2,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:03+00:00",
+=======
+      "updated": "2026-09-05T01:05:46+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1493,7 +1793,11 @@
       "price": 154.46001,
       "supertrend": 137.29462,
       "rsi": 60.74,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:11+00:00",
+=======
+      "updated": "2026-09-05T01:06:14+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1513,7 +1817,11 @@
       "price": 320.56,
       "supertrend": 354.493975,
       "rsi": 41.67,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:19+00:00",
+=======
+      "updated": "2026-09-05T01:06:23+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1533,7 +1841,11 @@
       "price": 43.31,
       "supertrend": 44.255269,
       "rsi": 58.43,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:28+00:00",
+=======
+      "updated": "2026-09-05T01:06:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1553,7 +1865,11 @@
       "price": 14.43,
       "supertrend": 15.493164,
       "rsi": 46.48,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:36+00:00",
+=======
+      "updated": "2026-09-05T01:06:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1573,7 +1889,11 @@
       "price": 24.01,
       "supertrend": 22.552732,
       "rsi": 46.26,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:44+00:00",
+=======
+      "updated": "2026-09-05T01:07:07+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1593,7 +1913,11 @@
       "price": 23.66,
       "supertrend": 21.937225,
       "rsi": 54.21,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:23:53+00:00",
+=======
+      "updated": "2026-09-05T01:07:15+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1613,7 +1937,11 @@
       "price": 99.43,
       "supertrend": 90.515976,
       "rsi": 50.56,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:01+00:00",
+=======
+      "updated": "2026-09-05T01:07:24+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1633,7 +1961,11 @@
       "price": 96.019997,
       "supertrend": 99.109057,
       "rsi": 39.16,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:09+00:00",
+=======
+      "updated": "2026-09-05T01:07:32+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1653,7 +1985,11 @@
       "price": 175.85001,
       "supertrend": 166.103442,
       "rsi": 52.81,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:17+00:00",
+=======
+      "updated": "2026-09-05T01:08:00+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1673,7 +2009,11 @@
       "price": 1035.97998,
       "supertrend": 1014.392221,
       "rsi": 45.18,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:26+00:00",
+=======
+      "updated": "2026-09-05T01:08:08+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1693,7 +2033,11 @@
       "price": 137.34,
       "supertrend": 143.761018,
       "rsi": 38.74,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:34+00:00",
+=======
+      "updated": "2026-09-05T01:08:16+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1713,7 +2057,11 @@
       "price": 61.25,
       "supertrend": 63.759244,
       "rsi": 38.66,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:42+00:00",
+=======
+      "updated": "2026-09-05T01:08:24+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1733,7 +2081,11 @@
       "price": 116.86,
       "supertrend": 126.083216,
       "rsi": 42.83,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:24:51+00:00",
+=======
+      "updated": "2026-09-05T01:08:33+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1753,7 +2105,11 @@
       "price": 236.17,
       "supertrend": 245.211419,
       "rsi": 48.29,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:25:19+00:00",
+=======
+      "updated": "2026-09-05T01:08:41+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1773,7 +2129,11 @@
       "price": 209.44,
       "supertrend": 220.384205,
       "rsi": 31.96,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:25:27+00:00",
+=======
+      "updated": "2026-09-05T01:09:09+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1793,7 +2153,11 @@
       "price": 86.22,
       "supertrend": 79.983556,
       "rsi": 58.35,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:25:36+00:00",
+=======
+      "updated": "2026-09-05T01:09:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1813,7 +2177,11 @@
       "price": 90.66,
       "supertrend": 88.195712,
       "rsi": 54.33,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:26:04+00:00",
+=======
+      "updated": "2026-09-05T01:09:25+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1833,7 +2201,11 @@
       "price": 46.060001,
       "supertrend": 43.778694,
       "rsi": 54.98,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:26:13+00:00",
+=======
+      "updated": "2026-09-05T01:09:34+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1853,7 +2225,11 @@
       "price": 65.19,
       "supertrend": 59.215418,
       "rsi": 58.92,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:26:21+00:00",
+=======
+      "updated": "2026-09-05T01:09:42+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1873,7 +2249,11 @@
       "price": 211.92,
       "supertrend": 201.997567,
       "rsi": 60.47,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:26:29+00:00",
+=======
+      "updated": "2026-09-05T01:09:50+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1893,7 +2273,11 @@
       "price": 64.059998,
       "supertrend": 61.595766,
       "rsi": 63.14,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:27:38+00:00",
+=======
+      "updated": "2026-09-05T01:09:58+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1913,7 +2297,11 @@
       "price": 103.25,
       "supertrend": 107.665748,
       "rsi": 43.11,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:27:46+00:00",
+=======
+      "updated": "2026-09-05T01:10:06+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1933,7 +2321,11 @@
       "price": 48.040001,
       "supertrend": 50.767385,
       "rsi": 40.54,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:28:15+00:00",
+=======
+      "updated": "2026-09-05T01:10:15+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1953,7 +2345,11 @@
       "price": 770.19,
       "supertrend": 755.669057,
       "rsi": 55.61,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:28:23+00:00",
+=======
+      "updated": "2026-09-05T01:10:23+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1973,7 +2369,11 @@
       "price": 718.96002,
       "supertrend": 698.289117,
       "rsi": 53.62,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:28:31+00:00",
+=======
+      "updated": "2026-09-05T01:10:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -1993,7 +2393,11 @@
       "price": 79660.77,
       "supertrend": 72310.901918,
       "rsi": 66.47,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:28:40+00:00",
+=======
+      "updated": "2026-09-05T01:10:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2013,7 +2417,11 @@
       "price": 2455.85,
       "supertrend": 2213.769116,
       "rsi": 62.67,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:29:08+00:00",
+=======
+      "updated": "2026-09-05T01:10:47+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2033,7 +2441,11 @@
       "price": 101.93,
       "supertrend": 88.219862,
       "rsi": 63.31,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:29:16+00:00",
+=======
+      "updated": "2026-09-05T01:10:56+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2053,7 +2465,11 @@
       "price": 721.37,
       "supertrend": 654.529276,
       "rsi": 70.81,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:29:24+00:00",
+=======
+      "updated": "2026-09-05T01:11:04+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2073,7 +2489,11 @@
       "price": 41.27,
       "supertrend": 35.749108,
       "rsi": 47.43,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:29:33+00:00",
+=======
+      "updated": "2026-09-05T01:11:12+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2093,7 +2513,11 @@
       "price": 17.72,
       "supertrend": 16.201051,
       "rsi": 46.17,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:08+00:00",
+=======
+      "updated": "2026-09-05T01:11:20+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2113,7 +2537,11 @@
       "price": 9.7,
       "supertrend": 7.939113,
       "rsi": 53.86,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:19+00:00",
+=======
+      "updated": "2026-09-05T01:11:28+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2133,7 +2561,11 @@
       "price": 14.81,
       "supertrend": 17.794375,
       "rsi": 40.92,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:28+00:00",
+=======
+      "updated": "2026-09-05T01:11:37+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2153,7 +2585,11 @@
       "price": 10.53,
       "supertrend": 12.393358,
       "rsi": 42.59,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:36+00:00",
+=======
+      "updated": "2026-09-05T01:11:45+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2173,7 +2609,11 @@
       "price": 44.68,
       "supertrend": 34.298808,
       "rsi": 57.16,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:44+00:00",
+=======
+      "updated": "2026-09-05T01:11:53+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2193,7 +2633,11 @@
       "price": 82.34,
       "supertrend": 80.524384,
       "rsi": 54.59,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:30:52+00:00",
+=======
+      "updated": "2026-09-05T01:12:01+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2213,7 +2657,11 @@
       "price": 0.007,
       "supertrend": 0.055334,
       "rsi": 47.76,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:31:01+00:00",
+=======
+      "updated": "2026-09-05T01:12:10+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2233,7 +2681,11 @@
       "price": 0.93,
       "supertrend": 1.138289,
       "rsi": 41.23,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:31:09+00:00",
+=======
+      "updated": "2026-09-05T01:12:18+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2253,7 +2705,11 @@
       "price": 22.76,
       "supertrend": 18.395209,
       "rsi": 59.87,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:33:23+00:00",
+=======
+      "updated": "2026-09-05T01:13:48+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2273,7 +2729,11 @@
       "price": 366.70001,
       "supertrend": 365.909829,
       "rsi": 43.02,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:13+00:00",
+=======
+      "updated": "2026-09-05T01:12:59+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2293,7 +2753,11 @@
       "price": 1.51,
       "supertrend": 1.107147,
       "rsi": 60.59,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:31:34+00:00",
+=======
+      "updated": "2026-09-05T01:12:42+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2313,7 +2777,11 @@
       "price": 354.079987,
       "supertrend": 330.761573,
       "rsi": 50.93,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:05+00:00",
+=======
+      "updated": "2026-09-05T01:12:50+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2333,7 +2801,11 @@
       "price": 366.70001,
       "supertrend": 365.909829,
       "rsi": 43.02,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:13+00:00",
+=======
+      "updated": "2026-09-05T01:12:59+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2353,7 +2825,11 @@
       "price": 42.94,
       "supertrend": 43.864579,
       "rsi": 55.29,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:21+00:00",
+=======
+      "updated": "2026-09-05T01:13:07+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2373,7 +2849,11 @@
       "price": 4.945,
       "supertrend": 4.535058,
       "rsi": 48.36,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:30+00:00",
+=======
+      "updated": "2026-09-05T01:13:15+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2393,7 +2873,11 @@
       "price": 62.25,
       "supertrend": 66.824574,
       "rsi": 50.11,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:38+00:00",
+=======
+      "updated": "2026-09-05T01:13:23+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2413,7 +2897,11 @@
       "price": 357.029999,
       "supertrend": 397.256431,
       "rsi": 46.88,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:32:46+00:00",
+=======
+      "updated": "2026-09-05T01:13:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2433,7 +2921,11 @@
       "price": 433.81,
       "supertrend": 451.821167,
       "rsi": 46.63,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:33:15+00:00",
+=======
+      "updated": "2026-09-05T01:13:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2453,7 +2945,11 @@
       "price": 22.76,
       "supertrend": 18.395209,
       "rsi": 59.87,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:33:23+00:00",
+=======
+      "updated": "2026-09-05T01:13:48+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2473,7 +2969,11 @@
       "price": 6.34,
       "supertrend": 6.578854,
       "rsi": 53.02,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:33:31+00:00",
+=======
+      "updated": "2026-09-05T01:13:56+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2493,7 +2993,11 @@
       "price": 8.56,
       "supertrend": 9.37993,
       "rsi": 48.09,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:33:40+00:00",
+=======
+      "updated": "2026-09-05T01:14:04+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2513,7 +3017,11 @@
       "price": 18.89,
       "supertrend": 19.170923,
       "rsi": 57.52,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:34:08+00:00",
+=======
+      "updated": "2026-09-05T01:14:12+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2533,7 +3041,11 @@
       "price": 36.43,
       "supertrend": 42.38288,
       "rsi": 45.36,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:34:16+00:00",
+=======
+      "updated": "2026-09-05T01:14:20+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2553,7 +3065,11 @@
       "price": 1.75,
       "supertrend": 1.483802,
       "rsi": 49.82,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:34:25+00:00",
+=======
+      "updated": "2026-09-05T01:14:29+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2573,7 +3089,11 @@
       "price": 5.71,
       "supertrend": 6.295639,
       "rsi": 46.96,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:34:33+00:00",
+=======
+      "updated": "2026-09-05T01:14:37+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2593,7 +3113,11 @@
       "price": 693.53003,
       "supertrend": 636.028259,
       "rsi": 68.29,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:01+00:00",
+=======
+      "updated": "2026-09-05T01:14:45+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2613,7 +3137,11 @@
       "price": 813.94,
       "supertrend": 861.530605,
       "rsi": 45.45,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:10+00:00",
+=======
+      "updated": "2026-09-05T01:14:53+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2633,7 +3161,11 @@
       "price": 14.4,
       "supertrend": 12.384895,
       "rsi": 79.24,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:18+00:00",
+=======
+      "updated": "2026-09-05T01:15:02+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2653,7 +3185,11 @@
       "price": 7.35,
       "supertrend": 8.109256,
       "rsi": 46.06,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:26+00:00",
+=======
+      "updated": "2026-09-05T01:15:13+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2673,7 +3209,11 @@
       "price": 5.98,
       "supertrend": 5.587954,
       "rsi": 50.64,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:35+00:00",
+=======
+      "updated": "2026-09-05T01:15:21+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2693,7 +3233,11 @@
       "price": 3.82,
       "supertrend": 4.231402,
       "rsi": 43.09,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:35:43+00:00",
+=======
+      "updated": "2026-09-05T01:15:29+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2713,7 +3257,11 @@
       "price": 48.32,
       "supertrend": 50.293272,
       "rsi": 51.42,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:36:12+00:00",
+=======
+      "updated": "2026-09-05T01:15:37+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2753,7 +3301,11 @@
       "price": 19.65,
       "supertrend": 21.122391,
       "rsi": 39.18,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:36:28+00:00",
+=======
+      "updated": "2026-09-05T01:15:54+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2773,7 +3325,11 @@
       "price": 209.61,
       "supertrend": 222.910358,
       "rsi": 34.9,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:36:36+00:00",
+=======
+      "updated": "2026-09-05T01:16:03+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2793,7 +3349,11 @@
       "price": 152.82001,
       "supertrend": 160.32434,
       "rsi": 48.76,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:37:05+00:00",
+=======
+      "updated": "2026-09-05T01:16:11+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2813,7 +3373,11 @@
       "price": 362.73999,
       "supertrend": 337.011746,
       "rsi": 60.7,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:37:13+00:00",
+=======
+      "updated": "2026-09-05T01:16:19+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2833,7 +3397,11 @@
       "price": 610.65002,
       "supertrend": 642.022585,
       "rsi": 34.23,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:37:21+00:00",
+=======
+      "updated": "2026-09-05T01:16:27+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2853,7 +3421,11 @@
       "price": 148.36,
       "supertrend": 162.159864,
       "rsi": 48.89,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:37:30+00:00",
+=======
+      "updated": "2026-09-05T01:16:36+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2873,7 +3445,11 @@
       "price": 303.13,
       "supertrend": 334.207426,
       "rsi": 34.06,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:38:38+00:00",
+=======
+      "updated": "2026-09-05T01:16:44+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2893,7 +3469,11 @@
       "price": 94.17,
       "supertrend": 87.158702,
       "rsi": 64.5,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:38:46+00:00",
+=======
+      "updated": "2026-09-05T01:16:52+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2913,7 +3493,11 @@
       "price": 98.07,
       "supertrend": 93.205527,
       "rsi": 50.0,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:38:55+00:00",
+=======
+      "updated": "2026-09-05T01:17:00+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2933,7 +3517,11 @@
       "price": 78.29,
       "supertrend": 85.272464,
       "rsi": 38.03,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:39:03+00:00",
+=======
+      "updated": "2026-09-05T01:17:08+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2953,7 +3541,11 @@
       "price": 1.39,
       "supertrend": 1.596161,
       "rsi": 44.74,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:39:11+00:00",
+=======
+      "updated": "2026-09-05T01:17:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2973,7 +3565,11 @@
       "price": 0.0389,
       "supertrend": 0.064065,
       "rsi": 31.79,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:39:20+00:00",
+=======
+      "updated": "2026-09-05T01:17:25+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -2993,7 +3589,11 @@
       "price": 34.37,
       "supertrend": 37.179851,
       "rsi": 40.31,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:39:28+00:00",
+=======
+      "updated": "2026-09-05T01:17:33+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3013,7 +3613,11 @@
       "price": 168.74001,
       "supertrend": 173.443146,
       "rsi": 53.08,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:40:37+00:00",
+=======
+      "updated": "2026-09-05T01:17:41+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3033,7 +3637,11 @@
       "price": 227.83501,
       "supertrend": 240.416881,
       "rsi": 43.9,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:40:45+00:00",
+=======
+      "updated": "2026-09-05T01:17:49+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3053,7 +3661,11 @@
       "price": 362.25,
       "supertrend": 385.3937,
       "rsi": 42.77,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:40:53+00:00",
+=======
+      "updated": "2026-09-05T01:17:58+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3073,7 +3685,11 @@
       "price": 74.17,
       "supertrend": 80.163567,
       "rsi": 44.81,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:41:02+00:00",
+=======
+      "updated": "2026-09-05T01:18:06+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3093,7 +3709,11 @@
       "price": 258.44,
       "supertrend": 276.1958,
       "rsi": 41.49,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:41:10+00:00",
+=======
+      "updated": "2026-09-05T01:18:14+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3113,7 +3733,11 @@
       "price": 95.8,
       "supertrend": 102.064279,
       "rsi": 51.74,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:41:19+00:00",
+=======
+      "updated": "2026-09-05T01:18:22+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3133,7 +3757,11 @@
       "price": 62.89,
       "supertrend": 73.534321,
       "rsi": 32.2,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:41:27+00:00",
+=======
+      "updated": "2026-09-05T01:18:31+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3153,7 +3781,11 @@
       "price": 962.59003,
       "supertrend": 1025.365854,
       "rsi": 40.12,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:42:36+00:00",
+=======
+      "updated": "2026-09-05T01:18:39+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3173,7 +3805,11 @@
       "price": 162.86,
       "supertrend": 176.059688,
       "rsi": 37.98,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:42:44+00:00",
+=======
+      "updated": "2026-09-05T01:18:47+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3213,7 +3849,11 @@
       "price": 43.080002,
       "supertrend": 44.767394,
       "rsi": 47.15,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:43:00+00:00",
+=======
+      "updated": "2026-09-05T01:19:03+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3233,7 +3873,11 @@
       "price": 15.69,
       "supertrend": 19.585181,
       "rsi": 40.51,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:43:09+00:00",
+=======
+      "updated": "2026-09-05T01:19:11+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3253,7 +3897,11 @@
       "price": 0.3452,
       "supertrend": 0.407248,
       "rsi": 37.8,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:43:17+00:00",
+=======
+      "updated": "2026-09-05T01:19:19+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3273,7 +3921,11 @@
       "price": 0.6355,
       "supertrend": 0.748319,
       "rsi": 38.55,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:43:25+00:00",
+=======
+      "updated": "2026-09-05T01:19:28+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3293,7 +3945,11 @@
       "price": 144.64999,
       "supertrend": 168.400633,
       "rsi": 38.9,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:44:34+00:00",
+=======
+      "updated": "2026-09-05T01:19:36+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3313,7 +3969,11 @@
       "price": 8.37,
       "supertrend": 10.099387,
       "rsi": 42.99,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:44:42+00:00",
+=======
+      "updated": "2026-09-05T01:19:44+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3333,7 +3993,11 @@
       "price": 7.62,
       "supertrend": 8.953604,
       "rsi": 43.38,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:44:50+00:00",
+=======
+      "updated": "2026-09-05T01:19:52+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3353,7 +4017,11 @@
       "price": 1.48,
       "supertrend": 1.216286,
       "rsi": 49.7,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:44:59+00:00",
+=======
+      "updated": "2026-09-05T01:20:00+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3373,7 +4041,11 @@
       "price": 0.6466,
       "supertrend": 0.924103,
       "rsi": 29.32,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:45:09+00:00",
+=======
+      "updated": "2026-09-05T01:20:09+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,
@@ -3393,7 +4065,11 @@
       "price": 1.65,
       "supertrend": 2.425934,
       "rsi": 31.18,
+<<<<<<< Updated upstream
       "updated": "2026-09-05T00:45:18+00:00",
+=======
+      "updated": "2026-09-05T01:20:17+00:00",
+>>>>>>> Stashed changes
       "signal_1w": null,
       "flip_date_1w": null,
       "bars_since_flip_1w": null,

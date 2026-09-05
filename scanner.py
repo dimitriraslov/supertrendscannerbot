@@ -453,6 +453,12 @@ def export_dashboard(state, watchlist):
                 "supertrend_1w":   rec.get("supertrend_1w") or prev_a.get("supertrend_1w"),
                 "rsi_1w":          rec.get("rsi_1w") or prev_a.get("rsi_1w"),
                 "updated_1w":      rec.get("updated_1w") or prev_a.get("updated_1w"),
+                # Pullback setups — written by RSI scanner into rsi_state.json
+                # Read from shared state if available
+                "pb_buy_1d":       prev_a.get("pb_buy_1d"),
+                "pb_sell_1d":      prev_a.get("pb_sell_1d"),
+                "pb_buy_1w":       prev_a.get("pb_buy_1w"),
+                "pb_sell_1w":      prev_a.get("pb_sell_1w"),
             })
 
     out = {

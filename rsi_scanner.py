@@ -257,6 +257,53 @@ def detect_divergence(closes, rsi_vals, idx):
 
     return results
 
+
+# ── Pullback-to-50 detection ──────────────────────────────────────────────────
+def detect_pullback(closes, rsi_vals, idx, st_signal):
+    """
+    Detect RSI pullback to 50 within an established Supertrend trend.
+
+    BUY setup:  Supertrend BULL + RSI crosses FROM above 50 TO at/below 50
+    SELL setup: Supertrend BEAR + RSI crosses FROM below 50 TO at/above 50
+
+    Uses the cross (prev bar vs current bar) so it fires exactly once
+    at the moment RSI touches 50 — not continuously while RSI stays there.
+
+    Returns dict with pullback info or None.
+    """
+    if idx < 2 or st_signal not in ("bull", "bear"):
+        return None
+
+    cur_rsi  = rsi_vals[idx]
+    prev_rsi = rsi_vals[idx - 1]
+
+    if cur_rsi is None or prev_rsi is None:
+        return None
+
+    cur_price = closes[idx]
+
+    if st_signal == "bull":
+        # RSI was above 50, now at or below 50 — pullback in uptrend
+        if prev_rsi > 50 and cur_rsi <= 50:
+            return {
+                "type":     "buy",
+                "rsi_cur":  round(cur_rsi, 1),
+                "rsi_prev": round(prev_rsi, 1),
+                "price":    cur_price,
+            }
+
+    if st_signal == "bear":
+        # RSI was below 50, now at or above 50 — rally in downtrend
+        if prev_rsi < 50 and cur_rsi >= 50:
+            return {
+                "type":     "sell",
+                "rsi_cur":  round(cur_rsi, 1),
+                "rsi_prev": round(prev_rsi, 1),
+                "price":    cur_price,
+            }
+
+    return None
+
 # ── State ─────────────────────────────────────────────────────────────────────
 def load_state():
     try:
@@ -413,6 +460,31 @@ def format_div_alert(sym, name, narrative, tf_label, div, price, bar_date):
             f"⏰ {_stamp()}"
         )
 
+
+def format_pullback_alert(sym, name, narrative, tf_label, pb_type, rsi_val, prev_rsi, price, bar_date, st_signal):
+    if pb_type == "buy":
+        return (
+            f"🎯 <b>PULLBACK BUY SETUP — {tf_label}</b>\n"
+            f"<b>{sym}</b> · {name}\n"
+            f"Supertrend: <b>BULL ✅</b>\n"
+            f"RSI crossed below 50 ({prev_rsi:.1f} → {rsi_val:.1f})\n"
+            f"Trend pullback — potential entry in uptrend\n"
+            f"Price: <b>{fmt_price(price)}</b> · Bar: {bar_date}\n"
+            f"Narrative: {narrative}\n\n"
+            f"⏰ {_stamp()}"
+        )
+    else:
+        return (
+            f"🎯 <b>PULLBACK SELL SETUP — {tf_label}</b>\n"
+            f"<b>{sym}</b> · {name}\n"
+            f"Supertrend: <b>BEAR ✅</b>\n"
+            f"RSI crossed above 50 ({prev_rsi:.1f} → {rsi_val:.1f})\n"
+            f"Relief rally — potential short entry in downtrend\n"
+            f"Price: <b>{fmt_price(price)}</b> · Bar: {bar_date}\n"
+            f"Narrative: {narrative}\n\n"
+            f"⏰ {_stamp()}"
+        )
+
 def format_alert(sym, name, narrative, tf_label, level, rsi_val, prev_rsi, price, bar_date):
     lvl = next((l for l in LEVELS if l["value"] == level), LEVELS[0])
     return (
@@ -457,6 +529,20 @@ def format_summary(alerts, errors, total):
             lines.append(f"  📉 {a['sym']} BEARISH divergence on {a['tf']}")
     else:
         lines.append("Divergences: none detected")
+
+    lines.append("")
+
+    # Pullback setups section
+    pb_buys  = [a for a in alerts if a.get("level") == "PB_BUY"]
+    pb_sells = [a for a in alerts if a.get("level") == "PB_SELL"]
+    if pb_buys or pb_sells:
+        lines.append(f"<b>Pullback Setups ({len(pb_buys) + len(pb_sells)})</b>")
+        for a in pb_buys:
+            lines.append(f"  🎯 {a['sym']} BUY setup on {a['tf']} (RSI {a['rsi']:.1f})")
+        for a in pb_sells:
+            lines.append(f"  🎯 {a['sym']} SELL setup on {a['tf']} (RSI {a['rsi']:.1f})")
+    else:
+        lines.append("Pullback setups: none detected")
 
     lines.append("")
 
@@ -681,6 +767,46 @@ def main():
                             alerts.append({"sym": sym, "tf": tf_label, "level": f"DIV_{div['type'].upper()}", "rsi": 0})
                             state[div_state_key] = {**div_prior, "alerted": {**already_div, div_alert_key: True},
                                                     "updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat()}
+
+                # ── Pullback-to-50 detection (0 extra credits) ──────────────────────
+                pb_key = f"{sym}:{tf_id}:pb"
+                if idx_all is not None and idx_all >= 2:
+                    # Need current Supertrend signal — read from scanner state or
+                    # derive from RSI context. Use the signal stored in state.json
+                    # by the Supertrend scanner (same watchlist, same symbols).
+                    # Fall back to RSI-context-only if not available.
+                    rsi_for_pb = calc_rsi(closes_all[:idx_all + 1], RSI_PERIOD)
+                    # Get ST signal from state key (written by supertrend scanner)
+                    st_rec = state.get(sym, {})
+                    st_sig = st_rec.get("signal")  # "bull" or "bear" from ST scanner
+                    if st_sig and rsi_for_pb[idx_all] is not None:
+                        pb = detect_pullback(closes_all, rsi_for_pb, idx_all, st_sig)
+                        if pb:
+                            bar_date_pb   = dates_all[idx_all]
+                            pb_alert_key  = f"{pb['type']}:{bar_date_pb}"
+                            pb_prior      = state.get(pb_key, {})
+                            already_pb    = pb_prior.get("alerted", {})
+
+                            if first_time or args.reseed:
+                                state[pb_key] = {**pb_prior, "alerted": {**already_pb, pb_alert_key: True}}
+                            elif not already_pb.get(pb_alert_key):
+                                label = "BUY" if pb["type"] == "buy" else "SELL"
+                                print(f"  *** PULLBACK {label} SETUP on {tf_label} (RSI {pb['rsi_cur']}) ***")
+                                msg = format_pullback_alert(
+                                    sym, name, narrative, tf_label,
+                                    pb["type"], pb["rsi_cur"], pb["rsi_prev"],
+                                    pb["price"], bar_date_pb, st_sig
+                                )
+                                if send_telegram(msg, dry=args.dry_run):
+                                    alerts.append({
+                                        "sym": sym, "tf": tf_label,
+                                        "level": f"PB_{label}", "rsi": pb["rsi_cur"],
+                                    })
+                                    state[pb_key] = {
+                                        **pb_prior,
+                                        "alerted": {**already_pb, pb_alert_key: True},
+                                        "updated": datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+                                    }
 
                 time.sleep(DELAY_SEC)
 

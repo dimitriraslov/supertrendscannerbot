@@ -2,542 +2,758 @@
   "ABTS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.23,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:58:39+00:00"
   },
   "ABTS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.68,
     "updated": "2026-09-10T01:22:15+00:00"
+=======
+    "updated": "2026-09-10T01:45:47+00:00"
+>>>>>>> Stashed changes
   },
   "ACHR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.87,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:43:08+00:00"
   },
   "ACHR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.4,
     "updated": "2026-09-10T01:10:01+00:00"
+=======
+    "updated": "2026-09-10T01:33:35+00:00"
+>>>>>>> Stashed changes
   },
   "ADI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.34,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:08+00:00"
   },
   "ADI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.49,
     "updated": "2026-09-10T01:27:27+00:00"
+=======
+    "updated": "2026-09-10T01:51:01+00:00"
+>>>>>>> Stashed changes
   },
   "AEM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 57.29,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:46:31+00:00"
   },
   "AEM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.63,
     "updated": "2026-09-10T01:12:21+00:00"
+=======
+    "updated": "2026-09-10T01:35:55+00:00"
+>>>>>>> Stashed changes
   },
   "AEVA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.93,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:22+00:00"
   },
   "AEVA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 45.89,
     "updated": "2026-09-10T01:28:40+00:00"
+=======
+    "updated": "2026-09-10T01:52:14+00:00"
+>>>>>>> Stashed changes
   },
   "AG:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 59.02,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:47:47+00:00"
   },
   "AG:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 56.26,
     "updated": "2026-09-10T01:12:37+00:00"
+=======
+    "updated": "2026-09-10T01:36:11+00:00"
+>>>>>>> Stashed changes
   },
   "AI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.59,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:37:32+00:00"
   },
   "AI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.5,
     "updated": "2026-09-10T01:07:26+00:00"
+=======
+    "updated": "2026-09-10T01:30:58+00:00"
+>>>>>>> Stashed changes
   },
   "ALAB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.62,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:39:50+00:00"
   },
   "ALAB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 53.19,
     "updated": "2026-09-10T01:08:23+00:00"
+=======
+    "updated": "2026-09-10T01:31:57+00:00"
+>>>>>>> Stashed changes
   },
   "AMBA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.62,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:40+00:00"
   },
   "AMBA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.69,
     "updated": "2026-09-10T01:27:59+00:00"
+=======
+    "updated": "2026-09-10T01:51:34+00:00"
+>>>>>>> Stashed changes
   },
   "AMD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 60.43,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:36:32+00:00"
   },
   "AMD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 62.1,
     "updated": "2026-09-10T01:06:45+00:00"
+=======
+    "updated": "2026-09-10T01:30:16+00:00"
+>>>>>>> Stashed changes
   },
   "AMT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.98,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:18+00:00"
   },
   "AMT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.2,
     "updated": "2026-09-10T01:17:50+00:00"
+=======
+    "updated": "2026-09-10T01:41:23+00:00"
+>>>>>>> Stashed changes
   },
   "AMZN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.06,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:32+00:00"
   },
   "AMZN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.45,
     "updated": "2026-09-10T01:16:04+00:00"
+=======
+    "updated": "2026-09-10T01:39:36+00:00"
+>>>>>>> Stashed changes
   },
   "APP:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 36.34,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:21+00:00"
   },
   "APP:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 36.04,
     "updated": "2026-09-10T01:16:53+00:00"
+=======
+    "updated": "2026-09-10T01:40:26+00:00"
+>>>>>>> Stashed changes
   },
   "AR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 62.15,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:45:19+00:00"
   },
   "AR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.49,
     "updated": "2026-09-10T01:11:31+00:00"
+=======
+    "updated": "2026-09-10T01:35:06+00:00"
+>>>>>>> Stashed changes
   },
   "ARBE:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.36,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:39+00:00"
   },
   "ARBE:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.1,
     "updated": "2026-09-10T01:28:56+00:00"
+=======
+    "updated": "2026-09-10T01:52:31+00:00"
+>>>>>>> Stashed changes
   },
   "ARKG:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.54,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:48:40+00:00"
   },
   "ARKG:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 66.44,
     "updated": "2026-09-10T01:13:10+00:00"
+=======
+    "updated": "2026-09-10T01:36:44+00:00"
+>>>>>>> Stashed changes
   },
   "ARKK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 54.08,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:16+00:00"
   },
   "ARKK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.59,
     "updated": "2026-09-10T01:18:47+00:00"
+=======
+    "updated": "2026-09-10T01:42:21+00:00"
+>>>>>>> Stashed changes
   },
   "ARM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.42,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:37:16+00:00"
   },
   "ARM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 52.36,
     "updated": "2026-09-10T01:07:10+00:00"
+=======
+    "updated": "2026-09-10T01:30:42+00:00"
+>>>>>>> Stashed changes
   },
   "ASTS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.48,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:42:32+00:00"
   },
   "ASTS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.31,
     "updated": "2026-09-10T01:09:45+00:00"
+=======
+    "updated": "2026-09-10T01:33:19+00:00"
+>>>>>>> Stashed changes
   },
   "ATS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.53,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:59+00:00"
   },
   "ATS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 30.98,
     "updated": "2026-09-10T01:25:24+00:00"
+=======
+    "updated": "2026-09-10T01:48:56+00:00"
+>>>>>>> Stashed changes
   },
   "AUR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.63,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:53+00:00"
   },
   "AUR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 54.49,
     "updated": "2026-09-10T01:23:29+00:00"
+=======
+    "updated": "2026-09-10T01:47:02+00:00"
+>>>>>>> Stashed changes
   },
   "AVAV:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.75,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:47+00:00"
   },
   "AVAV:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.38,
     "updated": "2026-09-10T01:29:04+00:00"
+=======
+    "updated": "2026-09-10T01:52:39+00:00"
+>>>>>>> Stashed changes
   },
   "AVGO:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 43.19,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:36:40+00:00"
   },
   "AVGO:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.7,
     "updated": "2026-09-10T01:06:54+00:00"
+=======
+    "updated": "2026-09-10T01:30:26+00:00"
+>>>>>>> Stashed changes
   },
   "BBAI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 39.36,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:38:09+00:00"
   },
   "BBAI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 37.64,
     "updated": "2026-09-10T01:07:43+00:00"
+=======
+    "updated": "2026-09-10T01:31:15+00:00"
+>>>>>>> Stashed changes
   },
   "BEAM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 36.57,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:49:33+00:00"
   },
   "BEAM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.04,
     "updated": "2026-09-10T01:13:42+00:00"
+=======
+    "updated": "2026-09-10T01:37:17+00:00"
+>>>>>>> Stashed changes
   },
   "BLOK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.39,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:40+00:00"
   },
   "BLOK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 55.63,
     "updated": "2026-09-10T01:19:12+00:00"
+=======
+    "updated": "2026-09-10T01:42:46+00:00"
+>>>>>>> Stashed changes
   },
   "BNB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.66,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:02+00:00"
   },
   "BNB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.26,
     "updated": "2026-09-10T01:20:37+00:00"
+=======
+    "updated": "2026-09-10T01:44:08+00:00"
+>>>>>>> Stashed changes
   },
   "BNTX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.38,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:49:16+00:00"
   },
   "BNTX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.58,
     "updated": "2026-09-10T01:13:26+00:00"
+=======
+    "updated": "2026-09-10T01:37:01+00:00"
+>>>>>>> Stashed changes
   },
   "BTBT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 57.15,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:51+00:00"
   },
   "BTBT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.99,
     "updated": "2026-09-10T01:15:22+00:00"
+=======
+    "updated": "2026-09-10T01:38:55+00:00"
+>>>>>>> Stashed changes
   },
   "BTC:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 59.51,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:37+00:00"
   },
   "BTC:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 56.22,
     "updated": "2026-09-10T01:20:12+00:00"
+=======
+    "updated": "2026-09-10T01:43:43+00:00"
+>>>>>>> Stashed changes
   },
   "CAT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.1,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:57+00:00"
   },
   "CAT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.0,
     "updated": "2026-09-10T01:24:26+00:00"
+=======
+    "updated": "2026-09-10T01:47:59+00:00"
+>>>>>>> Stashed changes
   },
   "CCJ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 52.92,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:09+00:00"
   },
   "CCJ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.67,
     "updated": "2026-09-10T01:10:42+00:00"
+=======
+    "updated": "2026-09-10T01:34:16+00:00"
+>>>>>>> Stashed changes
   },
   "CELH:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 38.11,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:48+00:00"
   },
   "CELH:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.54,
     "updated": "2026-09-10T01:16:20+00:00"
+=======
+    "updated": "2026-09-10T01:39:52+00:00"
+>>>>>>> Stashed changes
   },
   "CGNX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.11,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:20+00:00"
   },
   "CGNX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 53.68,
     "updated": "2026-09-10T01:22:56+00:00"
+=======
+    "updated": "2026-09-10T01:46:29+00:00"
+>>>>>>> Stashed changes
   },
   "CHWY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.97,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:53+00:00"
   },
   "CHWY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.49,
     "updated": "2026-09-10T01:17:26+00:00"
+=======
+    "updated": "2026-09-10T01:40:58+00:00"
+>>>>>>> Stashed changes
   },
   "CIFR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 48.02,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:59+00:00"
   },
   "CIFR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.97,
     "updated": "2026-09-10T01:15:30+00:00"
+=======
+    "updated": "2026-09-10T01:39:03+00:00"
+>>>>>>> Stashed changes
   },
   "CLSK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 54.47,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:35+00:00"
   },
   "CLSK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.89,
     "updated": "2026-09-10T01:15:05+00:00"
+=======
+    "updated": "2026-09-10T01:38:39+00:00"
+>>>>>>> Stashed changes
   },
   "CNH:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 69.34,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:06+00:00"
   },
   "CNH:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 65.18,
     "updated": "2026-09-10T01:24:34+00:00"
+=======
+    "updated": "2026-09-10T01:48:07+00:00"
+>>>>>>> Stashed changes
   },
   "COIN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.25,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:02+00:00"
   },
   "COIN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.29,
     "updated": "2026-09-10T01:14:31+00:00"
+=======
+    "updated": "2026-09-10T01:38:06+00:00"
+>>>>>>> Stashed changes
   },
   "COPX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 62.59,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:24+00:00"
   },
   "COPX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 61.8,
     "updated": "2026-09-10T01:18:55+00:00"
+=======
+    "updated": "2026-09-10T01:42:29+00:00"
+>>>>>>> Stashed changes
   },
   "CORZ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.85,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:07+00:00"
   },
   "CORZ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.11,
     "updated": "2026-09-10T01:15:39+00:00"
+=======
+    "updated": "2026-09-10T01:39:11+00:00"
+>>>>>>> Stashed changes
   },
   "CRDO:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 33.67,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:39:58+00:00"
   },
   "CRDO:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.38,
     "updated": "2026-09-10T01:08:31+00:00"
+=======
+    "updated": "2026-09-10T01:32:05+00:00"
+>>>>>>> Stashed changes
   },
   "CRSP:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 43.82,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:50:09+00:00"
   },
   "CRSP:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.08,
     "updated": "2026-09-10T01:13:59+00:00"
+=======
+    "updated": "2026-09-10T01:37:33+00:00"
+>>>>>>> Stashed changes
   },
   "CVX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 69.95,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:43:24+00:00"
   },
   "CVX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 65.22,
     "updated": "2026-09-10T01:10:18+00:00"
+=======
+    "updated": "2026-09-10T01:33:52+00:00"
+>>>>>>> Stashed changes
   },
   "DE:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.62,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:49+00:00"
   },
   "DE:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 62.29,
     "updated": "2026-09-10T01:24:18+00:00"
+=======
+    "updated": "2026-09-10T01:47:51+00:00"
+>>>>>>> Stashed changes
   },
   "DKNG:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.28,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:45+00:00"
   },
   "DKNG:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.19,
     "updated": "2026-09-10T01:17:18+00:00"
+=======
+    "updated": "2026-09-10T01:40:50+00:00"
+>>>>>>> Stashed changes
   },
   "DNN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.94,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:25+00:00"
   },
   "DNN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.85,
     "updated": "2026-09-10T01:10:59+00:00"
+=======
+    "updated": "2026-09-10T01:34:33+00:00"
+>>>>>>> Stashed changes
   },
   "DUOL:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.38,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:13+00:00"
   },
   "DUOL:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.06,
     "updated": "2026-09-10T01:16:45+00:00"
+=======
+    "updated": "2026-09-10T01:40:17+00:00"
+>>>>>>> Stashed changes
   },
   "EDIT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.5,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:50:01+00:00"
   },
   "EDIT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.02,
     "updated": "2026-09-10T01:13:50+00:00"
+=======
+    "updated": "2026-09-10T01:37:25+00:00"
+>>>>>>> Stashed changes
   },
   "ELF:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 52.14,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:56+00:00"
   },
   "ELF:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 60.78,
     "updated": "2026-09-10T01:16:28+00:00"
+=======
+    "updated": "2026-09-10T01:40:01+00:00"
+>>>>>>> Stashed changes
   },
   "EMR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.85,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:16+00:00"
   },
   "EMR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 53.47,
     "updated": "2026-09-10T01:25:40+00:00"
+=======
+    "updated": "2026-09-10T01:49:13+00:00"
+>>>>>>> Stashed changes
   },
   "EQIX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.37,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:26+00:00"
   },
   "EQIX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 52.48,
     "updated": "2026-09-10T01:17:58+00:00"
+=======
+    "updated": "2026-09-10T01:41:31+00:00"
+>>>>>>> Stashed changes
   },
   "ETH:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.01,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:45+00:00"
   },
   "ETH:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 58.34,
     "updated": "2026-09-10T01:20:20+00:00"
+=======
+    "updated": "2026-09-10T01:43:52+00:00"
+>>>>>>> Stashed changes
   },
   "EXK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 59.07,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:48:16+00:00"
   },
   "EXK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 59.93,
     "updated": "2026-09-10T01:12:45+00:00"
+=======
+    "updated": "2026-09-10T01:36:20+00:00"
+>>>>>>> Stashed changes
   },
   "GD:1day": {
     "alerted": {
@@ -545,82 +761,114 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 27.08,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:41:39+00:00"
   },
   "GD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.14,
     "updated": "2026-09-10T01:09:12+00:00"
+=======
+    "updated": "2026-09-10T01:32:46+00:00"
+>>>>>>> Stashed changes
   },
   "GDX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.39,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:46:05+00:00"
   },
   "GDX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 59.16,
     "updated": "2026-09-10T01:11:56+00:00"
+=======
+    "updated": "2026-09-10T01:35:31+00:00"
+>>>>>>> Stashed changes
   },
   "GDXJ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 57.78,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:46:14+00:00"
   },
   "GDXJ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 58.1,
     "updated": "2026-09-10T01:12:04+00:00"
+=======
+    "updated": "2026-09-10T01:35:39+00:00"
+>>>>>>> Stashed changes
   },
   "GLD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 50.19,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:45:28+00:00"
   },
   "GLD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.67,
     "updated": "2026-09-10T01:11:40+00:00"
+=======
+    "updated": "2026-09-10T01:35:14+00:00"
+>>>>>>> Stashed changes
   },
   "GMED:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 30.56,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:18+00:00"
   },
   "GMED:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.52,
     "updated": "2026-09-10T01:26:37+00:00"
+=======
+    "updated": "2026-09-10T01:50:11+00:00"
+>>>>>>> Stashed changes
   },
   "GSAT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.44,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:59+00:00"
   },
   "GSAT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 61.78,
     "updated": "2026-09-10T01:21:34+00:00"
+=======
+    "updated": "2026-09-10T01:45:06+00:00"
+>>>>>>> Stashed changes
   },
   "GXO:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.5,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:41+00:00"
   },
   "GXO:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.4,
     "updated": "2026-09-10T01:25:07+00:00"
+=======
+    "updated": "2026-09-10T01:48:40+00:00"
+>>>>>>> Stashed changes
   },
   "HII:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.5,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:41:47+00:00"
   },
   "HII:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 39.15,
     "updated": "2026-09-10T01:09:20+00:00"
+=======
+    "updated": "2026-09-10T01:32:54+00:00"
+>>>>>>> Stashed changes
   },
   "HON:1day": {
     "alerted": {
@@ -628,132 +876,184 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 31.15,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:07+00:00"
   },
   "HON:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.52,
     "updated": "2026-09-10T01:25:32+00:00"
+=======
+    "updated": "2026-09-10T01:49:04+00:00"
+>>>>>>> Stashed changes
   },
   "HOOD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.63,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:16+00:00"
   },
   "HOOD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.98,
     "updated": "2026-09-10T01:15:47+00:00"
+=======
+    "updated": "2026-09-10T01:39:20+00:00"
+>>>>>>> Stashed changes
   },
   "HSAI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.6,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:12+00:00"
   },
   "HSAI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.69,
     "updated": "2026-09-10T01:23:45+00:00"
+=======
+    "updated": "2026-09-10T01:47:18+00:00"
+>>>>>>> Stashed changes
   },
   "HUT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.28,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:43+00:00"
   },
   "HUT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 54.28,
     "updated": "2026-09-10T01:15:14+00:00"
+=======
+    "updated": "2026-09-10T01:38:47+00:00"
+>>>>>>> Stashed changes
   },
   "IBB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.94,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:48+00:00"
   },
   "IBB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 65.0,
     "updated": "2026-09-10T01:19:20+00:00"
+=======
+    "updated": "2026-09-10T01:42:54+00:00"
+>>>>>>> Stashed changes
   },
   "INTC:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 63.36,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:32+00:00"
   },
   "INTC:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.3,
     "updated": "2026-09-10T01:27:51+00:00"
+=======
+    "updated": "2026-09-10T01:51:25+00:00"
+>>>>>>> Stashed changes
   },
   "INVZ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 38.13,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:30+00:00"
   },
   "INVZ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 29.02,
     "updated": "2026-09-10T01:28:48+00:00"
+=======
+    "updated": "2026-09-10T01:52:23+00:00"
+>>>>>>> Stashed changes
   },
   "IONQ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 43.76,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:38:17+00:00"
   },
   "IONQ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.56,
     "updated": "2026-09-10T01:07:51+00:00"
+=======
+    "updated": "2026-09-10T01:31:24+00:00"
+>>>>>>> Stashed changes
   },
   "IREN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 57.17,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:50+00:00"
   },
   "IREN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.05,
     "updated": "2026-09-10T01:21:26+00:00"
+=======
+    "updated": "2026-09-10T01:44:57+00:00"
+>>>>>>> Stashed changes
   },
   "IRM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.18,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:50+00:00"
   },
   "IRM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.48,
     "updated": "2026-09-10T01:18:23+00:00"
+=======
+    "updated": "2026-09-10T01:41:56+00:00"
+>>>>>>> Stashed changes
   },
   "ISRG:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.42,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:58:56+00:00"
   },
   "ISRG:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 35.49,
     "updated": "2026-09-10T01:22:32+00:00"
+=======
+    "updated": "2026-09-10T01:46:03+00:00"
+>>>>>>> Stashed changes
   },
   "JOBY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 32.97,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:42:40+00:00"
   },
   "JOBY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 36.65,
     "updated": "2026-09-10T01:09:53+00:00"
+=======
+    "updated": "2026-09-10T01:33:27+00:00"
+>>>>>>> Stashed changes
   },
   "KDK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.55,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:32+00:00"
   },
   "KDK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 33.47,
     "updated": "2026-09-10T01:24:59+00:00"
+=======
+    "updated": "2026-09-10T01:48:32+00:00"
+>>>>>>> Stashed changes
   },
   "KITT:1day": {
     "alerted": {
@@ -761,16 +1061,21 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 35.6,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:06:20+00:00"
   },
   "KITT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 24.15,
     "updated": "2026-09-10T01:29:37+00:00"
+=======
+    "updated": "2026-09-10T01:53:12+00:00"
+>>>>>>> Stashed changes
   },
   "KSCP:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.22,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:06:12+00:00"
   },
   "KSCP:1week": {
@@ -780,276 +1085,387 @@
     "last_bar": "2026-09-07",
     "last_rsi": 29.58,
     "updated": "2026-09-10T01:29:29+00:00"
+=======
+    "updated": "2026-09-10T01:53:04+00:00"
+>>>>>>> Stashed changes
   },
   "KTOS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.18,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:42:15+00:00"
   },
   "KTOS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.66,
     "updated": "2026-09-10T01:09:29+00:00"
+=======
+    "updated": "2026-09-10T01:33:03+00:00"
+>>>>>>> Stashed changes
   },
   "LEU:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.43,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:45:11+00:00"
   },
   "LEU:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.49,
     "updated": "2026-09-10T01:11:23+00:00"
+=======
+    "updated": "2026-09-10T01:34:57+00:00"
+>>>>>>> Stashed changes
   },
   "LMT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 35.79,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:40:14+00:00"
   },
   "LMT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.62,
     "updated": "2026-09-10T01:08:48+00:00"
+=======
+    "updated": "2026-09-10T01:32:22+00:00"
+>>>>>>> Stashed changes
   },
   "LUNR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.97,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:34+00:00"
   },
   "LUNR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.95,
     "updated": "2026-09-10T01:21:10+00:00"
+=======
+    "updated": "2026-09-10T01:44:41+00:00"
+>>>>>>> Stashed changes
   },
   "MARA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 56.21,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:19+00:00"
   },
   "MARA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.17,
     "updated": "2026-09-10T01:14:47+00:00"
+=======
+    "updated": "2026-09-10T01:38:22+00:00"
+>>>>>>> Stashed changes
   },
   "MBLY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.06,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:03+00:00"
   },
   "MBLY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.74,
     "updated": "2026-09-10T01:23:37+00:00"
+=======
+    "updated": "2026-09-10T01:47:10+00:00"
+>>>>>>> Stashed changes
   },
   "MCHP:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.54,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:16+00:00"
   },
   "MCHP:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.16,
     "updated": "2026-09-10T01:27:35+00:00"
+=======
+    "updated": "2026-09-10T01:51:09+00:00"
+>>>>>>> Stashed changes
   },
   "MDT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.21,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:59+00:00"
   },
   "MDT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.68,
     "updated": "2026-09-10T01:26:21+00:00"
+=======
+    "updated": "2026-09-10T01:49:54+00:00"
+>>>>>>> Stashed changes
   },
   "MRNA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.13,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:49:08+00:00"
   },
   "MRNA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 73.32,
     "updated": "2026-09-10T01:13:18+00:00"
+=======
+    "updated": "2026-09-10T01:36:52+00:00"
+>>>>>>> Stashed changes
   },
   "MRVL:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.54,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:39:41+00:00"
   },
   "MRVL:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 60.0,
     "updated": "2026-09-10T01:08:15+00:00"
+=======
+    "updated": "2026-09-10T01:31:49+00:00"
+>>>>>>> Stashed changes
   },
   "MSTR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.57,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:10+00:00"
   },
   "MSTR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.06,
     "updated": "2026-09-10T01:14:39+00:00"
+=======
+    "updated": "2026-09-10T01:38:14+00:00"
+>>>>>>> Stashed changes
   },
   "MVIS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 30.92,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:06:29+00:00"
   },
   "MVIS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 26.32,
     "updated": "2026-09-10T01:29:45+00:00"
+=======
+    "updated": "2026-09-10T01:53:20+00:00"
+>>>>>>> Stashed changes
   },
   "NEM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 60.69,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:46:23+00:00"
   },
   "NEM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 63.18,
     "updated": "2026-09-10T01:12:13+00:00"
+=======
+    "updated": "2026-09-10T01:35:47+00:00"
+>>>>>>> Stashed changes
   },
   "NKLA:1day": {
     "last_bar": "2025-12-24",
     "last_rsi": 47.76,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:58:07+00:00"
   },
   "NKLA:1week": {
     "last_bar": "2025-11-10",
     "last_rsi": 27.91,
     "updated": "2026-09-10T01:21:42+00:00"
+=======
+    "updated": "2026-09-10T01:45:14+00:00"
+>>>>>>> Stashed changes
   },
   "NNE:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 48.69,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:18+00:00"
   },
   "NNE:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.7,
     "updated": "2026-09-10T01:20:53+00:00"
+=======
+    "updated": "2026-09-10T01:44:24+00:00"
+>>>>>>> Stashed changes
   },
   "NOC:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 35.25,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:40:31+00:00"
   },
   "NOC:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 39.74,
     "updated": "2026-09-10T01:09:04+00:00"
+=======
+    "updated": "2026-09-10T01:32:38+00:00"
+>>>>>>> Stashed changes
   },
   "NOVT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.78,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:42+00:00"
   },
   "NOVT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.14,
     "updated": "2026-09-10T01:26:05+00:00"
+=======
+    "updated": "2026-09-10T01:49:38+00:00"
+>>>>>>> Stashed changes
   },
   "NTLA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.79,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:50:18+00:00"
   },
   "NTLA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.21,
     "updated": "2026-09-10T01:14:07+00:00"
+=======
+    "updated": "2026-09-10T01:37:41+00:00"
+>>>>>>> Stashed changes
   },
   "NVAX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 62.37,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:50:34+00:00"
   },
   "NVAX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 56.16,
     "updated": "2026-09-10T01:14:23+00:00"
+=======
+    "updated": "2026-09-10T01:37:58+00:00"
+>>>>>>> Stashed changes
   },
   "NVDA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 54.32,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:36:23+00:00"
   },
   "NVDA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 58.09,
     "updated": "2026-09-10T01:06:37+00:00"
+=======
+    "updated": "2026-09-10T01:30:08+00:00"
+>>>>>>> Stashed changes
   },
   "NVNI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.37,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:58:15+00:00"
   },
   "NVNI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.57,
     "updated": "2026-09-10T01:21:51+00:00"
+=======
+    "updated": "2026-09-10T01:45:22+00:00"
+>>>>>>> Stashed changes
   },
   "NXE:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.51,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:33+00:00"
   },
   "NXE:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.75,
     "updated": "2026-09-10T01:11:07+00:00"
+=======
+    "updated": "2026-09-10T01:34:41+00:00"
+>>>>>>> Stashed changes
   },
   "NXPI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.3,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:59+00:00"
   },
   "NXPI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.93,
     "updated": "2026-09-10T01:27:18+00:00"
+=======
+    "updated": "2026-09-10T01:50:52+00:00"
+>>>>>>> Stashed changes
   },
   "O:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 31.36,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:42+00:00"
   },
   "O:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.35,
     "updated": "2026-09-10T01:18:15+00:00"
+=======
+    "updated": "2026-09-10T01:41:48+00:00"
+>>>>>>> Stashed changes
   },
   "OKLO:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 50.1,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:10+00:00"
   },
   "OKLO:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.39,
     "updated": "2026-09-10T01:20:45+00:00"
+=======
+    "updated": "2026-09-10T01:44:16+00:00"
+>>>>>>> Stashed changes
   },
   "OMCL:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.28,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:43+00:00"
   },
   "OMCL:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 40.88,
     "updated": "2026-09-10T01:27:02+00:00"
+=======
+    "updated": "2026-09-10T01:50:36+00:00"
+>>>>>>> Stashed changes
   },
   "ONDS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.09,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:06:04+00:00"
   },
   "ONDS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 44.09,
     "updated": "2026-09-10T01:29:21+00:00"
+=======
+    "updated": "2026-09-10T01:52:55+00:00"
+>>>>>>> Stashed changes
   },
   "ONON:1day": {
     "alerted": {
@@ -1057,342 +1473,478 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 27.43,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:04+00:00"
   },
   "ONON:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 30.43,
     "updated": "2026-09-10T01:16:37+00:00"
+=======
+    "updated": "2026-09-10T01:40:09+00:00"
+>>>>>>> Stashed changes
   },
   "OUST:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.23,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:21+00:00"
   },
   "OUST:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.74,
     "updated": "2026-09-10T01:23:53+00:00"
+=======
+    "updated": "2026-09-10T01:47:26+00:00"
+>>>>>>> Stashed changes
   },
   "OXY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.96,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:43:32+00:00"
   },
   "OXY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 60.23,
     "updated": "2026-09-10T01:10:26+00:00"
+=======
+    "updated": "2026-09-10T01:34:00+00:00"
+>>>>>>> Stashed changes
   },
   "PAAS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 56.76,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:47:39+00:00"
   },
   "PAAS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 53.56,
     "updated": "2026-09-10T01:12:29+00:00"
+=======
+    "updated": "2026-09-10T01:36:03+00:00"
+>>>>>>> Stashed changes
   },
   "PACB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.97,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:50:26+00:00"
   },
   "PACB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 45.4,
     "updated": "2026-09-10T01:14:15+00:00"
+=======
+    "updated": "2026-09-10T01:37:50+00:00"
+>>>>>>> Stashed changes
   },
   "PDYN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.99,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:40+00:00"
   },
   "PDYN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.0,
     "updated": "2026-09-10T01:24:10+00:00"
+=======
+    "updated": "2026-09-10T01:47:43+00:00"
+>>>>>>> Stashed changes
   },
   "PH:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.16,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:49+00:00"
   },
   "PH:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.89,
     "updated": "2026-09-10T01:28:07+00:00"
+=======
+    "updated": "2026-09-10T01:51:42+00:00"
+>>>>>>> Stashed changes
   },
   "PLD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 36.35,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:34+00:00"
   },
   "PLD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 45.08,
     "updated": "2026-09-10T01:18:07+00:00"
+=======
+    "updated": "2026-09-10T01:41:39+00:00"
+>>>>>>> Stashed changes
   },
   "PLTR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 50.74,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:37:24+00:00"
   },
   "PLTR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.04,
     "updated": "2026-09-10T01:07:18+00:00"
+=======
+    "updated": "2026-09-10T01:30:50+00:00"
+>>>>>>> Stashed changes
   },
   "PONY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 37.14,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:15+00:00"
   },
   "PONY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 36.62,
     "updated": "2026-09-10T01:24:42+00:00"
+=======
+    "updated": "2026-09-10T01:48:15+00:00"
+>>>>>>> Stashed changes
   },
   "PRCT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 48.26,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:45+00:00"
   },
   "PRCT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.65,
     "updated": "2026-09-10T01:23:20+00:00"
+=======
+    "updated": "2026-09-10T01:46:53+00:00"
+>>>>>>> Stashed changes
   },
   "QCOM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.16,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:51+00:00"
   },
   "QCOM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.95,
     "updated": "2026-09-10T01:27:10+00:00"
+=======
+    "updated": "2026-09-10T01:50:44+00:00"
+>>>>>>> Stashed changes
   },
   "QQQ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.65,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:29+00:00"
   },
   "QQQ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 57.7,
     "updated": "2026-09-10T01:20:04+00:00"
+=======
+    "updated": "2026-09-10T01:43:35+00:00"
+>>>>>>> Stashed changes
   },
   "QUBT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.12,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:39:33+00:00"
   },
   "QUBT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.42,
     "updated": "2026-09-10T01:08:07+00:00"
+=======
+    "updated": "2026-09-10T01:31:41+00:00"
+>>>>>>> Stashed changes
   },
   "RBLX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.18,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:29+00:00"
   },
   "RBLX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.82,
     "updated": "2026-09-10T01:17:01+00:00"
+=======
+    "updated": "2026-09-10T01:40:34+00:00"
+>>>>>>> Stashed changes
   },
   "RBOT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.04,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:34+00:00"
   },
   "RBOT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 30.55,
     "updated": "2026-09-10T01:26:54+00:00"
+=======
+    "updated": "2026-09-10T01:50:28+00:00"
+>>>>>>> Stashed changes
   },
   "RCAT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 41.6,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:55+00:00"
   },
   "RCAT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.64,
     "updated": "2026-09-10T01:29:12+00:00"
+=======
+    "updated": "2026-09-10T01:52:47+00:00"
+>>>>>>> Stashed changes
   },
   "RDW:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 45.27,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:42+00:00"
   },
   "RDW:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.06,
     "updated": "2026-09-10T01:21:18+00:00"
+=======
+    "updated": "2026-09-10T01:44:49+00:00"
+>>>>>>> Stashed changes
   },
   "RGTI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 43.87,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:38:25+00:00"
   },
   "RGTI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 43.64,
     "updated": "2026-09-10T01:07:59+00:00"
+=======
+    "updated": "2026-09-10T01:31:32+00:00"
+>>>>>>> Stashed changes
   },
   "RIOT:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 56.22,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:51:27+00:00"
   },
   "RIOT:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 53.61,
     "updated": "2026-09-10T01:14:56+00:00"
+=======
+    "updated": "2026-09-10T01:38:30+00:00"
+>>>>>>> Stashed changes
   },
   "RKLB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 36.83,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:42:23+00:00"
   },
   "RKLB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.89,
     "updated": "2026-09-10T01:09:37+00:00"
+=======
+    "updated": "2026-09-10T01:33:11+00:00"
+>>>>>>> Stashed changes
   },
   "ROK:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 41.97,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:36+00:00"
   },
   "ROK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.97,
     "updated": "2026-09-10T01:23:12+00:00"
+=======
+    "updated": "2026-09-10T01:46:45+00:00"
+>>>>>>> Stashed changes
   },
   "RR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.13,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:00:31+00:00"
   },
   "RR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 39.98,
     "updated": "2026-09-10T01:24:02+00:00"
+=======
+    "updated": "2026-09-10T01:47:34+00:00"
+>>>>>>> Stashed changes
   },
   "RRX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 35.66,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:57+00:00"
   },
   "RRX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 36.19,
     "updated": "2026-09-10T01:28:15+00:00"
+=======
+    "updated": "2026-09-10T01:51:50+00:00"
+>>>>>>> Stashed changes
   },
   "RTX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 31.29,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:40:22+00:00"
   },
   "RTX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.21,
     "updated": "2026-09-10T01:08:56+00:00"
+=======
+    "updated": "2026-09-10T01:32:30+00:00"
+>>>>>>> Stashed changes
   },
   "RXRX:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.05,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:49:25+00:00"
   },
   "RXRX:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.25,
     "updated": "2026-09-10T01:13:34+00:00"
+=======
+    "updated": "2026-09-10T01:37:09+00:00"
+>>>>>>> Stashed changes
   },
   "SERV:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.32,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:12+00:00"
   },
   "SERV:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 31.98,
     "updated": "2026-09-10T01:22:48+00:00"
+=======
+    "updated": "2026-09-10T01:46:20+00:00"
+>>>>>>> Stashed changes
   },
   "SHOP:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 36.9,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:40+00:00"
   },
   "SHOP:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.64,
     "updated": "2026-09-10T01:16:12+00:00"
+=======
+    "updated": "2026-09-10T01:39:44+00:00"
+>>>>>>> Stashed changes
   },
   "SLV:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.49,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:45:36+00:00"
   },
   "SLV:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 50.51,
     "updated": "2026-09-10T01:11:48+00:00"
+=======
+    "updated": "2026-09-10T01:35:22+00:00"
+>>>>>>> Stashed changes
   },
   "SM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 63.07,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:01+00:00"
   },
   "SM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 64.29,
     "updated": "2026-09-10T01:10:34+00:00"
+=======
+    "updated": "2026-09-10T01:34:08+00:00"
+>>>>>>> Stashed changes
   },
   "SMCI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 59.1,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:37:08+00:00"
   },
   "SMCI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 56.36,
     "updated": "2026-09-10T01:07:02+00:00"
+=======
+    "updated": "2026-09-10T01:30:34+00:00"
+>>>>>>> Stashed changes
   },
   "SMR:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 61.21,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:57:26+00:00"
   },
   "SMR:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.95,
     "updated": "2026-09-10T01:21:02+00:00"
+=======
+    "updated": "2026-09-10T01:44:33+00:00"
+>>>>>>> Stashed changes
   },
   "SOL:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.46,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:53+00:00"
   },
   "SOL:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 56.38,
     "updated": "2026-09-10T01:20:29+00:00"
+=======
+    "updated": "2026-09-10T01:44:00+00:00"
+>>>>>>> Stashed changes
   },
   "SOUN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.54,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:38:01+00:00"
   },
   "SOUN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.18,
     "updated": "2026-09-10T01:07:34+00:00"
+=======
+    "updated": "2026-09-10T01:31:07+00:00"
+>>>>>>> Stashed changes
   },
   "SPG:1day": {
     "alerted": {
@@ -1400,52 +1952,72 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 29.38,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:07+00:00"
   },
   "SPG:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 45.27,
     "updated": "2026-09-10T01:18:39+00:00"
+=======
+    "updated": "2026-09-10T01:42:13+00:00"
+>>>>>>> Stashed changes
   },
   "SPY:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 48.04,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:21+00:00"
   },
   "SPY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 60.49,
     "updated": "2026-09-10T01:19:53+00:00"
+=======
+    "updated": "2026-09-10T01:43:27+00:00"
+>>>>>>> Stashed changes
   },
   "SQ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.1,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:52:24+00:00"
   },
   "SQ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 55.36,
     "updated": "2026-09-10T01:15:55+00:00"
+=======
+    "updated": "2026-09-10T01:39:28+00:00"
+>>>>>>> Stashed changes
   },
   "ST:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.11,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:05:14+00:00"
   },
   "ST:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.13,
     "updated": "2026-09-10T01:28:32+00:00"
+=======
+    "updated": "2026-09-10T01:52:06+00:00"
+>>>>>>> Stashed changes
   },
   "STXS:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 38.72,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:26+00:00"
   },
   "STXS:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 34.6,
     "updated": "2026-09-10T01:26:46+00:00"
+=======
+    "updated": "2026-09-10T01:50:19+00:00"
+>>>>>>> Stashed changes
   },
   "SYK:1day": {
     "alerted": {
@@ -1453,32 +2025,44 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 24.46,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:51+00:00"
   },
   "SYK:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 33.03,
     "updated": "2026-09-10T01:26:13+00:00"
+=======
+    "updated": "2026-09-10T01:49:46+00:00"
+>>>>>>> Stashed changes
   },
   "SYM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 53.79,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:04+00:00"
   },
   "SYM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 45.17,
     "updated": "2026-09-10T01:22:40+00:00"
+=======
+    "updated": "2026-09-10T01:46:12+00:00"
+>>>>>>> Stashed changes
   },
   "TAN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 40.86,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:13+00:00"
   },
   "TAN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 38.03,
     "updated": "2026-09-10T01:19:45+00:00"
+=======
+    "updated": "2026-09-10T01:43:19+00:00"
+>>>>>>> Stashed changes
   },
   "TDY:1day": {
     "alerted": {
@@ -1486,201 +2070,281 @@
     },
     "last_bar": "2026-09-09",
     "last_rsi": 28.61,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:33+00:00"
   },
   "TDY:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.57,
     "updated": "2026-09-10T01:25:56+00:00"
+=======
+    "updated": "2026-09-10T01:49:30+00:00"
+>>>>>>> Stashed changes
   },
   "TER:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 54.53,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:59:28+00:00"
   },
   "TER:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 55.55,
     "updated": "2026-09-10T01:23:04+00:00"
+=======
+    "updated": "2026-09-10T01:46:37+00:00"
+>>>>>>> Stashed changes
   },
   "TSLA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 55.57,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:58:48+00:00"
   },
   "TSLA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 48.41,
     "updated": "2026-09-10T01:22:23+00:00"
+=======
+    "updated": "2026-09-10T01:45:55+00:00"
+>>>>>>> Stashed changes
   },
   "TSM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 59.1,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:40:06+00:00"
   },
   "TSM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 62.87,
     "updated": "2026-09-10T01:08:40+00:00"
+=======
+    "updated": "2026-09-10T01:32:14+00:00"
+>>>>>>> Stashed changes
   },
   "TTD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 42.35,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:53:37+00:00"
   },
   "TTD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 30.35,
     "updated": "2026-09-10T01:17:09+00:00"
+=======
+    "updated": "2026-09-10T01:40:42+00:00"
+>>>>>>> Stashed changes
   },
   "TXN:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 44.68,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:04:24+00:00"
   },
   "TXN:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 49.42,
     "updated": "2026-09-10T01:27:43+00:00"
+=======
+    "updated": "2026-09-10T01:51:17+00:00"
+>>>>>>> Stashed changes
   },
   "UEC:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.79,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:17+00:00"
   },
   "UEC:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 47.83,
     "updated": "2026-09-10T01:10:51+00:00"
+=======
+    "updated": "2026-09-10T01:34:25+00:00"
+>>>>>>> Stashed changes
   },
   "URA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 56.79,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:32+00:00"
   },
   "URA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.5,
     "updated": "2026-09-10T01:19:04+00:00"
+=======
+    "updated": "2026-09-10T01:42:37+00:00"
+>>>>>>> Stashed changes
   },
   "UUUU:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.84,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:44:41+00:00"
   },
   "UUUU:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.19,
     "updated": "2026-09-10T01:11:15+00:00"
+=======
+    "updated": "2026-09-10T01:34:49+00:00"
+>>>>>>> Stashed changes
   },
   "VNQ:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.06,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:10+00:00"
   },
   "VNQ:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 46.53,
     "updated": "2026-09-10T01:17:42+00:00"
+=======
+    "updated": "2026-09-10T01:41:15+00:00"
+>>>>>>> Stashed changes
   },
   "W:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 51.5,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:02+00:00"
   },
   "W:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 58.73,
     "updated": "2026-09-10T01:17:34+00:00"
+=======
+    "updated": "2026-09-10T01:41:07+00:00"
+>>>>>>> Stashed changes
   },
   "WELL:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.87,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:54:59+00:00"
   },
   "WELL:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 59.24,
     "updated": "2026-09-10T01:18:31+00:00"
+=======
+    "updated": "2026-09-10T01:42:04+00:00"
+>>>>>>> Stashed changes
   },
   "WPM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 63.5,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:48:24+00:00"
   },
   "WPM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 62.41,
     "updated": "2026-09-10T01:12:53+00:00"
+=======
+    "updated": "2026-09-10T01:36:28+00:00"
+>>>>>>> Stashed changes
   },
   "WRD:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 46.81,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:01:24+00:00"
   },
   "WRD:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 42.73,
     "updated": "2026-09-10T01:24:51+00:00"
+=======
+    "updated": "2026-09-10T01:48:24+00:00"
+>>>>>>> Stashed changes
   },
   "XBI:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 47.15,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:48:32+00:00"
   },
   "XBI:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 62.19,
     "updated": "2026-09-10T01:13:02+00:00"
+=======
+    "updated": "2026-09-10T01:36:36+00:00"
+>>>>>>> Stashed changes
   },
   "XHB:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 34.68,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:56:05+00:00"
   },
   "XHB:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 41.34,
     "updated": "2026-09-10T01:19:36+00:00"
+=======
+    "updated": "2026-09-10T01:43:11+00:00"
+>>>>>>> Stashed changes
   },
   "XLE:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 68.35,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:55:56+00:00"
   },
   "XLE:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 66.58,
     "updated": "2026-09-10T01:19:28+00:00"
+=======
+    "updated": "2026-09-10T01:43:03+00:00"
+>>>>>>> Stashed changes
   },
   "XOM:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 58.95,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T00:43:16+00:00"
   },
   "XOM:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 60.78,
     "updated": "2026-09-10T01:10:10+00:00"
+=======
+    "updated": "2026-09-10T01:33:44+00:00"
+>>>>>>> Stashed changes
   },
   "ZBH:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 41.18,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:03:09+00:00"
   },
   "ZBH:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 51.97,
     "updated": "2026-09-10T01:26:29+00:00"
+=======
+    "updated": "2026-09-10T01:50:03+00:00"
+>>>>>>> Stashed changes
   },
   "ZBRA:1day": {
     "last_bar": "2026-09-09",
     "last_rsi": 49.24,
+<<<<<<< Updated upstream
     "updated": "2026-09-10T01:02:24+00:00"
   },
   "ZBRA:1week": {
     "last_bar": "2026-09-07",
     "last_rsi": 64.37,
     "updated": "2026-09-10T01:25:48+00:00"
+=======
+    "updated": "2026-09-10T01:49:21+00:00"
+>>>>>>> Stashed changes
   }
 }

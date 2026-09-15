@@ -1,687 +1,416 @@
 #!/usr/bin/env python3
-"""
-Supertrend 1D Flip Scanner — v2
-
-Sends a Telegram alert when a watchlist asset flips direction on the DAILY
-SuperTrend (ATR 10, factor 3.0), matching what TradingView draws.
-
-What changed vs v1, and why
----------------------------
-1. CLOSED CANDLES ONLY. v1 fed the still-forming daily bar into the indicator,
-   so a mid-session wick could trip a band, fire an alert, and then close back
-   on the original side. Measured on 2 years of replayed scans across 22 assets:
-   98.6% of v1's alerts fired on an unclosed candle and ~31% of all its alerts
-   never corresponded to a real flip at all.
-
-2. FLIPS ARE IDENTIFIED BY THEIR BAR, NOT BY A STRING DIFF. v1 asked "does
-   state.json disagree with right now?" Any desync — a dropped GitHub Actions
-   run, a failed push, an API error, an intraday repaint — therefore looked
-   exactly like a brand-new flip. That is why alerts arrived announcing a
-   "fresh" trend the chart had been in for weeks (measured median: 23 trading
-   days stale, worst case 146 days). We now locate the actual bar where the
-   trend changed, and de-duplicate on that bar's date. Re-running the scanner
-   ten times can never re-fire or invent a flip.
-
-3. FRESHNESS IS STATED, NOT ASSUMED. Every alert carries the flip bar's date
-   and its age in bars. A flip older than MAX_FRESH_BARS is delivered as an
-   explicitly-labelled CATCH-UP, never as a fresh signal.
-
-4. ENOUGH HISTORY TO CONVERGE. SuperTrend is path-dependent. v1's 60 bars
-   disagreed with a fully-converged chart on up to 9% of days for some symbols.
-   We now request ~400 bars (still 1 API credit).
-
-5. RUNS AFTER THE CLOSE. A daily SuperTrend cannot change mid-session, so
-   scanning 6x/day only invited repaint. We scan after the US close and after
-   the UTC crypto rollover, which also cuts API usage ~50%.
-
-Usage
------
-  python scanner.py                 normal scan
-  python scanner.py --dry-run       compute + print, no Telegram, no state write
-  python scanner.py --verify NVDA   print recent flip dates to check vs a chart
-  python scanner.py --reseed        adopt current trends silently, no alerts
-"""
-
+"""Supertrend scanner v4: one candle stream, one event ledger, two outputs."""
 import argparse
+import copy
+import html
 import json
+import math
 import os
+from pathlib import Path
 import sys
 import time
 from datetime import datetime, timezone, timedelta
 
-import requests
+import urllib.request
+import urllib.parse
+import urllib.error
+from market_calendar import closed_index, close_at, is_crypto, latest_week_key, stale_bar
+from signals import calculate, events_at
+from supertrend import last_flip, label
 
-from supertrend import supertrend, last_flip, all_flips, label, BULL, BEAR
-from market_calendar import last_closed_index, describe, is_crypto
-
-
-# ── RSI (Wilder RMA — matches TradingView ta.rsi) ────────────────────────────
-def calc_rsi(closes, period=14):
-    """Returns list of RSI values same length as closes. None during warmup."""
-    n = len(closes)
-    if n < period + 1:
-        return [None] * n
-    gains  = [0.0]
-    losses = [0.0]
-    for i in range(1, n):
-        ch = closes[i] - closes[i - 1]
-        gains.append(max(ch, 0.0))
-        losses.append(max(-ch, 0.0))
-    rsi = [None] * n
-    ag = sum(gains[1:period + 1]) / period
-    al = sum(losses[1:period + 1]) / period
-    for i in range(period, n):
-        if i > period:
-            ag = (ag * (period - 1) + gains[i]) / period
-            al = (al * (period - 1) + losses[i]) / period
-        if al == 0:
-            rsi[i] = 100.0
-        elif ag == 0:
-            rsi[i] = 0.0
-        else:
-            rsi[i] = 100.0 - (100.0 / (1.0 + ag / al))
-    return rsi
-
-# ── Config ────────────────────────────────────────────────────────────────────
-TWELVE_DATA_KEY = os.environ.get("TWELVE_DATA_KEY", "")
-TELEGRAM_TOKEN  = os.environ.get("TELEGRAM_TOKEN", "")
-TELEGRAM_CHAT   = os.environ.get("TELEGRAM_CHAT", "")
-
-ATR_PERIOD = 10
-ST_FACTOR  = 3.0
-
-# SuperTrend is path dependent; short windows do not match a chart that was
-# computed over full history. 400 daily bars is far past convergence and still
-# costs a single API credit (free plan allows 5,000 data points per request).
-OUTPUTSIZE = 400
-MIN_BARS   = 120          # refuse to signal on less history than this
-
-# A flip newer than this is "fresh". Anything older is reported as catch-up.
-# 1 gives a one-day grace window so a dropped scheduled run still alerts.
-MAX_FRESH_BARS = 1
-
-DELAY_SEC   = 8           # free plan: 8 requests/minute
-MAX_RETRIES = 3
-STALE_AFTER_DAYS = 4      # warn if a symbol has not updated in this long
-
-STATE_FILE = "state.json"
-LOCAL_TZ = "America/Toronto"      # timestamps shown in your local time
-LOCAL_TZ_LABEL = "ET"
-STATE_SCHEMA = 2
-
-TD_URL = "https://api.twelvedata.com/time_series"
+VERSION = '4.0.0'
+STATE_FILE = 'scanner_state.json'
+MIN_BARS = 120
+HISTORY = 400
+FRESH_BARS = 1
 
 
-# ── Files ─────────────────────────────────────────────────────────────────────
-def load_watchlist(path="watchlist.json"):
-    with open(path, "r") as f:
-        return json.load(f)
-
-
-def load_state(path=STATE_FILE):
+def http_json(url, params=None, payload=None, timeout=30):
+    if params:
+        url += '?' + urllib.parse.urlencode(params)
+    request = urllib.request.Request(url, data=json.dumps(payload).encode() if payload is not None else None,
+                                     headers={'Content-Type': 'application/json', 'User-Agent': 'SupertrendScanner/4'})
     try:
-        with open(path, "r") as f:
-            s = json.load(f)
-        return s if isinstance(s, dict) else {}
-    except FileNotFoundError:
-        return {}
-    except Exception as e:
-        # State file is corrupted — likely from a git merge conflict between
-        # two overlapping scanner runs. Self-repair: reset to {} and reseed
-        # silently rather than crashing. This prevents the manual intervention
-        # loop where the file keeps getting corrupted and needs manual fixing.
-        print(f"!! {path} is unreadable ({e}).")
-        print("!! Auto-repairing: resetting state.json to {} and reseeding.")
-        print("!! No alerts will fire this run — all signals will be seeded silently.")
+        with urllib.request.urlopen(request, timeout=timeout) as response:
+            return response.status, json.loads(response.read())
+    except urllib.error.HTTPError as exc:
         try:
-            # Back up the corrupted file for debugging
-            import shutil
-            shutil.copy(path, path + ".corrupt")
-            print(f"!! Corrupted file backed up to {path}.corrupt")
-        except Exception:
-            pass
-        # Write clean empty state
-        try:
-            with open(path, "w") as f:
-                f.write("{}")
-        except Exception:
-            pass
-        # Return empty state — scanner will reseed all signals silently
-        return {}
+            body = json.loads(exc.read())
+        except ValueError:
+            body = {'message': 'HTTP ' + str(exc.code)}
+        return exc.code, body
 
 
-def save_state(state, path=STATE_FILE):
-    tmp = path + ".tmp"
-    with open(tmp, "w") as f:
-        json.dump(state, f, indent=2, sort_keys=True)
-    os.replace(tmp, path)      # atomic: never leaves a half-written state file
+def stamp():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
-# ── Data ──────────────────────────────────────────────────────────────────────
-def fetch_ohlc(td_symbol, interval="1day", outputsize=None):
-    """Return (bars, meta, None) or (None, None, error). bars are oldest-first."""
-    params = {
-        "symbol": td_symbol,
-        "interval": interval,
-        "outputsize": outputsize or OUTPUTSIZE,
-        "order": "ASC",
-        "apikey": TWELVE_DATA_KEY,
-    }
-    err = "unknown"
-    for attempt in range(1, MAX_RETRIES + 1):
-        try:
-            r = requests.get(TD_URL, params=params, timeout=25)
-            if r.status_code == 429:
-                wait = 20 * attempt
-                print(f"[rate-limited, waiting {wait}s] ", end="", flush=True)
-                time.sleep(wait)
-                err = "rate limited"
-                continue
-            d = r.json()
-            if isinstance(d, dict) and d.get("status") == "error":
-                return None, None, d.get("message", "API error")
-            vals = (d or {}).get("values")
-            if not vals:
-                return None, None, "no data returned"
+def read_json(path, default=None):
+    if not Path(path).exists():
+        return copy.deepcopy(default if default is not None else {})
+    try:
+        value = json.loads(Path(path).read_text())
+        if not isinstance(value, dict):
+            raise ValueError('expected a JSON object')
+        return value
+    except (ValueError, OSError) as exc:
+        raise RuntimeError(f'{path} is unreadable; restore it before scanning. State was not reset.') from exc
 
-            bars = []
-            for v in vals:
-                try:
-                    bars.append({
-                        "date": v["datetime"][:10],
-                        "h": float(v["high"]),
-                        "l": float(v["low"]),
-                        "c": float(v["close"]),
-                    })
-                except (KeyError, TypeError, ValueError):
+
+def write_json(path, data):
+    tmp = str(path) + '.tmp'
+    Path(tmp).write_text(json.dumps(data, indent=2, allow_nan=False) + '\n')
+    os.replace(tmp, path)
+
+
+def load_watchlist(path='watchlist.json'):
+    grouped = read_json(path)
+    unique = {}
+    for narrative, assets in grouped.items():
+        for original in assets:
+            a = dict(original)
+            sym = a['sym']
+            a.setdefault('td', sym)
+            if sym in unique:
+                if unique[sym]['td'] != a['td']:
+                    raise ValueError(f'Conflicting data symbols for {sym}')
+                if narrative not in unique[sym]['narratives']:
+                    unique[sym]['narratives'].append(narrative)
+            else:
+                a['narratives'] = [narrative]
+                unique[sym] = a
+    return list(unique.values())
+
+
+def load_state():
+    if Path(STATE_FILE).exists():
+        state = read_json(STATE_FILE)
+        if state.get('schema') != 4 or not isinstance(state.get('assets'), dict):
+            raise RuntimeError('Unsupported scanner_state.json schema; refusing to reset alerts.')
+        return state
+    old, old_rsi = read_json('state.json'), read_json('rsi_state.json')
+    assets = {}
+    for sym, rec in old.items():
+        if not isinstance(rec, dict):
+            continue
+        daily = dict(signal=rec.get('signal'), flip_date=rec.get('flip_date'),
+                     bars_since_flip=rec.get('bars_since_flip'), last_bar=rec.get('last_closed_bar'),
+                     price=rec.get('price'), supertrend=rec.get('supertrend'), rsi=rec.get('rsi'),
+                     updated=rec.get('updated'), events=[], status='unverified',
+                     legacy_alerted_flip=rec.get('alerted_flip_date'),
+                     legacy_rsi_alerted=old_rsi.get(sym + ':1day', {}).get('alerted', {}))
+        assets[sym] = {'1day': daily}
+        # Old weekly records used a daily close gate: do not trust them as final.
+    return dict(schema=4, version=VERSION, assets=assets)
+
+
+class DataClient:
+    def __init__(self, key, delay=8):
+        self.key, self.delay, self.last_request = key, delay, None
+        self.calls = 0
+
+    def fetch(self, symbol, timeframe):
+        error = 'Request failed'
+        for attempt in range(3):
+            if self.last_request is not None:
+                time.sleep(max(0, self.delay - (time.monotonic() - self.last_request)))
+            self.last_request = time.monotonic()
+            self.calls += 1
+            try:
+                status, data = http_json('https://api.twelvedata.com/time_series', params={
+                    'symbol': symbol, 'interval': timeframe, 'outputsize': HISTORY,
+                    'order': 'ASC', 'apikey': self.key}, timeout=30)
+                if not isinstance(data, dict):
+                    raise ValueError('Unexpected market data response')
+                code = data.get('code', status)
+                if status == 429 or code == 429:
+                    error = 'Market data rate limit'
+                    time.sleep(20 * (attempt + 1))
                     continue
-            bars.sort(key=lambda b: b["date"])
-            # de-duplicate identical dates, keeping the newest entry
-            dedup = {}
-            for b in bars:
-                dedup[b["date"]] = b
-            bars = [dedup[k] for k in sorted(dedup)]
-            if not bars:
-                return None, None, "no parseable bars"
-            return bars, (d.get("meta") or {}), None
-        except Exception as e:
-            err = str(e)
-            if attempt < MAX_RETRIES:
-                time.sleep(4 * attempt)
-    return None, None, err
+                if status != 200 or data.get('status') == 'error':
+                    raise ValueError(str(data.get('message', 'Market data error')).replace(self.key, '[redacted]'))
+                dedup = {}
+                for v in data.get('values', []):
+                    bar = dict(date=v['datetime'][:10], h=float(v['high']), l=float(v['low']), c=float(v['close']))
+                    if not all(math.isfinite(bar[k]) for k in ('h', 'l', 'c')) or not 0 < bar['l'] <= bar['c'] <= bar['h']:
+                        raise ValueError('Invalid OHLC values returned')
+                    datetime.fromisoformat(bar['date'])
+                    dedup[bar['date']] = bar
+                if not dedup:
+                    raise ValueError('No price data returned')
+                return [dedup[d] for d in sorted(dedup)], data.get('meta', {})
+            except OSError:
+                error = 'Market data network request failed'
+            except (ValueError, KeyError, TypeError) as exc:
+                error = str(exc)
+                break
+        raise RuntimeError(error)
 
 
-# ── Telegram ──────────────────────────────────────────────────────────────────
+def event_id(sym, tf, event):
+    parts = [sym, tf, event['kind'], event['direction'], str(event.get('level', '')), event['bar_date']]
+    if event['kind'] == 'divergence':
+        parts += [event['pivot1_date'], event['pivot2_date']]
+    return '|'.join(parts)
+
+
+def evaluate(bars, asset, tf, prior=None, meta=None, now=None, reseed=False):
+    now = now or datetime.now(timezone.utc)
+    prior = copy.deepcopy(prior or {})
+    meta = {**(meta or {}), **{k: asset[k] for k in ('asset_type', 'exchange_timezone', 'session_close') if k in asset}}
+    idx = closed_index([b['date'] for b in bars], asset['td'], meta, now, tf)
+    if idx is None:
+        raise ValueError('No closed candle available')
+    bars = bars[:idx + 1]
+    if len(bars) < MIN_BARS:
+        raise ValueError(f'Only {len(bars)} closed candles; need {MIN_BARS}')
+    closes, rsi, st = calculate(bars)
+    fi, _ = last_flip(st['dirs'])
+    n = len(bars) - 1
+    old_events = {e['id']: e for e in prior.get('events', [])}
+    stale = stale_bar(bars[-1]['date'], asset['td'], meta, tf, now)
+    record = {**prior, 'signal': label(st['dirs'][-1]),
+              'flip_date': bars[fi]['date'] if fi is not None else None,
+              'bars_since_flip': n - fi if fi is not None else None,
+              'last_bar': bars[-1]['date'], 'price': closes[-1],
+              'supertrend': st['trend'][-1], 'rsi': rsi[-1],
+              'updated': now.isoformat(), 'closed_at': close_at(bars[-1]['date'], asset['td'], meta, tf).isoformat(),
+              'status': 'stale' if stale else 'ok', 'error': None, 'meta': meta,
+              'history_bars': len(bars), 'events': list(old_events.values()),
+              'series': [dict(date=b['date'], close=b['c'], rsi=rsi[j], supertrend=st['trend'][j])
+                         for j, b in enumerate(bars) if j >= len(bars) - 90]}
+    if stale:
+        for e in record['events']:
+            e['active'] = False
+            e['stale_data'] = True
+        return record
+    # Replay missed bars (up to 60). Also inspect the last two to discover newly
+    # installed features; event IDs prevent repeats on unchanged data.
+    watermark = prior.get('processed_bar') or prior.get('last_bar')
+    start = max(1, n - 1)
+    if watermark:
+        unseen = next((i for i, b in enumerate(bars) if b['date'] > watermark), n)
+        start = max(1, n - 59, min(start, unseen))
+    for i in range(start, n + 1):
+        for event in events_at(closes, rsi, st['dirs'], i):
+            e = {**event, 'sym': asset['sym'], 'timeframe': tf, 'bar_date': bars[i]['date'],
+                 'price': closes[i], 'supertrend': st['trend'][i], 'rsi': rsi[i],
+                 'detected_at': now.isoformat(), 'delivery': 'pending'}
+            if e['kind'] == 'divergence':
+                e['pivot1_date'] = bars[e.pop('pivot1_index')]['date']
+                e['pivot2_date'] = bars[e.pop('pivot2_index')]['date']
+            e['id'] = event_id(asset['sym'], tf, e)
+            # Preserve pre-upgrade Telegram deduplication records.
+            if e['kind'] == 'flip' and (not prior.get('signal') or e['bar_date'] <= (prior.get('legacy_alerted_flip') or '')):
+                e['delivery'] = 'seeded'
+            if e['kind'] == 'oversold' and prior.get('legacy_rsi_alerted', {}).get(f"{e['level']}:{e['bar_date']}"):
+                e['delivery'] = 'sent'
+            if reseed:
+                e['delivery'] = 'seeded'
+            if e['id'] not in old_events:
+                old_events[e['id']] = e
+    # If upgrading after a long gap, preserve the original latest-flip catch-up.
+    if fi is not None and fi < start and prior and record['flip_date'] > (prior.get('processed_bar') or prior.get('legacy_alerted_flip') or record['flip_date']):
+        e = dict(kind='flip', direction=record['signal'], sym=asset['sym'], timeframe=tf,
+                 bar_date=record['flip_date'], price=closes[fi], supertrend=st['trend'][fi], rsi=rsi[fi],
+                 detected_at=now.isoformat(), delivery='seeded' if reseed else 'pending')
+        e['id'] = event_id(asset['sym'], tf, e)
+        old_events.setdefault(e['id'], e)
+    positions = {b['date']: i for i, b in enumerate(bars)}
+    events = []
+    for e in old_events.values():
+        e.pop('stale_data', None)
+        e['age_bars'] = n - positions[e['bar_date']] if e['bar_date'] in positions else None
+        e['active'] = e['age_bars'] is not None and e['age_bars'] <= FRESH_BARS
+        if reseed and e['delivery'] == 'pending':
+            e['delivery'] = 'seeded'
+        if e['delivery'] == 'pending' or (e['age_bars'] is not None and e['age_bars'] <= 90):
+            events.append(e)
+    record['events'] = sorted(events, key=lambda e: (e['bar_date'], e['id']))
+    record['processed_bar'] = bars[-1]['date']
+    return record
+
+
+def format_alert(asset, event):
+    esc = lambda v: html.escape(str(v))
+    money = lambda v: f'${v:,.4f}' if abs(v) < 1 else f'${v:,.2f}'
+    tf = '1D' if event['timeframe'] == '1day' else '1W'
+    titles = {'flip': 'SUPERTREND FLIP', 'pullback': 'PULLBACK SETUP', 'divergence': 'RSI / PRICE DIVERGENCE', 'oversold': 'RSI OVERSOLD CROSS'}
+    age = event.get('age_bars')
+    catchup = 'CATCH-UP · ' if event.get('stale_data') or age is None or age > FRESH_BARS else ''
+    lines = [f"<b>{catchup}{titles[event['kind']]} — {esc(event['direction'].upper())} · {tf}</b>",
+             f"<b>{esc(asset['sym'])}</b> · {esc(asset['name'])}"]
+    if event['kind'] == 'divergence':
+        lines += [f"Price closes: {money(event['price1'])} → {money(event['price2'])}",
+                  f"RSI at those pivots: {event['rsi1']:.1f} → {event['rsi2']:.1f}",
+                  f"Pivots: {event['pivot1_date']} → {event['pivot2_date']}",
+                  'Confirmed after 5 closed candles to the right of the second pivot.',
+                  f"Strength: {event['strength']}"]
+    elif event['kind'] in ('pullback', 'oversold'):
+        lines.append(f"RSI: {event['previous_rsi']:.1f} → {event['rsi']:.1f}")
+        if event['kind'] == 'pullback':
+            lines.append('RSI crossed 50 within an established ' + ('bullish' if event['direction'] == 'buy' else 'bearish') + ' Supertrend.')
+        else:
+            lines.append(f"Crossed below {event['level']}.")
+    lines += [f"Signal candle: {event['bar_date']} · Age: {age if age is not None else 'unknown'} {tf} bars",
+              f"Close at signal: {money(event['price'])}",
+              f"Supertrend at signal: {money(event['supertrend'])}",
+              'Themes: ' + esc(', '.join(asset['narratives']))]
+    return '\n'.join(lines)
+
+
 def send_telegram(message, dry=False):
     if dry:
-        print("\n--- telegram (dry-run) ---\n" + message + "\n--------------------------")
+        print('[DRY RUN] ' + message)
         return True
-    if not TELEGRAM_TOKEN or not TELEGRAM_CHAT:
-        print("Telegram not configured — skipping send")
+    token, chat = os.getenv('TELEGRAM_TOKEN'), os.getenv('TELEGRAM_CHAT')
+    if not token or not chat:
         return False
-    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
-    payload = {"chat_id": TELEGRAM_CHAT, "text": message,
-               "parse_mode": "HTML", "disable_web_page_preview": True}
-    for attempt in range(1, 4):
+    for attempt in range(3):
         try:
-            r = requests.post(url, json=payload, timeout=15)
-            if r.status_code == 200:
+            status, result = http_json(f'https://api.telegram.org/bot{token}/sendMessage', payload={
+                'chat_id': chat, 'text': message, 'parse_mode': 'HTML', 'disable_web_page_preview': True}, timeout=25)
+            if not isinstance(result, dict):
+                return False
+            if status == 200 and result.get('ok') is True:
                 return True
-            print(f"Telegram error {r.status_code}: {r.text[:200]}")
-            if r.status_code == 429:
-                time.sleep(5 * attempt)
-                continue
-            return False
-        except Exception as e:
-            print(f"Telegram exception: {e}")
-            time.sleep(3 * attempt)
+            if status == 429:
+                time.sleep(min(60, result.get('parameters', {}).get('retry_after', 5 * (attempt + 1))))
+            elif status < 500:
+                return False
+        except (OSError, ValueError):
+            pass
+        time.sleep(2 * (attempt + 1))
     return False
 
 
-def _stamp():
-    utc = datetime.now(timezone.utc)
-    try:
-        from zoneinfo import ZoneInfo
-        loc = utc.astimezone(ZoneInfo(LOCAL_TZ))
-        tag = loc.tzname() or LOCAL_TZ_LABEL
-    except Exception:
-        loc, tag = utc - timedelta(hours=4), LOCAL_TZ_LABEL
-    return (f"{loc.strftime('%b %d, %Y · %H:%M')} {tag}"
-            f"  ({utc.strftime('%H:%M')} UTC)")
+def deliver(asset, rec, dry=False, persist=None):
+    sent = failed = 0
+    for event in rec.get('events', []):
+        if event['delivery'] != 'pending':
+            continue
+        if send_telegram(format_alert(asset, event), dry):
+            if not dry:
+                event.update(delivery='sent', sent_at=stamp())
+                if persist:
+                    persist()
+            sent += 1
+        else:
+            failed += 1
+    return sent, failed
 
 
-def fmt_price(p):
-    if p is None:
-        return "n/a"
-    return f"${p:,.4f}" if abs(p) < 1 else f"${p:,.2f}"
+def export_dashboard(state, assets, path='dashboard_data.json', now=None):
+    now = now or datetime.now(timezone.utc)
+    rows = []
+    for asset in assets:
+        row = {**asset, 'narrative': asset['narratives'][0], 'timeframes': {}}
+        for tf in ('1day', '1week'):
+            rec = copy.deepcopy(state['assets'].get(asset['sym'], {}).get(tf, {}))
+            rec.pop('legacy_alerted_flip', None)
+            rec.pop('legacy_rsi_alerted', None)
+            if not rec.get('last_bar'):
+                rec['status'] = 'error' if rec.get('error') else 'missing'
+            elif stale_bar(rec['last_bar'], asset['td'], rec.get('meta', asset), tf, now):
+                rec['status'] = 'stale'
+            for e in rec.get('events', []):
+                e['active'] = rec['status'] == 'ok' and e.get('age_bars') is not None and e['age_bars'] <= FRESH_BARS
+            row['timeframes'][tf] = rec
+        # Legacy daily/weekly keys keep the old dashboard usable during upload.
+        for tf, suffix in (('1day', ''), ('1week', '_1w')):
+            r = row['timeframes'][tf]
+            for key in ('signal', 'flip_date', 'bars_since_flip', 'last_bar', 'price', 'supertrend', 'rsi', 'updated'):
+                row[key + suffix] = r.get(key)
+            for direction in ('buy', 'sell'):
+                row[f'pb_{direction}_{"1d" if tf == "1day" else "1w"}'] = any(
+                    e.get('active') and e['kind'] == 'pullback' and e['direction'] == direction for e in r.get('events', []))
+        rows.append(row)
+    out = dict(schema=4, version=VERSION, generated_at=now.isoformat(), assets=rows,
+               last_run=state.get('last_run', {}), rules=dict(atr_period=10, factor=3, rsi_period=14,
+               pivot_left=5, pivot_right=5, min_rsi_difference=3, active_bars=FRESH_BARS))
+    write_json(path, out)
+    return out
 
 
-def format_alert(a):
-    fresh = a["age"] <= MAX_FRESH_BARS
-    arrow = "🟢" if a["new"] == "bull" else "🔴"
-    action = a["new"].upper()
-    from_s = "BEAR" if a["new"] == "bull" else "BULL"
-
-    if fresh:
-        head = f"{arrow} <b>SUPERTREND FLIP — {action}</b>"
-        age_line = (f"Flip bar: <b>{a['flip_date']}</b> (last close — confirmed)"
-                    if a["age"] == 0 else
-                    f"Flip bar: <b>{a['flip_date']}</b> ({a['age']} bar(s) ago)")
-    else:
-        head = f"🕓 <b>CATCH-UP — {action}</b> (not a new flip)"
-        age_line = (f"Flip bar: <b>{a['flip_date']}</b> — "
-                    f"<b>{a['age']} trading days ago</b>\n"
-                    f"⚠️ Already in {action} since then. Reported now because "
-                    f"this scanner had not recorded it yet.")
-
-    lines = [
-        head,
-        f"<b>{a['sym']}</b> · {a['name']}",
-        f"1D SuperTrend {from_s} → {action}",
-        age_line,
-        f"Close: <b>{fmt_price(a['price'])}</b>   "
-        f"ST line: {fmt_price(a['st'])}",
-        f"Narrative: {a['narrative']}",
-        f"Data through: {a['last_bar']} · {a['bars']} bars · ATR{ATR_PERIOD}×{ST_FACTOR}",
-        "",
-        f"⏰ {_stamp()}",
-    ]
-    return "\n".join(lines)
-
-
-def format_summary(fresh, catchup, errors, stale, total):
-    lines = [f"📊 <b>SuperTrend Scan</b> — {total} assets on closed daily bars"]
-    if fresh:
-        lines += ["", f"<b>Fresh flips ({len(fresh)})</b>"]
-        for f in fresh:
-            arrow = "🟢" if f["new"] == "bull" else "🔴"
-            lines.append(f"{arrow} {f['sym']} → {f['new'].upper()}  "
-                         f"({f['flip_date']})")
-    if catchup:
-        lines += ["", f"<b>Catch-up, already established ({len(catchup)})</b>"]
-        for f in catchup[:12]:
-            lines.append(f"🕓 {f['sym']} → {f['new'].upper()}  "
-                         f"since {f['flip_date']} ({f['age']}d)")
-        if len(catchup) > 12:
-            lines.append(f"…and {len(catchup) - 12} more")
-    if not fresh and not catchup:
-        lines.append("No flips on the latest closed daily bar.")
-    if stale:
-        lines += ["", f"⚠️ <b>Not updating ({len(stale)})</b>: " + ", ".join(stale[:15])]
-    if errors:
-        lines += ["", f"⚠️ <b>Errors ({len(errors)})</b>"]
-        for e in errors[:12]:
-            lines.append(f"• {e}")
-        if len(errors) > 12:
-            lines.append(f"…and {len(errors) - 12} more")
-    lines += ["", f"⏰ {_stamp()}"]
-    return "\n".join(lines)
-
-
-# ── Core evaluation ───────────────────────────────────────────────────────────
-def evaluate(bars, td_symbol, meta):
-    """
-    Compute SuperTrend on CLOSED bars only and locate the real flip bar.
-
-    Returns (result_dict, None) or (None, reason_string).
-    """
-    dates = [b["date"] for b in bars]
-    lci = last_closed_index(dates, td_symbol, meta)
-    if lci is None:
-        return None, "no closed daily bar available yet"
-
-    closed = bars[:lci + 1]
-    if len(closed) < MIN_BARS:
-        return None, f"only {len(closed)} closed bars (need {MIN_BARS})"
-
-    H = [b["h"] for b in closed]
-    L = [b["l"] for b in closed]
-    C = [b["c"] for b in closed]
-    st = supertrend(H, L, C, ATR_PERIOD, ST_FACTOR)
-    dirs = st["dirs"]
-
-    cur = dirs[-1]
-    flip_idx, _ = last_flip(dirs)
-    last_i = len(closed) - 1
-
-    if flip_idx is None:
-        # Direction never changed anywhere in ~400 bars of history.
-        flip_date, age = None, None
-    else:
-        flip_date = closed[flip_idx]["date"]
-        age = last_i - flip_idx
-
-    return {
-        "signal": label(cur),
-        "flip_date": flip_date,
-        "age": age,
-        "price": C[-1],
-        "st": st["trend"][-1],
-        "last_bar": closed[-1]["date"],
-        "bars": len(closed),
-        "dropped_forming": len(bars) - len(closed),
-        "dirs": dirs,
-        "closed": closed,
-    }, None
-
-
-# ── Verify mode ───────────────────────────────────────────────────────────────
-def verify(sym_query, watchlist):
-    target = None
-    for narrative, assets in watchlist.items():
-        for a in assets:
-            if a["sym"].upper() == sym_query.upper():
-                target = (narrative, a)
-    if not target:
-        print(f"{sym_query} is not in watchlist.json")
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--reseed', action='store_true')
+    ap.add_argument('--no-summary', action='store_true')
+    ap.add_argument('--weekly', action='store_true', help='Weekly only; does not repeat daily scans')
+    ap.add_argument('--timeframe', choices=['auto', '1day', '1week'], default='auto')
+    ap.add_argument('--verify', metavar='SYMBOL')
+    args = ap.parse_args(argv)
+    key = os.getenv('TWELVE_DATA_KEY')
+    if not key:
+        print('TWELVE_DATA_KEY is not set.')
         return 1
-    narrative, asset = target
-    td = asset.get("td", asset["sym"])
-    bars, meta, err = fetch_ohlc(td)
-    if err:
-        print(f"fetch failed: {err}")
+    if not args.verify and not args.dry_run and not args.reseed and (not os.getenv('TELEGRAM_TOKEN') or not os.getenv('TELEGRAM_CHAT')):
+        print('Telegram secrets missing. Configure TELEGRAM_TOKEN and TELEGRAM_CHAT, or use --dry-run.')
         return 1
-    res, why = evaluate(bars, td, meta)
-    if not res:
-        print(f"cannot evaluate: {why}")
-        return 1
-
-    print(f"\n{asset['sym']} — {asset['name']}   [{narrative}]")
-    print(f"session/timezone   : {describe(td, meta)}")
-    print(f"bars fetched       : {len(bars)}  "
-          f"(dropped {res['dropped_forming']} still-forming)")
-    print(f"last CLOSED bar    : {res['last_bar']}   close {fmt_price(res['price'])}")
-    print(f"current trend      : {res['signal'].upper()}")
-    began = res["flip_date"] or "before our history window"
-    if res["age"] is not None:
-        began += f"   ({res['age']} trading days ago)"
-    print(f"trend began        : {began}")
-    print(f"SuperTrend line    : {fmt_price(res['st'])}")
-    print(f"\nLast 12 flips (compare these dates against your chart):")
-    fl = all_flips(res["dirs"])
-    for i, d in fl[-12:]:
-        print(f"   {res['closed'][i]['date']}   → {label(d).upper():<4}  "
-              f"close {fmt_price(res['closed'][i]['c'])}")
-    if not fl:
-        print("   (no direction change in the fetched history)")
-    return 0
-
-
-
-# ── Dashboard export ──────────────────────────────────────────────────────────
-def export_dashboard(state, watchlist):
-    """
-    Write dashboard_data.json for the HTML dashboard to consume.
-    The dashboard fetches this file from GitHub raw URL — zero Twelve Data
-    credits used when opening the dashboard.
-    Merges daily state (updated every run) with weekly state (updated Fridays).
-    """
-    # Load existing dashboard_data.json to preserve weekly data between runs
-    existing = {}
-    try:
-        with open("dashboard_data.json", "r") as f:
-            prev = json.load(f)
-        for a in prev.get("assets", []):
-            existing[a["sym"]] = a
-    except Exception:
-        pass
-
-    assets = []
-    for narrative, items in watchlist.items():
-        for a in items:
-            sym = a["sym"]
-            rec = state.get(sym, {})
-            prev_a = existing.get(sym, {})
-            assets.append({
-                "sym":             sym,
-                "name":            a["name"],
-                "narrative":       narrative,
-                "td":              a.get("td", sym),
-                # Daily data — always fresh from this run
-                "signal":          rec.get("signal"),
-                "flip_date":       rec.get("flip_date"),
-                "bars_since_flip": rec.get("bars_since_flip"),
-                "last_bar":        rec.get("last_closed_bar"),
-                "price":           rec.get("price"),
-                "supertrend":      rec.get("supertrend"),
-                "rsi":             rec.get("rsi"),
-                "updated":         rec.get("updated"),
-                # Weekly data — preserved from last Friday run
-                "signal_1w":       rec.get("signal_1w") or prev_a.get("signal_1w"),
-                "flip_date_1w":    rec.get("flip_date_1w") or prev_a.get("flip_date_1w"),
-                "bars_since_flip_1w": rec.get("bars_since_flip_1w") or prev_a.get("bars_since_flip_1w"),
-                "supertrend_1w":   rec.get("supertrend_1w") or prev_a.get("supertrend_1w"),
-                "rsi_1w":          rec.get("rsi_1w") or prev_a.get("rsi_1w"),
-                "updated_1w":      rec.get("updated_1w") or prev_a.get("updated_1w"),
-                # Pullback setups — written by RSI scanner into rsi_state.json
-                # Read from shared state if available
-                "pb_buy_1d":       prev_a.get("pb_buy_1d"),
-                "pb_sell_1d":      prev_a.get("pb_sell_1d"),
-                "pb_buy_1w":       prev_a.get("pb_buy_1w"),
-                "pb_sell_1w":      prev_a.get("pb_sell_1w"),
-            })
-
-    out = {
-        "generated_at": datetime.now(timezone.utc)
-                         .replace(microsecond=0).isoformat(),
-        "assets": assets,
-    }
-    tmp = "dashboard_data.json.tmp"
-    with open(tmp, "w") as f:
-        json.dump(out, f, indent=2)
-    os.replace(tmp, "dashboard_data.json")
-
-# ── Main ──────────────────────────────────────────────────────────────────────
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--dry-run", action="store_true",
-                    help="compute and print; do not send Telegram or write state")
-    ap.add_argument("--verify", metavar="SYMBOL",
-                    help="print recent flip dates for one symbol and exit")
-    ap.add_argument("--reseed", action="store_true",
-                    help="adopt every current trend silently, sending no alerts")
-    ap.add_argument("--no-summary", action="store_true")
-    ap.add_argument("--weekly", action="store_true",
-                    help="scan 1W timeframe and update weekly fields in state + dashboard")
-    args = ap.parse_args()
-
-    if not TWELVE_DATA_KEY:
-        print("TWELVE_DATA_KEY is not set."); return 1
-
-    watchlist = load_watchlist()
-
+    assets, state = load_watchlist(), load_state()
     if args.verify:
-        return verify(args.verify, watchlist)
-
-    started = datetime.now(timezone.utc)
-    print(f"Scan start {started.strftime('%Y-%m-%d %H:%M UTC')}"
-          f"{'  [DRY RUN]' if args.dry_run else ''}"
-          f"{'  [RESEED]' if args.reseed else ''}")
-    print(f"closed bars only · {OUTPUTSIZE}-bar history · "
-          f"fresh window {MAX_FRESH_BARS} bar(s)\n")
-
-    state = load_state()
-    fresh, catchup, errors, seeded = [], [], [], []
-    total = 0
-    symbols = [(n, a) for n, assets in watchlist.items() for a in assets]
-    budget = len(symbols)
-    print(f"{budget} symbols → {budget} API credits this run\n")
-
+        assets = [a for a in assets if a['sym'].upper() == args.verify.upper()]
+        if not assets:
+            print('Symbol is not in watchlist.')
+            return 1
+    client = DataClient(key)
+    summary = dict(started_at=stamp(), evaluated=0, errors=0, sent=0, delivery_failed=0)
+    mode = '1week' if args.weekly else args.timeframe
+    persist = lambda: write_json(STATE_FILE, state)
     try:
-        for narrative, asset in symbols:
-            sym = asset["sym"]
-            name = asset["name"]
-            td = asset.get("td", sym)
-            print(f"  {sym:<8}", end=" ", flush=True)
-
-            bars, meta, err = fetch_ohlc(td)
-            if err:
-                print(f"ERROR: {err}")
-                errors.append(f"{sym}: {err}")
-                time.sleep(DELAY_SEC)
-                continue
-
-            res, why = evaluate(bars, td, meta)
-            if not res:
-                print(f"SKIP: {why}")
-                errors.append(f"{sym}: {why}")
-                time.sleep(DELAY_SEC)
-                continue
-
-            total += 1
-            prior = state.get(sym) or {}
-            # v1 state records only stored a bull/bear string with no notion of
-            # WHICH BAR flipped. They cannot tell us whether a flip was already
-            # announced, so they are adopted silently rather than replayed as a
-            # wave of bogus "fresh" alerts on the first v2 run.
-            legacy = bool(prior) and "alerted_flip_date" not in prior
-            prior_alerted = prior.get("alerted_flip_date")
-            prior_sig = prior.get("signal")
-
-            age_s = "never" if res["age"] is None else f"{res['age']}d ago"
-            print(f"{res['signal'].upper():<4} since {res['flip_date'] or '—'} "
-                  f"({age_s})  bar {res['last_bar']}", end="")
-
-            # Calculate RSI(14) on closed bars
-            closed_closes = [b["c"] for b in res["closed"]]
-            rsi_vals = calc_rsi(closed_closes, 14)
-            rsi_now = rsi_vals[-1] if rsi_vals else None
-
-            record = {
-                "signal": res["signal"],
-                "flip_date": res["flip_date"],
-                "bars_since_flip": res["age"],
-                "last_closed_bar": res["last_bar"],
-                "price": round(res["price"], 6),
-                "supertrend": (None if res["st"] is None else round(res["st"], 6)),
-                "rsi": (None if rsi_now is None else round(rsi_now, 2)),
-                "history_bars": res["bars"],
-                "schema": STATE_SCHEMA,
-                "updated": datetime.now(timezone.utc)
-                            .replace(microsecond=0).isoformat(),
-                "alerted_flip_date": prior_alerted,
-            }
-
-            alert = {
-                "sym": sym, "name": name, "narrative": narrative,
-                "new": res["signal"], "old": prior_sig or "unknown",
-                "flip_date": res["flip_date"], "age": res["age"],
-                "price": res["price"], "st": res["st"],
-                "last_bar": res["last_bar"], "bars": res["bars"],
-            }
-
-            first_time = not prior
-            no_flip_in_history = res["flip_date"] is None
-
-            if args.reseed or first_time or legacy or no_flip_in_history:
-                # Silent adoption. A symbol we have never tracked, or one whose
-                # trend predates our whole history window, is by definition NOT
-                # a fresh flip and must never be announced as one.
-                record["alerted_flip_date"] = res["flip_date"]
-                if not args.reseed and (first_time or legacy):
-                    seeded.append(sym)
-                    print("   [seeded, no alert]" if first_time
-                          else "   [migrated from v1, no alert]")
-                else:
-                    print("   [adopted]")
-            elif prior_alerted == res["flip_date"]:
-                print("   [already alerted]")
-            else:
-                # A genuine, not-yet-announced change of trend bar.
-                if res["age"] is not None and res["age"] <= MAX_FRESH_BARS:
-                    fresh.append(alert)
-                    print("   *** FRESH FLIP ***")
-                else:
-                    catchup.append(alert)
-                    print(f"   [catch-up, {res['age']}d old]")
-                if send_telegram(format_alert(alert), dry=args.dry_run):
-                    record["alerted_flip_date"] = res["flip_date"]
-                elif args.dry_run:
-                    record["alerted_flip_date"] = res["flip_date"]
-                else:
-                    # Delivery failed — do NOT mark as alerted, so the next run
-                    # retries instead of silently swallowing the signal.
-                    print(f"    (delivery failed for {sym}; will retry next run)")
-
-            state[sym] = record
-            time.sleep(DELAY_SEC)
+        for asset in assets:
+            sym = asset['sym']
+            records = state['assets'].setdefault(sym, {})
+            tfs = ['1day', '1week'] if mode == 'auto' else [mode]
+            for tf in tfs:
+                prior = records.get(tf, {})
+                now = datetime.now(timezone.utc)
+                meta = {**asset, **prior.get('meta', {})}
+                if tf == '1week' and mode == 'auto' and prior.get('last_bar') and prior.get('status') == 'ok' and prior['last_bar'] >= latest_week_key(asset['td'], meta, now):
+                    if not args.reseed and not args.verify:
+                        sent, failed = deliver(asset, prior, args.dry_run, None if args.dry_run else persist)
+                        summary['sent'] += sent
+                        summary['delivery_failed'] += failed
+                    continue
+                try:
+                    bars, meta = client.fetch(asset['td'], tf)
+                    rec = evaluate(bars, asset, tf, prior, meta, now, args.reseed)
+                    records[tf] = rec
+                    summary['evaluated'] += 1
+                    if rec['status'] == 'stale':
+                        summary['errors'] += 1
+                    print(f"{sym} {tf}: {rec['signal']} · RSI {rec['rsi']:.1f} · candle {rec['last_bar']} · {rec['status']}")
+                    if args.verify:
+                        print(json.dumps(rec, indent=2))
+                        continue
+                except (RuntimeError, ValueError) as exc:
+                    summary['errors'] += 1
+                    rec = records.setdefault(tf, prior)
+                    rec.update(status='error', error=str(exc), checked_at=stamp())
+                    for e in rec.get('events', []):
+                        e['active'] = False
+                        e['stale_data'] = True
+                    print(f'{sym} {tf}: {exc}')
+                if not args.dry_run and not args.verify:
+                    persist()  # Persist pending events before attempting delivery.
+                if not args.reseed and not args.verify:
+                    sent, failed = deliver(asset, rec, args.dry_run, None if args.dry_run else persist)
+                    summary['sent'] += sent
+                    summary['delivery_failed'] += failed
     finally:
-        if not args.dry_run:
-            save_state(state)
-            print(f"\nstate.json written ({len(state)} symbols)")
-
-    # ── Weekly scan (runs on Fridays via --weekly flag) ───────────────────────
-    if args.weekly:
-        print(f"\n{'='*50}")
-        print("Weekly scan (1W Supertrend + RSI)")
-        print(f"{'='*50}")
-        weekly_symbols = [(n, a) for n, assets in watchlist.items() for a in assets]
-        for narrative, asset in weekly_symbols:
-            sym  = asset["sym"]
-            td   = asset.get("td", sym)
-            print(f"  {sym:<8}", end=" ", flush=True)
-            bars, meta, err = fetch_ohlc(td, interval="1week", outputsize=200)
-            if err:
-                print(f"ERROR: {err}")
-                time.sleep(DELAY_SEC)
-                continue
-            res, why = evaluate(bars, td, meta)
-            if not res:
-                print(f"SKIP: {why}")
-                time.sleep(DELAY_SEC)
-                continue
-            # Calculate weekly RSI
-            closed_closes = [b["c"] for b in res["closed"]]
-            rsi_vals = calc_rsi(closed_closes, 14)
-            rsi_1w = rsi_vals[-1] if rsi_vals else None
-            # Store weekly data in state under _1w keys
-            if sym not in state:
-                state[sym] = {}
-            state[sym]["signal_1w"]          = res["signal"]
-            state[sym]["flip_date_1w"]        = res["flip_date"]
-            state[sym]["bars_since_flip_1w"]  = res["age"]
-            state[sym]["supertrend_1w"]       = (None if res["st"] is None else round(res["st"], 6))
-            state[sym]["rsi_1w"]              = (None if rsi_1w is None else round(rsi_1w, 2))
-            state[sym]["updated_1w"]          = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
-            age_s = "never" if res["age"] is None else f"{res['age']}w ago"
-            rsi_s = f"RSI {rsi_1w:.1f}" if rsi_1w else "RSI —"
-            print(f"{res['signal'].upper():<4} {age_s}  {rsi_s}")
-            time.sleep(DELAY_SEC)
-        if not args.dry_run:
-            save_state(state)
-            print(f"state.json updated with weekly data")
-
-    if not args.dry_run:
-            # Export dashboard_data.json — read by the HTML dashboard
-            export_dashboard(state, watchlist)
-            print("dashboard_data.json written")
-
-    # staleness watchdog — surfaces silent scheduler/API failures
-    stale = []
-    now = datetime.now(timezone.utc)
-    for sym, rec in state.items():
-        try:
-            u = datetime.fromisoformat(rec["updated"])
-            if u.tzinfo is None:
-                u = u.replace(tzinfo=timezone.utc)
-            if (now - u).days >= STALE_AFTER_DAYS:
-                stale.append(sym)
-        except Exception:
-            pass
-
-    if seeded:
-        print(f"seeded (first sighting, intentionally silent): {', '.join(seeded)}")
-
-    if not args.no_summary and not args.reseed:
-        if fresh or catchup or errors or stale:
-            send_telegram(format_summary(fresh, catchup, errors, stale, total),
-                          dry=args.dry_run)
-
-    took = (datetime.now(timezone.utc) - started).total_seconds()
-    print(f"\nDone in {took/60:.1f} min — {total} evaluated, "
-          f"{len(fresh)} fresh, {len(catchup)} catch-up, {len(errors)} errors")
-    return 0
+        summary.update(finished_at=stamp(), api_requests=client.calls)
+        state['last_run'] = summary
+        if not args.dry_run and not args.verify:
+            persist()
+            export_dashboard(state, assets)
+    if not args.no_summary and not args.reseed and not args.verify:
+        send_telegram(f"<b>Scanner v4 summary</b>\n{summary['evaluated']} symbol/timeframes checked\n"
+                      f"{summary['sent']} alerts delivered · {summary['delivery_failed']} pending\n"
+                      f"{summary['errors']} data issues · {client.calls} data requests", args.dry_run)
+    print(json.dumps(summary))
+    return 1 if summary['errors'] or summary['delivery_failed'] else 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     sys.exit(main())

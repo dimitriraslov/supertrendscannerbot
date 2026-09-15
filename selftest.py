@@ -8,6 +8,7 @@ nonsense.
 """
 import sys
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 from supertrend import supertrend, last_flip, all_flips, label, BULL, BEAR
 from market_calendar import last_closed_index, is_crypto
@@ -111,15 +112,15 @@ print("-" * 46)
 dates = ["2026-07-24", "2026-07-27", "2026-07-28", "2026-07-29"]
 eq_meta = {"exchange_timezone": "America/New_York"}
 
-midday = datetime(2026, 7, 29, 12, 0, tzinfo=timezone.utc)     # 12:00 local ET
+midday = datetime(2026, 7, 29, 12, 0, tzinfo=ZoneInfo("America/New_York"))     # 12:00 local ET
 check("equity: today's bar EXCLUDED during the session",
       last_closed_index(dates, "NVDA", eq_meta, now=midday) == 2)
 
-after = datetime(2026, 7, 29, 16, 50, tzinfo=timezone.utc)     # 16:50 local ET
+after = datetime(2026, 7, 29, 16, 50, tzinfo=ZoneInfo("America/New_York"))     # 16:50 local ET
 check("equity: today's bar INCLUDED after close + settle buffer",
       last_closed_index(dates, "NVDA", eq_meta, now=after) == 3)
 
-edge = datetime(2026, 7, 29, 16, 30, tzinfo=timezone.utc)      # inside buffer
+edge = datetime(2026, 7, 29, 16, 30, tzinfo=ZoneInfo("America/New_York"))      # inside buffer
 check("equity: bar still excluded inside the settle buffer",
       last_closed_index(dates, "NVDA", eq_meta, now=edge) == 2)
 

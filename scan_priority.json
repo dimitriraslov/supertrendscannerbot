@@ -1,0 +1,41 @@
+{
+  "description": "Scan order: held names, then watch, then the rest of the watchlist.",
+  "held": [
+    "ETH",
+    "RKLB",
+    "RGTI",
+    "MRNA",
+    "RR",
+    "SOL",
+    "BTC",
+    "OUST",
+    "BEAM",
+    "TSLA",
+    "HIMS",
+    "MSFT",
+    "ONDO",
+    "LINK"
+  ],
+  "watch": [
+    "ASTS",
+    "IONQ"
+  ],
+  "symbols": {
+    "HIMS": {
+      "name": "Hims & Hers",
+      "td": "HIMS"
+    },
+    "MSFT": {
+      "name": "Microsoft",
+      "td": "MSFT"
+    },
+    "ONDO": {
+      "name": "Ondo",
+      "td": "ONDO/USD"
+    },
+    "LINK": {
+      "name": "Chainlink",
+      "td": "LINK/USD"
+    }
+  }
+}

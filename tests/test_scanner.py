@@ -61,31 +61,184 @@ class CalendarTests(unittest.TestCase):
         self.assertFalse(stale_bar('2026-09-14','TEST',now=NOW))
 
 
+def chart_dates(n=140, extra=()):
+    start = NOW.date() - timedelta(days=n - 1)
+    return [(start + timedelta(days=i)).isoformat() for i in range(n)] + list(extra)
+
+
+def yahoo_chart(dates):
+    from zoneinfo import ZoneInfo
+    tz = ZoneInfo('America/New_York')
+    ts = [int(datetime.fromisoformat(day).replace(tzinfo=tz).timestamp()) for day in dates]
+    n = len(dates)
+    return json.dumps({'chart': {'result': [{
+        'meta': {'exchangeTimezoneName': 'America/New_York', 'instrumentType': 'EQUITY'},
+        'timestamp': ts,
+        'indicators': {'quote': [{'high': [105] * n, 'low': [90] * n, 'close': [100] * n}]},
+    }]}}).encode()
+
+
+def stooq_csv(dates):
+    lines = ['Date,Open,High,Low,Close,Volume']
+    lines += [f'{day},100,105,90,100,1' for day in dates]
+    return ('\n'.join(lines) + '\n').encode()
+
+
 class DataClientTests(unittest.TestCase):
     def test_fetch_validates_sorts_and_deduplicates(self):
         rows=[{'datetime':d,'high':'105','low':'90','close':'100'} for d in ['2026-09-15','2026-09-14','2026-09-15']]
-        with patch('scanner.http_json',return_value=(200,{'values':rows,'meta':{'type':'Common Stock'}})) as http:
+        with patch('scanner.http_json_ex',return_value=(200,{'values':rows,'meta':{'type':'Common Stock'}},{})) as http:
             b,meta=scanner.DataClient('secret',delay=0).fetch('TEST','1week')
         self.assertEqual([x['date'] for x in b],['2026-09-14','2026-09-15'])
+        self.assertEqual(meta['source'],'twelvedata')
         self.assertEqual(http.call_args.kwargs['params']['interval'],'1week')
 
     def test_retries_api_rate_limit(self):
         row={'datetime':'2026-09-15','high':'105','low':'90','close':'100'}
-        with patch('scanner.http_json',side_effect=[(200,{'status':'error','code':429}),(200,{'values':[row]})]),patch('scanner.time.sleep'):
+        with patch('scanner.http_json_ex',side_effect=[(200,{'status':'error','code':429}),(200,{'values':[row]},{})]),patch('scanner.time.sleep'),patch('scanner.http_bytes') as fallback:
             client=scanner.DataClient('secret',delay=0)
-            self.assertEqual(len(client.fetch('TEST','1day')[0]),1)
-            self.assertEqual(client.calls,2)
+            bars,meta=client.fetch('TEST','1day')
+        self.assertEqual(len(bars),1)
+        self.assertEqual(meta['source'],'twelvedata')
+        self.assertEqual(client.calls,2)
+        fallback.assert_not_called()
+
+    def test_retries_use_longer_exponential_backoff(self):
+        row={'datetime':'2026-09-15','high':'105','low':'90','close':'100'}
+        limited=(429,{'code':429,'message':'You have run out of API credits for the current minute.','status':'error'},{})
+        with patch('scanner.http_json_ex',side_effect=[limited,limited,(200,{'values':[row]},{})]),patch('scanner.time.sleep') as sleep,patch('scanner.time.time',return_value=1000.0):
+            scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+        self.assertEqual([c.args[0] for c in sleep.call_args_list],[30.0,60.0])
+
+    def test_rate_limit_falls_back_to_yahoo(self):
+        dates=chart_dates(extra=('2026-09-16',))
+        payload=yahoo_chart(dates)
+
+        def fake_bytes(url, **kwargs):
+            self.assertIn('query1.finance.yahoo.com/v8/finance/chart/TEST', url)
+            self.assertIn('interval=1d', url)
+            return payload
+
+        limited=(429,{'code':429,'message':'You have run out of API credits for the current minute.','status':'error'},{})
+        with patch('scanner.http_json_ex',return_value=limited),patch('scanner.http_bytes',side_effect=fake_bytes) as http,patch('scanner.time.sleep'),patch('scanner.time.time',return_value=1000.0),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            client=scanner.DataClient('secret',delay=0)
+            bars,meta=client.fetch('TEST','1day')
+        self.assertEqual(meta['source'],'yahoo')
+        self.assertEqual(client.calls,scanner.TD_ATTEMPTS)
+        self.assertEqual(bars[-1]['date'],'2026-09-15')
+        self.assertNotIn('2026-09-16', [b['date'] for b in bars])
+        self.assertGreaterEqual(len(bars),scanner.MIN_BARS)
+        self.assertEqual(http.call_count,1)
+
+    def test_yahoo_skips_a_corrupt_bar(self):
+        dates=chart_dates()
+        payload=json.loads(yahoo_chart(dates))
+        payload['chart']['result'][0]['indicators']['quote'][0]['low'][10]=0
+        with patch('scanner.http_json_ex',return_value=(500,{'message':'Market data error'},{})),patch('scanner.http_bytes',return_value=json.dumps(payload).encode()),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            bars,meta=scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+        self.assertEqual(meta['source'],'yahoo')
+        self.assertNotIn(dates[10],[b['date'] for b in bars])
+        self.assertEqual(len(bars),len(dates)-1)
+
+    def test_yahoo_error_falls_back_to_stooq(self):
+        dates=chart_dates()
+
+        def fake_bytes(url, **kwargs):
+            if 'yahoo' in url:
+                raise RuntimeError('yahoo down')
+            self.assertIn('stooq.com/q/d/l/?s=test.us', url)
+            self.assertIn('i=d', url)
+            return stooq_csv(dates)
+
+        with patch('scanner.http_json_ex',return_value=(400,{'message':'Market data error'},{})),patch('scanner.http_bytes',side_effect=fake_bytes),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            bars,meta=scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+        self.assertEqual(meta['source'],'stooq')
+        self.assertEqual(bars[-1]['date'],'2026-09-15')
+
+    def test_daily_credit_limit_stops_twelve_data(self):
+        dates=chart_dates()
+        limited=(429,{'code':429,'message':'You have run out of API credits for the current day.','status':'error'},{})
+        with patch('scanner.http_json_ex',return_value=limited) as td,patch('scanner.http_bytes',return_value=yahoo_chart(dates)),patch('scanner.time.sleep'),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            client=scanner.DataClient('secret',delay=0)
+            first=client.fetch('TEST','1day')
+            calls=client.calls
+            second=client.fetch('AAPL','1day')
+        self.assertTrue(client.daily_exhausted)
+        self.assertEqual(calls,1)
+        self.assertEqual(client.calls,1)
+        self.assertEqual(td.call_count,1)
+        self.assertEqual(first[1]['source'],'yahoo')
+        self.assertEqual(second[1]['source'],'yahoo')
+
+    def test_minute_limit_that_survives_a_reset_stops_twelve_data(self):
+        dates=chart_dates()
+        clock={'t':1000.0}
+
+        def fake_time():
+            return clock['t']
+
+        def fake_sleep(seconds):
+            clock['t']+=seconds
+
+        limited=(429,{'code':429,'message':'You have run out of API credits for the current minute.','status':'error'},{})
+        with patch('scanner.http_json_ex',return_value=limited) as td,patch('scanner.http_bytes',return_value=yahoo_chart(dates)),patch('scanner.time.time',side_effect=fake_time),patch('scanner.time.sleep',side_effect=fake_sleep),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            client=scanner.DataClient('secret',delay=0)
+            bars,meta=client.fetch('TEST','1day')
+        self.assertTrue(client.daily_exhausted)
+        self.assertLess(client.calls,scanner.TD_ATTEMPTS)
+        self.assertEqual(meta['source'],'yahoo')
+        self.assertGreaterEqual(len(bars),scanner.MIN_BARS)
+        td.assert_called()
+
+    def test_paces_to_header_credit_limit(self):
+        row={'datetime':'2026-09-15','high':'105','low':'90','close':'100'}
+        headers={'api-credits-used':'2','api-credits-left':'6','api-credits-request':'1'}
+        with patch('scanner.http_json_ex',return_value=(200,{'values':[row],'meta':{}},headers)),patch('scanner.time.sleep') as sleep,patch('scanner.time.monotonic',return_value=0.0):
+            client=scanner.DataClient('secret',delay=8)
+            client.fetch('TEST','1day')
+            client.fetch('TEST','1day')
+        self.assertEqual(client.minute_limit,8)
+        self.assertEqual(client.credits_left,6)
+        self.assertEqual([c.args[0] for c in sleep.call_args_list],[7.5])
+
+    def test_zero_credits_left_waits_for_the_next_minute(self):
+        row={'datetime':'2026-09-15','high':'105','low':'90','close':'100'}
+        headers={'api-credits-used':'8','api-credits-left':'0'}
+        with patch('scanner.http_json_ex',return_value=(200,{'values':[row],'meta':{}},headers)),patch('scanner.time.sleep') as sleep,patch('scanner.time.time',return_value=1000.0),patch('scanner.time.monotonic',return_value=0.0):
+            client=scanner.DataClient('secret',delay=8)
+            client.fetch('TEST','1day')
+            client.fetch('TEST','1day')
+        # 1000 % 60 == 40, so the minute resets in 21s, which is wider than 60/8.
+        self.assertEqual(client.minute_limit,8)
+        self.assertEqual([c.args[0] for c in sleep.call_args_list],[21.0])
 
     def test_rejects_nan_candles(self):
         row={'datetime':'2026-09-15','high':'NaN','low':'90','close':'100'}
-        with patch('scanner.http_json',return_value=(200,{'values':[row]})):
+        with patch('scanner.http_json_ex',return_value=(200,{'values':[row]},{})),patch.object(scanner.DataClient,'_yahoo',side_effect=RuntimeError('yahoo down')),patch.object(scanner.DataClient,'_stooq',side_effect=RuntimeError('stooq down')):
             with self.assertRaisesRegex(RuntimeError,'Invalid OHLC'):
                 scanner.DataClient('secret',delay=0).fetch('TEST','1day')
 
     def test_provider_error_redacts_key(self):
-        with patch('scanner.http_json',return_value=(400,{'message':'Invalid key secret'})):
+        with patch('scanner.http_json_ex',return_value=(400,{'message':'Invalid key secret'},{})),patch.object(scanner.DataClient,'_yahoo',side_effect=RuntimeError('yahoo down')),patch.object(scanner.DataClient,'_stooq',side_effect=RuntimeError('stooq down')):
             with self.assertRaisesRegex(RuntimeError,r'Invalid key \[redacted\]'):
-                scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+                try:
+                    scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+                except RuntimeError as exc:
+                    self.assertNotIn('secret',str(exc))
+                    raise
+
+    def test_crypto_symbols_map_to_yahoo_and_stooq(self):
+        self.assertEqual(scanner.yahoo_symbol('BTC/USD'),'BTC-USD')
+        self.assertEqual(scanner.yahoo_symbol('ONDO/USD'),'ONDO-USD')
+        self.assertEqual(scanner.yahoo_symbol('NVDA'),'NVDA')
+        self.assertEqual(scanner.stooq_symbol('ETH/USD'),'ethusd')
+        self.assertEqual(scanner.stooq_symbol('LINK/USD'),'linkusd')
+        self.assertEqual(scanner.stooq_symbol('TSLA'),'tsla.us')
 
 
 class SignalTests(unittest.TestCase):
@@ -282,6 +435,70 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual([c.args[1] for c in fetch.call_args_list],['1day'])
             saved=scanner.read_json(scanner.STATE_FILE)
             self.assertEqual(saved['assets']['TEST']['1week']['events'][0]['delivery'],'sent')
+
+    def test_source_round_trips_to_dashboard(self):
+        b=bars()
+        with patch('scanner.calculate',return_value=calculated(b)):
+            rec=scanner.evaluate(b,ASSET,'1day',meta={'source':'yahoo'},now=NOW)
+        self.assertEqual(rec['source'],'yahoo')
+        with tempfile.TemporaryDirectory() as d:
+            out=scanner.export_dashboard({'assets':{'TEST':{'1day':rec}}},[ASSET],Path(d)/'dash.json',NOW)
+        self.assertEqual(out['assets'][0]['source'],'yahoo')
+        self.assertEqual(out['assets'][0]['timeframes']['1day']['source'],'yahoo')
+
+
+class ScanOrderTests(unittest.TestCase):
+    def test_held_then_watch_then_the_rest(self):
+        assets=[
+            {'sym':'NVDA','td':'NVDA','name':'NVIDIA','narratives':['AI']},
+            {'sym':'ASTS','td':'ASTS','name':'AST SpaceMobile','narratives':['Space']},
+            {'sym':'ETH','td':'ETH/USD','name':'Ethereum','narratives':['Crypto']},
+        ]
+        priority={'held':['ETH','HIMS'],'watch':['ASTS'],'symbols':{'HIMS':{'name':'Hims & Hers','td':'HIMS'}}}
+        ordered=scanner.order_assets(assets,priority)
+        self.assertEqual([a['sym'] for a in ordered],['ETH','HIMS','ASTS','NVDA'])
+        self.assertEqual(ordered[1]['td'],'HIMS')
+        self.assertEqual(ordered[1]['narratives'],['Held'])
+
+    def test_repo_priority_file_orders_the_watchlist(self):
+        held=['ETH','RKLB','RGTI','MRNA','RR','SOL','BTC','OUST','BEAM','TSLA','HIMS','MSFT','ONDO','LINK']
+        watch=['ASTS','IONQ']
+        priority=scanner.load_scan_priority()
+        self.assertEqual(priority['held'],held)
+        self.assertEqual(priority['watch'],watch)
+        assets=scanner.load_watchlist()
+        ordered=scanner.order_assets(assets,priority)
+        syms=[a['sym'] for a in ordered]
+        self.assertEqual(syms[:len(held)+len(watch)],held+watch)
+        rest=[a['sym'] for a in assets if a['sym'] not in set(held+watch)]
+        self.assertEqual([s for s in syms if s not in set(held+watch)],rest)
+        by={a['sym']:a for a in ordered}
+        self.assertEqual(by['ONDO']['td'],'ONDO/USD')
+        self.assertEqual(by['LINK']['td'],'LINK/USD')
+        self.assertEqual(by['MSFT']['name'],'Microsoft')
+
+    def test_dry_run_fetches_held_names_before_the_rest(self):
+        with tempfile.TemporaryDirectory() as d,contextlib.chdir(d),contextlib.redirect_stdout(io.StringIO()):
+            Path('watchlist.json').write_text(json.dumps({'Test':[
+                {'sym':'NVDA','name':'NVIDIA','td':'NVDA'},
+                {'sym':'ETH','name':'Ethereum','td':'ETH/USD'},
+                {'sym':'ASTS','name':'AST SpaceMobile','td':'ASTS'},
+            ]}))
+            Path('scan_priority.json').write_text(json.dumps({'held':['ETH'],'watch':['ASTS']}))
+            with patch.dict(os.environ,{'TWELVE_DATA_KEY':'fake'}),patch('scanner.DataClient.fetch',return_value=(bars(),{'source':'twelvedata'})) as fetch,patch('scanner.datetime',wraps=datetime) as dt,patch('scanner.calculate',return_value=calculated(bars())):
+                dt.now.return_value=NOW
+                self.assertEqual(scanner.main(['--dry-run','--timeframe','1day','--no-summary']),0)
+        self.assertEqual([c.args[0] for c in fetch.call_args_list],['ETH/USD','ASTS','NVDA'])
+
+
+class SupertrendParityTests(unittest.TestCase):
+    def test_rgti_daily_st_line_on_2026_10_12(self):
+        from supertrend import supertrend
+        series=json.loads((Path(__file__).resolve().parent/'fixtures'/'rgti_daily.json').read_text())
+        st=supertrend([b['h'] for b in series],[b['l'] for b in series],[b['c'] for b in series],10,3.0)
+        idx=next(i for i,b in enumerate(series) if b['date']=='2026-10-12')
+        self.assertEqual(series[idx]['date'],series[-1]['date'])
+        self.assertAlmostEqual(st['trend'][idx],15.957,delta=0.001)
 
 
 if __name__=='__main__':unittest.main()

@@ -131,6 +131,17 @@ class DataClientTests(unittest.TestCase):
         self.assertGreaterEqual(len(bars),scanner.MIN_BARS)
         self.assertEqual(http.call_count,1)
 
+    def test_yahoo_skips_a_corrupt_bar(self):
+        dates=chart_dates()
+        payload=json.loads(yahoo_chart(dates))
+        payload['chart']['result'][0]['indicators']['quote'][0]['low'][10]=0
+        with patch('scanner.http_json_ex',return_value=(500,{'message':'Market data error'},{})),patch('scanner.http_bytes',return_value=json.dumps(payload).encode()),patch('scanner.datetime',wraps=datetime) as dt:
+            dt.now.return_value=NOW
+            bars,meta=scanner.DataClient('secret',delay=0).fetch('TEST','1day')
+        self.assertEqual(meta['source'],'yahoo')
+        self.assertNotIn(dates[10],[b['date'] for b in bars])
+        self.assertEqual(len(bars),len(dates)-1)
+
     def test_yahoo_error_falls_back_to_stooq(self):
         dates=chart_dates()
 

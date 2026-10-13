@@ -128,10 +128,13 @@ def _as_response(result):
     return status, data, _header_map(headers)
 
 
-def _clean_bars(bars):
+def _clean_bars(bars, skip_invalid=False):
     dedup = {}
     for bar in bars:
-        if not all(math.isfinite(bar[k]) for k in ('h', 'l', 'c')) or not 0 < bar['l'] <= bar['c'] <= bar['h']:
+        invalid = not all(math.isfinite(bar[k]) for k in ('h', 'l', 'c')) or not 0 < bar['l'] <= bar['c'] <= bar['h']
+        if invalid:
+            if skip_invalid:
+                continue
             raise ValueError('Invalid OHLC values returned')
         datetime.fromisoformat(bar['date'])
         dedup[bar['date']] = bar
@@ -437,7 +440,7 @@ class DataClient:
             bars.append(dict(date=datetime.fromtimestamp(bar_ts, tz).date().isoformat(),
                              h=float(high), l=float(low), c=float(close)))
         meta = {'exchange_timezone': tzname, 'source': 'yahoo'}
-        return _finalize_bars(_clean_bars(bars), symbol, meta, timeframe), meta
+        return _finalize_bars(_clean_bars(bars, skip_invalid=True), symbol, meta, timeframe), meta
 
     def _stooq(self, symbol, timeframe):
         interval = 'd' if timeframe == '1day' else 'w'
@@ -451,7 +454,7 @@ class DataClient:
         bars = [dict(date=row['Date'][:10], h=float(row['High']), l=float(row['Low']), c=float(row['Close']))
                 for row in rows]
         meta = {'source': 'stooq'}
-        return _finalize_bars(_clean_bars(bars), symbol, meta, timeframe), meta
+        return _finalize_bars(_clean_bars(bars, skip_invalid=True), symbol, meta, timeframe), meta
 
 
 def event_id(sym, tf, event):

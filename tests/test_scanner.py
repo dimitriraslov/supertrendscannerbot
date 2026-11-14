@@ -501,4 +501,240 @@ class SupertrendParityTests(unittest.TestCase):
         self.assertAlmostEqual(st['trend'][idx],15.957,delta=0.001)
 
 
+JBT = {'sym':'JBT','td':'JBT','name':'John Bean','narratives':['Robotics']}
+
+
+def run_scan(watchlist, fetch, args, send=None, stale=None, calc=None):
+    """Run main() against an in-memory watchlist. Returns (code, state, sends, dashboard, legacy)."""
+    sends = []
+
+    def fake_send(message, dry=False):
+        sends.append(message)
+        return True if send is None else send(message, dry)
+
+    with tempfile.TemporaryDirectory() as d, contextlib.chdir(d), contextlib.redirect_stdout(io.StringIO()):
+        Path('watchlist.json').write_text(json.dumps({'Test': watchlist}))
+        stale_patch = patch('scanner.stale_bar', return_value=stale) if stale is not None else contextlib.nullcontext()
+        calc_patch = patch('scanner.calculate', return_value=calc) if calc is not None else contextlib.nullcontext()
+        with patch.dict(os.environ, {'TWELVE_DATA_KEY':'fake', 'TELEGRAM_TOKEN':'fake', 'TELEGRAM_CHAT':'fake'}), \
+             patch('scanner.DataClient.fetch', side_effect=fetch), \
+             patch('scanner.datetime', wraps=datetime) as dt, \
+             patch('scanner.send_telegram', side_effect=fake_send), \
+             stale_patch, calc_patch:
+            dt.now.return_value = NOW
+            code = scanner.main(args)
+        state = scanner.read_json(scanner.STATE_FILE) if Path(scanner.STATE_FILE).exists() else None
+        dash = Path('dashboard_data.json').read_text() if Path('dashboard_data.json').exists() else None
+        legacy = Path('state.json').read_text() if Path('state.json').exists() else None
+    return code, state, sends, dash, legacy
+
+
+class ExitAndHistoryTests(unittest.TestCase):
+    def test_exit_code_ignores_isolated_errors_and_fails_on_a_broken_run(self):
+        quiet = {'evaluated':80, 'errors':20, 'warnings':4, 'skipped':0, 'delivery_failed':0}
+        self.assertEqual(scanner.scan_exit_code(quiet), 0)  # exactly 20% stays green
+        self.assertEqual(scanner.scan_exit_code({'evaluated':79, 'errors':21}), 1)
+        self.assertEqual(scanner.scan_exit_code({'evaluated':0, 'errors':0, 'skipped':3}), 1)
+        self.assertEqual(scanner.scan_exit_code({'evaluated':0, 'up_to_date':2}), 0)
+        self.assertEqual(scanner.scan_exit_code({'evaluated':10, 'errors':1, 'delivery_failed':2}), 1)
+        self.assertEqual(scanner.scan_exit_code({'evaluated':10, 'errors':1, 'skipped':1, 'warnings':3}), 0)
+
+    def test_summary_lists_issues_for_telegram(self):
+        text = scanner.format_run_summary({
+            'evaluated':339, 'sent':0, 'delivery_failed':0, 'errors':1, 'warnings':2,
+            'twelve_data_blocked':True, 'short_history':['PONY 1week (104 bars)'],
+            'issues':['JBT 1day: HTTP Error 404: Not Found', 'NKLA 1day: stale candle 2025-12-24'],
+        }, 241)
+        self.assertIn('339 symbol/timeframes', text)
+        self.assertIn('1 data errors', text)
+        self.assertIn('JBT 1day', text)
+        self.assertIn('stale candle', text)
+        self.assertIn('PONY 1week', text)
+        self.assertIn('Twelve Data daily credits', text)
+        self.assertIn('404', text)
+
+    def test_dead_ticker_is_listed_and_does_not_fail(self):
+        healthy = [dict(ASSET, sym=f'S{i}', td=f'S{i}', name=f'S{i}') for i in range(5)]
+
+        def fetch(symbol, timeframe):
+            if symbol == 'JBT':
+                raise RuntimeError('Market data rate limit | fallback failed (yahoo: HTTP Error 404: Not Found; stooq: stooq: no data)')
+            return bars(), {'source':'yahoo'}
+
+        code, state, sends, _, _ = run_scan(healthy + [JBT], fetch, ['--timeframe','1day','--no-summary'])
+        self.assertEqual(code, 0)
+        run = state['last_run']
+        self.assertEqual(run['evaluated'], 5)
+        self.assertEqual(run['errors'], 1)
+        self.assertEqual(run['delivery_failed'], 0)
+        self.assertEqual(run['short_history'], [])
+        self.assertTrue(any('JBT' in item and '404' in item for item in run['issues']))
+        self.assertEqual(state['assets']['JBT']['1day']['status'], 'error')
+        self.assertIn('JBT', json.dumps(state))
+
+    def test_error_fraction_above_twenty_percent_fails(self):
+        symbols = [dict(ASSET, sym=f'S{i}', td=f'S{i}', name=f'S{i}') for i in range(4)]
+
+        def fetch(symbol, timeframe):
+            if symbol in ('S0', 'S1'):
+                raise RuntimeError('yahoo: HTTP Error 404: Not Found')
+            return bars(), {'source':'yahoo'}
+
+        code, state, _, _, _ = run_scan(symbols, fetch, ['--timeframe','1day','--no-summary'])
+        self.assertEqual(code, 1)
+        self.assertEqual(state['last_run']['evaluated'], 2)
+        self.assertEqual(state['last_run']['errors'], 2)
+
+    def test_telegram_delivery_failure_fails_the_job(self):
+        def fetch(symbol, timeframe):
+            return bars(), {'source':'twelvedata'}
+
+        def refuse(message, dry=False):
+            return False
+
+        code, state, sends, _, _ = run_scan([ASSET], fetch, ['--timeframe','1day','--no-summary'], send=refuse, calc=calculated(bars()))
+        self.assertEqual(code, 1)
+        self.assertGreater(state['last_run']['delivery_failed'], 0)
+        self.assertEqual(state['last_run']['errors'], 0)
+        self.assertTrue(any(e['delivery']=='pending' for e in state['assets']['TEST']['1day']['events']))
+
+    def test_stale_candle_is_a_warning(self):
+        def fetch(symbol, timeframe):
+            return bars(), {'source':'twelvedata'}
+
+        code, state, _, _, _ = run_scan([ASSET], fetch, ['--timeframe','1day','--no-summary'], stale=True)
+        self.assertEqual(code, 0)
+        run = state['last_run']
+        self.assertEqual(run['errors'], 0)
+        self.assertEqual(run['warnings'], 1)
+        self.assertEqual(run['evaluated'], 1)
+        self.assertIn('stale candle', run['issues'][0])
+
+    def test_short_history_is_computed(self):
+        def fetch(symbol, timeframe):
+            return bars(61), {'source':'yahoo'}
+
+        code, state, _, _, _ = run_scan([ASSET], fetch, ['--timeframe','1day','--no-summary'])
+        self.assertEqual(code, 0)
+        rec = state['assets']['TEST']['1day']
+        self.assertEqual(rec['status'], 'ok')
+        self.assertGreaterEqual(rec['history_bars'], scanner.MIN_COMPUTE_BARS)
+        self.assertLess(rec['history_bars'], scanner.MIN_BARS)
+        self.assertEqual(state['last_run']['errors'], 0)
+        self.assertEqual(state['last_run']['skipped'], 0)
+        self.assertTrue(any('61' in note or '60' in note for note in state['last_run']['short_history']))
+
+    def test_insufficient_history_is_a_nonfatal_skip(self):
+        def fetch(symbol, timeframe):
+            if symbol == 'JBT':
+                return bars(8), {'source':'yahoo'}
+            return bars(), {'source':'yahoo'}
+
+        code, state, _, dash, _ = run_scan([ASSET, JBT], fetch, ['--timeframe','1day','--no-summary'])
+        self.assertEqual(code, 0)
+        self.assertEqual(state['last_run']['errors'], 0)
+        self.assertEqual(state['last_run']['skipped'], 1)
+        self.assertEqual(state['last_run']['evaluated'], 1)
+        self.assertEqual(state['assets']['JBT']['1day']['status'], 'skipped')
+        self.assertTrue(any('insufficient history' in item for item in state['last_run']['issues']))
+        exported = json.loads(dash)
+        jbt = next(row for row in exported['assets'] if row['sym']=='JBT')
+        self.assertEqual(jbt['timeframes']['1day']['status'], 'skipped')
+
+    def test_nothing_computed_fails(self):
+        def fetch(symbol, timeframe):
+            return bars(8), {}
+
+        code, state, _, _, _ = run_scan([ASSET], fetch, ['--timeframe','1day','--no-summary'])
+        self.assertEqual(code, 1)
+        self.assertEqual(state['last_run']['evaluated'], 0)
+        self.assertEqual(state['last_run']['skipped'], 1)
+        self.assertEqual(state['last_run']['errors'], 0)
+
+    def test_saved_ledger_is_not_resent(self):
+        def fetch(symbol, timeframe):
+            return bars(), {'source':'twelvedata'}
+
+        with tempfile.TemporaryDirectory() as d, contextlib.chdir(d), contextlib.redirect_stdout(io.StringIO()):
+            Path('watchlist.json').write_text(json.dumps({'Test':[ASSET]}))
+            sends = []
+            with patch.dict(os.environ, {'TWELVE_DATA_KEY':'fake','TELEGRAM_TOKEN':'fake','TELEGRAM_CHAT':'fake'}), \
+                 patch('scanner.DataClient.fetch', side_effect=fetch), \
+                 patch('scanner.datetime', wraps=datetime) as dt, \
+                 patch('scanner.send_telegram', side_effect=lambda message, dry=False: sends.append(message) or True), \
+                 patch('scanner.calculate', return_value=calculated(bars())):
+                dt.now.return_value = NOW
+                self.assertEqual(scanner.main(['--timeframe','1day','--no-summary']), 0)
+                self.assertEqual(len(sends), 1)
+                self.assertEqual(scanner.main(['--timeframe','1day','--no-summary']), 0)
+                self.assertEqual(len(sends), 1)
+                self.assertTrue(all(e['delivery']=='sent' for e in scanner.read_json(scanner.STATE_FILE)['assets']['TEST']['1day']['events']))
+
+    def test_dashboard_keeps_sent_alerts_when_ledger_is_missing(self):
+        def fetch(symbol, timeframe):
+            return bars(), {'source':'twelvedata'}
+
+        with tempfile.TemporaryDirectory() as d, contextlib.chdir(d), contextlib.redirect_stdout(io.StringIO()):
+            Path('watchlist.json').write_text(json.dumps({'Test':[ASSET]}))
+            legacy = {'TEST':{'signal':'bull','last_closed_bar':'2026-06-01','alerted_flip_date':'2026-01-01'}}
+            sends = []
+            with patch.dict(os.environ, {'TWELVE_DATA_KEY':'fake','TELEGRAM_TOKEN':'fake','TELEGRAM_CHAT':'fake'}), \
+                 patch('scanner.DataClient.fetch', side_effect=fetch), \
+                 patch('scanner.datetime', wraps=datetime) as dt, \
+                 patch('scanner.send_telegram', side_effect=lambda message, dry=False: sends.append(message) or True), \
+                 patch('scanner.calculate', return_value=calculated(bars())):
+                dt.now.return_value = NOW
+                self.assertEqual(scanner.main(['--timeframe','1day','--no-summary']), 0)
+                self.assertEqual(len(sends), 1)
+                Path(scanner.STATE_FILE).unlink()
+                Path('state.json').write_text(json.dumps(legacy))
+                self.assertEqual(scanner.main(['--timeframe','1day','--no-summary']), 0)
+                self.assertEqual(len(sends), 1)
+                self.assertEqual(json.loads(Path('state.json').read_text())['TEST']['last_closed_bar'], '2026-06-01')
+                events = scanner.read_json(scanner.STATE_FILE)['assets']['TEST']['1day']['events']
+                self.assertTrue(events)
+                self.assertTrue(all(e['delivery']=='sent' for e in events))
+
+    def test_missing_secrets_fail_closed(self):
+        with patch.dict(os.environ, {'TWELVE_DATA_KEY':'', 'TELEGRAM_TOKEN':'', 'TELEGRAM_CHAT':''}):
+            self.assertEqual(scanner.main(['--timeframe','1day','--no-summary']), 1)
+        with tempfile.TemporaryDirectory() as d, contextlib.chdir(d), contextlib.redirect_stdout(io.StringIO()):
+            Path('watchlist.json').write_text(json.dumps({'Test':[ASSET]}))
+            with patch.dict(os.environ, {'TWELVE_DATA_KEY':'fake', 'TELEGRAM_TOKEN':'', 'TELEGRAM_CHAT':''}):
+                self.assertEqual(scanner.main(['--timeframe','1day']), 1)
+
+    def test_corrupt_dashboard_is_not_treated_as_an_empty_ledger(self):
+        with tempfile.TemporaryDirectory() as d, contextlib.chdir(d):
+            Path('dashboard_data.json').write_text('<<<<<<< Updated upstream\n')
+            Path('state.json').write_text(json.dumps({'TEST':{'last_closed_bar':'2026-09-14'}}))
+            with self.assertRaises(RuntimeError):
+                scanner.load_state()
+
+    def test_yahoo_keeps_a_short_computable_series(self):
+        dates = chart_dates(61)
+        with patch('scanner.http_json_ex', return_value=(429, {'code':429, 'message':'daily limit', 'status':'error'}, {})), \
+             patch('scanner.http_bytes', return_value=yahoo_chart(dates)), \
+             patch('scanner.time.sleep'), patch('scanner.datetime', wraps=datetime) as dt:
+            dt.now.return_value = NOW
+            bars_out, meta = scanner.DataClient('secret', delay=0).fetch('TEST', '1day')
+        self.assertEqual(meta['source'], 'yahoo')
+        self.assertGreaterEqual(len(bars_out), scanner.MIN_COMPUTE_BARS)
+        self.assertLess(len(bars_out), scanner.MIN_BARS)
+
+    def test_yahoo_below_indicator_minimum_is_insufficient(self):
+        dates = chart_dates(10)
+
+        def fake_bytes(url, **kwargs):
+            if 'yahoo' in url:
+                return yahoo_chart(dates)
+            return stooq_csv(dates)
+
+        with patch('scanner.http_json_ex', return_value=(400, {'message':'missing'}, {})), \
+             patch('scanner.http_bytes', side_effect=fake_bytes), \
+             patch('scanner.datetime', wraps=datetime) as dt:
+            dt.now.return_value = NOW
+            with self.assertRaises(scanner.InsufficientHistory):
+                scanner.DataClient('secret', delay=0).fetch('TEST', '1day')
+
+
 if __name__=='__main__':unittest.main()

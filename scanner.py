@@ -24,9 +24,15 @@ from supertrend import last_flip, label
 VERSION = '4.0.0'
 STATE_FILE = 'scanner_state.json'
 PRIORITY_FILE = 'scan_priority.json'
+DASHBOARD_FILE = 'dashboard_data.json'
+# Preferred closed-candle window. Indicator settings stay ATR(10) / factor 3 / RSI(14).
 MIN_BARS = 120
+# Fewest closes that can produce both indicators: RSI(14) needs period+1, ATR(10) needs period+1.
+MIN_COMPUTE_BARS = 15
 HISTORY = 400
 FRESH_BARS = 1
+# Isolated symbol failures stay green. A data-source outage (more than this share) fails the job.
+ERROR_FAIL_FRACTION = 0.20
 TD_ATTEMPTS = 6
 FALLBACK_GAP = 1.5
 # Bases quoted in USD by Yahoo (-USD) and Stooq (no separator). Twelve Data uses BASE/USD.
@@ -143,6 +149,10 @@ def _clean_bars(bars, skip_invalid=False):
     return [dedup[d] for d in sorted(dedup)]
 
 
+class InsufficientHistory(ValueError):
+    """The series is shorter than RSI(14) / ATR(10) can compute. Not a dead feed."""
+
+
 def _finalize_bars(bars, td_symbol, meta, timeframe):
     """Drop the forming bar, then keep the same window Twelve Data is asked for."""
     now = datetime.now(timezone.utc)
@@ -152,8 +162,8 @@ def _finalize_bars(bars, td_symbol, meta, timeframe):
     closed = bars[:idx + 1]
     if len(closed) > HISTORY:
         closed = closed[-HISTORY:]
-    if len(closed) < MIN_BARS:
-        raise RuntimeError(f'only {len(closed)} closed bars')
+    if len(closed) < MIN_COMPUTE_BARS:
+        raise InsufficientHistory(f'only {len(closed)} closed bars; need {MIN_COMPUTE_BARS}')
     return closed
 
 
@@ -266,6 +276,38 @@ def load_watchlist(path='watchlist.json'):
     return list(unique.values())
 
 
+def _overlay_dashboard(state, path=DASHBOARD_FILE):
+    """Copy delivery flags from the last dashboard when scanner_state.json is missing.
+
+    The workflows used to commit the dashboard and not the ledger that records
+    which alerts were sent. Replaying legacy state.json then re-sent the same
+    catch-up events on every run. Sent and seeded events stay sent.
+    """
+    if not Path(path).exists():
+        return state
+    dash = read_json(path)
+    if dash.get('schema') != 4 or not isinstance(dash.get('assets'), list):
+        return state
+    for row in dash['assets']:
+        sym = row.get('sym')
+        frames = row.get('timeframes')
+        if not sym or not isinstance(frames, dict):
+            continue
+        bucket = state['assets'].setdefault(sym, {})
+        for tf, rec in frames.items():
+            if not isinstance(rec, dict) or not (rec.get('last_bar') or rec.get('events')):
+                continue
+            prior = bucket.get(tf, {})
+            merged = {**prior, **copy.deepcopy(rec)}
+            if not merged.get('processed_bar'):
+                merged['processed_bar'] = merged.get('last_bar')
+            for key in ('legacy_alerted_flip', 'legacy_rsi_alerted'):
+                if prior.get(key) and not merged.get(key):
+                    merged[key] = prior[key]
+            bucket[tf] = merged
+    return state
+
+
 def load_state():
     if Path(STATE_FILE).exists():
         state = read_json(STATE_FILE)
@@ -285,7 +327,7 @@ def load_state():
                      legacy_rsi_alerted=old_rsi.get(sym + ':1day', {}).get('alerted', {}))
         assets[sym] = {'1day': daily}
         # Old weekly records used a daily close gate: do not trust them as final.
-    return dict(schema=4, version=VERSION, assets=assets)
+    return _overlay_dashboard(dict(schema=4, version=VERSION, assets=assets))
 
 
 class DataClient:
@@ -403,15 +445,20 @@ class DataClient:
 
     def _fallback(self, symbol, timeframe, primary):
         errors = []
+        insufficient = []
         for name, fn in (('yahoo', self._yahoo), ('stooq', self._stooq)):
             try:
                 bars, meta = fn(symbol, timeframe)
                 meta = dict(meta or {})
                 meta['source'] = name
                 return bars, meta
+            except InsufficientHistory as exc:
+                insufficient.append(f'{name}: {exc}')
             except Exception as exc:
                 errors.append(f'{name}: {exc}')
-        detail = '; '.join(errors)
+        if insufficient and not errors:
+            raise InsufficientHistory(self._redact('; '.join(insufficient)))
+        detail = '; '.join(errors + insufficient)
         raise RuntimeError(self._redact(f'{primary} | fallback failed ({detail})'))
 
     def _yahoo(self, symbol, timeframe):
@@ -472,8 +519,8 @@ def evaluate(bars, asset, tf, prior=None, meta=None, now=None, reseed=False):
     if idx is None:
         raise ValueError('No closed candle available')
     bars = bars[:idx + 1]
-    if len(bars) < MIN_BARS:
-        raise ValueError(f'Only {len(bars)} closed candles; need {MIN_BARS}')
+    if len(bars) < MIN_COMPUTE_BARS:
+        raise InsufficientHistory(f'Only {len(bars)} closed candles; need {MIN_COMPUTE_BARS}')
     closes, rsi, st = calculate(bars)
     fi, _ = last_flip(st['dirs'])
     n = len(bars) - 1
@@ -610,7 +657,52 @@ def deliver(asset, rec, dry=False, persist=None):
     return sent, failed
 
 
-def export_dashboard(state, assets, path='dashboard_data.json', now=None):
+def scan_exit_code(summary):
+    """Fail the job on a broken run, not on one delisted ticker or a short history.
+
+    Missing secrets are rejected before a summary exists. Telegram send failures
+    and a data-error share above ERROR_FAIL_FRACTION fail the job. Stale candles
+    and series too short to compute are warnings and do not, on their own.
+    """
+    if summary.get('delivery_failed'):
+        return 1
+    evaluated = int(summary.get('evaluated') or 0)
+    up_to_date = int(summary.get('up_to_date') or 0)
+    errors = int(summary.get('errors') or 0)
+    skipped = int(summary.get('skipped') or 0)
+    if evaluated + up_to_date == 0:
+        return 1
+    attempted = evaluated + up_to_date + errors + skipped
+    if attempted and errors / attempted > ERROR_FAIL_FRACTION:
+        return 1
+    return 0
+
+
+def format_run_summary(summary, requests):
+    lines = [
+        '<b>Scanner v4 summary</b>',
+        f"{summary['evaluated']} symbol/timeframes checked",
+        f"{summary['sent']} alerts delivered · {summary['delivery_failed']} pending",
+        f"{summary['errors']} data errors · {summary['warnings']} warnings · {requests} data requests",
+    ]
+    if summary.get('twelve_data_blocked'):
+        lines.append('Twelve Data daily credits were used up; remaining symbols used Yahoo or Stooq.')
+    short = summary.get('short_history') or []
+    if short:
+        shown = short[:8]
+        extra = len(short) - len(shown)
+        lines.append('Short history, computed anyway: ' + ', '.join(shown) + (f' …+{extra}' if extra else ''))
+    issues = summary.get('issues') or []
+    if issues:
+        lines.append('Data issues:')
+        for item in issues[:12]:
+            lines.append('• ' + html.escape(item))
+        if len(issues) > 12:
+            lines.append(f'…and {len(issues) - 12} more')
+    return '\n'.join(lines)
+
+
+def export_dashboard(state, assets, path=DASHBOARD_FILE, now=None):
     now = now or datetime.now(timezone.utc)
     rows = []
     for asset in assets:
@@ -619,7 +711,9 @@ def export_dashboard(state, assets, path='dashboard_data.json', now=None):
             rec = copy.deepcopy(state['assets'].get(asset['sym'], {}).get(tf, {}))
             rec.pop('legacy_alerted_flip', None)
             rec.pop('legacy_rsi_alerted', None)
-            if not rec.get('last_bar'):
+            if rec.get('status') == 'skipped':
+                pass
+            elif not rec.get('last_bar'):
                 rec['status'] = 'error' if rec.get('error') else 'missing'
             elif stale_bar(rec['last_bar'], asset['td'], rec.get('meta', asset), tf, now):
                 rec['status'] = 'stale'
@@ -665,7 +759,8 @@ def main(argv=None):
             print('Symbol is not in watchlist.')
             return 1
     client = DataClient(key)
-    summary = dict(started_at=stamp(), evaluated=0, errors=0, sent=0, delivery_failed=0, sources={})
+    summary = dict(started_at=stamp(), evaluated=0, errors=0, warnings=0, skipped=0, up_to_date=0,
+                   sent=0, delivery_failed=0, sources={}, issues=[], short_history=[])
     mode = '1week' if args.weekly else args.timeframe
     persist = lambda: write_json(STATE_FILE, state)
     try:
@@ -678,6 +773,7 @@ def main(argv=None):
                 now = datetime.now(timezone.utc)
                 meta = {**asset, **prior.get('meta', {})}
                 if tf == '1week' and mode == 'auto' and prior.get('last_bar') and prior.get('status') == 'ok' and prior['last_bar'] >= latest_week_key(asset['td'], meta, now):
+                    summary['up_to_date'] += 1
                     if not args.reseed and not args.verify:
                         sent, failed = deliver(asset, prior, args.dry_run, None if args.dry_run else persist)
                         summary['sent'] += sent
@@ -690,14 +786,30 @@ def main(argv=None):
                     summary['evaluated'] += 1
                     if rec.get('source'):
                         summary['sources'][rec['source']] = summary['sources'].get(rec['source'], 0) + 1
+                    detail = ''
+                    if rec.get('history_bars') and rec['history_bars'] < MIN_BARS:
+                        note = f"{sym} {tf} ({rec['history_bars']} bars)"
+                        summary['short_history'].append(note)
+                        detail = f" · short history ({rec['history_bars']} bars)"
                     if rec['status'] == 'stale':
-                        summary['errors'] += 1
-                    print(f"{sym} {tf}: {rec['signal']} · RSI {rec['rsi']:.1f} · candle {rec['last_bar']} · {rec['status']} · {rec.get('source')}")
+                        summary['warnings'] += 1
+                        summary['issues'].append(f"{sym} {tf}: stale candle {rec['last_bar']}")
+                    rsi = rec['rsi']
+                    rsi_txt = f'{rsi:.1f}' if isinstance(rsi, (int, float)) else 'n/a'
+                    print(f"{sym} {tf}: {rec['signal']} · RSI {rsi_txt} · candle {rec['last_bar']} · {rec['status']} · {rec.get('source')}{detail}")
                     if args.verify:
                         print(json.dumps(rec, indent=2))
                         continue
+                except InsufficientHistory as exc:
+                    summary['skipped'] += 1
+                    summary['warnings'] += 1
+                    summary['issues'].append(f'{sym} {tf}: insufficient history ({exc})')
+                    rec = records.setdefault(tf, prior)
+                    rec.update(status='skipped', error=str(exc), checked_at=stamp())
+                    print(f'{sym} {tf}: insufficient history ({exc})')
                 except (RuntimeError, ValueError) as exc:
                     summary['errors'] += 1
+                    summary['issues'].append(f'{sym} {tf}: {exc}')
                     rec = records.setdefault(tf, prior)
                     rec.update(status='error', error=str(exc), checked_at=stamp())
                     for e in rec.get('events', []):
@@ -717,11 +829,9 @@ def main(argv=None):
             persist()
             export_dashboard(state, assets)
     if not args.no_summary and not args.reseed and not args.verify:
-        send_telegram(f"<b>Scanner v4 summary</b>\n{summary['evaluated']} symbol/timeframes checked\n"
-                      f"{summary['sent']} alerts delivered · {summary['delivery_failed']} pending\n"
-                      f"{summary['errors']} data issues · {client.calls} data requests", args.dry_run)
+        send_telegram(format_run_summary(summary, client.calls), args.dry_run)
     print(json.dumps(summary))
-    return 1 if summary['errors'] or summary['delivery_failed'] else 0
+    return scan_exit_code(summary)
 
 
 if __name__ == '__main__':

@@ -14,7 +14,9 @@ on:
     # Manual trigger for testing — runs both
 
 concurrency:
-  group: rsi-scanner
+  # Same group as Supertrend 1D Scanner. Both jobs call scanner.py and share
+  # scanner_state.json, so they must not send alerts at the same time.
+  group: scanner
   cancel-in-progress: false
 
 jobs:
@@ -54,17 +56,55 @@ jobs:
           TELEGRAM_CHAT:   ${{ secrets.TELEGRAM_CHAT }}
         run: python rsi_scanner.py --timeframe 1week
 
-      - name: Save state back to repo
+      - name: Save state and dashboard data back to repo
         if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git pull --rebase --autostash origin main || true
-          git add rsi_state.json
-          git diff --staged --quiet || git commit -m "Update RSI scanner state [skip ci]"
+          # rsi_scanner.py is the v4 scanner. Sent alerts are stored in
+          # scanner_state.json, not rsi_state.json.
+          for f in scanner_state.json dashboard_data.json; do
+            if [ -f "$f" ]; then
+              if grep -E '^(<<<<<<<|>>>>>>>)' "$f" >/dev/null; then
+                echo "Refusing to commit $f because it contains conflict markers."
+                exit 1
+              fi
+              git add -- "$f"
+            fi
+          done
+          if git diff --staged --quiet; then
+            exit 0
+          fi
+          git commit -m "Update scanner state + dashboard data [skip ci]"
           for i in 1 2 3; do
-            git push && break
-            echo "Push attempt $i failed, retrying..."
-            git pull --rebase --autostash origin main || true
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push; then
+                exit 0
+              fi
+              echo "Push attempt $i failed, retrying..."
+            else
+              echo "Rebase attempt $i hit a conflict."
+              resolved=1
+              for f in $(git diff --name-only --diff-filter=U); do
+                case "$f" in
+                  scanner_state.json|dashboard_data.json)
+                    git checkout --theirs -- "$f"
+                    git add -- "$f"
+                    ;;
+                  *)
+                    resolved=0
+                    ;;
+                esac
+              done
+              if [ "$resolved" = 1 ]; then
+                GIT_EDITOR=true git rebase --continue || git rebase --abort || true
+              else
+                echo "Conflict is outside generated scanner files."
+                git rebase --abort || true
+              fi
+            fi
             sleep $((i * 5))
           done
+          echo "Could not push scanner state."
+          exit 1
